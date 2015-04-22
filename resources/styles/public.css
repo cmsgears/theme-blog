@@ -3371,37 +3371,37 @@ Dependencies: variables, mixins
 .content-80 {
   position: relative;
   padding: 0 10%;
-  width: 80%;
+  width: 100%;
 }
 
 .content-74 {
   position: relative;
   padding: 0 13%;
-  width: 74%;
+  width: 100%;
 }
 
 .content-50 {
   position: relative;
   padding: 0 25%;
-  width: 50%;
+  width: 100%;
 }
 
 .content-26 {
   position: relative;
   padding: 0 37%;
-  width: 26%;
+  width: 100%;
 }
 
 .content-left-25 {
   position: relative;
   padding-right: 75%;
-  width: 25%;
+  width: 100%;
 }
 
 .content-right-25 {
   position: relative;
   padding-left: 75%;
-  width: 25%;
+  width: 100%;
 }
 
 /**********************************************************************
@@ -3683,6 +3683,112 @@ Javascript: jquery, cmg-module
 .module-basic .module-wrap-content {
   position: relative;
   z-index: 10;
+}
+
+/**********************************************************************
+Description: It defines the styles for the Blog Widgets of cms module for CMSGears following components approach.
+Dependencies: variables, mixins
+***********************************************************************/
+.blog-posts-regular .post {
+  margin: 10px 0;
+  border: 1px solid #1e2328;
+  background-color: #f2f2f2;
+}
+.blog-posts-regular .banner {
+  width: 20%;
+  display: inline-block;
+  text-align: center;
+}
+.blog-posts-regular .post-content {
+  width: 80%;
+  display: inline-block;
+}
+.blog-posts-regular .post-content.full {
+  width: 100%;
+}
+.blog-posts-regular .post-content .header {
+  background-color: #475461;
+  padding: 0.25em;
+}
+.blog-posts-regular .post-content .header a {
+  color: #f2f2f2;
+}
+.blog-posts-regular .post-content .header a:hover {
+  color: #1e2328;
+}
+.blog-posts-regular .post-content .summary {
+  padding: 1em;
+}
+.blog-posts-regular .post-content .info {
+  background-color: #1e2328;
+  padding: 5px;
+}
+.blog-posts-regular .post-content .info .author, .blog-posts-regular .post-content .info .time {
+  display: inline-block;
+}
+.blog-posts-regular .post-content .info .author {
+  float: left;
+}
+.blog-posts-regular .post-content .info .author img {
+  width: 40px;
+  border: 5px solid #f2f2f2;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -khtml-border-radius: 5px;
+}
+.blog-posts-regular .post-content .info .time {
+  float: right;
+  margin-top: 15px;
+}
+.blog-posts-regular .wrap-pagination {
+  margin: 10px 0;
+}
+.blog-posts-regular .wrap-pagination .info {
+  float: left;
+}
+.blog-posts-regular .wrap-pagination .pagination {
+  float: right;
+}
+.blog-posts-regular .wrap-pagination .pagination, .blog-posts-regular .wrap-pagination .pagination li {
+  display: inline-block;
+  list-style: none;
+}
+.blog-posts-regular .wrap-pagination .pagination li {
+  margin: 0 2px;
+  font-size: 1em;
+  line-heigh: 1em;
+}
+.blog-posts-regular .wrap-pagination .pagination .prev, .blog-posts-regular .wrap-pagination .pagination .next, .blog-posts-regular .wrap-pagination .pagination li a {
+  color: #f2f2f2;
+  text-decoration: none;
+  height: 1.6em;
+  background-color: #475461;
+  -moz-transition: all 250ms ease-in-out 0s;
+  -ms-transition: all 250ms ease-in-out 0s;
+  -o-transition: all 250ms ease-in-out 0s;
+  -webkit-transition: all 250ms ease-in-out 0s;
+  transition: all 250ms ease-in-out 0s;
+}
+.blog-posts-regular .wrap-pagination .pagination li a {
+  padding: 2px 8px;
+}
+.blog-posts-regular .wrap-pagination .pagination .disabled span, .blog-posts-regular .wrap-pagination .pagination .disabled span:hover {
+  background-color: #1e2328;
+  padding: 2px 8px;
+  height: 1.6em;
+}
+.blog-posts-regular .wrap-pagination .pagination .disabled span {
+  line-height: 1.6em;
+}
+.blog-posts-regular .wrap-pagination .pagination .active, .blog-posts-regular .wrap-pagination .pagination .active a, .blog-posts-regular .wrap-pagination .pagination li a:hover, .blog-posts-regular .wrap-pagination .pagination .next:hover, .blog-posts-regular .wrap-pagination .pagination .prev:hover {
+  background-color: #1e2328;
+  color: #f2f2f2;
+  -moz-transition: all 250ms ease-in-out 0s;
+  -ms-transition: all 250ms ease-in-out 0s;
+  -o-transition: all 250ms ease-in-out 0s;
+  -webkit-transition: all 250ms ease-in-out 0s;
+  transition: all 250ms ease-in-out 0s;
 }
 
 .texture1 {

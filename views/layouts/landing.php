@@ -1,9 +1,9 @@
 <?php
-use themes\basic\assets\AssetLoaderLanding;
+use themes\blog\assets\AssetLoaderLanding;
 
 AssetLoaderLanding::register( $this );
 
-$coreProperties = $this->context->getCoreProperties();
+$coreProperties 		= $this->context->getCoreProperties();
 ?>
 <?php $this->beginPage(); ?>
 <!DOCTYPE html>

@@ -1,6 +1,10 @@
 <?php
 use \Yii;
 use yii\helpers\Html;
+
+// TODO: Move it to Pre/Post page load event
+use cmsgears\cms\common\utilities\ContentUtil;
+ContentUtil::initPage( $this );
 ?>
 <meta charset="<?= $coreProperties->getCharset() ?>">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
