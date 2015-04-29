@@ -28,9 +28,9 @@ class AssetLoaderPrivate extends AssetBundle {
             "scripts/vendor/conditionizr-4.4.0.min.js",
             "conditionizr/detects/ie6-ie7-ie8-ie9.js",
             "scripts/vendor/imagesloaded.pkgd-3.1.8.min.js",
-            "scripts/cmgtools/cmg-browser-features.js",
-            "scripts/cmgtools/cmg-ajax-processor.js",
-            "scripts/cmgtools/cmg-utilities.js",
+            "scripts/cmgtools/cmt-browser-features.js",
+            "scripts/cmgtools/cmt-ajax-processor.js",
+            "scripts/cmgtools/cmt-utilities.js",
             "scripts/main.js",
             "scripts/ajax-processor.js"
 	    ];

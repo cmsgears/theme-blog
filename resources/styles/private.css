@@ -2779,6 +2779,12 @@ Dependencies: variables, variables-ext
   box-shadow: 1px 1px 5px #1e2328;
 }
 
+.text-shadow {
+  -webkit-box-shadow: 1px 1px 5px #1e2328;
+  -moz-box-shadow: 1px 1px 5px #1e2328;
+  box-shadow: 1px 1px 5px #1e2328;
+}
+
 .linear-gradient {
   background-color: #1e2328;
   background-image: -moz-linear-gradient(#f2f2f2, #1e2328);

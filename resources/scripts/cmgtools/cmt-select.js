@@ -115,7 +115,7 @@
 					var parent		= selected.parents().eq(1);
 					
 					parent.children( ".cmt-selected" ).children( ".s-text" ).html( selected.html() );
-					parent.parent().children( "select" ).val( selected.attr( "data-value" ) );
+					parent.parent().children( "select" ).val( selected.attr( "data-value" ) ).change();
 	
 					selected.parent().hide();
 				});
