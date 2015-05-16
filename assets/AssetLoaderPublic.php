@@ -20,7 +20,8 @@ class AssetLoaderPublic extends AssetBundle {
 
 		// Load CSS
 	    $this->css     = [
-			"styles/public.css"
+			"styles/public.css",
+			"styles/vendor/animate.min.css"
 	    ];
 
 		// Load Javascript

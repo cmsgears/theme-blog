@@ -17,16 +17,17 @@
 // Override default variables
 @import "partials/core/fonts";
 @import "partials/core/variables";
-@import "cmt-partials/core/variables-ext";
-@import "partials/core/variables-ext";
+@import "cmt-partials/core/variables-ext"; 
 @import "cmt-partials/core/mixins";
 @import "cmt-partials/core/transitions";
 @import "cmt-partials/core/reset";
 @import "cmt-partials/core/basic";
 @import "cmt-partials/core/typography";
+@import "partials/core/typography";
 @import "cmt-partials/core/containers";
 @import "cmt-partials/elements/forms";
 @import "cmt-partials/components/modules";
+@import "cmt-partials/components/menus";
 
 // Theme - Basic
 @import "partials/core/basic";

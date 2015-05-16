@@ -1,10 +1,17 @@
 jQuery(document).ready( function() {
 
-	initLanding();
-
-	initModules();
+	initLanding(); 
 
 	initListeners();
+	
+	initAutoHeight();
+	
+	cmgStickMenu( ".mobile-nav-icon" ); 
+	
+	jQuery(".media").click( function() {
+		
+		jQuery(this).toggleClass("hover");
+	} );
 });
 
 function initLanding() {
@@ -12,22 +19,7 @@ function initLanding() {
 	registerHeaderChange();
 
 	initSmoothScroll( ".smooth-scroll" );	
-}
-
-function initModules() {
-
-	// Initialise the Page Modules
-	if( jQuery().cmgPageModules ) {
-
-		jQuery( ".module" ).cmgPageModules( {
-			fullHeight: true,
-			modules: {
-				'module-about': { fullHeight: true, css: { 'height': 'auto' } },
-				'module-contact': { heightAutoMobile: true, heightAutoWidth: 1024 }
-			}
-		});
-	}	
-}
+} 
 
 function initListeners() {
 
@@ -38,25 +30,41 @@ function initListeners() {
 	jQuery( 'body' ).imagesLoaded( function() {
 
 		jQuery( '#pre-loader-page' ).fadeOut( "slow" );
-	});
+	}); 
+}
 
-	// Initialise the mobile button
-	jQuery( "#btn-mobile-menu" ).click( function() {
-
-		jQuery( "#nav-mobile" ).slideToggle( "slow" );
-	});
+function cmgStickMenu( $clickable ) { 
+	 	
+	jQuery(".cmg-stick-menu").css("top",-jQuery(".header-main").height());
 	
-	// Show/ Hide login box
-	jQuery("#btn-login, #btn-login-mobile").click( function() {
-
-		jQuery( "#wrap-login-register" ).toggle( "slow" );
-	});
-	
-	// Show/ Hide settings box
-	jQuery("#btn-settings, #btn-settings-mobile").click( function( e ) {
+	jQuery( $clickable ).click( function() {
 		
-		e.preventDefault();
+		jQuery(".cmg-stick-menu").animate({left: '0px'});
+	} );
+	
+	jQuery(".menu-close").click( function() {
+		
+		jQuery(".cmg-stick-menu").animate({left: '-700px'});
+	} );
+}
 
-		jQuery( "#box-settings" ).toggle( "slow" );
-	});
+// Set AutoHeight
+
+function initAutoHeight() {
+	
+	jQuery("#wrap-posts").css("min-height",jQuery(".post").height());
+	
+	jQuery(".sidebar").height( jQuery(".media").height() );
+	
+	jQuery(".post .hover-content").width( jQuery(".media").width() ); 
+	
+	if( window.innerWidth <= 1024  ) {
+		
+		jQuery(".post .sidebar").height(jQuery(".date").outerHeight()); 
+	}
+	
+	if( window.innerWidth <= 480  ) {
+		
+		jQuery(".post .media").height( jQuery(".hover-content").height()+30 );
+	}
 }

@@ -13,135 +13,205 @@
       .module-wrap-content {
           margin-top: 110px;
       }
-    }
+    } 
 }
 
-// Landing Page modules
+// Cmg Stick Menu ---------------------------------
 
-#module-banner {
-
-    .module-bkg-parallax {
-        background-image: url(../images/pad.jpg);     
-    }
-
-    .module-wrap-content {
-        background-color: $color-transparent-gray;
-        width: 80%;
-        height: 200px;
-        margin: 0 auto;
-
-        .module-content {
-            padding: 3%;
-            font-size: 2.5em;
-            text-align: center;
-            color: $color-tertiary-text;
-        }
-    }
-
-    @include responsive-min( screen-tablet-large ) {
-
-        .module-content {
-            font-size: 3.5em;
-        }
-    }
-}
-
-#module-about {
-
-    .row {
-        width: 80%;
-    }
-
-    .container {
-        background-color: $color-primary-l;
-        margin: 1em 1%;
-
-        .content {
-            margin: 1em 0;
-        }
-    }
-}
-
-#module-contact {
-
-    .module-bkg {
-        background-image: url(../images/keyboard.jpg);
-    }
-
-    .module-wrap-content {
-        background-color: $color-primary-l;
-        width: 90%;
-        height: auto;
-        margin: 0 auto;
-        padding-top: 1em;
-
-        .module-content {
-            padding: 3%;
-            text-align: center;
-            color: $color-primary-text;
-            
-            textarea, .icon-textarea {
-                height: 80px;
-            }
-            
-            input[type="submit"] {
-                background-color: $color-tertiary;
-            }
-        }
-    }
-
-    @include responsive-max( screen-tablet-large ) {
-
-        .module-wrap-content {
-            background-color: $color-transparent-tertiary;
-            color: $color-tertiary-text;
-            height: auto;
-            margin: 0 auto;
-            margin-top: 75px;
-            margin-bottom: 75px;
-        }
-
-        .module-content h6, .module-content p {
-            color: $color-tertiary-text;
-        }
-    }
-
-    @include responsive-min( screen-tablet-large ) {
-
-        .module-wrap-content {
-            width: 820px;
-        }
-    }
-}
-
-// Other Modules
-#module-public {
-
-    .module-bkg {
-        background-image: url(../images/pad.jpg);     
-    }
-
-    .module-wrap-content {
-        background-color: $color-tertiary;
-        margin: 0 auto;
-        color: $color-tertiary-text;
-        padding: 1em;
-        width: 400px;
+.cmg-stick-menu {
+  background: $color-secondary-text-d;
+  bottom: 0;
+  padding: 5%;
+  position: absolute;
+  top: 0;
+  width: 50%;
+  z-index: 999;
+  left: -700px;
+  
+  ul {
+    
+    li {
+      margin: 10% 0;
+      
+      a {
+        color: white;
+        @include transit-color( $transit-eio, $transit-time-small, $delay: 0s );
         
-        a {
-            color: $color-tertiary-text;
+        &:not(.fa) {
+           font-family: aller-regular;
+        }   
+        
+        &:hover {
+          color: darken( white, 20% );
+        } 
+      }
+      
+      &.menu-close {
+        text-align: right;
+        font-size: $font-size-1;   
+      }      
+    }
+  }
+}
+
+// Blog -------------------------------------
+
+.blog {
+  min-height: 600px;
+  height: auto;
+  padding: 2%;
+  background: url('../images/pattern.jpg');
+  
+  #wrap-posts { 
+    height: auto;
+    padding: 2%;
+    background: white;
+    margin: 2% 0;
+    
+    .post {
+      border-bottom: 1px solid $color-secondary;
+      margin: 5% 0; 
+      
+      .sidebar{
+        margin-bottom: 0;
+        position: relative;
+        
+        .date {
+          @include rounded(100px);
+          background: $color-secondary;
+          position: absolute;
+          top: 0;
+          text-align: center;
+          padding: 18% 14%;
+          right: 5%;
+          @include transit-all( $transit-eio, $transit-time-small, $delay: 0s );  
+          
+          &:hover {
+            background: darken( $color-secondary, 5% );
+          }
+          
+          .day {
+            font-family: aller-bold;
+            font-size: 2em;
+          }
+          
+          .month {
+            font-family: amble-regular;
+            color: $color-secondary-text-l;
+          }
         }
         
-        .help-block {
-            color: $color-error;
+        .comment {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          background: $color-primary;
+          color: $color-secondary-text-d;
+          padding: 18% 25%;
+          @include transit-all( $transit-eio, $transit-time-small, $delay: 0s );
+          
+          &:hover {
+            background: darken( $color-primary, 5% );
+          }
+          
+          p {
+            color: $color-secondary-text-d;
+            font-size: $font-size-5;
+          }
+          
+          .fa {
+            color: $color-secondary-d;
+            margin: 2% 0;
+          }
         }
+      } 
+      
+      .module-container {
+        position: relative;
+      }
     }
-
-    @include responsive-max( screen-mobile-large ) {
-
-        .module-wrap-content {
-            background-color: $color-transparent-tertiary;
-            width: 80%;
+    
+    .media {
+      position: relative;
+      overflow: hidden;
+      
+      &:hover, &.hover {
+        
+        .hover-content {
+          margin-bottom: 0;
         }
+      }
+      
+      .hover-content {
+        position: absolute;
+        bottom: 0; 
+        background: $color-transparent-black;
+        margin-bottom: -100%;
+        @include transit-all( $transit-eio, $transit-time-small, $delay: 0s );
+        
+        .icon {
+          background: $color-primary-l;
+          color: $color-secondary;
+          font-size: $font-size-1;
+          padding: 1% 2%; 
+          border-radius: 50%;  
+          margin-top: -4% !important;
+        } 
+        
+        p {
+          font-family: amble-light;
+          color: $color-secondary-text-l;
+          margin: 3% 0;
+        }
+        
+        .btn {
+          background: $color-button;
+          font-family: aller-regular;
+          width: 40%; 
+          @include transit-all( $transit-eio, $transit-time-small, $delay: 0s );
+          
+          &:hover {
+            background: darken( $color-button, 10% );
+          }
+        }
+      }  
     }
+  }
 }
+
+@include responsive-max( screen-tablet-large ) {
+   
+   .blog { 
+     
+    #wrap-posts { 
+      
+      .post { 
+        
+        .sidebar{
+          min-height: 40px;
+          position: relative;
+          
+          .date { 
+            left: 0;
+            padding: 4% 1%;
+            top: 0;
+            width: 60%;
+            border-radius: 0;
+          } 
+                   
+          .comment { 
+            right: 0;
+            padding: 4% 1%;
+            top: 0;
+            width: 40%; 
+            border-radius: 0;
+          }
+        } 
+      } 
+    }
+  }
+  
+  .content-80 {
+    padding: 0;
+  }
+} 

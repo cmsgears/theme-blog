@@ -4,31 +4,17 @@ use cmsgears\core\widgets\AjaxLogin;
 ?>
 <header id="header" class="header-main">
 	<div class="header-desktop clearfix">
-		<div class="colf12x4">
-			<?=Html::a( "<img class='logo' src='" . Yii::getAlias( '@images' ) . "/logo.png'>", [ '/' ], null )?>
+		<div class="colf12x3 logo">
+			<?=Html::a( "<img class='fluid' src='" . Yii::getAlias( '@images' ) . "/logo.png'>", [ '/' ], null )?>
 		</div>
-		<div class="colf12x6">
+		<div class="colf12x9 wrap-nav">
+			<a class="fa fa-bars mobile-nav-icon"></a>			
 			<ul class="nav-main">
-	            <li><a class="smooth-scroll" href="#module-banner">Home</a></li>
-	            <li><a class="smooth-scroll" href="#module-about">About</a></li>
-	            <li><a class="smooth-scroll" href="#module-contact">Contact</a></li>
+	            <li><a>HOME</a></li>
+	            <li><a>BLOG</a></li>
+	            <li><a>PORTFOLIO</a></li> 
+	            <li><a>CONTACT US</a></li>
 			</ul>
-		</div>
-		<div class="colf12x2">
-			<span class="btn" id="btn-login">My Account</span>
-		</div>
-	</div>
-	<div class="header-mobile clearfix">
-		<div id="btn-mobile-menu"> 
-			<span class="fa fa-3x fa-list"></span>
-		</div>
-		<?=Html::a( "<img class='logo' src='" . Yii::getAlias( '@images' ) . "/logo.png'>", [ '/' ], null )?>
-		<span class="fa fa-3x fa-user" id="btn-login-mobile"></span>
-		<ul class="nav-main" id='nav-mobile'>
-            <li><a class="smooth-scroll" href="#module-banner">Home</a></li>
-	        <li><a class="smooth-scroll" href="#module-about">About</a></li>
-			<li><a class="smooth-scroll" href="#module-contact">Contact</a></li>
-		</ul>
-	</div>
-	<?=AjaxLogin::widget( [ 'options' => [ 'id' => 'wrap-login-register' ] ] )?>
+		</div> 
+	</div>  
 </header>
