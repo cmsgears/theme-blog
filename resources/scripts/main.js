@@ -6,13 +6,53 @@ jQuery(document).ready( function() {
 	
 	initAutoHeight();
 	
+	initGridView();	 
+	initListView();
+	
 	cmgStickMenu( ".mobile-nav-icon" ); 
 	
 	jQuery(".media").click( function() {
 		
 		jQuery(this).toggleClass("hover");
-	} );
+	} ); 
+	
 });
+
+function initGridView() {
+	
+	jQuery(".icon-grid").click( function() { 
+		
+		jQuery(".blog .post").css({"width":"50%", "float": "left", "border":"0px", "margin":"2% 0"});
+		jQuery(".blog .post .sidebar, .blog .post .icon").hide();
+		jQuery(".blog .media").removeClass("colf12x9");
+		jQuery(".blog .media").addClass("col1");
+		jQuery(this).removeClass("fa-th");
+		jQuery(this).addClass("fa-th-list");
+		jQuery(this).attr("title","List View");
+		jQuery(this).removeClass("icon-grid");
+		jQuery(this).addClass("icon-list");
+		jQuery(this).one('bind',initAutoHeight());
+		initListView();		
+	} );
+}
+
+function initListView() {
+	
+	jQuery(".icon-list").click( function() {
+		
+		jQuery(".blog .post").css({"width":"100%", "float": "none", "border":"1px", "margin":"5% 0"});
+		jQuery(".blog .post .sidebar, .blog .post .icon").show();
+		jQuery(".blog .media").addClass("colf12x9");
+		jQuery(".blog .media").removeClass("col1");
+		jQuery(this).removeClass("fa-th-list");
+		jQuery(this).addClass("fa-th");
+		jQuery(this).attr("title","Grid View");
+		jQuery(this).removeClass("icon-list");
+		jQuery(this).addClass("icon-grid");
+		jQuery(this).one('bind',initAutoHeight());
+		initGridView(); 
+	} );
+}
 
 function initLanding() {
 
@@ -52,7 +92,7 @@ function cmgStickMenu( $clickable ) {
 
 function initAutoHeight() {
 	
-	jQuery("#wrap-posts").css("min-height",jQuery(".post").height());
+	jQuery(".wrap-posts").css("min-height",jQuery(".post").height());
 	
 	jQuery(".sidebar").height( jQuery(".media").height() );
 	

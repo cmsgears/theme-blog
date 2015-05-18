@@ -4595,4 +4595,70 @@ input[type="submit"], input[type="button"], button, select, .btn {
   display: none;
 }
 
+.pagination {
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid #3498DB;
+  padding: 2em 0;
+}
+.pagination ul {
+  text-align: right;
+}
+.pagination ul li {
+  display: inline-block;
+  margin: 0.3em;
+}
+.pagination ul li a {
+  border: 1px solid #256E9E;
+  font-size: 0.75em;
+  display: block;
+  min-height: 2em;
+  line-height: 2em;
+  text-align: center;
+  min-width: 3.5em;
+  color: #256E9E;
+  background: #FFFFFF;
+  -moz-transition: all 250ms ease-in-out 0s;
+  -ms-transition: all 250ms ease-in-out 0s;
+  -o-transition: all 250ms ease-in-out 0s;
+  -webkit-transition: all 250ms ease-in-out 0s;
+  transition: all 250ms ease-in-out 0s;
+}
+.pagination ul li a:hover, .pagination ul li a.active {
+  background: #256E9E;
+  color: #FFFFFF;
+}
+.pagination ul li a:not(.fa) {
+  font-family: aller-regular;
+}
+
+/* Need to add 2 classes to the parent div 1 .pagination, 2 .tag */
+.tag {
+  border-bottom: 0;
+  box-shadow: 1px 1px 6px silver;
+  margin: 2em 0;
+  padding: 1em;
+}
+.tag .title-medium {
+  margin: 1em 0;
+  border-bottom: 1px solid #3498DB;
+  padding-bottom: 1em;
+}
+.tag ul {
+  text-align: left;
+}
+.tag ul li a {
+  border: 1px solid #3498DB;
+  padding: 0 0.5em;
+  -moz-transition: all 250ms ease-in-out 0s;
+  -ms-transition: all 250ms ease-in-out 0s;
+  -o-transition: all 250ms ease-in-out 0s;
+  -webkit-transition: all 250ms ease-in-out 0s;
+  transition: all 250ms ease-in-out 0s;
+}
+.tag ul li a:hover, .tag ul li a.active {
+  background: #3498DB;
+  color: #FFFFFF;
+}
+
 /*# sourceMappingURL=private.css.map */
