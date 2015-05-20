@@ -1,6 +1,7 @@
 <?php
 use yii\helpers\Html;
-use cmsgears\core\widgets\AjaxLogin;
+use yii\helpers\Url;
+use cmsgears\core\widgets\AjaxLogin; 
 ?>
 <header id="header" class="header-main">
 	<div class="header-desktop clearfix">
@@ -10,10 +11,8 @@ use cmsgears\core\widgets\AjaxLogin;
 		<div class="colf12x9 wrap-nav">
 			<a class="fa fa-bars mobile-nav-icon"></a>			
 			<ul class="nav-main">
-	            <li><a>HOME</a></li>
-	            <li><a>BLOG</a></li>
-	            <li><a>PORTFOLIO</a></li> 
-	            <li><a>CONTACT US</a></li>
+	            <li><a href="<?= Url::toRoute( ["/"] ) ?>">HOME</a></li>
+	            <li><a href="<?= Url::toRoute( ["/blog"] ) ?>">BLOG</a></li>	  
 			</ul>
 		</div> 
 	</div>  

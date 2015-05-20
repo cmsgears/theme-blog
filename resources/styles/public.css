@@ -3041,6 +3041,15 @@ a:active, a:hover {
   outline: 0;
 }
 
+.title-large, .title-medium, .title-small {
+  color: #256E9E;
+  font-family: aller-regular;
+}
+
+.title-medium {
+  font-size: 1em;
+}
+
 /**********************************************************************
 Description: It defines the grid system and basic containers for CMGTools.
 Dependencies: variables, mixins
@@ -3861,109 +3870,167 @@ Javascript: jquery, cmg-module
 }
 
 /**********************************************************************
-Description: It defines the styles for the Blog Widgets of cms module for CMSGears following components approach.
-Dependencies: variables, mixins
+Description: It defines the styles for the menu components available in CMGTools.
+Dependencies: variables, variables-ext, mixins
 ***********************************************************************/
-.blog-posts-regular .post {
-  margin: 10px 0;
-  border: 1px solid #3498DB;
+/* hnav-regular is 3 level horizontal responsive menu for ul, li and a tags and works well for all modern web browsers. 
+   It need little javascript or jquery for mobile screens to expand or contract the immediate child menus for touch screens. It's best suited for header menu. */
+.hnav-regular {
   background-color: #ECF0F1;
+  border-bottom: 5px solid #3498DB;
+  position: relative;
 }
-.blog-posts-regular .banner {
-  width: 20%;
+.hnav-regular > li {
   display: inline-block;
-  text-align: center;
+  text-align: left;
+  background-color: #ECF0F1;
+  border-bottom: 5px solid #3498DB;
+  margin-bottom: -5px;
+  -moz-transition: all 250ms ease-in-out 0s;
+  -ms-transition: all 250ms ease-in-out 0s;
+  -o-transition: all 250ms ease-in-out 0s;
+  -webkit-transition: all 250ms ease-in-out 0s;
+  transition: all 250ms ease-in-out 0s;
 }
-.blog-posts-regular .post-content {
-  width: 80%;
+.hnav-regular > li > a {
+  color: #464646;
+  font-size: 1em;
+  line-height: 48px;
+  padding: 0 15px;
+  text-transform: uppercase;
+}
+.hnav-regular > li:hover > a {
+  background-color: #td;
+  color: #td;
+}
+.hnav-regular li a {
   display: inline-block;
+  text-decoration: none;
+  -moz-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+  -ms-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+  -o-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+  -webkit-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+  transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
 }
-.blog-posts-regular .post-content.full {
-  width: 100%;
-}
-.blog-posts-regular .post-content .header {
-  background-color: #256E9E;
-  padding: 0.25em;
-}
-.blog-posts-regular .post-content .header a {
-  color: #ECF0F1;
-}
-.blog-posts-regular .post-content .header a:hover {
+.hnav-regular li.active > a {
+  background-color: #3498DB;
   color: #3498DB;
 }
-.blog-posts-regular .post-content .summary {
-  padding: 1em;
+.hnav-regular li:hover .nav-sub {
+  display: block;
 }
-.blog-posts-regular .post-content .info {
+.hnav-regular .nav-sub {
+  display: none;
+  position: absolute;
+  top: 53px;
+  left: 0;
+  padding: 10px 2%;
+  width: 96%;
   background-color: #3498DB;
-  padding: 5px;
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
-.blog-posts-regular .post-content .info .author, .blog-posts-regular .post-content .info .time {
+.hnav-regular .nav-sub > li {
   display: inline-block;
+  float: none;
+  padding: 10px 1%;
+  vertical-align: top;
+  width: 22%;
 }
-.blog-posts-regular .post-content .info .author {
-  float: left;
-}
-.blog-posts-regular .post-content .info .author img {
-  width: 40px;
-  border: 5px solid #ECF0F1;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  -khtml-border-radius: 5px;
-}
-.blog-posts-regular .post-content .info .time {
-  float: right;
-  margin-top: 15px;
-}
-.blog-posts-regular .wrap-pagination {
-  margin: 10px 0;
-}
-.blog-posts-regular .wrap-pagination .info {
-  float: left;
-}
-.blog-posts-regular .wrap-pagination .pagination {
-  float: right;
-}
-.blog-posts-regular .wrap-pagination .pagination, .blog-posts-regular .wrap-pagination .pagination li {
-  display: inline-block;
-  list-style: none;
-}
-.blog-posts-regular .wrap-pagination .pagination li {
-  margin: 0 2px;
+.hnav-regular .nav-sub > li > a {
   font-size: 1em;
-  line-heigh: 1em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
-.blog-posts-regular .wrap-pagination .pagination .prev, .blog-posts-regular .wrap-pagination .pagination .next, .blog-posts-regular .wrap-pagination .pagination li a {
-  color: #ECF0F1;
+.hnav-regular .nav-sub > li a {
+  line-height: 20px;
+  color: #256E9E;
+}
+.hnav-regular .nav-sub > li li {
+  float: none;
+  padding-left: 5px;
+  -moz-transition: padding 250ms ease-out 0s;
+  -ms-transition: padding 250ms ease-out 0s;
+  -o-transition: padding 250ms ease-out 0s;
+  -webkit-transition: padding 250ms ease-out 0s;
+  transition: padding 250ms ease-out 0s;
+}
+.hnav-regular .nav-sub > li li:hover {
+  padding-left: 10px;
+}
+@media only screen and (max-width: 1024px) {
+  .hnav-regular li, .hnav-regular a {
+    width: 100%;
+  }
+  .hnav-regular .nav-sub {
+    position: relative;
+    top: 0px;
+  }
+  .hnav-regular .nav-sub li, .hnav-regular .nav-sub a {
+    width: 100%;
+  }
+}
+
+/* vnav-regular is n level vertical responsive menu and best suited for sidebar menu. */
+.vnav-regular {
+  border: 2px solid #3498DB;
+  position: relative;
+}
+.vnav-regular li {
+  text-align: left;
+  border-bottom: 1px solid #3498DB;
+  position: relative;
+  -moz-transition: all 250ms ease-in-out 0s;
+  -ms-transition: all 250ms ease-in-out 0s;
+  -o-transition: all 250ms ease-in-out 0s;
+  -webkit-transition: all 250ms ease-in-out 0s;
+  transition: all 250ms ease-in-out 0s;
+}
+.vnav-regular li .last {
+  border: none;
+}
+.vnav-regular a {
+  display: block;
+  background-color: #ECF0F1;
+  color: #464646;
+  font-size: 1em;
+  line-height: 35px;
+  width: 98%;
+  padding: 0 1%;
   text-decoration: none;
-  height: 1.6em;
-  background-color: #256E9E;
-  -moz-transition: all 250ms ease-in-out 0s;
-  -ms-transition: all 250ms ease-in-out 0s;
-  -o-transition: all 250ms ease-in-out 0s;
-  -webkit-transition: all 250ms ease-in-out 0s;
-  transition: all 250ms ease-in-out 0s;
+  -moz-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+  -ms-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+  -o-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+  -webkit-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
+  transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
 }
-.blog-posts-regular .wrap-pagination .pagination li a {
-  padding: 2px 8px;
+.vnav-regular li:hover > a {
+  background-color: #td;
+  color: #td;
 }
-.blog-posts-regular .wrap-pagination .pagination .disabled span, .blog-posts-regular .wrap-pagination .pagination .disabled span:hover {
-  background-color: #3498DB;
-  padding: 2px 8px;
-  height: 1.6em;
+.vnav-regular li:hover > .nav-sub {
+  display: block;
 }
-.blog-posts-regular .wrap-pagination .pagination .disabled span {
-  line-height: 1.6em;
+.vnav-regular .nav-sub {
+  display: none;
+  position: absolute;
+  top: -2px;
+  width: 250px;
+  margin-left: 100%;
+  border: 2px solid #3498DB;
 }
-.blog-posts-regular .wrap-pagination .pagination .active, .blog-posts-regular .wrap-pagination .pagination .active a, .blog-posts-regular .wrap-pagination .pagination li a:hover, .blog-posts-regular .wrap-pagination .pagination .next:hover, .blog-posts-regular .wrap-pagination .pagination .prev:hover {
-  background-color: #3498DB;
-  color: #ECF0F1;
-  -moz-transition: all 250ms ease-in-out 0s;
-  -ms-transition: all 250ms ease-in-out 0s;
-  -o-transition: all 250ms ease-in-out 0s;
-  -webkit-transition: all 250ms ease-in-out 0s;
-  transition: all 250ms ease-in-out 0s;
+@media only screen and (max-width: 1024px) {
+  .vnav-regular .nav-sub {
+    position: relative;
+    top: 0px;
+    margin-left: 0;
+    width: 100%;
+    border: none;
+  }
+  .vnav-regular .nav-sub a {
+    background-color: #3498DB;
+  }
 }
 
 .texture1 {
@@ -4390,6 +4457,19 @@ input[type="submit"], input[type="button"], button, select, .btn {
   -webkit-transition: all 250ms ease-in-out 0s;
   transition: all 250ms ease-in-out 0s;
 }
+.blog #sidebar .wrap-sidebar-posts .sidebar-post .sidebar-media {
+  text-align: center;
+}
+
+#template-blog .post {
+  width: 50%;
+  float: left;
+  border: 0px;
+  margin: 2% 0;
+}
+#template-blog .post .sidebar {
+  display: none;
+}
 
 @media only screen and (max-width: 1024px) {
   .blog .wrap-posts .post .sidebar {
@@ -4495,6 +4575,31 @@ input[type="submit"], input[type="button"], button, select, .btn {
   .nav-settings li a {
     width: 100%;
   }
+}
+
+.popout-header {
+  position: absolute;
+  width: 98%;
+  background-color: #td;
+  padding: 1%;
+}
+.popout-header a, .popout-header .warning {
+  color: #td;
+}
+@media only screen and (min-width: 481px) {
+  .popout-header {
+    right: 0;
+    width: 250px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .popout-header {
+    right: 10%;
+  }
+}
+
+#wrap-login-register, #box-signup, #box-settings {
+  display: none;
 }
 
 .pagination {

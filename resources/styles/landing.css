@@ -4457,6 +4457,19 @@ input[type="submit"], input[type="button"], button, select, .btn {
   -webkit-transition: all 250ms ease-in-out 0s;
   transition: all 250ms ease-in-out 0s;
 }
+.blog #sidebar .wrap-sidebar-posts .sidebar-post .sidebar-media {
+  text-align: center;
+}
+
+#template-blog .post {
+  width: 50%;
+  float: left;
+  border: 0px;
+  margin: 2% 0;
+}
+#template-blog .post .sidebar {
+  display: none;
+}
 
 @media only screen and (max-width: 1024px) {
   .blog .wrap-posts .post .sidebar {

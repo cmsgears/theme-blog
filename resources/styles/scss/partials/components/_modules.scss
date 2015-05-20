@@ -243,9 +243,27 @@
                         @include transit-all( $transit-eio, $transit-time-small, $delay: 0s );
                     } 
                 } 
+                
+                .sidebar-media {
+                    text-align: center;
+                }
             }
         }       
     }
+}
+
+#template-blog {
+  
+    .post {
+        width: 50%; 
+        float: left;
+        border: 0px;
+        margin: 2% 0; 
+        
+        .sidebar {
+          display: none;
+        }
+    } 
 }
 
 @include responsive-max( screen-tablet-large ) {

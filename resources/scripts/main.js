@@ -2,10 +2,7 @@ jQuery(document).ready( function() {
 
 	initLanding(); 
 
-	initListeners();
-	
-	initAutoHeight();
-	
+	initListeners(); 
 	initGridView();	 
 	initListView();
 	
@@ -15,7 +12,7 @@ jQuery(document).ready( function() {
 		
 		jQuery(this).toggleClass("hover");
 	} ); 
-	
+	initAutoHeight();
 });
 
 function initGridView() {

@@ -19,7 +19,7 @@ $this->params['meta']	= "cmsgears, template, basic, theme";
 				<div class="colf12x8"><h1 class="title-large"> Recent Posts </h1></div>
 				<div class="colf12x4 align-right"><a class="switch-view fa fa-th icon-grid" title="Grid View"></a></div>
 			</div>	
-			<div class="wrap-posts" class="clearfix">
+			<div class="wrap-posts clearfix">
 				<div class="post row clearfix">
 					<div class="colf12x3 sidebar">
 						<div class="date">
@@ -85,47 +85,7 @@ $this->params['meta']	= "cmsgears, template, basic, theme";
 					</div>
 					<div class="colf12x3"></div>
 					<div class="colf12x9"><h2 class="title-medium"> Post Title Goes Here </h2></div>
-				</div>
-				<!-- Pagination ----------------------- -->				
-				<div class="pagination">
-					<ul>
-						<li><a class="fa fa-angle-double-left"></a></li>
-						<li><a class="fa fa-angle-left"></a></li>
-						<li><a>1</a></li>
-						<li><a class="active">2</a></li>
-						<li><a>3</a></li>
-						<li><a>4</a></li>
-						<li><a>5</a></li> 
-						<li><a class="fa fa-angle-right"></a></li>
-						<li><a class="fa fa-angle-double-right"></a></li>
-					</ul>	
-				</div>	
-				
-				<!-- Tag Cloud -->	
-				<div class="pagination tag">
-					<h1 class="title-medium"> Tag Cloud </h1>
-					<ul> 
-						<li><a>ajax</a></li>
-						<li><a>java</a></li>
-						<li><a>php</a></li>
-						<li><a>c#</a></li>
-						<li><a>c++</a></li>  
-						<li><a>ruby</a></li>
-						<li><a>rails</a></li>
-						<li><a class="active">yii</a></li>
-						<li><a>sass</a></li>
-						<li><a>html5</a></li>   
-						<li><a>c#</a></li>
-						<li><a>swift</a></li>  
-						<li><a>ruby</a></li>
-						<li><a>visual basic</a></li>
-						<li><a>ajax</a></li>
-						<li><a>fox pro</a></li>
-						<li><a>php</a></li>
-						<li><a>c#</a></li>
-						<li><a>c++</a></li>    
-					</ul>	
-				</div> 
+				</div>				
 			</div>	
 		</div>
 		

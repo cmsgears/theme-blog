@@ -23,10 +23,11 @@
 @import "cmt-partials/core/reset";
 @import "cmt-partials/core/basic";
 @import "cmt-partials/core/typography";
+@import "partials/core/typography";
 @import "cmt-partials/core/containers";
 @import "cmt-partials/elements/forms";
 @import "cmt-partials/components/modules";
-@import "cmt-partials/components/blog";
+@import "cmt-partials/components/menus";
 
 // Theme - Basic
 @import "partials/core/basic";
@@ -36,5 +37,6 @@
 @import "partials/components/footers";
 @import "partials/components/modules";
 @import "partials/components/navs";
+@import "partials/components/popouts";
 @import "partials/components/pagination";
 @import "partials/components/tag";
