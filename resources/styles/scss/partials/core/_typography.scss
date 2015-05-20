@@ -1,8 +1,8 @@
-.title-large, .title-medium, .title-small {
+.title-large, .title-medium, .title-small, .title-large a, .title-medium a, .title-small a {
   color: $color-secondary-text-d;
   font-family: aller-regular;
 } 
  
-.title-medium {
+.title-medium, .title-medium a {
   font-size: $font-size-7;
 } 

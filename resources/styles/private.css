@@ -4595,20 +4595,21 @@ input[type="submit"], input[type="button"], button, select, .btn {
   display: none;
 }
 
-.pagination {
+.wrap-pagination .info {
+  display: none;
+}
+.wrap-pagination .pagination {
   float: left;
   width: 100%;
   border-bottom: 1px solid #3498DB;
   padding: 2em 0;
-}
-.pagination ul {
   text-align: right;
 }
-.pagination ul li {
+.wrap-pagination .pagination li {
   display: inline-block;
   margin: 0.3em;
 }
-.pagination ul li a {
+.wrap-pagination .pagination li a, .wrap-pagination .pagination li span {
   border: 1px solid #256E9E;
   font-size: 0.75em;
   display: block;
@@ -4624,30 +4625,35 @@ input[type="submit"], input[type="button"], button, select, .btn {
   -webkit-transition: all 250ms ease-in-out 0s;
   transition: all 250ms ease-in-out 0s;
 }
-.pagination ul li a:hover, .pagination ul li a.active {
+.wrap-pagination .pagination li:hover a, .wrap-pagination .pagination li.active a {
   background: #256E9E;
   color: #FFFFFF;
 }
-.pagination ul li a:not(.fa) {
+.wrap-pagination .pagination li:not(.fa) {
   font-family: aller-regular;
+}
+.wrap-pagination .pagination li.prev.disabled span, .wrap-pagination .pagination li.next.disabled span {
+  border-color: silver;
+  color: silver;
 }
 
 /* Need to add 2 classes to the parent div 1 .pagination, 2 .tag */
-.tag {
+.wrap-pagination .tag {
   border-bottom: 0;
   box-shadow: 1px 1px 6px silver;
   margin: 2em 0;
   padding: 1em;
 }
-.tag .title-medium {
+.wrap-pagination .tag .title-medium {
   margin: 1em 0;
   border-bottom: 1px solid #3498DB;
   padding-bottom: 1em;
-}
-.tag ul {
   text-align: left;
 }
-.tag ul li a {
+.wrap-pagination .tag ul {
+  text-align: left;
+}
+.wrap-pagination .tag ul li a {
   border: 1px solid #3498DB;
   padding: 0 0.5em;
   -moz-transition: all 250ms ease-in-out 0s;
@@ -4656,7 +4662,7 @@ input[type="submit"], input[type="button"], button, select, .btn {
   -webkit-transition: all 250ms ease-in-out 0s;
   transition: all 250ms ease-in-out 0s;
 }
-.tag ul li a:hover, .tag ul li a.active {
+.wrap-pagination .tag ul li a:hover, .wrap-pagination .tag ul li a.active {
   background: #3498DB;
   color: #FFFFFF;
 }

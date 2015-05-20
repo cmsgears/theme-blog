@@ -1,37 +1,51 @@
-.pagination {  
-    float: left;
-    width: 100%;
-    border-bottom: 1px solid $color-secondary;
-    padding: 2em 0;
-    
-    ul {        
-          text-align: right;
-      
-          li {            
-              display: inline-block;
-              margin: 0.3em;
-              
-              a { 
-                    border: 1px solid $color-secondary-d;
-                    font-size: $font-size-8;                    
-                    display: block;                     
-                    min-height: 2em;
-                    line-height: 2em;                     
-                    text-align: center;
-                    min-width: 3.5em; 
-                    color: $color-secondary-text-d;
-                    background: $color-primary-l;
-                    @include transit-all( $transit-eio, $transit-time-small, $delay: 0s );
-                    
-                    &:hover, &.active {                      
-                          background: $color-secondary-d;
-                          color: $color-secondary-text-l;
-                    }
-                    
-                    &:not(.fa) {                      
-                        font-family: aller-regular;
-                    }
-              }
-          }
+.wrap-pagination {
+  
+    .info {
+        display: none;
     }
-}
+
+    .pagination {  
+        float: left;
+        width: 100%;
+        border-bottom: 1px solid $color-secondary;
+        padding: 2em 0; 
+        text-align: right;
+    
+        li {            
+            display: inline-block;
+            margin: 0.3em;
+            
+            a, span { 
+                  border: 1px solid $color-secondary-d;
+                  font-size: $font-size-8;                    
+                  display: block;                     
+                  min-height: 2em;
+                  line-height: 2em;                     
+                  text-align: center;
+                  min-width: 3.5em; 
+                  color: $color-secondary-text-d;
+                  background: $color-primary-l;
+                  @include transit-all( $transit-eio, $transit-time-small, $delay: 0s );
+                   
+            }
+            
+            &:hover, &.active {  
+              
+                  a {                    
+                      background: $color-secondary-d;
+                      color: $color-secondary-text-l;
+                  }
+            }
+            
+            &:not(.fa) {                      
+                font-family: aller-regular;
+            }
+            
+            &.prev.disabled span, &.next.disabled span {
+                border-color: silver;
+                color: silver;
+            }
+        }
+    
+    }
+}    

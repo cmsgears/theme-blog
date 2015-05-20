@@ -20,8 +20,7 @@ class AssetLoaderLanding extends AssetBundle {
 
 		// Load CSS
 	    $this->css     = [
-			"styles/landing.css",
-			"styles/vendor/animate.min.css"
+			"styles/landing.css"
 	    ];
 
 		// Load Javascript

@@ -30,6 +30,7 @@ function initGridView() {
 		jQuery(this).addClass("icon-list");
 		jQuery(this).one('bind',initAutoHeight());
 		initListView();		
+		initAutoHeight();
 	} );
 }
 
@@ -47,7 +48,8 @@ function initListView() {
 		jQuery(this).removeClass("icon-list");
 		jQuery(this).addClass("icon-grid");
 		jQuery(this).one('bind',initAutoHeight());
-		initGridView(); 
+		initGridView();
+		initAutoHeight(); 
 	} );
 }
 
@@ -91,7 +93,7 @@ function initAutoHeight() {
 	
 	jQuery(".wrap-posts").css("min-height",jQuery(".post").height());
 	
-	jQuery(".sidebar").height( jQuery(".media").height() );
+	jQuery(".sidebar").height( jQuery(".media").height()-53 );
 	
 	jQuery(".post .hover-content").width( jQuery(".media").width() ); 
 	

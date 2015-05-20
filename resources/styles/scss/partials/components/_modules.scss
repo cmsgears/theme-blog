@@ -219,7 +219,7 @@
             padding: 1em;
             background: white;
           
-            .title-medium {
+            .title-medium a, .title-medium {
                 border-bottom: 1px solid $color-secondary;
                 padding-bottom: 1em;
             }
@@ -307,5 +307,12 @@
   
     .icon-grid, .icon-list {
           display: none;
+    }
+}
+
+@include responsive-max( screen-mobile-large ) {
+  
+    .post {
+          width: 100% !important;
     }
 }

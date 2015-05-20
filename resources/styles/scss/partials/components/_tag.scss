@@ -1,31 +1,35 @@
 /* Need to add 2 classes to the parent div 1 .pagination, 2 .tag */
 
-.tag {
-    border-bottom: 0;
-    box-shadow: 1px 1px 6px silver;
-    margin: 2em 0;
-    padding: 1em;
-    
-    .title-medium {
-        margin: 1em 0;
-        border-bottom: 1px solid $color-secondary;
-        padding-bottom: 1em;
-    }
-      
-    ul {         
-        text-align: left;
+.wrap-pagination {
+  
+    .tag {
+        border-bottom: 0;
+        box-shadow: 1px 1px 6px silver;
+        margin: 2em 0;
+        padding: 1em; 
         
-        li {               
+        .title-medium {
+            margin: 1em 0;
+            border-bottom: 1px solid $color-secondary;
+            padding-bottom: 1em;
+            text-align: left;
+        }
+          
+        ul {         
+            text-align: left;
             
-            a {
-                border: 1px solid $color-secondary;
-                padding: 0 0.5em;
-                @include transit-all( $transit-eio, $transit-time-small, $delay: 0s );
-                    
-                    &:hover, &.active {                      
-                          background: $color-secondary;
-                          color: $color-secondary-text-l;
-                    }
+            li {               
+                
+                a {
+                    border: 1px solid $color-secondary;
+                    padding: 0 0.5em;
+                    @include transit-all( $transit-eio, $transit-time-small, $delay: 0s );
+                        
+                        &:hover, &.active {                      
+                              background: $color-secondary;
+                              color: $color-secondary-text-l;
+                        }
+                }
             }
         }
     }
