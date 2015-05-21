@@ -110,6 +110,12 @@ $this->params['meta']	= "cmsgears, template, basic, theme";
 			<div class="wrap-sidebar-posts">
 				<h1 class="title-medium"> Blog Archive </h1> 			
 			</div>	
+				<div class="wrap-sidebar-posts">
+				<h1 class="title-medium"> Follow By Email </h1> 			
+			</div>
+			<div class="wrap-sidebar-posts">
+				<h1 class="title-medium"> Tag Cloud </h1> 			
+			</div>
 		</div>
 	</div>
 	 

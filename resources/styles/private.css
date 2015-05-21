@@ -4299,6 +4299,10 @@ input[type="text"].xlarge, input[type="email"].xlarge, input[type="password"].xl
   background-image: url(../images/texture1.png);
 }
 
+table {
+  width: 100%;
+}
+
 html, body {
   width: 100%;
   height: 100%;

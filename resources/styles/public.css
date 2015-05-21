@@ -4037,6 +4037,10 @@ Dependencies: variables, variables-ext, mixins
   background-image: url(../images/texture1.png);
 }
 
+table {
+  width: 100%;
+}
+
 html, body {
   width: 100%;
   height: 100%;
@@ -4300,6 +4304,31 @@ input[type="submit"], input[type="button"], button, select, .btn {
   background: white;
   margin: 2% 0;
 }
+.blog .wrap-posts.post-single img {
+  width: 100%;
+}
+.blog .wrap-posts.post-single .content {
+  color: #464646;
+  font-family: amble-light;
+  margin: 2em 0;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+.blog .wrap-posts.post-single .post-data {
+  position: relative;
+  width: 100%;
+  margin: 1em 0;
+  color: #256E9E;
+}
+.blog .wrap-posts.post-single .post-data .date {
+  float: left;
+  font-family: amble-regular;
+  font-size: 1.25em;
+}
+.blog .wrap-posts.post-single .post-data .comment {
+  float: right;
+  font-size: 1.25em;
+}
 .blog .wrap-posts .post {
   border-bottom: 1px solid #3498DB;
   margin: 5% 0;
@@ -4407,16 +4436,16 @@ input[type="submit"], input[type="button"], button, select, .btn {
 .blog .wrap-posts .media .hover-content .btn:hover {
   background: #d62c1a;
 }
-.blog #sidebar form {
+.blog #sidebar form, .blog #wrap-comment form {
   margin: 1em 0 0.6em;
 }
-.blog #sidebar form input[type="text"] {
+.blog #sidebar form input[type="text"], .blog #wrap-comment form input[type="text"] {
   background: #FFFFFF;
 }
-.blog #sidebar form .button {
+.blog #sidebar form .button, .blog #wrap-comment form .button {
   width: 15%;
 }
-.blog #sidebar form .button button {
+.blog #sidebar form .button button, .blog #wrap-comment form .button button {
   background: #3498DB;
   color: #FFFFFF;
   -moz-transition: all 250ms ease-in-out 0s;
@@ -4425,28 +4454,61 @@ input[type="submit"], input[type="button"], button, select, .btn {
   -webkit-transition: all 250ms ease-in-out 0s;
   transition: all 250ms ease-in-out 0s;
 }
-.blog #sidebar form .button button:hover {
+.blog #sidebar form .button button:hover, .blog #wrap-comment form .button button:hover {
   background: #217dbb;
 }
-.blog #sidebar .wrap-sidebar-posts {
+.blog #sidebar #frm-comment, .blog #wrap-comment #frm-comment {
+  box-shadow: 1px 1px 3px #C0C0C0;
+  min-height: 30px;
+  padding: 1em;
+}
+.blog #sidebar #frm-comment .title-medium, .blog #wrap-comment #frm-comment .title-medium {
+  border-bottom: 1px solid #3498DB;
+  padding-bottom: 1em;
+}
+.blog #sidebar #frm-comment form input, .blog #wrap-comment #frm-comment form input {
+  background: #F5F5F5;
+}
+.blog #sidebar #frm-comment form input[type='submit'], .blog #wrap-comment #frm-comment form input[type='submit'] {
+  background: #E74C3C;
+  color: #FFFFFFF;
+  font-family: aller-regular;
+}
+.blog #sidebar #frm-comment form input[type='submit']:hover, .blog #wrap-comment #frm-comment form input[type='submit']:hover {
+  background: #d62c1a;
+}
+.blog #sidebar .wrap-sidebar-posts, .blog #sidebar .wrap-comments, .blog #wrap-comment .wrap-sidebar-posts, .blog #wrap-comment .wrap-comments {
   margin: 0 0 1em 0;
   min-height: 10px;
   padding: 1em;
   background: white;
 }
-.blog #sidebar .wrap-sidebar-posts .title-medium a, .blog #sidebar .wrap-sidebar-posts .title-medium {
+.blog #sidebar .wrap-sidebar-posts .title-medium a, .blog #sidebar .wrap-sidebar-posts .title-medium, .blog #sidebar .wrap-comments .title-medium a, .blog #sidebar .wrap-comments .title-medium, .blog #wrap-comment .wrap-sidebar-posts .title-medium a, .blog #wrap-comment .wrap-sidebar-posts .title-medium, .blog #wrap-comment .wrap-comments .title-medium a, .blog #wrap-comment .wrap-comments .title-medium {
   border-bottom: 1px solid #3498DB;
   padding-bottom: 1em;
 }
-.blog #sidebar .wrap-sidebar-posts .sidebar-post {
+.blog #sidebar .wrap-sidebar-posts .sidebar-post, .blog #sidebar .wrap-sidebar-posts .comment, .blog #sidebar .wrap-comments .sidebar-post, .blog #sidebar .wrap-comments .comment, .blog #wrap-comment .wrap-sidebar-posts .sidebar-post, .blog #wrap-comment .wrap-sidebar-posts .comment, .blog #wrap-comment .wrap-comments .sidebar-post, .blog #wrap-comment .wrap-comments .comment {
   padding: 1em 0;
   display: block;
   border-bottom: 1px solid silver;
 }
-.blog #sidebar .wrap-sidebar-posts .sidebar-post:hover .content p {
+.blog #sidebar .wrap-sidebar-posts .sidebar-post.comment, .blog #sidebar .wrap-sidebar-posts .comment.comment, .blog #sidebar .wrap-comments .sidebar-post.comment, .blog #sidebar .wrap-comments .comment.comment, .blog #wrap-comment .wrap-sidebar-posts .sidebar-post.comment, .blog #wrap-comment .wrap-sidebar-posts .comment.comment, .blog #wrap-comment .wrap-comments .sidebar-post.comment, .blog #wrap-comment .wrap-comments .comment.comment {
+  border-color: #3498DB;
+}
+.blog #sidebar .wrap-sidebar-posts .sidebar-post.comment .media, .blog #sidebar .wrap-sidebar-posts .comment.comment .media, .blog #sidebar .wrap-comments .sidebar-post.comment .media, .blog #sidebar .wrap-comments .comment.comment .media, .blog #wrap-comment .wrap-sidebar-posts .sidebar-post.comment .media, .blog #wrap-comment .wrap-sidebar-posts .comment.comment .media, .blog #wrap-comment .wrap-comments .sidebar-post.comment .media, .blog #wrap-comment .wrap-comments .comment.comment .media {
+  background: snow;
+  font-size: 4em;
+}
+.blog #sidebar .wrap-sidebar-posts .sidebar-post:hover .content p, .blog #sidebar .wrap-sidebar-posts .comment:hover .content p, .blog #sidebar .wrap-comments .sidebar-post:hover .content p, .blog #sidebar .wrap-comments .comment:hover .content p, .blog #wrap-comment .wrap-sidebar-posts .sidebar-post:hover .content p, .blog #wrap-comment .wrap-sidebar-posts .comment:hover .content p, .blog #wrap-comment .wrap-comments .sidebar-post:hover .content p, .blog #wrap-comment .wrap-comments .comment:hover .content p {
   color: #256E9E;
 }
-.blog #sidebar .wrap-sidebar-posts .sidebar-post .content p {
+.blog #sidebar .wrap-sidebar-posts .sidebar-post.comment:hover .content p, .blog #sidebar .wrap-sidebar-posts .comment.comment:hover .content p, .blog #sidebar .wrap-comments .sidebar-post.comment:hover .content p, .blog #sidebar .wrap-comments .comment.comment:hover .content p, .blog #wrap-comment .wrap-sidebar-posts .sidebar-post.comment:hover .content p, .blog #wrap-comment .wrap-sidebar-posts .comment.comment:hover .content p, .blog #wrap-comment .wrap-comments .sidebar-post.comment:hover .content p, .blog #wrap-comment .wrap-comments .comment.comment:hover .content p {
+  color: #464646;
+}
+.blog #sidebar .wrap-sidebar-posts .sidebar-post .content, .blog #sidebar .wrap-sidebar-posts .comment .content, .blog #sidebar .wrap-comments .sidebar-post .content, .blog #sidebar .wrap-comments .comment .content, .blog #wrap-comment .wrap-sidebar-posts .sidebar-post .content, .blog #wrap-comment .wrap-sidebar-posts .comment .content, .blog #wrap-comment .wrap-comments .sidebar-post .content, .blog #wrap-comment .wrap-comments .comment .content {
+  position: relative;
+}
+.blog #sidebar .wrap-sidebar-posts .sidebar-post .content p, .blog #sidebar .wrap-sidebar-posts .sidebar-post .content .comment-user, .blog #sidebar .wrap-sidebar-posts .sidebar-post .content .comment-date, .blog #sidebar .wrap-sidebar-posts .comment .content p, .blog #sidebar .wrap-sidebar-posts .comment .content .comment-user, .blog #sidebar .wrap-sidebar-posts .comment .content .comment-date, .blog #sidebar .wrap-comments .sidebar-post .content p, .blog #sidebar .wrap-comments .sidebar-post .content .comment-user, .blog #sidebar .wrap-comments .sidebar-post .content .comment-date, .blog #sidebar .wrap-comments .comment .content p, .blog #sidebar .wrap-comments .comment .content .comment-user, .blog #sidebar .wrap-comments .comment .content .comment-date, .blog #wrap-comment .wrap-sidebar-posts .sidebar-post .content p, .blog #wrap-comment .wrap-sidebar-posts .sidebar-post .content .comment-user, .blog #wrap-comment .wrap-sidebar-posts .sidebar-post .content .comment-date, .blog #wrap-comment .wrap-sidebar-posts .comment .content p, .blog #wrap-comment .wrap-sidebar-posts .comment .content .comment-user, .blog #wrap-comment .wrap-sidebar-posts .comment .content .comment-date, .blog #wrap-comment .wrap-comments .sidebar-post .content p, .blog #wrap-comment .wrap-comments .sidebar-post .content .comment-user, .blog #wrap-comment .wrap-comments .sidebar-post .content .comment-date, .blog #wrap-comment .wrap-comments .comment .content p, .blog #wrap-comment .wrap-comments .comment .content .comment-user, .blog #wrap-comment .wrap-comments .comment .content .comment-date {
   color: #464646;
   font-family: amble-light;
   font-size: 0.75em;
@@ -4457,7 +4519,18 @@ input[type="submit"], input[type="button"], button, select, .btn {
   -webkit-transition: all 250ms ease-in-out 0s;
   transition: all 250ms ease-in-out 0s;
 }
-.blog #sidebar .wrap-sidebar-posts .sidebar-post .sidebar-media {
+.blog #sidebar .wrap-sidebar-posts .sidebar-post .content .comment-user, .blog #sidebar .wrap-sidebar-posts .sidebar-post .content .comment-date, .blog #sidebar .wrap-sidebar-posts .comment .content .comment-user, .blog #sidebar .wrap-sidebar-posts .comment .content .comment-date, .blog #sidebar .wrap-comments .sidebar-post .content .comment-user, .blog #sidebar .wrap-comments .sidebar-post .content .comment-date, .blog #sidebar .wrap-comments .comment .content .comment-user, .blog #sidebar .wrap-comments .comment .content .comment-date, .blog #wrap-comment .wrap-sidebar-posts .sidebar-post .content .comment-user, .blog #wrap-comment .wrap-sidebar-posts .sidebar-post .content .comment-date, .blog #wrap-comment .wrap-sidebar-posts .comment .content .comment-user, .blog #wrap-comment .wrap-sidebar-posts .comment .content .comment-date, .blog #wrap-comment .wrap-comments .sidebar-post .content .comment-user, .blog #wrap-comment .wrap-comments .sidebar-post .content .comment-date, .blog #wrap-comment .wrap-comments .comment .content .comment-user, .blog #wrap-comment .wrap-comments .comment .content .comment-date {
+  float: left;
+  color: #256E9E;
+}
+.blog #sidebar .wrap-sidebar-posts .sidebar-post .content .comment-date, .blog #sidebar .wrap-sidebar-posts .comment .content .comment-date, .blog #sidebar .wrap-comments .sidebar-post .content .comment-date, .blog #sidebar .wrap-comments .comment .content .comment-date, .blog #wrap-comment .wrap-sidebar-posts .sidebar-post .content .comment-date, .blog #wrap-comment .wrap-sidebar-posts .comment .content .comment-date, .blog #wrap-comment .wrap-comments .sidebar-post .content .comment-date, .blog #wrap-comment .wrap-comments .comment .content .comment-date {
+  float: right;
+}
+.blog #sidebar .wrap-sidebar-posts .sidebar-post .content .comment-content, .blog #sidebar .wrap-sidebar-posts .comment .content .comment-content, .blog #sidebar .wrap-comments .sidebar-post .content .comment-content, .blog #sidebar .wrap-comments .comment .content .comment-content, .blog #wrap-comment .wrap-sidebar-posts .sidebar-post .content .comment-content, .blog #wrap-comment .wrap-sidebar-posts .comment .content .comment-content, .blog #wrap-comment .wrap-comments .sidebar-post .content .comment-content, .blog #wrap-comment .wrap-comments .comment .content .comment-content {
+  float: left;
+  width: 100%;
+}
+.blog #sidebar .wrap-sidebar-posts .sidebar-post .sidebar-media, .blog #sidebar .wrap-sidebar-posts .sidebar-post .media, .blog #sidebar .wrap-sidebar-posts .comment .sidebar-media, .blog #sidebar .wrap-sidebar-posts .comment .media, .blog #sidebar .wrap-comments .sidebar-post .sidebar-media, .blog #sidebar .wrap-comments .sidebar-post .media, .blog #sidebar .wrap-comments .comment .sidebar-media, .blog #sidebar .wrap-comments .comment .media, .blog #wrap-comment .wrap-sidebar-posts .sidebar-post .sidebar-media, .blog #wrap-comment .wrap-sidebar-posts .sidebar-post .media, .blog #wrap-comment .wrap-sidebar-posts .comment .sidebar-media, .blog #wrap-comment .wrap-sidebar-posts .comment .media, .blog #wrap-comment .wrap-comments .sidebar-post .sidebar-media, .blog #wrap-comment .wrap-comments .sidebar-post .media, .blog #wrap-comment .wrap-comments .comment .sidebar-media, .blog #wrap-comment .wrap-comments .comment .media {
   text-align: center;
 }
 
@@ -4503,6 +4576,12 @@ input[type="submit"], input[type="button"], button, select, .btn {
 @media only screen and (max-width: 480px) {
   .post {
     width: 100% !important;
+  }
+
+  .post-data .comment {
+    clear: left;
+    float: left !important;
+    margin: 1em 0;
   }
 }
 .nav-main {

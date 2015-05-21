@@ -79,6 +79,39 @@
         background: white;
         margin: 2% 0;
         
+        &.post-single {
+          
+            img {
+                width: 100%;
+            }
+            
+            .content {
+                color: $color-primary-text;
+                font-family: amble-light;
+                margin: 2em 0;
+                font-size: $font-size-7;
+                line-height: 1.5em;
+            }
+            
+            .post-data {
+                position: relative;
+                width: 100%;
+                margin: 1em 0;
+                color: $color-secondary-text-d;
+                
+                .date {
+                    float: left;
+                    font-family: amble-regular;
+                    font-size: $font-size-6;
+                }
+                
+                .comment {
+                    float: right;
+                    font-size: $font-size-6;
+                }
+            }
+        }
+        
         .post {            
             border-bottom: 1px solid $color-secondary;
             margin: 5% 0;
@@ -189,7 +222,7 @@
         }
     }
     
-    #sidebar {
+    #sidebar, #wrap-comment {
       
         form {          
             margin: 1em 0 0.6em;
@@ -213,7 +246,34 @@
             }
         } 
         
-        .wrap-sidebar-posts {
+         #frm-comment {
+              box-shadow: 1px 1px 3px #C0C0C0;
+              min-height: 30px;
+              padding: 1em;
+              
+              .title-medium {
+                  border-bottom: 1px solid $color-secondary;
+                  padding-bottom: 1em;
+              }
+              
+              form {
+                  input {
+                      background: $color-field;
+                  }
+                  
+                  input[type='submit'] {
+                      background: $color-button;
+                      color: $color-button-h-text;
+                      font-family: aller-regular;
+                      
+                      &:hover {
+                        background: darken( $color-button, 10% );
+                      }
+                  }
+              }
+          }
+        
+        .wrap-sidebar-posts, .wrap-comments {
             margin: 0 0 1em 0;
             min-height: 10px;
             padding: 1em;
@@ -223,28 +283,57 @@
                 border-bottom: 1px solid $color-secondary;
                 padding-bottom: 1em;
             }
-            
-            .sidebar-post {
+             
+            .sidebar-post, .comment {
                 padding: 1em 0;
                 display: block;
                 border-bottom: 1px solid silver;
+                
+                &.comment {
+                  
+                    border-color: $color-secondary;
+                    
+                    .media {
+                         background: snow;
+                         font-size: 4em;
+                    } 
+                }
                 
                 &:hover .content p {
                     color: $color-secondary-text-d;
                 }
                 
+                &.comment:hover .content p {
+                  color: $color-primary-text;
+                }
+                
                 .content {
-                  
-                    p {
+                    position: relative;
+                    
+                    p, .comment-user, .comment-date {
                         color: $color-primary-text;
                         font-family: amble-light;
                         font-size: $font-size-8;
                         line-height: 1.5em;
                         @include transit-all( $transit-eio, $transit-time-small, $delay: 0s );
                     } 
+                    
+                    .comment-user, .comment-date {
+                        float: left;
+                        color: $color-secondary-text-d;
+                    }
+                    
+                    .comment-date {
+                        float: right;
+                    }
+                    
+                    .comment-content {
+                      float: left;
+                      width: 100%;
+                    }
                 } 
                 
-                .sidebar-media {
+                .sidebar-media, .media {
                     text-align: center;
                 }
             }
@@ -314,5 +403,14 @@
   
     .post {
           width: 100% !important;
+    }
+    
+    .post-data { 
+      
+        .comment {
+            clear: left;
+            float: left !important; 
+            margin: 1em 0;
+        }
     }
 }
