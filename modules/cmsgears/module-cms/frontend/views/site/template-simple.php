@@ -1,7 +1,8 @@
 <?php
 use yii\captcha\Captcha; 
-use yii\helpers\Html;
-use widgets\Post;
+use yii\helpers\Html; 
+use widgets\EmailFollow;
+use widgets\SocialShare;
 
 $coreProperties 		= $this->context->getCoreProperties();
 $this->title 			= $coreProperties->getSiteTitle().' | '.$page->name;
@@ -102,7 +103,12 @@ $this->params['meta']	= "cmsgears, template, basic, theme";
 				<h1 class="title-medium"> Blog Archive </h1> 			
 			</div>	
 			<div class="wrap-sidebar-posts">
-				<h1 class="title-medium"> Follow By Email </h1> 			
+				<h1 class="title-medium"> Follow By Email </h1> 
+				<?php
+				    echo EmailFollow::widget([
+				        'options' => [ 'action' => '', 'frmClass' => '', 'placeholder' => 'Email ...', 'submitValue' => 'SUBSCRIBE', 'btnClass' => '' ]
+				    ]);
+				?> 	
 			</div>
 			<div class="wrap-sidebar-posts">
 				<h1 class="title-medium"> Tag Cloud </h1> 			

@@ -4671,4 +4671,31 @@ input[type="submit"], input[type="button"], button, select, .btn {
   color: #FFFFFF;
 }
 
+/* Widget - Follow Email ========================== */
+.widget-follow-email form input[type='text'] {
+  background: #F5F5F5 !important;
+  color: #3F3F46;
+}
+.widget-follow-email form input[type='submit'] {
+  font-family: aller-regular;
+}
+
+/* Widget - Social Share ========================== */
+.widget-social-share li {
+  display: inline-block;
+}
+.widget-social-share li a {
+  background: #3498DB;
+  color: white;
+  padding: 1em;
+  -moz-transition: all 250ms ease-in-out 0s;
+  -ms-transition: all 250ms ease-in-out 0s;
+  -o-transition: all 250ms ease-in-out 0s;
+  -webkit-transition: all 250ms ease-in-out 0s;
+  transition: all 250ms ease-in-out 0s;
+}
+.widget-social-share li a:hover {
+  background: #217dbb;
+}
+
 /*# sourceMappingURL=private.css.map */
