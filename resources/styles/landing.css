@@ -4729,22 +4729,24 @@ input[type="submit"], input[type="button"], button, select, .btn {
 }
 
 /* Need to add 2 classes to the parent div 1 .pagination, 2 .tag */
-.wrap-pagination .tag {
+.tag {
   border-bottom: 0;
-  box-shadow: 1px 1px 6px silver;
   margin: 2em 0;
-  padding: 1em;
 }
-.wrap-pagination .tag .title-medium {
+.tag .title-medium {
   margin: 1em 0;
   border-bottom: 1px solid #3498DB;
   padding-bottom: 1em;
   text-align: left;
 }
-.wrap-pagination .tag ul {
+.tag ul {
   text-align: left;
 }
-.wrap-pagination .tag ul li a {
+.tag ul li {
+  display: inline-block;
+  margin: 0.3em;
+}
+.tag ul li a {
   border: 1px solid #3498DB;
   padding: 0 0.5em;
   -moz-transition: all 250ms ease-in-out 0s;
@@ -4753,7 +4755,7 @@ input[type="submit"], input[type="button"], button, select, .btn {
   -webkit-transition: all 250ms ease-in-out 0s;
   transition: all 250ms ease-in-out 0s;
 }
-.wrap-pagination .tag ul li a:hover, .wrap-pagination .tag ul li a.active {
+.tag ul li a:hover, .tag ul li a.active {
   background: #3498DB;
   color: #FFFFFF;
 }

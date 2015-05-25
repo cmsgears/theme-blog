@@ -3,6 +3,7 @@ use yii\captcha\Captcha;
 use yii\helpers\Html; 
 use widgets\EmailFollow;
 use widgets\SocialShare;
+use widgets\Tag;
 
 $coreProperties 		= $this->context->getCoreProperties();
 $this->title 			= $coreProperties->getSiteTitle().' | '.$page->name;
@@ -110,8 +111,15 @@ $this->params['meta']	= "cmsgears, template, basic, theme";
 				    ]);
 				?> 	
 			</div>
-			<div class="wrap-sidebar-posts">
-				<h1 class="title-medium"> Tag Cloud </h1> 			
+			<div class="wrap-sidebar-posts wrap-pagination">
+				<h1 class="title-medium"> Tags </h1> 	
+				<div class="tag">
+					<?php
+					    echo Tag::widget([
+					        'tags' => $page->tags
+					    ]);
+					?> 	
+				</div>	
 			</div>
 		</div>
 	</div>

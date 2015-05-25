@@ -2,6 +2,7 @@
 use yii\captcha\Captcha; 
 use yii\helpers\Html;
 use widgets\Post;
+use widgets\Tag;
 
 $coreProperties 		= $this->context->getCoreProperties();
 $this->title 			= $coreProperties->getSiteTitle();
@@ -114,7 +115,12 @@ $this->params['meta']	= "cmsgears, template, basic, theme";
 				<h1 class="title-medium"> Follow By Email </h1> 			
 			</div>
 			<div class="wrap-sidebar-posts">
-				<h1 class="title-medium"> Tag Cloud </h1> 			
+				<h1 class="title-medium"> Tag Cloud </h1>
+				<div class="tag">
+					<?php
+					    echo Tag::widget([]);
+					?>  		
+				</div>	
 			</div>
 		</div>
 	</div>
