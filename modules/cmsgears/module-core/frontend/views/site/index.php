@@ -53,7 +53,7 @@ $this->params['meta']	= "cmsgears, template, basic, theme";
 					<div class="colf12x9"><h2 class="title-medium"> Post Title Goes Here </h2></div>
 				</div>	 			
 			</div>	-->
-		</div>
+		</div></div>
 		
 		<!-- Sidebar --------------- -->
 		<div class="colf12x3" id="sidebar">

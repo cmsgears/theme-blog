@@ -4333,6 +4333,10 @@ input[type="submit"], input[type="button"], button, select, .btn {
   border-bottom: 1px solid #3498DB;
   margin: 5% 0;
 }
+.blog .wrap-posts .post .media a img.home {
+  a-width: 350px;
+  min-height: 350px;
+}
 .blog .wrap-posts .post .sidebar {
   margin-bottom: 0;
   position: relative;

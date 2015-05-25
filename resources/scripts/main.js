@@ -21,7 +21,8 @@ function initGridView() {
 		
 		jQuery(".blog .post").css({"width":"50%", "float": "left", "border":"0px", "margin":"2% 0"});
 		jQuery(".blog .post .sidebar, .blog .post .icon").hide();
-		jQuery(".blog .media").removeClass("colf12x9");
+		jQuery(".blog .media").removeClass("col12x9");
+		jQuery(".blog .media a img").removeClass("home");
 		jQuery(".blog .media").addClass("col1");
 		jQuery(this).removeClass("fa-th");
 		jQuery(this).addClass("fa-th-list");
@@ -40,8 +41,9 @@ function initListView() {
 		
 		jQuery(".blog .post").css({"width":"100%", "float": "none", "border":"1px", "margin":"5% 0"});
 		jQuery(".blog .post .sidebar, .blog .post .icon").show();
-		jQuery(".blog .media").addClass("colf12x9");
+		jQuery(".blog .media").addClass("col12x9");
 		jQuery(".blog .media").removeClass("col1");
+		jQuery(".blog .media a img").addClass("home");
 		jQuery(this).removeClass("fa-th-list");
 		jQuery(this).addClass("fa-th");
 		jQuery(this).attr("title","Grid View");
@@ -91,9 +93,9 @@ function cmgStickMenu( $clickable ) {
 
 function initAutoHeight() {
 	
-	jQuery(".wrap-posts").css("min-height",jQuery(".post").height());
+	jQuery(".wrap-posts").css("min-height",jQuery(".post").height()); 
 	
-	jQuery(".sidebar").height( jQuery(".media").height()-53 );
+	jQuery(".sidebar").height( jQuery(".media").height() );
 	
 	jQuery(".post .hover-content").width( jQuery(".media").width() ); 
 	

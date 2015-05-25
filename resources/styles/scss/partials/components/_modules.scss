@@ -115,6 +115,14 @@
         .post {            
             border-bottom: 1px solid $color-secondary;
             margin: 5% 0;
+            
+            .media {
+              
+                a img.home {
+                    min-width: 350px;
+                    min-height: 350px;
+                }
+            }
               
             .sidebar {
                 margin-bottom: 0;

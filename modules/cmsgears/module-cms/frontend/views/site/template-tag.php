@@ -53,8 +53,8 @@ $this->params['meta']	= "cmsgears, template, basic, theme";
 					</ul>	
 				</div> 
 			</div>	--> 
-		</div>		
 		</div>
+		
 		 
 		<div class="colf12x3" id="sidebar">
 			<form id="search">
