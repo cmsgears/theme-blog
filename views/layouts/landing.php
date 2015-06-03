@@ -1,7 +1,7 @@
 <?php
-use themes\blog\assets\AssetLoaderLanding;
+use themes\blog\assets\LandingAssetBundle;
 
-AssetLoaderLanding::register( $this );
+LandingAssetBundle::register( $this );
 
 $coreProperties 		= $this->context->getCoreProperties();
 ?>

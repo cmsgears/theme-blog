@@ -1,7 +1,7 @@
 <?php
-use themes\blog\assets\AssetLoaderPrivate;
+use themes\blog\assets\PrivateAssetBundle;
 
-AssetLoaderPrivate::register( $this );
+PrivateAssetBundle::register( $this );
 
 $coreProperties = $this->context->getCoreProperties();
 ?>
