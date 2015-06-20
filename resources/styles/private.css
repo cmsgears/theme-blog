@@ -2601,6 +2601,21 @@
   font-size: 5em;
 }
 
+.cmt-action-icon {
+  font-size: 1em;
+  display: inline-block;
+  cursor: pointer;
+}
+.cmt-action-icon.small {
+  font-size: 2em;
+}
+.cmt-action-icon.medium {
+  font-size: 3em;
+}
+.cmt-action-icon.large {
+  font-size: 5em;
+}
+
 /*
 Color Palatte:
 1. primary: #f2f2f2
@@ -2882,11 +2897,20 @@ Dependencies: variables, variables-ext
 
 .bkg-image {
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-position: 50% 50% 9 !important;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
+}
+
+.bkg-image-fill {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
 }
 
 /**********************************************************************
@@ -3000,7 +3024,7 @@ Dependencies: variables, mixins
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, a, blockquote, pre, abbr,
 address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i,
 dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr,
-th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+th, td, article, aside, figure, figcaption, footer, header, hgroup, menu, nav, section, time, mark, audio, video, details, summary {
   margin: 0;
   padding: 0;
   border: 0;
@@ -3008,6 +3032,7 @@ th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, 
   font-size: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  font: inherit;
   vertical-align: middle;
   background: transparent;
 }
@@ -3327,6 +3352,11 @@ body {
   color: #e74343;
 }
 
+.error-field {
+  border: 1px solid #e74343;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.2);
+}
+
 .warning {
   color: #800020;
 }
@@ -3370,7 +3400,7 @@ body {
   background-color: rgba(54, 54, 54, 0.6);
 }
 
-.texture, .texture-default {
+.texture {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -3381,6 +3411,14 @@ body {
 
 .texture-default {
   background-image: url("../images/texture-default.png");
+}
+
+.texture1 {
+  background-image: url(../images/texture1.png);
+}
+
+table {
+  width: 100%;
 }
 
 /**********************************************************************
@@ -3443,9 +3481,7 @@ h1, h2, h3, h4, h5, h6, .default-header {
   font-weight: bold;
   verticle-align: middle;
   padding: 0.25em 0;
-}
-
-h1, h2, h3, h4, h5, h6, .default-header {
+  margin: 0.5em 0;
   font-family: Verdana, Geneva, sans-serif;
 }
 
@@ -3470,6 +3506,15 @@ a:focus {
 
 a:active, a:hover {
   outline: 0;
+}
+
+.title-large, .title-medium, .title-small, .title-large a, .title-medium a, .title-small a {
+  color: #256E9E;
+  font-family: aller-regular;
+}
+
+.title-medium, .title-medium a {
+  font-size: 1em;
 }
 
 /**********************************************************************
@@ -3564,6 +3609,21 @@ Dependencies: variables, mixins
 }
 
 @media only screen and (max-width: 1024px) {
+  .row.small {
+    width: 50%;
+  }
+  .row.medium {
+    width: 50%;
+  }
+  .row.large {
+    width: 50%;
+  }
+
+  .col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12, .col13, .col14, .col15 {
+    width: 48%;
+  }
+}
+@media only screen and (max-width: 480px) {
   .row.small {
     width: 100%;
   }
@@ -3715,6 +3775,13 @@ Dependencies: variables, mixins
   .col3x2, .col4x2, .col4x3, .col5x2, .col5x3, .col5x4, .col6x2, .col6x3, .col6x4, .col6x5,
   .col12x2, .col12x3, .col12x4, .col12x5, .col12x6, .col12x7, .col12x8, .col12x9, .col12x10, .col12x11,
   .col15x2, .col15x3, .col15x4, .col15x5, .col15x6, .col15x7, .col15x8, .col15x9, .col15x10, .col15x11, .col15x12, .col15x13, .col15x14 {
+    width: 48%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .col3x2, .col4x2, .col4x3, .col5x2, .col5x3, .col5x4, .col6x2, .col6x3, .col6x4, .col6x5,
+  .col12x2, .col12x3, .col12x4, .col12x5, .col12x6, .col12x7, .col12x8, .col12x9, .col12x10, .col12x11,
+  .col15x2, .col15x3, .col15x4, .col15x5, .col15x6, .col15x7, .col15x8, .col15x9, .col15x10, .col15x11, .col15x12, .col15x13, .col15x14 {
     width: 98%;
   }
 }
@@ -3785,6 +3852,11 @@ Dependencies: variables, mixins
 }
 
 @media only screen and (max-width: 1024px) {
+  .colf1, .colf2, .colf3, .colf4, .colf5, .colf6, .colf7, .colf8, .colf9, .colf10, .colf11, .colf12, .colf13, .colf14, .colf15 {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 480px) {
   .colf1, .colf2, .colf3, .colf4, .colf5, .colf6, .colf7, .colf8, .colf9, .colf10, .colf11, .colf12, .colf13, .colf14, .colf15 {
     width: 100%;
   }
@@ -3925,6 +3997,13 @@ Dependencies: variables, mixins
   .colf3x2, .colf4x2, .colf4x3, .colf5x2, .colf5x3, .colf5x4, .colf6x2, .colf6x3, .colf6x4, .colf6x5,
   .colf12x2, .colf12x3, .colf12x4, .colf12x5, .colf12x6, .colf12x7, .colf12x8, .colf12x9, .colf12x10, .colf12x11,
   .colf15x2, .colf15x3, .colf15x4, .colf15x5, .colf15x6, .colf15x7, .colf15x8, .colf15x9, .colf15x10, .colf15x11, .colf15x12, .colf15x13, .colf15x14 {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .colf3x2, .colf4x2, .colf4x3, .colf5x2, .colf5x3, .colf5x4, .colf6x2, .colf6x3, .colf6x4, .colf6x5,
+  .colf12x2, .colf12x3, .colf12x4, .colf12x5, .colf12x6, .colf12x7, .colf12x8, .colf12x9, .colf12x10, .colf12x11,
+  .colf15x2, .colf15x3, .colf15x4, .colf15x5, .colf15x6, .colf15x7, .colf15x8, .colf15x9, .colf15x10, .colf15x11, .colf15x12, .colf15x13, .colf15x14 {
     width: 100%;
   }
 }
@@ -4006,6 +4085,36 @@ Dependencies: variables, mixins
   width: 100%;
 }
 
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.container-main {
+  width: 100%;
+  min-height: 100%;
+}
+
+.container-private .wrap-content {
+  padding-top: 75px;
+}
+@media only screen and (min-width: 1025px) {
+  .container-private .wrap-content {
+    padding-top: 95px;
+  }
+}
+
+.wrap-content-private {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+}
+@media only screen and (min-width: 1025px) {
+  .wrap-content-private {
+    width: 1000px;
+  }
+}
+
 /**********************************************************************
 Description: It defines the form elements styles for CMGTools.
 Dependencies: variables, mixins
@@ -4015,21 +4124,23 @@ form {
   margin-top: 1em;
   margin-bottom: 1em;
 }
-form .warning, form .error, form .success {
-  display: none;
-}
-form .small {
+form.small {
   width: 230px;
   padding: 10px;
   position: relative;
 }
-form .medium {
+form.medium {
   width: 430px;
   padding: 10px;
   position: relative;
 }
+form.large {
+  width: 630px;
+  padding: 10px;
+  position: relative;
+}
 @media only screen and (max-width: 1024px) {
-  form .small, form .medium {
+  form.small, form.medium, form.large {
     width: 80%;
     padding: 5%;
   }
@@ -4075,11 +4186,6 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-input[type="text"].error-field, input[type="email"].error-field, input[type="password"].error-field, textarea.error-field, select.error-field {
-  border: 1px solid #e74343;
-  box-shadow: 0 0 5px rgba(255, 0, 0, 0.2);
-}
-
 input[type="submit"], input[type="button"], button, select, .btn {
   -moz-transition: all 250ms ease-in-out 0s;
   -ms-transition: all 250ms ease-in-out 0s;
@@ -4103,19 +4209,19 @@ input[type="submit"]:hover, input[type="button"]:hover, button:hover, .btn:hover
   display: inline-block;
 }
 
-input[type="text"].half, input[type="email"].half, input[type="password"].half, textarea.half, input[type="submit"].half, input[type="button"].half, button.half, .btn.half {
+input[type="text"].half, input[type="email"].half, input[type="password"].half, textarea.half, input[type="submit"].half, input[type="button"].half, button.half, select.half, .btn.half {
   width: 50%;
 }
-input[type="text"].small, input[type="email"].small, input[type="password"].small, textarea.small, input[type="submit"].small, input[type="button"].small, button.small, .btn.small {
+input[type="text"].small, input[type="email"].small, input[type="password"].small, textarea.small, input[type="submit"].small, input[type="button"].small, button.small, select.small, .btn.small {
   width: 80px;
 }
-input[type="text"].medium, input[type="email"].medium, input[type="password"].medium, textarea.medium, input[type="submit"].medium, input[type="button"].medium, button.medium, .btn.medium {
+input[type="text"].medium, input[type="email"].medium, input[type="password"].medium, textarea.medium, input[type="submit"].medium, input[type="button"].medium, button.medium, select.medium, .btn.medium {
   width: 120px;
 }
-input[type="text"].large, input[type="email"].large, input[type="password"].large, textarea.large, input[type="submit"].large, input[type="button"].large, button.large, .btn.large {
+input[type="text"].large, input[type="email"].large, input[type="password"].large, textarea.large, input[type="submit"].large, input[type="button"].large, button.large, select.large, .btn.large {
   width: 180px;
 }
-input[type="text"].xlarge, input[type="email"].xlarge, input[type="password"].xlarge, textarea.xlarge, input[type="submit"].xlarge, input[type="button"].xlarge, button.xlarge, .btn.xlarge {
+input[type="text"].xlarge, input[type="email"].xlarge, input[type="password"].xlarge, textarea.xlarge, input[type="submit"].xlarge, input[type="button"].xlarge, button.xlarge, select.xlarge, .btn.xlarge {
   width: 250px;
 }
 
@@ -4224,113 +4330,6 @@ input[type="text"].xlarge, input[type="email"].xlarge, input[type="password"].xl
   border-radius: 0 5px 5px 0;
   -khtml-border-radius-top-right: 5px;
   -khtml-border-radius-bottom-right: 5px;
-}
-
-.box-avatar {
-  border: 1px solid #D3EFFE;
-  padding: 1em;
-}
-.box-avatar .avatar img {
-  width: 100%;
-}
-
-#wrap-avatar-uploader {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 1000000;
-}
-
-#avatar-uploader {
-  width: 360px;
-  height: 512px;
-  background-color: #FFFFFF;
-  position: absolute;
-}
-#avatar-uploader .header {
-  position: relative;
-  padding-left: 10px;
-  height: 56px;
-  line-height: 56px;
-}
-#avatar-uploader .header span {
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  right: 10px;
-}
-#avatar-uploader .header span input[type="file"] {
-  cursor: pointer;
-  height: 100%;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-#avatar-uploader .content {
-  padding: 10px;
-}
-#avatar-uploader .content .actions {
-  width: 40px;
-  height: 320px;
-  float: left;
-}
-#avatar-uploader .content .actions .cmt-icon {
-  margin: 10px 0;
-  cursor: pointer;
-}
-#avatar-uploader .content .actions .cmt-icon:hover {
-  background-color: #ECF0F1;
-}
-#avatar-uploader .content .avatar-wrap {
-  margin-left: 20px;
-  width: 280px;
-  height: 320px;
-  float: left;
-  background-color: #ECF0F1;
-}
-
-.texture1 {
-  background-image: url(../images/texture1.png);
-}
-
-table {
-  width: 100%;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
-}
-
-.container-main {
-  width: 100%;
-  min-height: 100%;
-}
-
-.container-private .wrap-content {
-  padding-top: 75px;
-}
-@media only screen and (min-width: 1025px) {
-  .container-private .wrap-content {
-    padding-top: 95px;
-  }
-}
-
-.wrap-content-private {
-  width: 90%;
-  margin: 0 auto;
-  background-color: #FFFFFF;
-}
-@media only screen and (min-width: 1025px) {
-  .wrap-content-private {
-    width: 1000px;
-  }
 }
 
 input[type="text"], input[type="email"], input[type="password"], textarea {
@@ -4599,6 +4598,431 @@ input[type="submit"], input[type="button"], button, select, .btn {
   display: none;
 }
 
+/**********************************************************************
+Description: It defines the styles for the module components forming the page. We can devide the entire page in one or more modules. 
+Each module can have background image with or without parallax effect, a content wrapper which wraps module header and content.
+Dependencies: variables, variables-ext, mixins
+Javascript: jquery, cmg-module
+***********************************************************************/
+.module {
+  position: relative;
+}
+.module .splitter {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  z-index: 10000;
+}
+.module .splitter.top {
+  top: 0;
+  margin-top: -50px;
+}
+.module .splitter.bottom {
+  bottom: 0;
+  margin-bottom: -50px;
+}
+.module .splitter .icon {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+}
+
+.module-basic {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.module-basic .bkg {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.module-basic .bkg-parallax {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 110%;
+  position: absolute;
+  top: -5%;
+  left: 0;
+  z-index: 5;
+}
+.module-basic .texture {
+  z-index: 10;
+}
+.module-basic .wrap-content {
+  position: relative;
+  z-index: 15;
+}
+
+.module .module-wrap-content {
+  margin-top: 75px;
+}
+.module .module-wrap-content .module-header {
+  text-align: center;
+}
+@media only screen and (min-width: 1025px) {
+  .module .module-wrap-content {
+    margin-top: 110px;
+  }
+}
+
+.cmg-stick-menu {
+  background: #256E9E;
+  bottom: 0;
+  padding: 5%;
+  position: absolute;
+  top: 0;
+  width: 50%;
+  z-index: 999;
+  left: -700px;
+}
+.cmg-stick-menu ul li {
+  margin: 10% 0;
+}
+.cmg-stick-menu ul li a {
+  color: white;
+  -moz-transition: color 250ms ease-in-out 0s;
+  -ms-transition: color 250ms ease-in-out 0s;
+  -o-transition: color 250ms ease-in-out 0s;
+  -webkit-transition: color 250ms ease-in-out 0s;
+  transition: color 250ms ease-in-out 0s;
+}
+.cmg-stick-menu ul li a:not(.fa) {
+  font-family: aller-regular;
+}
+.cmg-stick-menu ul li a:hover {
+  color: #cccccc;
+}
+.cmg-stick-menu ul li.menu-close {
+  text-align: right;
+  font-size: 2.5em;
+}
+
+.blog {
+  min-height: 600px;
+  height: auto;
+  padding: 2%;
+  background: url("../images/pattern.jpg");
+}
+.blog .icon-grid, .blog .icon-list {
+  color: #256E9E;
+  font-size: 2em;
+  margin-top: 0.6em;
+  -moz-transition: all 250ms ease-in-out 0s;
+  -ms-transition: all 250ms ease-in-out 0s;
+  -o-transition: all 250ms ease-in-out 0s;
+  -webkit-transition: all 250ms ease-in-out 0s;
+  transition: all 250ms ease-in-out 0s;
+}
+.blog .icon-grid:hover, .blog .icon-list:hover {
+  color: #2f8bc7;
+}
+.blog .wrap-posts {
+  height: auto;
+  padding: 2%;
+  background: white;
+  margin: 2% 0;
+}
+.blog .wrap-posts.post-single img {
+  width: 100%;
+}
+.blog .wrap-posts.post-single .content {
+  color: #464646;
+  font-family: amble-light;
+  margin: 2em 0;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+.blog .wrap-posts.post-single .post-data {
+  position: relative;
+  width: 100%;
+  margin: 1em 0;
+  color: #256E9E;
+}
+.blog .wrap-posts.post-single .post-data .date {
+  float: left;
+  font-family: amble-regular;
+  font-size: 1.25em;
+}
+.blog .wrap-posts.post-single .post-data .comment {
+  float: right;
+  font-size: 1.25em;
+}
+.blog .wrap-posts .post {
+  border-bottom: 1px solid #3498DB;
+  margin: 5% 0;
+}
+.blog .wrap-posts .post .media a img.home {
+  min-width: 350px;
+  min-height: 350px;
+}
+.blog .wrap-posts .post .sidebar {
+  margin-bottom: 0;
+  position: relative;
+}
+.blog .wrap-posts .post .sidebar .date {
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  -khtml-border-radius: 100px;
+  background: #3498DB;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  padding: 18% 14%;
+  right: 5%;
+  -moz-transition: all 250ms ease-in-out 0s;
+  -ms-transition: all 250ms ease-in-out 0s;
+  -o-transition: all 250ms ease-in-out 0s;
+  -webkit-transition: all 250ms ease-in-out 0s;
+  transition: all 250ms ease-in-out 0s;
+}
+.blog .wrap-posts .post .sidebar .date:hover {
+  background: #258cd1;
+}
+.blog .wrap-posts .post .sidebar .date .day {
+  font-family: aller-bold;
+  font-size: 2em;
+}
+.blog .wrap-posts .post .sidebar .date .month {
+  font-family: amble-regular;
+  color: #FFFFFF;
+}
+.blog .wrap-posts .post .sidebar .comment {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #ECF0F1;
+  color: #256E9E;
+  padding: 18% 25%;
+  -moz-transition: all 250ms ease-in-out 0s;
+  -ms-transition: all 250ms ease-in-out 0s;
+  -o-transition: all 250ms ease-in-out 0s;
+  -webkit-transition: all 250ms ease-in-out 0s;
+  transition: all 250ms ease-in-out 0s;
+}
+.blog .wrap-posts .post .sidebar .comment:hover {
+  background: #dde4e6;
+}
+.blog .wrap-posts .post .sidebar .comment p {
+  color: #256E9E;
+  font-size: 1.5em;
+}
+.blog .wrap-posts .post .sidebar .comment .fa {
+  color: #256E9E;
+  margin: 2% 0;
+}
+.blog .wrap-posts .post .module-container {
+  position: relative;
+}
+.blog .wrap-posts .media {
+  position: relative;
+  overflow: hidden;
+}
+.blog .wrap-posts .media:hover .hover-content, .blog .wrap-posts .media.hover .hover-content {
+  margin-bottom: 0;
+}
+.blog .wrap-posts .media .hover-content {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  margin-bottom: -100%;
+  -moz-transition: all 250ms ease-in-out 0s;
+  -ms-transition: all 250ms ease-in-out 0s;
+  -o-transition: all 250ms ease-in-out 0s;
+  -webkit-transition: all 250ms ease-in-out 0s;
+  transition: all 250ms ease-in-out 0s;
+}
+.blog .wrap-posts .media .hover-content .icon {
+  background: #FFFFFF;
+  color: #3498DB;
+  font-size: 2.5em;
+  padding: 1% 2%;
+  border-radius: 50%;
+  margin-top: -4% !important;
+}
+.blog .wrap-posts .media .hover-content p {
+  font-family: amble-light;
+  color: #FFFFFF;
+  margin: 3% 0;
+}
+.blog .wrap-posts .media .hover-content .btn {
+  background: #E74C3C;
+  font-family: aller-regular;
+  width: 40%;
+  -moz-transition: all 250ms ease-in-out 0s;
+  -ms-transition: all 250ms ease-in-out 0s;
+  -o-transition: all 250ms ease-in-out 0s;
+  -webkit-transition: all 250ms ease-in-out 0s;
+  transition: all 250ms ease-in-out 0s;
+}
+.blog .wrap-posts .media .hover-content .btn:hover {
+  background: #d62c1a;
+}
+.blog #sidebar form, .blog #wrap-comment form {
+  margin: 1em 0 0.6em;
+}
+.blog #sidebar form input[type="text"], .blog #wrap-comment form input[type="text"] {
+  background: #FFFFFF;
+}
+.blog #sidebar form .button, .blog #wrap-comment form .button {
+  width: 15%;
+}
+.blog #sidebar form .button button, .blog #wrap-comment form .button button {
+  background: #3498DB;
+  color: #FFFFFF;
+  -moz-transition: all 250ms ease-in-out 0s;
+  -ms-transition: all 250ms ease-in-out 0s;
+  -o-transition: all 250ms ease-in-out 0s;
+  -webkit-transition: all 250ms ease-in-out 0s;
+  transition: all 250ms ease-in-out 0s;
+}
+.blog #sidebar form .button button:hover, .blog #wrap-comment form .button button:hover {
+  background: #217dbb;
+}
+.blog #sidebar #frm-comment, .blog #wrap-comment #frm-comment {
+  box-shadow: 1px 1px 3px #C0C0C0;
+  min-height: 30px;
+  padding: 1em;
+}
+.blog #sidebar #frm-comment .title-medium, .blog #wrap-comment #frm-comment .title-medium {
+  border-bottom: 1px solid #3498DB;
+  padding-bottom: 1em;
+}
+.blog #sidebar #frm-comment form input, .blog #wrap-comment #frm-comment form input {
+  background: #F5F5F5;
+}
+.blog #sidebar #frm-comment form input[type='submit'], .blog #wrap-comment #frm-comment form input[type='submit'] {
+  background: #E74C3C;
+  color: #FFFFFFF;
+  font-family: aller-regular;
+}
+.blog #sidebar #frm-comment form input[type='submit']:hover, .blog #wrap-comment #frm-comment form input[type='submit']:hover {
+  background: #d62c1a;
+}
+.blog #sidebar .wrap-sidebar-posts, .blog #sidebar .wrap-comments, .blog #wrap-comment .wrap-sidebar-posts, .blog #wrap-comment .wrap-comments {
+  margin: 0 0 1em 0;
+  min-height: 10px;
+  padding: 1em;
+  background: white;
+}
+.blog #sidebar .wrap-sidebar-posts .title-medium a, .blog #sidebar .wrap-sidebar-posts .title-medium, .blog #sidebar .wrap-comments .title-medium a, .blog #sidebar .wrap-comments .title-medium, .blog #wrap-comment .wrap-sidebar-posts .title-medium a, .blog #wrap-comment .wrap-sidebar-posts .title-medium, .blog #wrap-comment .wrap-comments .title-medium a, .blog #wrap-comment .wrap-comments .title-medium {
+  border-bottom: 1px solid #3498DB;
+  padding-bottom: 1em;
+}
+.blog #sidebar .wrap-sidebar-posts .sidebar-post, .blog #sidebar .wrap-sidebar-posts .comment, .blog #sidebar .wrap-comments .sidebar-post, .blog #sidebar .wrap-comments .comment, .blog #wrap-comment .wrap-sidebar-posts .sidebar-post, .blog #wrap-comment .wrap-sidebar-posts .comment, .blog #wrap-comment .wrap-comments .sidebar-post, .blog #wrap-comment .wrap-comments .comment {
+  padding: 1em 0;
+  display: block;
+  border-bottom: 1px solid silver;
+}
+.blog #sidebar .wrap-sidebar-posts .sidebar-post.comment, .blog #sidebar .wrap-sidebar-posts .comment.comment, .blog #sidebar .wrap-comments .sidebar-post.comment, .blog #sidebar .wrap-comments .comment.comment, .blog #wrap-comment .wrap-sidebar-posts .sidebar-post.comment, .blog #wrap-comment .wrap-sidebar-posts .comment.comment, .blog #wrap-comment .wrap-comments .sidebar-post.comment, .blog #wrap-comment .wrap-comments .comment.comment {
+  border-color: #3498DB;
+}
+.blog #sidebar .wrap-sidebar-posts .sidebar-post.comment .media, .blog #sidebar .wrap-sidebar-posts .comment.comment .media, .blog #sidebar .wrap-comments .sidebar-post.comment .media, .blog #sidebar .wrap-comments .comment.comment .media, .blog #wrap-comment .wrap-sidebar-posts .sidebar-post.comment .media, .blog #wrap-comment .wrap-sidebar-posts .comment.comment .media, .blog #wrap-comment .wrap-comments .sidebar-post.comment .media, .blog #wrap-comment .wrap-comments .comment.comment .media {
+  background: snow;
+  font-size: 4em;
+}
+.blog #sidebar .wrap-sidebar-posts .sidebar-post:hover .content p, .blog #sidebar .wrap-sidebar-posts .comment:hover .content p, .blog #sidebar .wrap-comments .sidebar-post:hover .content p, .blog #sidebar .wrap-comments .comment:hover .content p, .blog #wrap-comment .wrap-sidebar-posts .sidebar-post:hover .content p, .blog #wrap-comment .wrap-sidebar-posts .comment:hover .content p, .blog #wrap-comment .wrap-comments .sidebar-post:hover .content p, .blog #wrap-comment .wrap-comments .comment:hover .content p {
+  color: #256E9E;
+}
+.blog #sidebar .wrap-sidebar-posts .sidebar-post.comment:hover .content p, .blog #sidebar .wrap-sidebar-posts .comment.comment:hover .content p, .blog #sidebar .wrap-comments .sidebar-post.comment:hover .content p, .blog #sidebar .wrap-comments .comment.comment:hover .content p, .blog #wrap-comment .wrap-sidebar-posts .sidebar-post.comment:hover .content p, .blog #wrap-comment .wrap-sidebar-posts .comment.comment:hover .content p, .blog #wrap-comment .wrap-comments .sidebar-post.comment:hover .content p, .blog #wrap-comment .wrap-comments .comment.comment:hover .content p {
+  color: #464646;
+}
+.blog #sidebar .wrap-sidebar-posts .sidebar-post .content, .blog #sidebar .wrap-sidebar-posts .comment .content, .blog #sidebar .wrap-comments .sidebar-post .content, .blog #sidebar .wrap-comments .comment .content, .blog #wrap-comment .wrap-sidebar-posts .sidebar-post .content, .blog #wrap-comment .wrap-sidebar-posts .comment .content, .blog #wrap-comment .wrap-comments .sidebar-post .content, .blog #wrap-comment .wrap-comments .comment .content {
+  position: relative;
+}
+.blog #sidebar .wrap-sidebar-posts .sidebar-post .content p, .blog #sidebar .wrap-sidebar-posts .sidebar-post .content .comment-user, .blog #sidebar .wrap-sidebar-posts .sidebar-post .content .comment-date, .blog #sidebar .wrap-sidebar-posts .comment .content p, .blog #sidebar .wrap-sidebar-posts .comment .content .comment-user, .blog #sidebar .wrap-sidebar-posts .comment .content .comment-date, .blog #sidebar .wrap-comments .sidebar-post .content p, .blog #sidebar .wrap-comments .sidebar-post .content .comment-user, .blog #sidebar .wrap-comments .sidebar-post .content .comment-date, .blog #sidebar .wrap-comments .comment .content p, .blog #sidebar .wrap-comments .comment .content .comment-user, .blog #sidebar .wrap-comments .comment .content .comment-date, .blog #wrap-comment .wrap-sidebar-posts .sidebar-post .content p, .blog #wrap-comment .wrap-sidebar-posts .sidebar-post .content .comment-user, .blog #wrap-comment .wrap-sidebar-posts .sidebar-post .content .comment-date, .blog #wrap-comment .wrap-sidebar-posts .comment .content p, .blog #wrap-comment .wrap-sidebar-posts .comment .content .comment-user, .blog #wrap-comment .wrap-sidebar-posts .comment .content .comment-date, .blog #wrap-comment .wrap-comments .sidebar-post .content p, .blog #wrap-comment .wrap-comments .sidebar-post .content .comment-user, .blog #wrap-comment .wrap-comments .sidebar-post .content .comment-date, .blog #wrap-comment .wrap-comments .comment .content p, .blog #wrap-comment .wrap-comments .comment .content .comment-user, .blog #wrap-comment .wrap-comments .comment .content .comment-date {
+  color: #464646;
+  font-family: amble-light;
+  font-size: 0.75em;
+  line-height: 1.5em;
+  -moz-transition: all 250ms ease-in-out 0s;
+  -ms-transition: all 250ms ease-in-out 0s;
+  -o-transition: all 250ms ease-in-out 0s;
+  -webkit-transition: all 250ms ease-in-out 0s;
+  transition: all 250ms ease-in-out 0s;
+}
+.blog #sidebar .wrap-sidebar-posts .sidebar-post .content .comment-user, .blog #sidebar .wrap-sidebar-posts .sidebar-post .content .comment-date, .blog #sidebar .wrap-sidebar-posts .comment .content .comment-user, .blog #sidebar .wrap-sidebar-posts .comment .content .comment-date, .blog #sidebar .wrap-comments .sidebar-post .content .comment-user, .blog #sidebar .wrap-comments .sidebar-post .content .comment-date, .blog #sidebar .wrap-comments .comment .content .comment-user, .blog #sidebar .wrap-comments .comment .content .comment-date, .blog #wrap-comment .wrap-sidebar-posts .sidebar-post .content .comment-user, .blog #wrap-comment .wrap-sidebar-posts .sidebar-post .content .comment-date, .blog #wrap-comment .wrap-sidebar-posts .comment .content .comment-user, .blog #wrap-comment .wrap-sidebar-posts .comment .content .comment-date, .blog #wrap-comment .wrap-comments .sidebar-post .content .comment-user, .blog #wrap-comment .wrap-comments .sidebar-post .content .comment-date, .blog #wrap-comment .wrap-comments .comment .content .comment-user, .blog #wrap-comment .wrap-comments .comment .content .comment-date {
+  float: left;
+  color: #256E9E;
+}
+.blog #sidebar .wrap-sidebar-posts .sidebar-post .content .comment-date, .blog #sidebar .wrap-sidebar-posts .comment .content .comment-date, .blog #sidebar .wrap-comments .sidebar-post .content .comment-date, .blog #sidebar .wrap-comments .comment .content .comment-date, .blog #wrap-comment .wrap-sidebar-posts .sidebar-post .content .comment-date, .blog #wrap-comment .wrap-sidebar-posts .comment .content .comment-date, .blog #wrap-comment .wrap-comments .sidebar-post .content .comment-date, .blog #wrap-comment .wrap-comments .comment .content .comment-date {
+  float: right;
+}
+.blog #sidebar .wrap-sidebar-posts .sidebar-post .content .comment-content, .blog #sidebar .wrap-sidebar-posts .comment .content .comment-content, .blog #sidebar .wrap-comments .sidebar-post .content .comment-content, .blog #sidebar .wrap-comments .comment .content .comment-content, .blog #wrap-comment .wrap-sidebar-posts .sidebar-post .content .comment-content, .blog #wrap-comment .wrap-sidebar-posts .comment .content .comment-content, .blog #wrap-comment .wrap-comments .sidebar-post .content .comment-content, .blog #wrap-comment .wrap-comments .comment .content .comment-content {
+  float: left;
+  width: 100%;
+}
+.blog #sidebar .wrap-sidebar-posts .sidebar-post .sidebar-media, .blog #sidebar .wrap-sidebar-posts .sidebar-post .media, .blog #sidebar .wrap-sidebar-posts .comment .sidebar-media, .blog #sidebar .wrap-sidebar-posts .comment .media, .blog #sidebar .wrap-comments .sidebar-post .sidebar-media, .blog #sidebar .wrap-comments .sidebar-post .media, .blog #sidebar .wrap-comments .comment .sidebar-media, .blog #sidebar .wrap-comments .comment .media, .blog #wrap-comment .wrap-sidebar-posts .sidebar-post .sidebar-media, .blog #wrap-comment .wrap-sidebar-posts .sidebar-post .media, .blog #wrap-comment .wrap-sidebar-posts .comment .sidebar-media, .blog #wrap-comment .wrap-sidebar-posts .comment .media, .blog #wrap-comment .wrap-comments .sidebar-post .sidebar-media, .blog #wrap-comment .wrap-comments .sidebar-post .media, .blog #wrap-comment .wrap-comments .comment .sidebar-media, .blog #wrap-comment .wrap-comments .comment .media {
+  text-align: center;
+}
+
+#template-blog .post {
+  width: 50%;
+  float: left;
+  border: 0px;
+  margin: 2% 0;
+}
+#template-blog .post .sidebar {
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .blog .wrap-posts .post .sidebar {
+    min-height: 40px;
+    position: relative;
+  }
+  .blog .wrap-posts .post .sidebar .date {
+    left: 0;
+    padding: 4% 1%;
+    top: 0;
+    width: 60%;
+    border-radius: 0;
+  }
+  .blog .wrap-posts .post .sidebar .comment {
+    right: 0;
+    padding: 4% 1%;
+    top: 0;
+    width: 40%;
+    border-radius: 0;
+  }
+
+  .content-80 {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .icon-grid, .icon-list {
+    display: none;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .post {
+    width: 100% !important;
+  }
+
+  .post-data .comment {
+    clear: left;
+    float: left !important;
+    margin: 1em 0;
+  }
+}
 .wrap-pagination .info {
   display: none;
 }
@@ -4657,6 +5081,7 @@ input[type="submit"], input[type="button"], button, select, .btn {
 }
 .tag ul li {
   display: inline-block;
+  margin: 0.3em;
 }
 .tag ul li a {
   border: 1px solid #3498DB;
@@ -4672,31 +5097,90 @@ input[type="submit"], input[type="button"], button, select, .btn {
   color: #FFFFFF;
 }
 
-/* Widget - Follow Email ========================== */
-.widget-follow-email form input[type='text'] {
-  background: #F5F5F5 !important;
-  color: #3F3F46;
+.file-uploader {
+  position: relative;
 }
-.widget-follow-email form input[type='submit'] {
-  font-family: aller-regular;
+.file-uploader .postview {
+  position: relative;
+  margin: 0 auto;
 }
-
-/* Widget - Social Share ========================== */
-.widget-social-share li {
-  display: inline-block;
-}
-.widget-social-share li a {
-  background: #3498DB;
-  color: white;
+.file-uploader .postview .wrap-image {
+  text-align: center;
   padding: 1em;
-  -moz-transition: all 250ms ease-in-out 0s;
-  -ms-transition: all 250ms ease-in-out 0s;
-  -o-transition: all 250ms ease-in-out 0s;
-  -webkit-transition: all 250ms ease-in-out 0s;
-  transition: all 250ms ease-in-out 0s;
 }
-.widget-social-share li a:hover {
-  background: #217dbb;
+.file-uploader .postview .wrap-image .cmt-icon {
+  font-size: 10em;
+}
+.file-uploader .postview .btn-show-chooser {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+}
+.file-uploader .wrap-chooser {
+  display: none;
+}
+.file-uploader .chooser {
+  overflow: hidden;
+  position: relative;
+}
+.file-uploader .chooser input[type="file"] {
+  opacity: 0;
+  cursor: pointer !important;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.file-uploader .preview {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+}
+.file-uploader .preview .wrap-drag {
+  position: relative;
+  margin: 0 auto;
+  width: 120px;
+  height: 120px;
+}
+.file-uploader .preview .wrap-drag .drag {
+  background-color: #ECF0F1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 120px;
+  height: 120px;
+  z-index: 10;
+  text-align: center;
+  line-height: 120px;
+}
+.file-uploader .preview .wrap-drag .drag.hover {
+  background-color: #td;
+  color: #td;
+}
+.file-uploader .preview .wrap-drag canvas {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 120px;
+  height: 120px;
+  z-index: 50;
+  display: none;
+}
+.file-uploader .preloader {
+  padding-top: 10px;
+}
+.file-uploader .preloader .preloader-bar {
+  background-color: #td;
+  width: 0%;
+  height: 10px;
+}
+.file-uploader .post-action {
+  display: none;
+}
+.file-uploader .fields {
+  position: relative;
 }
 
 /*# sourceMappingURL=private.css.map */

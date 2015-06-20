@@ -2451,11 +2451,20 @@ Dependencies: variables, variables-ext
 
 .bkg-image {
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-position: 50% 50% 9 !important;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
+}
+
+.bkg-image-fill {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
 }
 
 /**********************************************************************
@@ -2569,7 +2578,7 @@ Dependencies: variables, mixins
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, a, blockquote, pre, abbr,
 address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i,
 dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr,
-th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+th, td, article, aside, figure, figcaption, footer, header, hgroup, menu, nav, section, time, mark, audio, video, details, summary {
   margin: 0;
   padding: 0;
   border: 0;
@@ -2577,6 +2586,7 @@ th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, 
   font-size: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  font: inherit;
   vertical-align: middle;
   background: transparent;
 }
@@ -2896,6 +2906,11 @@ body {
   color: #e74343;
 }
 
+.error-field {
+  border: 1px solid #e74343;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.2);
+}
+
 .warning {
   color: #800020;
 }
@@ -2939,7 +2954,7 @@ body {
   background-color: rgba(54, 54, 54, 0.6);
 }
 
-.texture, .texture-default {
+.texture {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -2950,6 +2965,14 @@ body {
 
 .texture-default {
   background-image: url("../images/texture-default.png");
+}
+
+.texture1 {
+  background-image: url(../images/texture1.png);
+}
+
+table {
+  width: 100%;
 }
 
 /**********************************************************************
@@ -3012,9 +3035,7 @@ h1, h2, h3, h4, h5, h6, .default-header {
   font-weight: bold;
   verticle-align: middle;
   padding: 0.25em 0;
-}
-
-h1, h2, h3, h4, h5, h6, .default-header {
+  margin: 0.5em 0;
   font-family: Verdana, Geneva, sans-serif;
 }
 
@@ -3142,6 +3163,21 @@ Dependencies: variables, mixins
 }
 
 @media only screen and (max-width: 1024px) {
+  .row.small {
+    width: 50%;
+  }
+  .row.medium {
+    width: 50%;
+  }
+  .row.large {
+    width: 50%;
+  }
+
+  .col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12, .col13, .col14, .col15 {
+    width: 48%;
+  }
+}
+@media only screen and (max-width: 480px) {
   .row.small {
     width: 100%;
   }
@@ -3293,6 +3329,13 @@ Dependencies: variables, mixins
   .col3x2, .col4x2, .col4x3, .col5x2, .col5x3, .col5x4, .col6x2, .col6x3, .col6x4, .col6x5,
   .col12x2, .col12x3, .col12x4, .col12x5, .col12x6, .col12x7, .col12x8, .col12x9, .col12x10, .col12x11,
   .col15x2, .col15x3, .col15x4, .col15x5, .col15x6, .col15x7, .col15x8, .col15x9, .col15x10, .col15x11, .col15x12, .col15x13, .col15x14 {
+    width: 48%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .col3x2, .col4x2, .col4x3, .col5x2, .col5x3, .col5x4, .col6x2, .col6x3, .col6x4, .col6x5,
+  .col12x2, .col12x3, .col12x4, .col12x5, .col12x6, .col12x7, .col12x8, .col12x9, .col12x10, .col12x11,
+  .col15x2, .col15x3, .col15x4, .col15x5, .col15x6, .col15x7, .col15x8, .col15x9, .col15x10, .col15x11, .col15x12, .col15x13, .col15x14 {
     width: 98%;
   }
 }
@@ -3363,6 +3406,11 @@ Dependencies: variables, mixins
 }
 
 @media only screen and (max-width: 1024px) {
+  .colf1, .colf2, .colf3, .colf4, .colf5, .colf6, .colf7, .colf8, .colf9, .colf10, .colf11, .colf12, .colf13, .colf14, .colf15 {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 480px) {
   .colf1, .colf2, .colf3, .colf4, .colf5, .colf6, .colf7, .colf8, .colf9, .colf10, .colf11, .colf12, .colf13, .colf14, .colf15 {
     width: 100%;
   }
@@ -3503,6 +3551,13 @@ Dependencies: variables, mixins
   .colf3x2, .colf4x2, .colf4x3, .colf5x2, .colf5x3, .colf5x4, .colf6x2, .colf6x3, .colf6x4, .colf6x5,
   .colf12x2, .colf12x3, .colf12x4, .colf12x5, .colf12x6, .colf12x7, .colf12x8, .colf12x9, .colf12x10, .colf12x11,
   .colf15x2, .colf15x3, .colf15x4, .colf15x5, .colf15x6, .colf15x7, .colf15x8, .colf15x9, .colf15x10, .colf15x11, .colf15x12, .colf15x13, .colf15x14 {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .colf3x2, .colf4x2, .colf4x3, .colf5x2, .colf5x3, .colf5x4, .colf6x2, .colf6x3, .colf6x4, .colf6x5,
+  .colf12x2, .colf12x3, .colf12x4, .colf12x5, .colf12x6, .colf12x7, .colf12x8, .colf12x9, .colf12x10, .colf12x11,
+  .colf15x2, .colf15x3, .colf15x4, .colf15x5, .colf15x6, .colf15x7, .colf15x8, .colf15x9, .colf15x10, .colf15x11, .colf15x12, .colf15x13, .colf15x14 {
     width: 100%;
   }
 }
@@ -3584,6 +3639,36 @@ Dependencies: variables, mixins
   width: 100%;
 }
 
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.container-main {
+  width: 100%;
+  min-height: 100%;
+}
+
+.container-private .wrap-content {
+  padding-top: 75px;
+}
+@media only screen and (min-width: 1025px) {
+  .container-private .wrap-content {
+    padding-top: 95px;
+  }
+}
+
+.wrap-content-private {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+}
+@media only screen and (min-width: 1025px) {
+  .wrap-content-private {
+    width: 1000px;
+  }
+}
+
 /**********************************************************************
 Description: It defines the form elements styles for CMGTools.
 Dependencies: variables, mixins
@@ -3593,21 +3678,23 @@ form {
   margin-top: 1em;
   margin-bottom: 1em;
 }
-form .warning, form .error, form .success {
-  display: none;
-}
-form .small {
+form.small {
   width: 230px;
   padding: 10px;
   position: relative;
 }
-form .medium {
+form.medium {
   width: 430px;
   padding: 10px;
   position: relative;
 }
+form.large {
+  width: 630px;
+  padding: 10px;
+  position: relative;
+}
 @media only screen and (max-width: 1024px) {
-  form .small, form .medium {
+  form.small, form.medium, form.large {
     width: 80%;
     padding: 5%;
   }
@@ -3653,11 +3740,6 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-input[type="text"].error-field, input[type="email"].error-field, input[type="password"].error-field, textarea.error-field, select.error-field {
-  border: 1px solid #e74343;
-  box-shadow: 0 0 5px rgba(255, 0, 0, 0.2);
-}
-
 input[type="submit"], input[type="button"], button, select, .btn {
   -moz-transition: all 250ms ease-in-out 0s;
   -ms-transition: all 250ms ease-in-out 0s;
@@ -3681,19 +3763,19 @@ input[type="submit"]:hover, input[type="button"]:hover, button:hover, .btn:hover
   display: inline-block;
 }
 
-input[type="text"].half, input[type="email"].half, input[type="password"].half, textarea.half, input[type="submit"].half, input[type="button"].half, button.half, .btn.half {
+input[type="text"].half, input[type="email"].half, input[type="password"].half, textarea.half, input[type="submit"].half, input[type="button"].half, button.half, select.half, .btn.half {
   width: 50%;
 }
-input[type="text"].small, input[type="email"].small, input[type="password"].small, textarea.small, input[type="submit"].small, input[type="button"].small, button.small, .btn.small {
+input[type="text"].small, input[type="email"].small, input[type="password"].small, textarea.small, input[type="submit"].small, input[type="button"].small, button.small, select.small, .btn.small {
   width: 80px;
 }
-input[type="text"].medium, input[type="email"].medium, input[type="password"].medium, textarea.medium, input[type="submit"].medium, input[type="button"].medium, button.medium, .btn.medium {
+input[type="text"].medium, input[type="email"].medium, input[type="password"].medium, textarea.medium, input[type="submit"].medium, input[type="button"].medium, button.medium, select.medium, .btn.medium {
   width: 120px;
 }
-input[type="text"].large, input[type="email"].large, input[type="password"].large, textarea.large, input[type="submit"].large, input[type="button"].large, button.large, .btn.large {
+input[type="text"].large, input[type="email"].large, input[type="password"].large, textarea.large, input[type="submit"].large, input[type="button"].large, button.large, select.large, .btn.large {
   width: 180px;
 }
-input[type="text"].xlarge, input[type="email"].xlarge, input[type="password"].xlarge, textarea.xlarge, input[type="submit"].xlarge, input[type="button"].xlarge, button.xlarge, .btn.xlarge {
+input[type="text"].xlarge, input[type="email"].xlarge, input[type="password"].xlarge, textarea.xlarge, input[type="submit"].xlarge, input[type="button"].xlarge, button.xlarge, select.xlarge, .btn.xlarge {
   width: 250px;
 }
 
@@ -3802,273 +3884,6 @@ input[type="text"].xlarge, input[type="email"].xlarge, input[type="password"].xl
   border-radius: 0 5px 5px 0;
   -khtml-border-radius-top-right: 5px;
   -khtml-border-radius-bottom-right: 5px;
-}
-
-/**********************************************************************
-Description: It defines the styles for the module components forming the page. We can devide the entire page in one or more modules. 
-Each module can have background image with or without parallax effect, a content wrapper which wraps module header and content.
-Dependencies: variables, variables-ext, mixins
-Javascript: jquery, cmg-module
-***********************************************************************/
-.module {
-  position: relative;
-}
-.module .spliter {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100px;
-  margin-top: -50px;
-  text-align: center;
-}
-.module .spliter .icon {
-  display: inline-block;
-  width: 100px;
-  height: 50px;
-}
-
-.module-basic {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-.module-basic .bkg {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-position: 50% 50% 9 !important;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-.module-basic .bkg-parallax {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-position: 50% 50% 9 !important;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  width: 100%;
-  height: 110%;
-  position: absolute;
-  top: -5%;
-  left: 0;
-  z-index: 5;
-}
-.module-basic .texture {
-  z-index: 10;
-}
-.module-basic .wrap-content {
-  position: relative;
-  z-index: 15;
-}
-
-/**********************************************************************
-Description: It defines the styles for the menu components available in CMGTools.
-Dependencies: variables, variables-ext, mixins
-***********************************************************************/
-/* hnav-regular is 3 level horizontal responsive menu for ul, li and a tags and works well for all modern web browsers. 
-   It need little javascript or jquery for mobile screens to expand or contract the immediate child menus for touch screens. It's best suited for header menu. */
-.hnav-regular {
-  background-color: #ECF0F1;
-  border-bottom: 5px solid #3498DB;
-  position: relative;
-}
-.hnav-regular > li {
-  display: inline-block;
-  text-align: left;
-  background-color: #ECF0F1;
-  border-bottom: 5px solid #3498DB;
-  margin-bottom: -5px;
-  -moz-transition: all 250ms ease-in-out 0s;
-  -ms-transition: all 250ms ease-in-out 0s;
-  -o-transition: all 250ms ease-in-out 0s;
-  -webkit-transition: all 250ms ease-in-out 0s;
-  transition: all 250ms ease-in-out 0s;
-}
-.hnav-regular > li > a {
-  color: #464646;
-  font-size: 1em;
-  line-height: 48px;
-  padding: 0 15px;
-  text-transform: uppercase;
-}
-.hnav-regular > li:hover > a {
-  background-color: #td;
-  color: #td;
-}
-.hnav-regular li a {
-  display: inline-block;
-  text-decoration: none;
-  -moz-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
-  -ms-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
-  -o-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
-  -webkit-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
-  transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
-}
-.hnav-regular li.active > a {
-  background-color: #3498DB;
-  color: #3498DB;
-}
-.hnav-regular li:hover .nav-sub {
-  display: block;
-}
-.hnav-regular .nav-sub {
-  display: none;
-  position: absolute;
-  top: 53px;
-  left: 0;
-  padding: 10px 2%;
-  width: 96%;
-  background-color: #3498DB;
-  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-}
-.hnav-regular .nav-sub > li {
-  display: inline-block;
-  float: none;
-  padding: 10px 1%;
-  vertical-align: top;
-  width: 22%;
-}
-.hnav-regular .nav-sub > li > a {
-  font-size: 1em;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-}
-.hnav-regular .nav-sub > li a {
-  line-height: 20px;
-  color: #256E9E;
-}
-.hnav-regular .nav-sub > li li {
-  float: none;
-  padding-left: 5px;
-  -moz-transition: padding 250ms ease-out 0s;
-  -ms-transition: padding 250ms ease-out 0s;
-  -o-transition: padding 250ms ease-out 0s;
-  -webkit-transition: padding 250ms ease-out 0s;
-  transition: padding 250ms ease-out 0s;
-}
-.hnav-regular .nav-sub > li li:hover {
-  padding-left: 10px;
-}
-@media only screen and (max-width: 1024px) {
-  .hnav-regular li, .hnav-regular a {
-    width: 100%;
-  }
-  .hnav-regular .nav-sub {
-    position: relative;
-    top: 0px;
-  }
-  .hnav-regular .nav-sub li, .hnav-regular .nav-sub a {
-    width: 100%;
-  }
-}
-
-/* vnav-regular is n level vertical responsive menu and best suited for sidebar menu. */
-.vnav-regular {
-  border: 2px solid #3498DB;
-  position: relative;
-}
-.vnav-regular li {
-  text-align: left;
-  border-bottom: 1px solid #3498DB;
-  position: relative;
-  -moz-transition: all 250ms ease-in-out 0s;
-  -ms-transition: all 250ms ease-in-out 0s;
-  -o-transition: all 250ms ease-in-out 0s;
-  -webkit-transition: all 250ms ease-in-out 0s;
-  transition: all 250ms ease-in-out 0s;
-}
-.vnav-regular li .last {
-  border: none;
-}
-.vnav-regular a {
-  display: block;
-  background-color: #ECF0F1;
-  color: #464646;
-  font-size: 1em;
-  line-height: 35px;
-  width: 98%;
-  padding: 0 1%;
-  text-decoration: none;
-  -moz-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
-  -ms-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
-  -o-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
-  -webkit-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
-  transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
-}
-.vnav-regular li:hover > a {
-  background-color: #td;
-  color: #td;
-}
-.vnav-regular li:hover > .nav-sub {
-  display: block;
-}
-.vnav-regular .nav-sub {
-  display: none;
-  position: absolute;
-  top: -2px;
-  width: 250px;
-  margin-left: 100%;
-  border: 2px solid #3498DB;
-}
-@media only screen and (max-width: 1024px) {
-  .vnav-regular .nav-sub {
-    position: relative;
-    top: 0px;
-    margin-left: 0;
-    width: 100%;
-    border: none;
-  }
-  .vnav-regular .nav-sub a {
-    background-color: #3498DB;
-  }
-}
-
-.texture1 {
-  background-image: url(../images/texture1.png);
-}
-
-table {
-  width: 100%;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
-}
-
-.container-main {
-  width: 100%;
-  min-height: 100%;
-}
-
-.container-private .wrap-content {
-  padding-top: 75px;
-}
-@media only screen and (min-width: 1025px) {
-  .container-private .wrap-content {
-    padding-top: 95px;
-  }
-}
-
-.wrap-content-private {
-  width: 90%;
-  margin: 0 auto;
-  background-color: #FFFFFF;
-}
-@media only screen and (min-width: 1025px) {
-  .wrap-content-private {
-    width: 1000px;
-  }
 }
 
 input[type="text"], input[type="email"], input[type="password"], textarea {
@@ -4235,6 +4050,180 @@ input[type="submit"], input[type="button"], button, select, .btn {
     margin: 5px 2px 2px;
   }
 }
+.nav-main {
+  text-align: right;
+}
+.nav-main li {
+  list-style: none;
+  display: inline-block;
+  width: 100px;
+  height: 45px;
+  margin-top: 35px;
+  text-align: center;
+  line-height: 45px;
+  -moz-transition: background-color 250ms ease-in-out 0s;
+  -ms-transition: background-color 250ms ease-in-out 0s;
+  -o-transition: background-color 250ms ease-in-out 0s;
+  -webkit-transition: background-color 250ms ease-in-out 0s;
+  transition: background-color 250ms ease-in-out 0s;
+}
+.nav-main li a {
+  display: inline-block;
+  width: 100px;
+  color: white;
+}
+.nav-main li:hover {
+  background-color: #D3EFFE;
+}
+@media only screen and (max-width: 1024px) {
+  .nav-main {
+    display: none;
+  }
+  .nav-main li {
+    width: 100%;
+    height: 35px;
+    margin: 0;
+    line-height: 35px;
+  }
+  .nav-main li a {
+    width: 100%;
+  }
+}
+
+.nav-settings {
+  text-align: center;
+}
+.nav-settings li {
+  list-style: none;
+  display: inline-block;
+  width: 100%;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  background-color: #3498DB;
+  -moz-transition: background-color 250ms ease-in-out 0s;
+  -ms-transition: background-color 250ms ease-in-out 0s;
+  -o-transition: background-color 250ms ease-in-out 0s;
+  -webkit-transition: background-color 250ms ease-in-out 0s;
+  transition: background-color 250ms ease-in-out 0s;
+}
+.nav-settings li a {
+  display: inline-block;
+  width: 100%;
+  color: white;
+}
+.nav-settings li:hover {
+  background-color: #D3EFFE;
+}
+@media only screen and (max-width: 1024px) {
+  .nav-settings li {
+    width: 100%;
+    height: 35px;
+    margin: 0;
+    line-height: 35px;
+  }
+  .nav-settings li a {
+    width: 100%;
+  }
+}
+
+.popout-header {
+  position: absolute;
+  width: 98%;
+  background-color: #td;
+  padding: 1%;
+}
+.popout-header a, .popout-header .warning {
+  color: #td;
+}
+@media only screen and (min-width: 481px) {
+  .popout-header {
+    right: 0;
+    width: 250px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .popout-header {
+    right: 10%;
+  }
+}
+
+#wrap-login-register, #box-signup, #box-settings {
+  display: none;
+}
+
+/**********************************************************************
+Description: It defines the styles for the module components forming the page. We can devide the entire page in one or more modules. 
+Each module can have background image with or without parallax effect, a content wrapper which wraps module header and content.
+Dependencies: variables, variables-ext, mixins
+Javascript: jquery, cmg-module
+***********************************************************************/
+.module {
+  position: relative;
+}
+.module .splitter {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  z-index: 10000;
+}
+.module .splitter.top {
+  top: 0;
+  margin-top: -50px;
+}
+.module .splitter.bottom {
+  bottom: 0;
+  margin-bottom: -50px;
+}
+.module .splitter .icon {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+}
+
+.module-basic {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.module-basic .bkg {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.module-basic .bkg-parallax {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 110%;
+  position: absolute;
+  top: -5%;
+  left: 0;
+  z-index: 5;
+}
+.module-basic .texture {
+  z-index: 10;
+}
+.module-basic .wrap-content {
+  position: relative;
+  z-index: 15;
+}
+
 .module .module-wrap-content {
   margin-top: 75px;
 }
@@ -4334,7 +4323,7 @@ input[type="submit"], input[type="button"], button, select, .btn {
   margin: 5% 0;
 }
 .blog .wrap-posts .post .media a img.home {
-  a-width: 350px;
+  min-width: 350px;
   min-height: 350px;
 }
 .blog .wrap-posts .post .sidebar {
@@ -4588,108 +4577,6 @@ input[type="submit"], input[type="button"], button, select, .btn {
     margin: 1em 0;
   }
 }
-.nav-main {
-  text-align: right;
-}
-.nav-main li {
-  list-style: none;
-  display: inline-block;
-  width: 100px;
-  height: 45px;
-  margin-top: 35px;
-  text-align: center;
-  line-height: 45px;
-  -moz-transition: background-color 250ms ease-in-out 0s;
-  -ms-transition: background-color 250ms ease-in-out 0s;
-  -o-transition: background-color 250ms ease-in-out 0s;
-  -webkit-transition: background-color 250ms ease-in-out 0s;
-  transition: background-color 250ms ease-in-out 0s;
-}
-.nav-main li a {
-  display: inline-block;
-  width: 100px;
-  color: white;
-}
-.nav-main li:hover {
-  background-color: #D3EFFE;
-}
-@media only screen and (max-width: 1024px) {
-  .nav-main {
-    display: none;
-  }
-  .nav-main li {
-    width: 100%;
-    height: 35px;
-    margin: 0;
-    line-height: 35px;
-  }
-  .nav-main li a {
-    width: 100%;
-  }
-}
-
-.nav-settings {
-  text-align: center;
-}
-.nav-settings li {
-  list-style: none;
-  display: inline-block;
-  width: 100%;
-  height: 45px;
-  text-align: center;
-  line-height: 45px;
-  background-color: #3498DB;
-  -moz-transition: background-color 250ms ease-in-out 0s;
-  -ms-transition: background-color 250ms ease-in-out 0s;
-  -o-transition: background-color 250ms ease-in-out 0s;
-  -webkit-transition: background-color 250ms ease-in-out 0s;
-  transition: background-color 250ms ease-in-out 0s;
-}
-.nav-settings li a {
-  display: inline-block;
-  width: 100%;
-  color: white;
-}
-.nav-settings li:hover {
-  background-color: #D3EFFE;
-}
-@media only screen and (max-width: 1024px) {
-  .nav-settings li {
-    width: 100%;
-    height: 35px;
-    margin: 0;
-    line-height: 35px;
-  }
-  .nav-settings li a {
-    width: 100%;
-  }
-}
-
-.popout-header {
-  position: absolute;
-  width: 98%;
-  background-color: #td;
-  padding: 1%;
-}
-.popout-header a, .popout-header .warning {
-  color: #td;
-}
-@media only screen and (min-width: 481px) {
-  .popout-header {
-    right: 0;
-    width: 250px;
-  }
-}
-@media only screen and (min-width: 1025px) {
-  .popout-header {
-    right: 10%;
-  }
-}
-
-#wrap-login-register, #box-signup, #box-settings {
-  display: none;
-}
-
 .wrap-pagination .info {
   display: none;
 }

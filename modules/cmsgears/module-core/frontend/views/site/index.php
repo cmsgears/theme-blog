@@ -1,16 +1,11 @@
 <?php
-use yii\captcha\Captcha; 
+use yii\captcha\Captcha;
 use yii\helpers\Html;
 use widgets\Post;
-
-$coreProperties 		= $this->context->getCoreProperties();
-$this->title 			= $coreProperties->getSiteTitle();
-$this->params['desc']	= "The basic template with basic theme for CMSGears.";
-$this->params['meta']	= "cmsgears, template, basic, theme";
 ?>
 <div class="module module-basic" id="module-banner">
-	<img src="<?= Yii::getAlias( '@images' ) . '/train.jpg' ?>">	  
-</div> 
+	<img src="<?= Yii::getAlias( '@images' ) . '/train.jpg' ?>">
+</div>
 
 <div class="blog row">
 	<div class="content-80 clearfix">

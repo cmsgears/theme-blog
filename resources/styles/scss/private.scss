@@ -1,3 +1,5 @@
+//Fonts -------------------------------------
+
 //Font Awesome
 @import "vendor/font-awesome/variables";
 @import "vendor/font-awesome/mixins";
@@ -12,33 +14,42 @@
 @import "vendor/font-awesome/stacked";
 @import "vendor/font-awesome/icons";
 
-// CMG Fonts
+// CMT Icon Lib
 @import "cmt-partials/iconlib/icons-lib";
 @import "cmt-partials/iconlib/icons-core";
 
-// CMG Tools with Theme Variables
+// Core -------------------------------------
+
 @import "cmt-partials/core/variables";
-// Override default variables
 @import "partials/core/fonts";
 @import "partials/core/variables";
-@import "cmt-partials/core/variables-ext"; 
+@import "cmt-partials/core/variables-ext";
 @import "cmt-partials/core/mixins";
 @import "cmt-partials/core/transitions";
 @import "cmt-partials/core/reset";
 @import "cmt-partials/core/basic";
-@import "cmt-partials/core/typography";
-@import "cmt-partials/core/containers";
-@import "cmt-partials/elements/forms";
-@import "cmt-partials/components/avatar-uploader";
-
-// Theme - Basic
 @import "partials/core/basic";
+@import "cmt-partials/core/typography";
+@import "partials/core/typography";
+@import "cmt-partials/core/containers";
 @import "partials/core/containers";
+
+// Elements ---------------------------------
+
+@import "cmt-partials/elements/forms";
 @import "partials/elements/forms";
+
+// Components -------------------------------
+
 @import "partials/components/headers";
 @import "partials/components/footers";
-@import "partials/components/navs";
+@import "partials/components/menus";
 @import "partials/components/popouts";
+@import "cmt-partials/components/modules";
+@import "partials/components/modules";
 @import "partials/components/pagination";
 @import "partials/components/tag";
-@import "partials/components/widgets";
+
+// Widgets ----------------------------------
+
+@import "cmt-partials/widgets/file-uploader";

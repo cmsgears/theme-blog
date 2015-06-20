@@ -3,7 +3,7 @@ use themes\blog\assets\LandingAssetBundle;
 
 LandingAssetBundle::register( $this );
 
-$coreProperties 		= $this->context->getCoreProperties();
+$coreProperties = $this->context->getCoreProperties();
 ?>
 <?php $this->beginPage(); ?>
 <!DOCTYPE html>
