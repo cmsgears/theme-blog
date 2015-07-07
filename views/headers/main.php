@@ -28,7 +28,7 @@ ContentUtil::initPage( $this );
 <script type="text/javascript"> if ( !window.console ) console = { log: function() {} }; </script>
 
 <!-- Browser tab icons -->
-<link href="assets/images/icons/icon.ico" rel="shortcut icon">
-<link href="assets/images/icons/icon.jpg" rel="apple-touch-icon-precomposed">
+<link href="images/icons/icon.ico" rel="shortcut icon">
+<link href="images/icons/icon.jpg" rel="apple-touch-icon-precomposed">
 
 <?php $this->head(); ?>
