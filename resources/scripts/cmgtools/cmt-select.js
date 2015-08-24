@@ -103,9 +103,18 @@
 			else {
 
 				// Add listener to selected val
-				customSelected.click( function() {
-	
-					customList.show();
+				customSelected.click( function( e ) {
+					
+					var visible = customList.is( ':visible' );
+
+					cmt( ".cmt-select-list" ).hide();
+
+					if( !visible ) {
+
+						customList.show();
+					}
+					
+					e.stopPropagation();
 				});
 	
 				// Update selected value
@@ -116,16 +125,18 @@
 					
 					parent.children( ".cmt-selected" ).children( ".s-text" ).html( selected.html() );
 					parent.parent().children( "select" ).val( selected.attr( "data-value" ) ).change();
+
+					customList.hide();
+				});
+				
+				cmt( document ).on( 'click', function( e ) {
+
+			        if ( cmt( e.target ).closest( customList ).length === 0 ) {
 	
-					selected.parent().hide();
+			            customList.hide();
+			        }
 				});
-
-				// Update selected value
-				customList.mouseleave( function() {
-
-					jQuery( this ).hide();
-				});
-			}	
+			}
 		}
 	};
 

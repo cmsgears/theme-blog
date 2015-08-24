@@ -5,15 +5,10 @@ jQuery(document).ready( function() {
 
 function initAjaxListeners() {
 
-	jQuery( "#btn-logout a" ).click( function( e ) {
-	
-		e.preventDefault();
-		
-		logout( this.href );
-	});
-
 	// Listen for Ajax Forms
 	jQuery( ".frm-ajax" ).processAjax();
+	
+	jQuery( ".request-ajax" ).processAjax( { form: false } );
 }
 
 // Forms --------------------------------------------------------------------
@@ -22,14 +17,19 @@ function postBTProcessorSuccess( formId, formGroup, formKey, data ) {
 
 	switch( formGroup ) {
 
-		case FORM_GROUP_DEFAULT:
-		{
+		case CONTROLLER_DEFAULT: {
 
 			switch( formKey ) {
 
-				case FORM_KEY_LOGIN:
-				{
-					window.location.replace( siteUrl + "user/home" );
+				case ACTION_LOGIN: {
+
+					window.location.replace( siteUrl + "cmgcore/user/home" );
+
+					break;
+				}
+				case ACTION_AVATAR: {
+
+					jQuery( "#" + formId ).parent().hide();
 
 					break;
 				}
@@ -40,23 +40,4 @@ function postBTProcessorSuccess( formId, formGroup, formKey, data ) {
 	}
 }
 
-postAjaxProcessor.addSuccessListener( postBTProcessorSuccess );
-
-// Logout -------------------------------------------------------------------
-
-function logout( logoutUrl ) {
-
-	var csrfToken 	= jQuery( 'meta[name=csrf-token]' ).attr( 'content' );
-	var formData	= { _csrf: csrfToken };
-
-    jQuery.ajax({
-        type: 'POST',
-        url: logoutUrl,
-        data: formData,
-        dataType: "JSON",
-        success: function( data, textStatus, XMLHttpRequest ) {
-
-        	window.location.href = siteUrl;
-        }
-	});
-}
+postCmtApiProcessor.addSuccessListener( postBTProcessorSuccess );

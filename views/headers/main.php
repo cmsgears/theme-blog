@@ -1,8 +1,9 @@
 <?php
+// Yiim Imports
 use \Yii;
 use yii\helpers\Html;
 
-// TODO: Move it to Pre/Post page load event
+// CMG Imports
 use cmsgears\cms\common\utilities\ContentUtil;
 ContentUtil::initPage( $this );
 ?>

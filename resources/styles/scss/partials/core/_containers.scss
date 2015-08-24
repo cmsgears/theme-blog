@@ -23,12 +23,9 @@ html, body {
 }
 
 .wrap-content-private {
-    width: 90%;
-    margin: 0 auto;
-    //border: $border-default-l;
     background-color: $color-primary-l;
 
-    @include responsive-min( screen-tablet-large ) {
-        width: 1000px;
+    @include responsive-max( screen-tablet-large ) {
+        width: 100%;
     }
 }

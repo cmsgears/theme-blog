@@ -1,4 +1,14 @@
 .header-main {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: $color-primary-l;
+    padding: 1em;
+}
+
+
+.header-main1 {
     background-color: $color-primary-l;
     position: fixed;
     top: 0;

@@ -3,6 +3,7 @@ use themes\blog\assets\LandingAssetBundle;
 
 LandingAssetBundle::register( $this );
 
+// Variables available for headers, sidebars and footers included within this layout
 $coreProperties = $this->context->getCoreProperties();
 ?>
 <?php $this->beginPage(); ?>

@@ -1,111 +1,76 @@
 jQuery(document).ready( function() {
-
-	initLanding(); 
-
-	initListeners(); 
-	initGridView();	 
-	initListView();
 	
-	cmgStickMenu( ".mobile-nav-icon" ); 
-	
-	jQuery(".media").click( function() {
-		
-		jQuery(this).toggleClass("hover");
-	} ); 
-	initAutoHeight();
+	initPreloaders();
+
+	initLanding();
+
+	initModules();
+
+	initListeners();
 });
 
-function initGridView() {
-	
-	jQuery(".icon-grid").click( function() { 
-		
-		jQuery(".blog .post").css({"width":"50%", "float": "left", "border":"0px", "margin":"2% 0"});
-		jQuery(".blog .post .sidebar, .blog .post .icon").hide();
-		jQuery(".blog .media").removeClass("col12x9");
-		jQuery(".blog .media a img").removeClass("home");
-		jQuery(".blog .media").addClass("col1");
-		jQuery(this).removeClass("fa-th");
-		jQuery(this).addClass("fa-th-list");
-		jQuery(this).attr("title","List View");
-		jQuery(this).removeClass("icon-grid");
-		jQuery(this).addClass("icon-list");
-		jQuery(this).one('bind',initAutoHeight());
-		initListView();		
-		initAutoHeight();
-	} );
-}
+function initPreloaders() {
 
-function initListView() {
-	
-	jQuery(".icon-list").click( function() {
-		
-		jQuery(".blog .post").css({"width":"100%", "float": "none", "border":"1px", "margin":"5% 0"});
-		jQuery(".blog .post .sidebar, .blog .post .icon").show();
-		jQuery(".blog .media").addClass("col12x9");
-		jQuery(".blog .media").removeClass("col1");
-		jQuery(".blog .media a img").addClass("home");
-		jQuery(this).removeClass("fa-th-list");
-		jQuery(this).addClass("fa-th");
-		jQuery(this).attr("title","Grid View");
-		jQuery(this).removeClass("icon-list");
-		jQuery(this).addClass("icon-grid");
-		jQuery(this).one('bind',initAutoHeight());
-		initGridView();
-		initAutoHeight(); 
-	} );
+	// Hide global pre-loader spinner
+	jQuery( '.module' ).imagesLoaded( function() {
+
+		jQuery( '#pre-loader-main' ).fadeOut( "slow" );
+	});
 }
 
 function initLanding() {
 
-	registerHeaderChange();
+	// perspective header
+	if( jQuery().cmtHeader ) {
 
-	initSmoothScroll( ".smooth-scroll" );	
-} 
+		jQuery( "#header-main" ).cmtHeader( { scrollDistance: 250 } );
+	}
+}
+
+function initModules() {
+
+	// Page Modules
+	if( jQuery().cmtPageModule ) {
+
+		jQuery( ".module" ).cmtPageModule( {
+			fullHeight: true,
+			modules: {
+				'module-banner': { fullHeight: false }
+				/*
+				'module-contact': { fullHeight: false, heightAutoMobile: true, heightAutoMobileWidth: 1024 },
+				'module-public': { fullHeight: true, heightAutoMobile: true, heightAutoMobileWidth: 1024 },
+				'module-public-full': { fullHeight: false, heightAutoMobile: true, heightAutoMobileWidth: 1024 }
+				*/
+			}
+		});
+	}
+}
 
 function initListeners() {
 
-	// Show pre-loader spinner
-	jQuery( '#pre-loader-page' ).fadeIn();
+	// Initialise the mobile button
+	jQuery( "#btn-mobile-menu, #nav-mobile li" ).click( function() {
 
-	// Hide pre-loader spinner
-	jQuery( 'body' ).imagesLoaded( function() {
+		jQuery( "#nav-mobile" ).slideToggle( "slow" );
+	});
 
-		jQuery( '#pre-loader-page' ).fadeOut( "slow" );
-	}); 
-}
+	// Show/ Hide login box
+	jQuery( "#btn-login, #btn-login-mobile" ).click( function() {
 
-function cmgStickMenu( $clickable ) { 
-	 	
-	jQuery(".cmg-stick-menu").css("top",-jQuery(".header-main").height());
-	
-	jQuery( $clickable ).click( function() {
-		
-		jQuery(".cmg-stick-menu").animate({left: '0px'});
-	} );
-	
-	jQuery(".menu-close").click( function() {
-		
-		jQuery(".cmg-stick-menu").animate({left: '-700px'});
-	} );
-}
+		jQuery( "#wrap-login-register" ).toggle( "slow" );
+	});
 
-// Set AutoHeight
+	// Show/ Hide settings box
+	jQuery( "#btn-settings, #btn-settings-mobile" ).click( function( e ) {
 
-function initAutoHeight() {
-	
-	jQuery(".wrap-posts").css("min-height",jQuery(".post").height()); 
-	
-	jQuery(".sidebar").height( jQuery(".media").height() );
-	
-	jQuery(".post .hover-content").width( jQuery(".media").width() ); 
-	
-	if( window.innerWidth <= 1024  ) {
-		
-		jQuery(".post .sidebar").height(jQuery(".date").outerHeight()); 
-	}
-	
-	if( window.innerWidth <= 480  ) {
-		
-		jQuery(".post .media").height( jQuery(".hover-content").height()+30 );
+		e.preventDefault();
+
+		jQuery( "#box-settings" ).toggle( "slow" );
+	});
+
+	// File Uploader
+	if( jQuery().cmtFileUploader ) {
+
+		jQuery( '.file-uploader' ).cmtFileUploader();
 	}
 }
