@@ -15,7 +15,6 @@ class LandingAssetBundle extends AssetBundle {
 		parent::__construct();
 
 		// Path Configuration
-
 	    $this->sourcePath = dirname( __DIR__ ) . '/resources';
 
 		// Load CSS

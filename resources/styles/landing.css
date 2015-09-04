@@ -3395,6 +3395,22 @@ Dependencies: variables, variables-ext
   background-size: 100% 100%;
 }
 
+.bkg-auto {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% auto;
+}
+
+.bkg-image-fixed {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 /**********************************************************************
 Description: The transition effects available in CMGTools.
 Dependencies: none
@@ -3886,7 +3902,7 @@ body {
   background-color: rgba(231, 76, 60, 0.6);
 }
 
-.texture {
+.texture, .pattern {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -3901,14 +3917,6 @@ body {
 
 .pattern-default {
   background-image: url("../images/pattern-default.jpg");
-}
-
-.texture1 {
-  background-image: url(../images/texture1.png);
-}
-
-table {
-  width: 100%;
 }
 
 /**********************************************************************
@@ -4551,25 +4559,29 @@ Dependencies: variables, mixins
 
 .content-80 {
   position: relative;
-  padding: 0 10% !important;
+  padding-left: 10% !important;
+  padding-right: 10% !important;
   width: 100% !important;
 }
 
 .content-74 {
   position: relative;
-  padding: 0 13% !important;
+  padding-left: 13% !important;
+  padding-right: 13% !important;
   width: 100% !important;
 }
 
 .content-50 {
   position: relative;
-  padding: 0 25% !important;
+  padding-left: 25% !important;
+  padding-right: 25% !important;
   width: 100% !important;
 }
 
 .content-26 {
   position: relative;
-  padding: 0 37% !important;
+  padding-left: 37% !important;
+  padding-right: 37% !important;
   width: 100% !important;
 }
 
@@ -4597,6 +4609,24 @@ Dependencies: variables, mixins
   width: 100% !important;
 }
 
+.max-height {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.max-block {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.stick-bottom {
+  bottom: 0;
+  position: absolute;
+}
+
 html, body {
   width: 100%;
   height: 100%;
@@ -4617,13 +4647,11 @@ html, body {
 }
 
 .wrap-content-private {
-  width: 90%;
-  margin: 0 auto;
   background-color: #ffffff;
 }
-@media only screen and (min-width: 1025px) {
+@media only screen and (max-width: 1024px) {
   .wrap-content-private {
-    width: 1000px;
+    width: 100%;
   }
 }
 
@@ -4843,208 +4871,107 @@ input[type="text"].xlarge, input[type="email"].xlarge, input[type="password"].xl
   -khtml-border-radius-bottom-right: 5px;
 }
 
-input[type="text"], input[type="email"], input[type="password"], textarea {
-  border: none;
-  margin: 10px 0;
-}
-
-input[type="submit"], input[type="button"], button, select, .btn {
-  border: none;
-}
-
-.frm-icon-field .wrap-icon {
-  -moz-border-radius-top-left: 0;
-  -moz-border-radius-bottom-left: 0;
-  -webkit-border-radius-top-left: 0;
-  -webkit-border-radius-bottom-left: 0;
-  border-radius: 0 0 0 0;
-  -khtml-border-radius-top-left: 0;
-  -khtml-border-radius-bottom-left: 0;
-}
-.frm-icon-field input[type="text"], .frm-icon-field input[type="email"], .frm-icon-field input[type="password"], .frm-icon-field textarea, .frm-icon-field input[type="submit"], .frm-icon-field input[type="button"], .frm-icon-field button, .frm-icon-field .btn {
-  -moz-border-radius-top-right: 0;
-  -moz-border-radius-bottom-right: 0;
-  -webkit-border-radius-top-right: 0;
-  -webkit-border-radius-bottom-right: 0;
-  border-radius: 0 0 0 0;
-  -khtml-border-radius-top-right: 0;
-  -khtml-border-radius-bottom-right: 0;
-  margin: 10px 0;
-}
-
 .header-main {
-  background-color: #ffffff;
   position: fixed;
   top: 0;
   z-index: 100;
   width: 100%;
-}
-.header-main .header-desktop {
-  width: 80%;
-  margin: 0 auto;
-}
-.header-main .header-desktop .logo {
-  height: 60px;
-  margin: 10px;
-}
-.header-main .header-desktop .wrap-nav {
-  -moz-transition: width 250ms ease-in-out 0s;
-  -ms-transition: width 250ms ease-in-out 0s;
-  -o-transition: width 250ms ease-in-out 0s;
-  -webkit-transition: width 250ms ease-in-out 0s;
-  transition: width 250ms ease-in-out 0s;
-  width: 75%;
-}
-.header-main .header-desktop .wrap-nav .nav-main li {
-  -moz-transition: all 250ms ease-in-out 0s;
-  -ms-transition: all 250ms ease-in-out 0s;
-  -o-transition: all 250ms ease-in-out 0s;
-  -webkit-transition: all 250ms ease-in-out 0s;
-  transition: all 250ms ease-in-out 0s;
-  width: auto !important;
-  margin: 8% 20px 4%;
-  line-height: 0;
-  height: 10px;
-}
-.header-main .header-desktop .wrap-nav .nav-main li:hover {
-  background: none;
-}
-.header-main .header-desktop .wrap-nav .nav-main li a {
-  -moz-transition: color 250ms ease-in-out 0s;
-  -ms-transition: color 250ms ease-in-out 0s;
-  -o-transition: color 250ms ease-in-out 0s;
-  -webkit-transition: color 250ms ease-in-out 0s;
-  transition: color 250ms ease-in-out 0s;
-  color: #ffffff;
-  position: relative;
-  width: auto !important;
-  font-family: aller-regular;
-}
-.header-main .header-desktop .wrap-nav .nav-main li a:after {
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  width: 0;
-  height: 3px;
   background-color: #ffffff;
-  content: "";
-  transition: width 0.2s;
+  padding: 1em;
 }
-.header-main .header-desktop .wrap-nav .nav-main li a:hover {
-  color: #cccccc;
+.header-main .logo {
+  width: 80px;
 }
-.header-main .header-desktop .wrap-nav .nav-main li a:hover:after {
-  width: 100%;
+.header-main .nav-mobile-icon {
+  margin: 1em;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
-.header-main .header-desktop .wrap-nav .nav-main li a.link-active:after {
-  width: 100%;
-}
-.header-main .header-desktop .wrap-nav .mobile-nav-icon {
+.header-main .nav-main {
   display: none;
-  color: #ffffff;
-  margin-top: 3%;
-  font-size: 2.5em;
 }
-.header-main .header-desktop .logo {
-  -moz-transition: width 250ms ease-in-out 0s;
-  -ms-transition: width 250ms ease-in-out 0s;
-  -o-transition: width 250ms ease-in-out 0s;
-  -webkit-transition: width 250ms ease-in-out 0s;
-  transition: width 250ms ease-in-out 0s;
-  width: 23%;
-}
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   .header-main .logo {
-    float: right;
+    width: 120px;
   }
-  .header-main .header-desktop .wrap-nav {
-    width: 66%;
-    float: left;
+  .header-main .nav-mobile-icon {
+    display: none;
   }
-  .header-main .header-desktop .wrap-nav .mobile-nav-icon {
-    display: block !important;
+  .header-main .nav-main {
+    display: block;
   }
 }
 
 .header-small {
-  box-shadow: 1px -5px 10px #ffffff;
+  padding: 0.5em 1em;
 }
-.header-small .header-desktop .wrap-nav {
-  -moz-transition: width 250ms ease-in-out 0s;
-  -ms-transition: width 250ms ease-in-out 0s;
-  -o-transition: width 250ms ease-in-out 0s;
-  -webkit-transition: width 250ms ease-in-out 0s;
-  transition: width 250ms ease-in-out 0s;
-  width: 90%;
-}
-.header-small .header-desktop .wrap-nav .nav-main li {
-  -moz-transition: all 250ms ease-in-out 0s;
-  -ms-transition: all 250ms ease-in-out 0s;
-  -o-transition: all 250ms ease-in-out 0s;
-  -webkit-transition: all 250ms ease-in-out 0s;
-  transition: all 250ms ease-in-out 0s;
-  margin: 5% 20px 1%;
-}
-.header-small .header-desktop .logo {
-  -moz-transition: width 250ms ease-in-out 0s;
-  -ms-transition: width 250ms ease-in-out 0s;
-  -o-transition: width 250ms ease-in-out 0s;
-  -webkit-transition: width 250ms ease-in-out 0s;
-  transition: width 250ms ease-in-out 0s;
-  width: 8%;
-  height: auto;
+.header-small .logo {
+  width: 80px;
 }
 
-@media only screen and (max-width: 1024px) {
-  .header-main {
-    position: relative !important;
-    z-index: 1;
-  }
-  .header-main .header-desktop .logo {
-    min-height: 25px;
-    height: auto;
-    margin: 5px 2px 2px;
-  }
+.footer-main {
+  min-height: 250px;
+  background-color: #256e9e;
 }
+
+.nav {
+  display: block;
+}
+.nav li {
+  display: inline-block;
+}
+.nav li a {
+  display: inline-block;
+  width: 100%;
+  text-transform: uppercase;
+}
+
 .nav-main {
+  margin: 1em 0;
+  right: 10%;
+}
+.nav-main ul {
   text-align: right;
+  height: 100%;
 }
-.nav-main li {
-  list-style: none;
-  display: inline-block;
-  width: 100px;
-  height: 45px;
-  margin-top: 35px;
+.nav-main ul li {
+  height: 100%;
+  padding-left: 2em;
+}
+.nav-main ul li.active a, .nav-main ul li:hover a {
+  border-bottom: 2px solid #3498db;
+}
+
+.nav-mobile {
+  position: absolute;
+  top: 65px;
+  left: -180px;
+  width: 180px;
+  padding: 1em;
+  background-color: #3498db;
+  -moz-transition: all 350ms ease-in-out 0s;
+  -ms-transition: all 350ms ease-in-out 0s;
+  -o-transition: all 350ms ease-in-out 0s;
+  -webkit-transition: all 350ms ease-in-out 0s;
+  transition: all 350ms ease-in-out 0s;
+}
+.nav-mobile.active {
+  left: 0px;
+}
+.nav-mobile li {
+  width: 100%;
   text-align: center;
-  line-height: 45px;
-  -moz-transition: background-color 250ms ease-in-out 0s;
-  -ms-transition: background-color 250ms ease-in-out 0s;
-  -o-transition: background-color 250ms ease-in-out 0s;
-  -webkit-transition: background-color 250ms ease-in-out 0s;
-  transition: background-color 250ms ease-in-out 0s;
+  padding: 1em;
 }
-.nav-main li a {
-  display: inline-block;
-  width: 100px;
-  color: white;
+.nav-mobile li a {
+  width: 100%;
 }
-.nav-main li:hover {
-  background-color: #d3effe;
+.nav-mobile li.active, .nav-mobile li:hover {
+  background-color: #ecf0f1;
 }
-@media only screen and (max-width: 1024px) {
-  .nav-main {
-    display: none;
-  }
-  .nav-main li {
-    width: 100%;
-    height: 35px;
-    margin: 0;
-    line-height: 35px;
-  }
-  .nav-main li a {
-    width: 100%;
-  }
+.nav-mobile li.active a, .nav-mobile li:hover a {
+  color: #464646;
 }
 
 .nav-settings {
@@ -5084,31 +5011,6 @@ input[type="submit"], input[type="button"], button, select, .btn {
   }
 }
 
-.popout-header {
-  position: absolute;
-  width: 98%;
-  background-color: #e74c3c;
-  padding: 1%;
-}
-.popout-header a, .popout-header .warning {
-  color: #ffffff;
-}
-@media only screen and (min-width: 481px) {
-  .popout-header {
-    right: 0;
-    width: 250px;
-  }
-}
-@media only screen and (min-width: 1025px) {
-  .popout-header {
-    right: 10%;
-  }
-}
-
-#wrap-login-register, #box-signup, #box-settings {
-  display: none;
-}
-
 /**********************************************************************
 Description: It defines the styles for the module components forming the page. We can devide the entire page in one or more modules. 
 Each module can have background image with or without parallax effect, a content wrapper which wraps module header and content.
@@ -5125,6 +5027,36 @@ Javascript: jquery, cmg-module
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.module .module-bkg-fixed {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.module .module-bkg-scroll {
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -5184,12 +5116,18 @@ Javascript: jquery, cmg-module
 .module .module-wrap-content {
   margin-top: 75px;
 }
-.module .module-wrap-content .module-header {
-  text-align: center;
-}
 @media only screen and (min-width: 1025px) {
   .module .module-wrap-content {
-    margin-top: 110px;
+    margin-top: 90px;
+  }
+}
+
+#module-banner {
+  height: 250px;
+}
+@media only screen and (min-width: 1025px) {
+  #module-banner {
+    height: 540px;
   }
 }
 
@@ -5512,10 +5450,6 @@ Javascript: jquery, cmg-module
     top: 0;
     width: 40%;
     border-radius: 0;
-  }
-
-  .content-80 {
-    padding: 0;
   }
 }
 @media only screen and (max-width: 1024px) {

@@ -5,150 +5,42 @@
     width: 100%;
     background-color: $color-primary-l;
     padding: 1em;
-}
 
+    .logo {
+        width: 80px;
+    }
 
-.header-main1 {
-    background-color: $color-primary-l;
-    position: fixed;
-    top: 0;
-    z-index: 100;
-    width: 100%;
+    .nav-mobile-icon {
+        margin: 1em;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
 
-    .header-desktop {
-        width: 80%;
-        margin: 0 auto;
+    .nav-main {
+        display: none;
+    }
+
+    @include responsive-min( screen-tablet-large ) {
 
         .logo {
-            height: 60px;
-            margin: 10px;       
+            width: 120px;
         }
-        
-        .wrap-nav {
-          @include transit-width( $transit-eio, $transit-time-small, $delay: 0s );
-          width: 75%; 
-          
-          .nav-main {
-            
-            li {
-              @include transit-all( $transit-eio, $transit-time-small, $delay: 0s );
-              width: auto !important;
-              margin: 8% 20px 4%;
-              line-height: 0;
-              height: 10px;
-              
-              &:hover {
-                background: none;
-              }
-              
-              a {
-                @include transit-color( $transit-eio, $transit-time-small, $delay: 0s );
-                color: $color-secondary-text-d;  
-                position: relative;
-                width: auto !important;
-                font-family: aller-regular;
-                
-                &:after {
-                  display: block;
-                  position: absolute;
-                  left: 0;
-                  bottom: -10px;
-                  width: 0;
-                  height: 3px;
-                  background-color: $color-secondary-text-d;
-                  content: "";
-                  transition: width 0.2s;
-                }
-                
-                &:hover {
-                  color: darken(white, 20%);
-                }
-                
-                &:hover:after {
-                  width: 100%;
-                } 
-                
-                &.link-active:after {
-                  width: 100%;
-                }        
-              }            
-            }
-          }
-          
-         .mobile-nav-icon {
+
+        .nav-mobile-icon {
             display: none;
-            color: $color-secondary-text-d;
-            margin-top: 3%;
-            font-size: $font-size-1;
-         }
-       } 
-       
-      .logo {
-        @include transit-width( $transit-eio, $transit-time-small, $delay: 0s );
-        width: 23%;
-      } 
-    }
-
-
-  @include responsive-max( screen-tablet-large ) {
-    
-    .logo {
-      float: right;
-    }
-     
-    .header-desktop {
-      
-      .wrap-nav {
-        width: 66%;
-        float: left;
-        
-        .mobile-nav-icon {
-          display: block !important;
         }
-      }
-    } 
-  }     
+
+        .nav-main {
+            display: block;
+        }
+    }
 }
 
 .header-small {
-  
-  .header-desktop {
-    
-    .wrap-nav {
-      @include transit-width( $transit-eio, $transit-time-small, $delay: 0s );
-      width: 90%;
-      
-      .nav-main {
-        li {
-          @include transit-all( $transit-eio, $transit-time-small, $delay: 0s );
-          margin: 5% 20px 1%;
-        } 
-      }  
-    }
-    
+    padding: 0.5em 1em;
+
     .logo {
-      @include transit-width( $transit-eio, $transit-time-small, $delay: 0s );
-      width: 8%;
-      height: auto;
-    } 
-  }
-   
-  box-shadow: 1px -5px 10px $color-secondary-text-d;
-}
-
-@include responsive-max( screen-tablet-large ) {
-
-  .header-main {
-    position: relative !important;
-    z-index: 1;
-    
-    .header-desktop {
-      
-      .logo {
-        min-height: 25px;
-        height: auto;
-        margin: 5px 2px 2px;
-      }
-    }   
-  }    
+        width: 80px;
+    }
 }

@@ -49,15 +49,16 @@ function initModules() {
 function initListeners() {
 
 	// Initialise the mobile button
-	jQuery( "#btn-mobile-menu, #nav-mobile li" ).click( function() {
+	jQuery( "#nav-mobile-icon, #nav-mobile li" ).click( function() {
 
-		jQuery( "#nav-mobile" ).slideToggle( "slow" );
-	});
+		if( jQuery( "#nav-mobile" ).hasClass( "active" ) ) {
 
-	// Show/ Hide login box
-	jQuery( "#btn-login, #btn-login-mobile" ).click( function() {
+			jQuery( "#nav-mobile" ).removeClass( "active" );
+		}
+		else {
 
-		jQuery( "#wrap-login-register" ).toggle( "slow" );
+			jQuery( "#nav-mobile" ).addClass( "active" );
+		}
 	});
 
 	// Show/ Hide settings box
@@ -73,4 +74,11 @@ function initListeners() {
 
 		jQuery( '.file-uploader' ).cmtFileUploader();
 	}
+
+	jQuery( window ).scroll(function() {
+
+		var scrolledY = jQuery( window ).scrollTop();
+
+	  	jQuery( '#module-banner .module-bkg-scroll' ).css( 'background-position', 'center ' + ( ( scrolledY ) ) + 'px' );
+	});
 }

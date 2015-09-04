@@ -23,7 +23,7 @@ function postBTProcessorSuccess( formId, formGroup, formKey, data ) {
 
 				case ACTION_LOGIN: {
 
-					window.location.replace( siteUrl + "cmgcore/user/home" );
+					window.location.replace( siteUrl + "user/home" );
 
 					break;
 				}
