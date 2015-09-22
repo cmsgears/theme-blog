@@ -61,12 +61,12 @@ class LandingAssetBundle extends AssetBundle {
 
     		conditionizr.polyfill( 'scripts/vendor/html5shiv.min.js', [ 'ie6', 'ie7', 'ie8' ] );
     		conditionizr.polyfill( 'scripts/vendor/respond.min.js', [ 'ie6', 'ie7', 'ie8' ] );";
-    
+
     	$siteUrl = "var siteUrl = '" . Yii::$app->homeUrl . "';
 					var fileUploadUrl = '" . Yii::$app->homeUrl . "apix/file/file-handler';";
 
 		$view->registerJs( $inlineScript, View::POS_READY );
-		
+
 		$view->registerJs( $siteUrl, View::POS_END );
 	}
 }

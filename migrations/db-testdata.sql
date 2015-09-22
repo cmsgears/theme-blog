@@ -12,21 +12,10 @@ INSERT INTO `cmg_core_template` (`name`,`description`,`type`,`layout`,`viewPath`
 	('text','It can be used to display simple key values for a widget.','widget',null,'@themes/blog/views/templates/widget','text-admin',null,null);
 
 --
--- Dumping data for table `cmg_cms_menu`
+-- Dumping data for table `cmg_core_object`
 --
 
-INSERT INTO `cmg_cms_menu` VALUES 
-	(1,NULL,'main','Main Menu. It can be used for site header and footer.');
-
---
--- Dumping data for table `cmg_cms_menu_page`
---
-
-INSERT INTO `cmg_cms_menu_page` VALUES
-	(1,1,0),
-	(1,13,0),
-	(1,10,0),
-	(1,8,0);
-
+INSERT INTO `cmg_core_object` VALUES 
+	(1,1,1,NULL,'main','Main Menu. It can be used for site header and footer.','menu','{\"pages\":[\"1\",\"3\",\"12\"]}','2014-10-11 14:22:54','2014-10-11 14:22:54');
 
 SET FOREIGN_KEY_CHECKS=1;
