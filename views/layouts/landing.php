@@ -1,9 +1,13 @@
 <?php
-use themes\blog\assets\AssetLoaderLanding;
+use cmsgears\cms\common\utilities\ContentUtil;
+use themes\blog\assets\LandingAssetBundle;
 
-AssetLoaderLanding::register( $this );
+ContentUtil::initPage( $this );
 
-$coreProperties 		= $this->context->getCoreProperties();
+LandingAssetBundle::register( $this );
+
+// Variables available for headers, sidebars and footers included within this layout
+$coreProperties = $this->context->getCoreProperties();
 ?>
 <?php $this->beginPage(); ?>
 <!DOCTYPE html>
@@ -13,14 +17,15 @@ $coreProperties 		= $this->context->getCoreProperties();
     </head>
     <body>
         <?php $this->beginBody(); ?>
-		<div id='pre-loader-page' class="max-area-cover"><div class="valign-center fa fa-5x fa-spinner fa-spin"></div></div>
+		<div id='pre-loader-main' class="max-area-cover"><div class="valign-center cmti cmti-5x cmti-flexible-o spin"></div></div>
 		<?php include dirname( __DIR__ ) . "/headers/landing.php"; ?>
         <div class="container-main">
+	        <div class="pattern pattern-default"></div>
 	        <div class="wrap-content">
 	        	<?= $content ?>
 	        </div>
-	        <?php include dirname( __DIR__ ) . "/footers/common.php"; ?>
         </div>
+        <?php include dirname( __DIR__ ) . "/footers/common.php"; ?>
         <?php $this->endBody(); ?>
     </body>
 </html>

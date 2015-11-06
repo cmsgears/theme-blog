@@ -1,20 +1,22 @@
 .popout-header {
     position: absolute;
-    width: 98%;
-    background-color: $color-tertiary;
-    padding: 1%;
+    width: 180px;
+    background-color: $color-primary;
+    padding: 1em;
 
     a, .warning {
-        color: $color-tertiary-text;
+        color: $color-primary-text;
     }
 
-    @include responsive-min( screen-mobile-large ) {
-        right: 0;
-        width: 250px;
+    @include responsive-max( screen-tablet-large ) {
+        left: 0px;
+        top: 65px;
+        width: 100%;
     }
 
     @include responsive-min( screen-tablet-large ) {
         right: 10%;
+        top: 95px;
     }
 }
 

@@ -1,5 +1,12 @@
 <?php
+use yii\helpers\Url;
+
 use cmsgears\files\widgets\AvatarUploader;
 ?>
 
-<?= AvatarUploader::widget( [ 'avatarId' => 'avatar', 'listenerId' => 'btn-avatar-box', 'includeScripts' => true ] ); ?>
+<?=AvatarUploader::widget([ 
+			'options' => [ 'id' => 'avatar-user', 'class' => 'file-uploader' ], 
+			'model' => $user->avatar,  
+			'postaction' => true, 'cmtcontroller' => 'default', 'cmtaction' => 'avatar',
+			'postactionurl' => Url::toRoute( [ 'apix/user/avatar'], true )
+]);?>

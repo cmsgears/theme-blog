@@ -1,62 +1,82 @@
-jQuery(document).ready( function() {
+jQuery( document ).ready( function() {
 
-	initLanding();
+	initPreloaders();
 
-	initModules();
+	initCmgTools();
 
 	initListeners();
+	
+	initWindowScroll();
 });
 
-function initLanding() {
+function initPreloaders() {
 
-	registerHeaderChange();
+	// Hide global pre-loader spinner
+	jQuery( '.block' ).imagesLoaded( { background: true }, function() {
 
-	initSmoothScroll( ".smooth-scroll" );	
+		jQuery( '#pre-loader-main' ).fadeOut( 'slow' );
+	});
 }
 
-function initModules() {
+function initCmgTools() {
 
-	// Initialise the Page Modules
-	if( jQuery().cmgPageModules ) {
+	// perspective header
+	if( jQuery().cmtHeader ) {
 
-		jQuery( ".module" ).cmgPageModules( {
+		jQuery( "#header-main" ).cmtHeader( { scrollDistance: 350 } );
+	}
+
+	// Initialise the Blocks
+	if( jQuery().cmtBlock ) {
+
+		jQuery( ".block" ).cmtBlock({
 			fullHeight: true,
-			modules: {
-				'module-about': { fullHeight: true, css: { 'height': 'auto' } },
-				'module-contact': { heightAutoMobile: true, heightAutoWidth: 1024 }
+			blocks: {
+				'block-banner': { fullHeight: false },
+				'block-about': { 'fullHeight': true, heightAutoMobile: true, heightAutoMobileWidth: 1024 },
+				'block-contact': { 'fullHeight': true, 'heightAuto': true },
+				'block-public': { 'fullHeight': true, heightAutoMobile: true, heightAutoMobileWidth: 1600 }
 			}
 		});
-	}	
+	}
 }
 
 function initListeners() {
 
-	// Show pre-loader spinner
-	jQuery( '#pre-loader-page' ).fadeIn();
-
-	// Hide pre-loader spinner
-	jQuery( 'body' ).imagesLoaded( function() {
-
-		jQuery( '#pre-loader-page' ).fadeOut( "slow" );
-	});
-
 	// Initialise the mobile button
-	jQuery( "#btn-mobile-menu" ).click( function() {
+	jQuery( "#nav-mobile-icon, #nav-mobile li" ).click( function() {
 
-		jQuery( "#nav-mobile" ).slideToggle( "slow" );
-	});
-	
-	// Show/ Hide login box
-	jQuery("#btn-login, #btn-login-mobile").click( function() {
+		if( jQuery( "#nav-mobile" ).hasClass( "active" ) ) {
 
-		jQuery( "#wrap-login-register" ).toggle( "slow" );
+			jQuery( "#nav-mobile" ).removeClass( "active" );
+		}
+		else {
+
+			jQuery( "#nav-mobile" ).addClass( "active" );
+		}
 	});
-	
+
 	// Show/ Hide settings box
-	jQuery("#btn-settings, #btn-settings-mobile").click( function( e ) {
-		
+	jQuery( "#btn-settings, #btn-settings-mobile" ).click( function( e ) {
+
 		e.preventDefault();
 
 		jQuery( "#box-settings" ).toggle( "slow" );
+	});
+
+	// File Uploader
+	if( jQuery().cmtFileUploader ) {
+
+		jQuery( '.file-uploader' ).cmtFileUploader();
+	}
+}
+
+function initWindowScroll() {
+
+	jQuery( window ).scroll(function() {
+
+		var scrolledY = jQuery( window ).scrollTop();
+
+	  	jQuery( '#block-banner .block-bkg-scroll' ).css( 'background-position', 'center ' + ( ( scrolledY ) ) + 'px' );
 	});
 }

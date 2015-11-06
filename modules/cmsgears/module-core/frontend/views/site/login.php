@@ -1,29 +1,30 @@
 <?php
+// Yii Imports
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
-$coreProperties = $this->context->getCoreProperties();
-$this->title 	= $coreProperties->getSiteTitle() . " | Login";
+// CMG Imports
+use cmsgears\widgets\block\BasicBlock;
 ?>
-<section class="module module-basic" id="module-public">
-	<div class="module-bkg"></div>
-	<div class="texture texture1"></div>
-	<div class="module-wrap-content valign-center">
-		<div class="module-header">
-			<h1 class="align-middle">LOGIN</h1>
-		</div>
-		<div class="module-content">
-			<?php $form = ActiveForm::begin( [ 'id' => 'frm-login' ] );?>
-	
-	    	<?= $form->field( $model, 'email' )->textInput( [ 'placeholder' => 'Email*' ] )->label( false ) ?>
-	    	<?= $form->field( $model, 'password' )->passwordInput( array( 'placeholder' => 'Password*' ) )->label( false ) ?>
-	    	<?= $form->field( $model, 'rememberMe' )->checkbox() ?>
 
-			<?= Html::a( "Forgot your Password ?", [ '/forgot-password' ] ) ?>
-			
-			<div><input type="submit" value="Login" /></div>
+<?php BasicBlock::begin([
+	'options' => [ 'id' => 'block-public', 'class' => 'block block-basic' ],
+	'bkg' => true,
+	'texture' => true, 'textureClass' => 'texture-default',
+	'header' => true, 'headerContent' => "<h2 class='align align-middle'>LOGIN</h2>",
+	'contentWrapClass' => 'align align-center', 'content' => true
+]);?>
 
-			<?php ActiveForm::end(); ?>
-		</div>
-	</div>
-</section>
+	<?php $form = ActiveForm::begin( [ 'id' => 'frm-login' ] );?>
+
+	<?= $form->field( $model, 'email' )->textInput( [ 'placeholder' => 'Email*' ] )->label( false ) ?>
+	<?= $form->field( $model, 'password' )->passwordInput( array( 'placeholder' => 'Password*' ) )->label( false ) ?>
+	<?= $form->field( $model, 'rememberMe' )->checkbox() ?>
+
+	<?= Html::a( "Forgot your Password ?", [ '/forgot-password' ] ) ?>
+
+	<div class='align-middle'><input type="submit" value="Login" /></div>
+
+	<?php ActiveForm::end(); ?>
+
+<?php BasicBlock::end(); ?>

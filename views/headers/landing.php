@@ -1,34 +1,18 @@
 <?php
 use yii\helpers\Html;
-use cmsgears\core\widgets\AjaxLogin;
+use yii\helpers\Url;
+
+use cmsgears\widgets\dnav\DynamicNav;
 ?>
-<header id="header" class="header-main">
-	<div class="header-desktop clearfix">
-		<div class="colf12x4">
-			<?=Html::a( "<img class='logo' src='" . Yii::getAlias( '@images' ) . "/logo.png'>", [ '/' ], null )?>
-		</div>
-		<div class="colf12x6">
-			<ul class="nav-main">
-	            <li><a class="smooth-scroll" href="#module-banner">Home</a></li>
-	            <li><a class="smooth-scroll" href="#module-about">About</a></li>
-	            <li><a class="smooth-scroll" href="#module-contact">Contact</a></li>
-			</ul>
-		</div>
-		<div class="colf12x2">
-			<span class="btn" id="btn-login">My Account</span>
+<header id="header-main" class="header-main content-80 max-cols clearfix">
+	<a id="nav-mobile-icon" class="cmti cmti-2x cmti-list"></a>
+	<div class="colf12x3">
+		<?=Html::a( "<img class='fluid logo' src='" . Yii::getAlias( '@images' ) . "/logo.png'>", [ '/' ], null )?>
+	</div>
+	<div class="colf12x9">
+		<div class="nav-main stick-bottom">			
+			<?=DynamicNav::widget( [ 'view' => $this, 'options' => [ 'class' => 'nav' ] ] );?>
 		</div>
 	</div>
-	<div class="header-mobile clearfix">
-		<div id="btn-mobile-menu"> 
-			<span class="fa fa-3x fa-list"></span>
-		</div>
-		<?=Html::a( "<img class='logo' src='" . Yii::getAlias( '@images' ) . "/logo.png'>", [ '/' ], null )?>
-		<span class="fa fa-3x fa-user" id="btn-login-mobile"></span>
-		<ul class="nav-main" id='nav-mobile'>
-            <li><a class="smooth-scroll" href="#module-banner">Home</a></li>
-	        <li><a class="smooth-scroll" href="#module-about">About</a></li>
-			<li><a class="smooth-scroll" href="#module-contact">Contact</a></li>
-		</ul>
-	</div>
-	<?=AjaxLogin::widget( [ 'options' => [ 'id' => 'wrap-login-register' ] ] )?>
+	<?=DynamicNav::widget( [ 'view' => $this, 'options' => [ 'id' => 'nav-mobile', 'class' => 'nav nav-mobile' ] ] );?>
 </header>
