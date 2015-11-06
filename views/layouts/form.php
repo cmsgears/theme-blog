@@ -2,12 +2,11 @@
 use cmsgears\cms\common\utilities\ContentUtil;
 use themes\blog\assets\PublicAssetBundle;
 
-ContentUtil::initPage( $this );
+ContentUtil::initPage( $this, 'cmgforms' );
 
 PublicAssetBundle::register( $this );
 
-// Variables available for headers, sidebars and footers included within this layout
-$coreProperties = $this->context->getCoreProperties();
+$coreProperties 	= $this->context->getCoreProperties();
 ?>
 <?php $this->beginPage(); ?>
 <!DOCTYPE html>
@@ -17,7 +16,7 @@ $coreProperties = $this->context->getCoreProperties();
     </head>
     <body>
         <?php $this->beginBody(); ?>
-		<div id='pre-loader-main' class="max-area-cover"><div class="valign-center cmti cmti-5x cmti-flexible-o spin"></div></div>
+		<div id='pre-loader' class="max-area-cover"><div class="valign-center cmti cmti-5x cmti-flexible-o spin"></div></div>
 		<?php include dirname( __DIR__ ) . "/headers/common.php"; ?>
         <div class="container-main">
 	        <div class="pattern pattern-default"></div>

@@ -1,46 +1,41 @@
-jQuery(document).ready( function() {
-	
+jQuery( document ).ready( function() {
+
 	initPreloaders();
 
-	initLanding();
-
-	initModules();
+	initCmgTools();
 
 	initListeners();
+	
+	initWindowScroll();
 });
 
 function initPreloaders() {
 
 	// Hide global pre-loader spinner
-	jQuery( '.module' ).imagesLoaded( function() {
+	jQuery( '.block' ).imagesLoaded( { background: true }, function() {
 
-		jQuery( '#pre-loader-main' ).fadeOut( "slow" );
+		jQuery( '#pre-loader-main' ).fadeOut( 'slow' );
 	});
 }
 
-function initLanding() {
+function initCmgTools() {
 
 	// perspective header
 	if( jQuery().cmtHeader ) {
 
-		jQuery( "#header-main" ).cmtHeader( { scrollDistance: 250 } );
+		jQuery( "#header-main" ).cmtHeader( { scrollDistance: 350 } );
 	}
-}
 
-function initModules() {
+	// Initialise the Blocks
+	if( jQuery().cmtBlock ) {
 
-	// Page Modules
-	if( jQuery().cmtPageModule ) {
-
-		jQuery( ".module" ).cmtPageModule( {
+		jQuery( ".block" ).cmtBlock({
 			fullHeight: true,
-			modules: {
-				'module-banner': { fullHeight: false }
-				/*
-				'module-contact': { fullHeight: false, heightAutoMobile: true, heightAutoMobileWidth: 1024 },
-				'module-public': { fullHeight: true, heightAutoMobile: true, heightAutoMobileWidth: 1024 },
-				'module-public-full': { fullHeight: false, heightAutoMobile: true, heightAutoMobileWidth: 1024 }
-				*/
+			blocks: {
+				'block-banner': { fullHeight: false },
+				'block-about': { 'fullHeight': true, heightAutoMobile: true, heightAutoMobileWidth: 1024 },
+				'block-contact': { 'fullHeight': true, 'heightAuto': true },
+				'block-public': { 'fullHeight': true, heightAutoMobile: true, heightAutoMobileWidth: 1600 }
 			}
 		});
 	}
@@ -74,11 +69,14 @@ function initListeners() {
 
 		jQuery( '.file-uploader' ).cmtFileUploader();
 	}
+}
+
+function initWindowScroll() {
 
 	jQuery( window ).scroll(function() {
 
 		var scrolledY = jQuery( window ).scrollTop();
 
-	  	jQuery( '#module-banner .module-bkg-scroll' ).css( 'background-position', 'center ' + ( ( scrolledY ) ) + 'px' );
+	  	jQuery( '#block-banner .block-bkg-scroll' ).css( 'background-position', 'center ' + ( ( scrolledY ) ) + 'px' );
 	});
 }

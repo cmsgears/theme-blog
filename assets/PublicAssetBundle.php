@@ -8,41 +8,50 @@ use yii\web\View;
 
 class PublicAssetBundle extends AssetBundle {
 
+	// Variables ---------------------------------------------------
+
+	// Public ----
+
+	// Path Configuration
+	public $sourcePath	= '@themes/blog/resources';
+
+	// Load css
+    public $css     = [
+		'styles/public.css'
+    ];
+
+	// Position to load css
+    public $cssOptions = [
+        "position" => View::POS_HEAD
+    ];
+
+	// Load Javascript
+    public $js      = [
+        'scripts/vendor/conditionizr-4.4.0.min.js',
+        'conditionizr/detects/ie6-ie7-ie8-ie9.js',
+        'scripts/vendor/imagesloaded.pkgd-3.2.0.min.js',
+        'scripts/main.js'
+    ];
+
+	// Position to load Javascript
+    public $jsOptions = [
+        'position' => View::POS_END
+    ];
+
+	// Define dependent Asset Loaders
+    public $depends = [
+		'yii\web\JqueryAsset',
+		'cmsgears\core\common\assets\CMTAssetBundle'
+    ];
+
 	// Constructor and Initialisation ------------------------------
 
 	public function __construct()  {
 
 		parent::__construct();
-
-		// Path Configuration
-
-	    $this->sourcePath = dirname( __DIR__ ) . '/resources';
-
-		// Load CSS
-	    $this->css     = [
-			"styles/public.css"
-	    ];
-
-		// Load Javascript
-	    $this->js      = [
-            "scripts/vendor/conditionizr-4.4.0.min.js",
-            "conditionizr/detects/ie6-ie7-ie8-ie9.js",
-            "scripts/vendor/imagesloaded.pkgd-3.1.8.min.js",
-            "scripts/cmgtools/cmt-modules.js",
-            "scripts/cmgtools/cmt-utilities.js",
-            "scripts/main.js"
-	    ];
-
-		// Define the Position to load Assets
-	    $this->jsOptions = [
-	        "position" => View::POS_END
-	    ];
-
-		// Define dependent Asset Loaders
-	    $this->depends = [
-			'yii\web\JqueryAsset'
-	    ];
 	}
+
+	// Additional Assets Registration ------------------------------
 
 	public function registerAssetFiles( $view ) {
 
@@ -59,13 +68,8 @@ class PublicAssetBundle extends AssetBundle {
 
     		conditionizr.polyfill( 'scripts/vendor/html5shiv.min.js', [ 'ie6', 'ie7', 'ie8' ] );
     		conditionizr.polyfill( 'scripts/vendor/respond.min.js', [ 'ie6', 'ie7', 'ie8' ] );";
-    
-    	//$siteUrl = "var siteUrl = '" . Yii::$app->homeUrl . "';
-					//var fileUploadUrl = '" . Yii::$app->homeUrl . "apix/file/file-handler';";
 
 		$view->registerJs( $inlineScript, View::POS_READY );
-		
-		//$view->registerJs( $siteUrl, View::POS_END );
 	}
 }
 

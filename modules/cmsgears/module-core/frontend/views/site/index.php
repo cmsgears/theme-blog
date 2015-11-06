@@ -1,16 +1,12 @@
 <?php
-// Yii Imports
-use yii\captcha\Captcha;
-use yii\helpers\Html;
-use widgets\Post;
-
 // CMG Imports
-use cmsgears\cms\frontend\services\PageService;
-
-$page 		= PageService::findBySlug( 'home' );
-$banner		= $page->content->banner;
-$background	= isset( $banner ) ? $banner->getFileUrl() : '';
+use cmsgears\widgets\block\BasicBlock;
+use cmsgears\widgets\dblock\DynamicBlock;
+use cmsgears\widgets\blog\BlogPost;
 ?>
-<section id="module-banner" class="module module-basic">
-	<div class="module-bkg-scroll" style="<?php if( isset( $banner ) ) echo "background-image:url( $background )";?>"></div>
-</section>
+
+<?= DynamicBlock::widget([
+	'options' => [ 'id' => 'block-banner', 'class' => 'block block-basic' ],
+	'scrollBkg' => true,
+	'slug' => 'main'
+]);?>

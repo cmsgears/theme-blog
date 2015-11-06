@@ -1,15 +1,11 @@
 <?php
-// Yiim Imports
+// Yii Imports
 use \Yii;
 use yii\helpers\Html;
-
-// CMG Imports
-use cmsgears\cms\common\utilities\ContentUtil;
-ContentUtil::initPage( $this );
 ?>
 <meta charset="<?= $coreProperties->getCharset() ?>">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!-- Use minimum-scale=1.0, maximum-scale=1.0, user-scalable=no for mobile applications -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <?php if( isset( $this->params['desc'] ) ) { ?>
 	<meta name="description" content="<?=$this->params['desc']?>">
@@ -29,7 +25,7 @@ ContentUtil::initPage( $this );
 <script type="text/javascript"> if ( !window.console ) console = { log: function() {} }; </script>
 
 <!-- Browser tab icons -->
-<link href="images/icons/icon.ico" rel="shortcut icon">
-<link href="images/icons/icon.jpg" rel="apple-touch-icon-precomposed">
+<link href="images/icons/favicon.ico" rel="shortcut icon">
+<link href="images/icons/apple-touch-icon.png" rel="apple-touch-icon-precomposed">
 
 <?php $this->head(); ?>

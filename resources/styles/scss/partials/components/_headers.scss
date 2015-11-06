@@ -1,4 +1,4 @@
-.header-main {
+#header-main {
     position: fixed;
     top: 0;
     z-index: 100;
@@ -10,7 +10,7 @@
         width: 80px;
     }
 
-    .nav-mobile-icon {
+    #nav-mobile-icon {
         margin: 1em;
         position: absolute;
         top: 0;
@@ -27,7 +27,7 @@
             width: 120px;
         }
 
-        .nav-mobile-icon {
+        #nav-mobile-icon {
             display: none;
         }
 

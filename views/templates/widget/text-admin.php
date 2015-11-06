@@ -10,7 +10,7 @@ use yii\helpers\Html;
 
 <div class="box-filler"></div>
 
-<?=Html::a( "Cancel", [ '/cmgcms/widget/all' ], ['class' => 'btn' ] );?>
+<?=Html::a( 'Cancel', [ '/cmgcms/widget/all' ], ['class' => 'btn' ] );?>
 <input type="submit" value="Update" />
 
 <?php ActiveForm::end(); ?>

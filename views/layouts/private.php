@@ -19,8 +19,8 @@ $user			= Yii::$app->user->getIdentity();
     </head>
     <body>
         <?php $this->beginBody(); ?>
-		<div id='pre-loader-page' class="max-area-cover"><div class="valign-center fa fa-5x fa-spinner fa-spin"></div></div>
-		<?php include dirname( __DIR__ ) . "/headers/common.php"; ?>
+		<div id='pre-loader-main' class="max-area-cover"><div class="valign-center cmti cmti-5x cmti-flexible-o spin"></div></div>
+		<?php include dirname( __DIR__ ) . "/headers/private.php"; ?>
         <div class="container-main container-private">
 	        <div class="wrap-content">
 	        	<div class="wrap-content-private clearfix">
