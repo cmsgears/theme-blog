@@ -33,6 +33,7 @@ function initCmgTools() {
 			fullHeight: true,
 			blocks: {
 				'block-banner': { fullHeight: false },
+				'block-page': { fullHeight: false },
 				'block-about': { 'fullHeight': true, heightAutoMobile: true, heightAutoMobileWidth: 1024 },
 				'block-contact': { 'fullHeight': true, 'heightAuto': true },
 				'block-public': { 'fullHeight': true, heightAutoMobile: true, heightAutoMobileWidth: 1600 }
