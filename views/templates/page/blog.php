@@ -1,32 +1,35 @@
 <?php
-// Yii Imports 
+// CMG Imports 
+use cmsgears\widgets\dblock\DynamicBlock;
 use cmsgears\widgets\blog\BlogPost;
-
-// CMG Imports
-use cmsgears\widgets\block\BasicBlock; 
-
-$coreProperties = $this->context->getCoreProperties();
-$this->title 	= $coreProperties->getSiteTitle() . " | Blog";
 ?>
 
-<?php BasicBlock::begin([
-	'options' => [ 'id' => 'block-blog', 'class' => 'block block-basic' ],
-	'bkg' => true,
-	'texture' => true, 'textureClass' => 'texture-default',
-	'header' => true, 'headerContent' => "<h3 class='align align-middle'>BLOG</h3>",
-	'content' => true
+<?= DynamicBlock::widget([
+	'options' => [ 'id' => 'block-banner', 'class' => 'block block-basic' ], 
+	'slug' => 'main', 
+	'parallaxBkg' => true,
+	'texture' => true,
+	'textureClass' => 'texture texture-grid-b'
 ]);?>
-
-	<div class="module-content content-80">
-		<?=$content->content?>
-	</div>
-	<div class="row clearfix max-cols-100">
-		<div class="col12x6">
-			<?= BlogPost::widget([
-			        'options' => [ 'class' => 'content-80 blog-posts-regular' ]
-			    ]);
-			?>
-		</div>	
+ 
+<div class="blog row">
+	<div class="content-80 clearfix max-cols-100">
+		<!-- Blog Posts --------------- -->
+		<div class="col12x9">
+			<div class="row clearfix">
+				<div class="colf1"><h6> A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. </h6></div>			
+			</div> 		 
+			  	<?= BlogPost::widget([
+				        'options' => [ 'class' => 'wrap-posts clearfix' ], 
+				        'viewFile' => 'post/recent',
+						'viewsDirectory' => Yii::getAlias( '@templates/widget/blog' ),
+						'pagination' => true,
+						'limit' => 5
+				    ]);
+				?>			 
+		</div>
+		<div class="col12x3" id="sidebar">
+			<?php include_once Yii::getAlias("@themes")."/blog/views/sidebars/sidebar-right.php" ?>
+		</div>
 	</div>	
-
-<?php BasicBlock::end(); ?>
+</div> 	

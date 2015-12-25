@@ -1,0 +1,19 @@
+.rounded {
+    &.rounded-50 {
+        border-radius: 50px !important;
+    }
+}
+
+.title {
+    &, a {
+        color: $color-secondary !important;
+    }
+    
+    &.title-small {
+        font-size: $font-size-7;
+    }
+    
+    &.title-medium {
+        font-size: $font-size-5;
+    }   
+} 
