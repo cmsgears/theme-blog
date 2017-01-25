@@ -11,25 +11,3 @@ use cmsgears\widgets\blog\BlogPost;
 	'texture' => true,
 	'textureClass' => 'texture texture-grid-b'
 ]);?>
- 
-<div class="blog row">
-	<div class="content-80 clearfix max-cols-100">
-		<!-- Blog Posts --------------- -->
-		<div class="col12x9">
-			<div class="row clearfix">
-				<div class="colf1"><h6> A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. </h6></div>			
-			</div>			 
-			  	<?= BlogPost::widget([
-				        'options' => [ 'class' => 'wrap-posts clearfix' ],
-				        'limit' => 5,
-				        'viewFile' => 'post/recent',
-				        'pagination' => false,
-						'viewsDirectory' => Yii::getAlias( '@templates/widget/blog' )
-				    ]);
-				?>			 
-		</div>
-		<div class="col12x3" id="sidebar">
-			<?php include_once Yii::getAlias("@themes")."/blog/views/sidebars/sidebar-right.php" ?>
-		</div>
-	</div>	
-</div> 	

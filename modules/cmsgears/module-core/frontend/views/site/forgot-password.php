@@ -10,13 +10,13 @@ use cmsgears\widgets\block\BasicBlock;
 <?php BasicBlock::begin([
 	'options' => [ 'id' => 'block-public', 'class' => 'block block-basic' ],
 	'bkg' => true,
-	'texture' => true, 'textureClass' => 'texture-default',
-	'header' => true, 'headerContent' => "<h2 class='align align-middle'>FORGOT PASSWORD</h2>",
-	'contentWrapClass' => 'align align-center', 'content' => true
+	'texture' => true,
+	'header' => true, 'headerContent' => "<h2 class='align align-center'>FORGOT PASSWORD</h2>",
+	'contentWrapClass' => 'center', 'content' => true
 ]);?>
 
-	<?php if( Yii::$app->session->hasFlash( "message" ) ) { ?>
-		<div class='frm-message'><p> <?php echo Yii::$app->session->getFlash( "message" ); ?> </p></div>
+	<?php if( Yii::$app->session->hasFlash( 'message' ) ) { ?>
+		<div class='frm-message'><p> <?php echo Yii::$app->session->getFlash( 'message'); ?> </p></div>
 	<?php
 		}
 		else {

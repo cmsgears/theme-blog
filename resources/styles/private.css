@@ -1,1128 +1,3 @@
-.cmti {
-  font-size: 1em;
-  display: inline-block;
-}
-.cmti.cmti-2x {
-  font-size: 2em;
-}
-.cmti.cmti-3x {
-  font-size: 3em;
-}
-.cmti.cmti-4x {
-  font-size: 4em;
-}
-.cmti.cmti-5x {
-  font-size: 5em;
-}
-.cmti.cmti-action {
-  cursor: pointer;
-}
-
-@font-face {
-  font-family: "cmti-core";
-  src: url("../fonts/cmgtools/cmti-core.eot");
-  src: url("../fonts/cmgtools/cmti-core.eot?#iefix") format("embedded-opentype"), url("../fonts/cmgtools/cmti-core.woff") format("woff"), url("../fonts/cmgtools/cmti-core.ttf") format("truetype"), url("../fonts/cmgtools/cmti-core.svg#cmti-core") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-[data-cmti]:before {
-  font-family: "cmti-core" !important;
-  content: attr(data-cmti);
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  speak: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-[class^="cmti-"]:before,
-[class*=" cmti-"]:before {
-  font-family: "cmti-core" !important;
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  speak: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.cmti-angle-up:before {
-  content: "a";
-}
-
-.cmti-approve:before {
-  content: "b";
-}
-
-.cmti-arrow-down:before {
-  content: "c";
-}
-
-.cmti-arrow-down-b:before {
-  content: "d";
-}
-
-.cmti-arrow-left:before {
-  content: "e";
-}
-
-.cmti-arrow-left-b:before {
-  content: "f";
-}
-
-.cmti-arrow-right:before {
-  content: "g";
-}
-
-.cmti-arrow-right-b:before {
-  content: "h";
-}
-
-.cmti-arrow-up:before {
-  content: "i";
-}
-
-.cmti-arrow-up-b:before {
-  content: "j";
-}
-
-.cmti-at:before {
-  content: "k";
-}
-
-.cmti-attachment:before {
-  content: "l";
-}
-
-.cmti-bag:before {
-  content: "m";
-}
-
-.cmti-bag-b:before {
-  content: "n";
-}
-
-.cmti-ban:before {
-  content: "o";
-}
-
-.cmti-ban-b:before {
-  content: "p";
-}
-
-.cmti-basket:before {
-  content: "q";
-}
-
-.cmti-basket-air:before {
-  content: "r";
-}
-
-.cmti-basket-b:before {
-  content: "s";
-}
-
-.cmti-bed:before {
-  content: "t";
-}
-
-.cmti-bed-b:before {
-  content: "u";
-}
-
-.cmti-bell:before {
-  content: "v";
-}
-
-.cmti-bell-b:before {
-  content: "w";
-}
-
-.cmti-bin:before {
-  content: "x";
-}
-
-.cmti-building:before {
-  content: "y";
-}
-
-.cmti-buy:before {
-  content: "z";
-}
-
-.cmti-calendar:before {
-  content: "A";
-}
-
-.cmti-calendar-b:before {
-  content: "B";
-}
-
-.cmti-card:before {
-  content: "C";
-}
-
-.cmti-cart:before {
-  content: "D";
-}
-
-.cmti-cart-bag:before {
-  content: "E";
-}
-
-.cmti-cart-empty:before {
-  content: "F";
-}
-
-.cmti-chart-area:before {
-  content: "G";
-}
-
-.cmti-chart-area-b:before {
-  content: "H";
-}
-
-.cmti-chart-column:before {
-  content: "I";
-}
-
-.cmti-chart-donut:before {
-  content: "J";
-}
-
-.cmti-chart-down:before {
-  content: "K";
-}
-
-.cmti-chart-down-zig:before {
-  content: "L";
-}
-
-.cmti-chart-pie:before {
-  content: "M";
-}
-
-.cmti-chart-up:before {
-  content: "N";
-}
-
-.cmti-chart-up-zig:before {
-  content: "O";
-}
-
-.cmti-check:before {
-  content: "P";
-}
-
-.cmti-check-b:before {
-  content: "Q";
-}
-
-.cmti-check-report:before {
-  content: "R";
-}
-
-.cmti-checkbox:before {
-  content: "S";
-}
-
-.cmti-checkbox-active:before {
-  content: "T";
-}
-
-.cmti-checkbox-c:before {
-  content: "U";
-}
-
-.cmti-checkbox-c-active:before {
-  content: "V";
-}
-
-.cmti-checkbox-c-b:before {
-  content: "W";
-}
-
-.cmti-checkbox-c-b-active:before {
-  content: "X";
-}
-
-.cmti-checkbox-c-f-active:before {
-  content: "Y";
-}
-
-.cmti-chevron-down:before {
-  content: "Z";
-}
-
-.cmti-chevron-down-b:before {
-  content: "0";
-}
-
-.cmti-chevron-left:before {
-  content: "1";
-}
-
-.cmti-chevron-left-b:before {
-  content: "2";
-}
-
-.cmti-chevron-right:before {
-  content: "3";
-}
-
-.cmti-chevron-right-b:before {
-  content: "4";
-}
-
-.cmti-chevron-up:before {
-  content: "5";
-}
-
-.cmti-chevron-up-b:before {
-  content: "6";
-}
-
-.cmti-close:before {
-  content: "7";
-}
-
-.cmti-close-b:before {
-  content: "8";
-}
-
-.cmti-close-o:before {
-  content: "9";
-}
-
-.cmti-close-o-b:before {
-  content: "!";
-}
-
-.cmti-comment:before {
-  content: "\"";
-}
-
-.cmti-comment-b:before {
-  content: "#";
-}
-
-.cmti-coupon:before {
-  content: "$";
-}
-
-.cmti-crop:before {
-  content: "%";
-}
-
-.cmti-curency-dollar:before {
-  content: "&";
-}
-
-.cmti-curency-dollar-b:before {
-  content: "'";
-}
-
-.cmti-dashboard:before {
-  content: "(";
-}
-
-.cmti-design-tools:before {
-  content: ")";
-}
-
-.cmti-document:before {
-  content: "*";
-}
-
-.cmti-document-b:before {
-  content: "+";
-}
-
-.cmti-door:before {
-  content: ",";
-}
-
-.cmti-door-b:before {
-  content: "-";
-}
-
-.cmti-door-o:before {
-  content: ".";
-}
-
-.cmti-door-o-b:before {
-  content: "/";
-}
-
-.cmti-earth:before {
-  content: ":";
-}
-
-.cmti-edit:before {
-  content: ";";
-}
-
-.cmti-emoticons-happy:before {
-  content: "<";
-}
-
-.cmti-emoticons-hopeful:before {
-  content: "=";
-}
-
-.cmti-emoticons-intense:before {
-  content: ">";
-}
-
-.cmti-emoticons-sad:before {
-  content: "?";
-}
-
-.cmti-emoticons-sulk:before {
-  content: "@";
-}
-
-.cmti-emoticons-surprise:before {
-  content: "[";
-}
-
-.cmti-envelope:before {
-  content: "]";
-}
-
-.cmti-envelope-b:before {
-  content: "^";
-}
-
-.cmti-equalizer:before {
-  content: "_";
-}
-
-.cmti-event:before {
-  content: "`";
-}
-
-.cmti-exchange:before {
-  content: "{";
-}
-
-.cmti-eye:before {
-  content: "|";
-}
-
-.cmti-eye-off:before {
-  content: "}";
-}
-
-.cmti-file:before {
-  content: "~";
-}
-
-.cmti-file-archive:before {
-  content: "\\";
-}
-
-.cmti-file-audio:before {
-  content: "\e000";
-}
-
-.cmti-file-code:before {
-  content: "\e001";
-}
-
-.cmti-file-copy:before {
-  content: "\e002";
-}
-
-.cmti-file-image:before {
-  content: "\e003";
-}
-
-.cmti-file-text:before {
-  content: "\e004";
-}
-
-.cmti-file-video:before {
-  content: "\e005";
-}
-
-.cmti-film:before {
-  content: "\e006";
-}
-
-.cmti-flag:before {
-  content: "\e007";
-}
-
-.cmti-flag-b:before {
-  content: "\e008";
-}
-
-.cmti-flexible:before {
-  content: "\e009";
-}
-
-.cmti-flexible-b:before {
-  content: "\e00a";
-}
-
-.cmti-flexible-o:before {
-  content: "\e00b";
-}
-
-.cmti-forward:before {
-  content: "\e00c";
-}
-
-.cmti-forward-b:before {
-  content: "\e00d";
-}
-
-.cmti-forward-c:before {
-  content: "\e00e";
-}
-
-.cmti-forward-c-b:before {
-  content: "\e00f";
-}
-
-.cmti-gift:before {
-  content: "\e010";
-}
-
-.cmti-gift-b:before {
-  content: "\e011";
-}
-
-.cmti-glass:before {
-  content: "\e012";
-}
-
-.cmti-glass-b:before {
-  content: "\e013";
-}
-
-.cmti-grid:before {
-  content: "\e014";
-}
-
-.cmti-grid-b:before {
-  content: "\e015";
-}
-
-.cmti-groups:before {
-  content: "\e016";
-}
-
-.cmti-groups-b:before {
-  content: "\e017";
-}
-
-.cmti-guarantee:before {
-  content: "\e018";
-}
-
-.cmti-headphone:before {
-  content: "\e019";
-}
-
-.cmti-heart:before {
-  content: "\e01a";
-}
-
-.cmti-heart-b:before {
-  content: "\e01b";
-}
-
-.cmti-heart-beat:before {
-  content: "\e01c";
-}
-
-.cmti-hierarchy:before {
-  content: "\e01d";
-}
-
-.cmti-home:before {
-  content: "\e01e";
-}
-
-.cmti-home-b:before {
-  content: "\e01f";
-}
-
-.cmti-image:before {
-  content: "\e020";
-}
-
-.cmti-image-b:before {
-  content: "\e021";
-}
-
-.cmti-instrument-piano:before {
-  content: "\e022";
-}
-
-.cmti-joystick:before {
-  content: "\e023";
-}
-
-.cmti-key:before {
-  content: "\e024";
-}
-
-.cmti-key-b:before {
-  content: "\e025";
-}
-
-.cmti-list:before {
-  content: "\e026";
-}
-
-.cmti-list-approved:before {
-  content: "\e027";
-}
-
-.cmti-list-blocked:before {
-  content: "\e028";
-}
-
-.cmti-list-c:before {
-  content: "\e029";
-}
-
-.cmti-list-disable:before {
-  content: "\e02a";
-}
-
-.cmti-list-new:before {
-  content: "\e02b";
-}
-
-.cmti-list-small:before {
-  content: "\e02c";
-}
-
-.cmti-lock-close:before {
-  content: "\e02d";
-}
-
-.cmti-lock-close-b:before {
-  content: "\e02e";
-}
-
-.cmti-lock-open:before {
-  content: "\e02f";
-}
-
-.cmti-lock-open-b:before {
-  content: "\e030";
-}
-
-.cmti-login:before {
-  content: "\e031";
-}
-
-.cmti-login-b:before {
-  content: "\e032";
-}
-
-.cmti-logout:before {
-  content: "\e033";
-}
-
-.cmti-logout-b:before {
-  content: "\e034";
-}
-
-.cmti-marker:before {
-  content: "\e035";
-}
-
-.cmti-marker-b:before {
-  content: "\e036";
-}
-
-.cmti-menu:before {
-  content: "\e037";
-}
-
-.cmti-mic:before {
-  content: "\e038";
-}
-
-.cmti-minus:before {
-  content: "\e039";
-}
-
-.cmti-money-return:before {
-  content: "\e03a";
-}
-
-.cmti-music-off:before {
-  content: "\e03b";
-}
-
-.cmti-music-off-b:before {
-  content: "\e03c";
-}
-
-.cmti-music-on:before {
-  content: "\e03d";
-}
-
-.cmti-music-on-b:before {
-  content: "\e03e";
-}
-
-.cmti-page:before {
-  content: "\e03f";
-}
-
-.cmti-page-b:before {
-  content: "\e040";
-}
-
-.cmti-pen:before {
-  content: "\e041";
-}
-
-.cmti-pen-b:before {
-  content: "\e042";
-}
-
-.cmti-pencil:before {
-  content: "\e043";
-}
-
-.cmti-pencil-b:before {
-  content: "\e044";
-}
-
-.cmti-permission:before {
-  content: "\e045";
-}
-
-.cmti-phone:before {
-  content: "\e046";
-}
-
-.cmti-plane:before {
-  content: "\e047";
-}
-
-.cmti-plane-b:before {
-  content: "\e048";
-}
-
-.cmti-plus:before {
-  content: "\e049";
-}
-
-.cmti-power:before {
-  content: "\e04a";
-}
-
-.cmti-power-b:before {
-  content: "\e04b";
-}
-
-.cmti-prize:before {
-  content: "\e04c";
-}
-
-.cmti-prize-b:before {
-  content: "\e04d";
-}
-
-.cmti-product:before {
-  content: "\e04e";
-}
-
-.cmti-radio:before {
-  content: "\e04f";
-}
-
-.cmti-radio-active:before {
-  content: "\e050";
-}
-
-.cmti-refresh:before {
-  content: "\e051";
-}
-
-.cmti-rent:before {
-  content: "\e052";
-}
-
-.cmti-return:before {
-  content: "\e053";
-}
-
-.cmti-return-b:before {
-  content: "\e054";
-}
-
-.cmti-return-c:before {
-  content: "\e055";
-}
-
-.cmti-return-c-b:before {
-  content: "\e056";
-}
-
-.cmti-rotate-left:before {
-  content: "\e057";
-}
-
-.cmti-rotate-left-b:before {
-  content: "\e058";
-}
-
-.cmti-rotate-right:before {
-  content: "\e059";
-}
-
-.cmti-rotate-right-b:before {
-  content: "\e05a";
-}
-
-.cmti-save:before {
-  content: "\e05b";
-}
-
-.cmti-scissor:before {
-  content: "\e05c";
-}
-
-.cmti-search:before {
-  content: "\e05d";
-}
-
-.cmti-server:before {
-  content: "\e05e";
-}
-
-.cmti-setting:before {
-  content: "\e05f";
-}
-
-.cmti-setting-b:before {
-  content: "\e060";
-}
-
-.cmti-shipping-free:before {
-  content: "\e061";
-}
-
-.cmti-slider:before {
-  content: "\e062";
-}
-
-.cmti-social-amazon:before {
-  content: "\e063";
-}
-
-.cmti-social-apple:before {
-  content: "\e064";
-}
-
-.cmti-social-ebay:before {
-  content: "\e065";
-}
-
-.cmti-social-evernote:before {
-  content: "\e066";
-}
-
-.cmti-social-facebook:before {
-  content: "\e067";
-}
-
-.cmti-social-gmail:before {
-  content: "\e068";
-}
-
-.cmti-social-google:before {
-  content: "\e069";
-}
-
-.cmti-social-google-plus:before {
-  content: "\e06a";
-}
-
-.cmti-social-instagram:before {
-  content: "\e06b";
-}
-
-.cmti-social-linkedin:before {
-  content: "\e06c";
-}
-
-.cmti-social-picasa:before {
-  content: "\e06d";
-}
-
-.cmti-social-pinterest:before {
-  content: "\e06e";
-}
-
-.cmti-social-skype:before {
-  content: "\e06f";
-}
-
-.cmti-social-twitter:before {
-  content: "\e070";
-}
-
-.cmti-social-vimeo:before {
-  content: "\e071";
-}
-
-.cmti-social-wordpress:before {
-  content: "\e072";
-}
-
-.cmti-social-yahoo:before {
-  content: "\e073";
-}
-
-.cmti-social-youtube:before {
-  content: "\e074";
-}
-
-.cmti-sound-off:before {
-  content: "\e075";
-}
-
-.cmti-sound-off-b:before {
-  content: "\e076";
-}
-
-.cmti-sound-on:before {
-  content: "\e077";
-}
-
-.cmti-sound-on-b:before {
-  content: "\e078";
-}
-
-.cmti-spinner-1:before {
-  content: "\e079";
-}
-
-.cmti-spinner-2:before {
-  content: "\e07a";
-}
-
-.cmti-spinner-3:before {
-  content: "\e07b";
-}
-
-.cmti-spinner-4:before {
-  content: "\e07c";
-}
-
-.cmti-spinner-5:before {
-  content: "\e07d";
-}
-
-.cmti-spinner-6:before {
-  content: "\e07e";
-}
-
-.cmti-spinner-7:before {
-  content: "\e07f";
-}
-
-.cmti-star:before {
-  content: "\e080";
-}
-
-.cmti-star-b:before {
-  content: "\e081";
-}
-
-.cmti-star-half:before {
-  content: "\e082";
-}
-
-.cmti-stock-out:before {
-  content: "\e083";
-}
-
-.cmti-stopwatch:before {
-  content: "\e084";
-}
-
-.cmti-tachometer:before {
-  content: "\e085";
-}
-
-.cmti-tag:before {
-  content: "\e086";
-}
-
-.cmti-tag-b:before {
-  content: "\e087";
-}
-
-.cmti-thumbs-down:before {
-  content: "\e088";
-}
-
-.cmti-thumbs-down-b:before {
-  content: "\e089";
-}
-
-.cmti-thumbs-up:before {
-  content: "\e08a";
-}
-
-.cmti-thumbs-up-b:before {
-  content: "\e08b";
-}
-
-.cmti-todo:before {
-  content: "\e08c";
-}
-
-.cmti-tweeter:before {
-  content: "\e08d";
-}
-
-.cmti-tweeter-b:before {
-  content: "\e08e";
-}
-
-.cmti-user:before {
-  content: "\e08f";
-}
-
-.cmti-user-add:before {
-  content: "\e090";
-}
-
-.cmti-user-approved:before {
-  content: "\e091";
-}
-
-.cmti-user-b:before {
-  content: "\e092";
-}
-
-.cmti-user-blocked:before {
-  content: "\e093";
-}
-
-.cmti-user-executive:before {
-  content: "\e094";
-}
-
-.cmti-user-executive-o:before {
-  content: "\e095";
-}
-
-.cmti-user-full:before {
-  content: "\e096";
-}
-
-.cmti-user-full-b:before {
-  content: "\e097";
-}
-
-.cmti-user-group:before {
-  content: "\e098";
-}
-
-.cmti-user-o:before {
-  content: "\e099";
-}
-
-.cmti-user-o-b:before {
-  content: "\e09a";
-}
-
-.cmti-user-stranger:before {
-  content: "\e09b";
-}
-
-.cmti-user-stranger-b:before {
-  content: "\e09c";
-}
-
-.cmti-vc-cmgtools:before {
-  content: "\e09d";
-}
-
-.cmti-vc-cmsgears:before {
-  content: "\e09e";
-}
-
-.cmti-vc-foxslider:before {
-  content: "\e09f";
-}
-
-.cmti-vc-vulpinecode:before {
-  content: "\e0a0";
-}
-
-.cmti-wallet:before {
-  content: "\e0a1";
-}
-
-.cmti-watch:before {
-  content: "\e0a2";
-}
-
-.cmti-widget:before {
-  content: "\e0a3";
-}
-
-.cmti-zoom-in:before {
-  content: "\e0a4";
-}
-
-.cmti-zoom-in-b:before {
-  content: "\e0a5";
-}
-
-.cmti-zoom-out:before {
-  content: "\e0a6";
-}
-
-.cmti-zoom-out-b:before {
-  content: "\e0a7";
-}
-
-.cmti-angle-right:before {
-  content: "\e0a8";
-}
-
-.cmti-angle-left:before {
-  content: "\e0a9";
-}
-
-.cmti-angle-down:before {
-  content: "\e0aa";
-}
-
-.cmti-anchor:before {
-  content: "\e0ab";
-}
-
-.cmti-ambulance:before {
-  content: "\e0ac";
-}
-
-.cmti-alarm:before {
-  content: "\e0ad";
-}
-
 @font-face {
   font-family: 'aller-regular';
   src: url("../fonts/aller/aller-regular.eot");
@@ -1163,16 +38,16 @@
 Description: The mixins used by CMGTools. It define the default classes for mixins available within CMGTools.
 Dependencies: variables
 ***********************************************************************/
-.clearfix {
+.clearfix, .frm-split-40-60 .form-group {
   zoom: 1;
 }
-.clearfix:before, .clearfix:after {
+.clearfix:before, .frm-split-40-60 .form-group:before, .clearfix:after, .frm-split-40-60 .form-group:after {
   content: "\0020";
   display: block;
   height: 0;
   overflow: hidden;
 }
-.clearfix:after {
+.clearfix:after, .frm-split-40-60 .form-group:after {
   clear: both;
 }
 
@@ -1217,7 +92,7 @@ Dependencies: variables
 }
 
 .bkg-transparent-gray {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(127, 127, 127, 0.6);
 }
 
 .bkg-transparent-black {
@@ -1244,17 +119,17 @@ Dependencies: variables
 }
 
 .rounded-medium {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -khtml-border-radius: 4px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -khtml-border-radius: 5px;
 }
 
 .rounded-large {
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px;
-  -khtml-border-radius: 8px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -khtml-border-radius: 10px;
 }
 
 .rounded-top {
@@ -1330,6 +205,7 @@ Dependencies: variables
   text-align: center;
   vertical-align: middle;
   background-color: #3498db;
+  color: #ffffff;
   -moz-border-radius: 100%;
   -webkit-border-radius: 100%;
   border-radius: 100%;
@@ -1381,51 +257,51 @@ Dependencies: variables
 }
 
 .shadow {
-  -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.4);
-  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.4);
 }
 
 .shadow-primary {
-  -webkit-box-shadow: 1px 1px 4px 0px rgba(236, 240, 241, 0.4);
-  -moz-box-shadow: 1px 1px 4px 0px rgba(236, 240, 241, 0.4);
-  box-shadow: 1px 1px 4px 0px rgba(236, 240, 241, 0.4);
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(236, 240, 241, 0.4);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(236, 240, 241, 0.4);
+  box-shadow: 1px 1px 5px 0px rgba(236, 240, 241, 0.4);
 }
 
 .shadow-secondary {
-  -webkit-box-shadow: 1px 1px 4px 0px rgba(52, 152, 219, 0.4);
-  -moz-box-shadow: 1px 1px 4px 0px rgba(52, 152, 219, 0.4);
-  box-shadow: 1px 1px 4px 0px rgba(52, 152, 219, 0.4);
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(52, 152, 219, 0.4);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(52, 152, 219, 0.4);
+  box-shadow: 1px 1px 5px 0px rgba(52, 152, 219, 0.4);
 }
 
 .shadow-tertiary {
-  -webkit-box-shadow: 1px 1px 4px 0px rgba(231, 76, 60, 0.4);
-  -moz-box-shadow: 1px 1px 4px 0px rgba(231, 76, 60, 0.4);
-  box-shadow: 1px 1px 4px 0px rgba(231, 76, 60, 0.4);
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(231, 76, 60, 0.4);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(231, 76, 60, 0.4);
+  box-shadow: 1px 1px 5px 0px rgba(231, 76, 60, 0.4);
 }
 
 .text-shadow {
-  -webkit-text-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.4);
-  -moz-text-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.4);
-  text-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.4);
+  -webkit-text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  -moz-text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
 }
 
 .text-shadow-primary {
-  -webkit-text-shadow: 1px 1px 4px 0px rgba(236, 240, 241, 0.4);
-  -moz-text-shadow: 1px 1px 4px 0px rgba(236, 240, 241, 0.4);
-  text-shadow: 1px 1px 4px 0px rgba(236, 240, 241, 0.4);
+  -webkit-text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  -moz-text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
 }
 
 .text-shadow-secondary {
-  -webkit-text-shadow: 1px 1px 4px 0px rgba(52, 152, 219, 0.4);
-  -moz-text-shadow: 1px 1px 4px 0px rgba(52, 152, 219, 0.4);
-  text-shadow: 1px 1px 4px 0px rgba(52, 152, 219, 0.4);
+  -webkit-text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  -moz-text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
 }
 
 .text-shadow-tertiary {
-  -webkit-text-shadow: 1px 1px 4px 0px rgba(231, 76, 60, 0.4);
-  -moz-text-shadow: 1px 1px 4px 0px rgba(231, 76, 60, 0.4);
-  text-shadow: 1px 1px 4px 0px rgba(231, 76, 60, 0.4);
+  -webkit-text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  -moz-text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
 }
 
 .border-default {
@@ -1506,6 +382,13 @@ Dependencies: variables
   display: none;
 }
 
+.max-area-relative {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
 .bkg-tile {
   background-repeat: repeat;
 }
@@ -1554,6 +437,27 @@ Dependencies: variables
   background-attachment: fixed;
 }
 
+.bkg-img {
+  position: relative;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+}
+.bkg-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+}
+
+.texture {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD5JREFUeNpisLKy2QcQQAwgAiCAGMEsIAAIIDCPCcQACCCEEBAABBDj////YWwGJgYkgMIBCDAUZThVESUBABoFDS/HAzk5AAAAAElFTkSuQmCC");
+}
 .texture.texture-bar-s {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAAGzCI4dAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEFJREFUeNpisLKy2Q8QQAwgAiCAGMEsIAAIIDiDiQEKAAIILgIDTAxoACCACKsgLAAQYIz///9nwAeYGAgAyhUAAMiPC606TDsbAAAAAElFTkSuQmCC");
 }
@@ -1595,19 +499,49 @@ Dependencies: variables
 }
 
 .blur {
+  transform: scale(1.1);
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -o-filter: blur(1px);
+  -ms-filter: blur(1px);
+}
+.blur.blur-small {
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+}
+.blur.blur-medium {
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+}
+.blur.blur-large {
   filter: blur(10px);
   -webkit-filter: blur(10px);
   -moz-filter: blur(10px);
   -o-filter: blur(10px);
   -ms-filter: blur(10px);
 }
+.blur.blur-xlarge {
+  filter: blur(14px);
+  -webkit-filter: blur(14px);
+  -moz-filter: blur(14px);
+  -o-filter: blur(14px);
+  -ms-filter: blur(14px);
+}
 
-.pattern-default {
+.pattern {
   background-image: url("../images/pattern-default.jpg");
 }
 
 /**********************************************************************
-Description: The transition effects available in CMGTools.
+Description: The transition effects available in CMGTools. These allow changes in allowed css properties smoothly over a 
+defined time interval. We can define the animation/transition effects and duration to change the property.
 Dependencies: none
 ***********************************************************************/
 /* transit-xxx
@@ -1703,46 +637,8 @@ Dependencies: none
 }
 
 /**********************************************************************
-Description: The translation effects available in CMGTools.
-Dependencies: none
-***********************************************************************/
-@-moz-keyframes spin {
-  0% {
-    -moz-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -moz-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-.spin {
-  -webkit-animation: spin 2s infinite linear;
-  animation: spin 2s infinite linear;
-}
-
-/**********************************************************************
-Description: The transformation effects available in CMGTools.
+Description: The transformation effects available in CMGTools. These change the physical look of an element - position, orientation and scale. 
+We can assist transformations with transition to create animation effects.
 Dependencies: none
 ***********************************************************************/
 .rotate-45 {
@@ -1806,6 +702,60 @@ Dependencies: none
   -webkit-transform: scale(1, -1);
   -ms-transform: scale(1, -1);
   transform: scale(1, -1);
+}
+
+.grow {
+  -moz-transition: all 350ms ease-in-out 0s;
+  -ms-transition: all 350ms ease-in-out 0s;
+  -o-transition: all 350ms ease-in-out 0s;
+  -webkit-transition: all 350ms ease-in-out 0s;
+  transition: all 350ms ease-in-out 0s;
+}
+.grow:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+/**********************************************************************
+Description: The translation effects available in CMGTools.
+Dependencies: none
+***********************************************************************/
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+.spin {
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
 }
 
 /**********************************************************************
@@ -1875,12 +825,15 @@ pre {
 
 hr {
   display: block;
-  border: 0;
-  margin: 1em 0;
-  padding: 0;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
   height: 0;
+  padding: 0;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  height: 0;
+  border: none;
+  border-bottom: 1px solid #3498db;
 }
 
 audio, canvas, video {
@@ -2002,7 +955,7 @@ textarea {
 a {
   text-decoration: none;
   cursor: pointer;
-  color: #464646;
+  color: #298ccf;
 }
 
 a:focus {
@@ -2017,6 +970,423 @@ a:active, a:hover {
 Description: The basic styles for CMGTools.
 Dependencies: variables
 ***********************************************************************/
+/**
+ * Screen Resolutions - The large number of device resolutions and to serve content decorated specific to these devices is a tedius task without going responsive. 
+ * CMGTools have used the most commonly used standard resolutions to cover maximum screens.
+ */
+.screen.screen-mobile-small {
+  width: 320px;
+}
+.screen.screen-mobile-large {
+  width: 480px;
+}
+.screen.screen-tablet-small {
+  width: 768px;
+}
+.screen.screen-tablet-large {
+  width: 1024px;
+}
+.screen.screen-desktop-small {
+  width: 1280px;
+}
+.screen.screen-desktop-medium {
+  width: 1360px;
+}
+.screen.screen-desktop-large {
+  width: 1600px;
+}
+.screen.screen-desktop-xlarge {
+  width: 1920px;
+}
+
+/**
+ * Coloring - It is one of the most important factor while designing website following a theme approach. CMGTools have taken extra care in 
+ * this area and tried to manage colors by dividing them into 3 major variations forming a standard color palette. The primary color is dominating 
+ * for the entire design and secondary is contrary to primary to be used for components. The tertiary color can also be used apart from secondary.
+ */
+.color {
+  background-color: #ecf0f1;
+  color: #464646;
+  /**
+   * Color Palatte:
+   * 1. primary: #ecf0f1
+   * 2. primary text: #464646
+   * 3. primary light: #ffffff
+   * 4. primary text light: #464646
+   * 5. primary dark: #f5f5f5
+   * 6. primary text dark: #000000
+   * 7. secondary: #3498db
+   * 8. secondary text: #ffffff
+   * 9. secondary light: #d3effe
+   * 10. secondary text light: #464646
+   * 11. secondary dark: #256e9e
+   * 12. secondary text dark: #ffffff
+   * 13. tertiary: #e74c3c
+   * 14. tertiary text: #ffffff
+   * 15. tertiary light: #f98a7f
+   * 16. tertiary text light: #ffffff
+   * 17. tertiary dark: #a72012
+   * 18. tertiary text dark: #ffffff
+   */
+}
+.color.color-primary-l {
+  background-color: #ffffff;
+  color: #464646;
+}
+.color.color-primary-d {
+  background-color: #f5f5f5;
+  color: #000000;
+}
+.color.color-secondary {
+  background-color: #3498db;
+  color: #ffffff;
+}
+.color.color-secondary-l {
+  background-color: #d3effe;
+  color: #464646;
+}
+.color.color-secondary-d {
+  background-color: #256e9e;
+  color: #ffffff;
+}
+.color.color-tertiary {
+  background-color: #e74c3c;
+  color: #ffffff;
+}
+.color.color-tertiary-l {
+  background-color: #f98a7f;
+  color: #ffffff;
+}
+.color.color-tertiary-d {
+  background-color: #a72012;
+  color: #ffffff;
+}
+.color.color-white {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+.color.color-black {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.bkg {
+  background-color: #ecf0f1;
+}
+.bkg.bkg-secondary {
+  background-color: #3498db;
+}
+.bkg.bkg-tertiary {
+  background-color: #e74c3c;
+}
+.bkg.bkg-black {
+  background-color: #000000;
+}
+.bkg.bkg-gray {
+  background-color: #7F7F7F;
+}
+.bkg.bkg-white {
+  background-color: #FFFFFF;
+}
+.bkg.bkg-blue {
+  background-color: #3F62A0;
+}
+.bkg.bkg-purple {
+  background-color: #663096;
+}
+.bkg.bkg-orange {
+  background-color: #F3702E;
+}
+.bkg.bkg-yellow {
+  background-color: #FFD800;
+}
+.bkg .bkg-red {
+  background-color: #B42A1A;
+}
+.bkg.bkg-pink {
+  background-color: #FF9DAB;
+}
+.bkg.bkg-magenta {
+  background-color: #B200B2;
+}
+.bkg.bkg-green {
+  background-color: #87C442;
+}
+.bkg.bkg-green-d {
+  background-color: #56832A;
+}
+
+/**
+ * Make all box elements to follow border-box. It gives flexibility to use css width as the element width including border and 
+ * padding. The remaining space deducting border and padding from given width will be used by element content.
+ */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/** 
+ * The primary color will be used as default color for document body and text.
+ */
+html, body {
+  background-color: #ecf0f1;
+  color: #464646;
+}
+
+.margin-none {
+  margin: 0 !important;
+}
+
+.padding-none {
+  padding: 0 !important;
+}
+
+.mp-none {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/** 
+ * The global pre-loader can be displayed to hide content till all the images are loaded. It depends on the Javascript library used to detect image loading.
+ */
+#pre-loader-main {
+  display: block;
+}
+
+/** 
+ * Floating Blocks - These classes can be used to clear or float the elements.
+ */
+.clear {
+  clear: both !important;
+}
+
+.left {
+  float: left !important;
+}
+
+.right {
+  float: right !important;
+}
+
+.float-none {
+  float: none !important;
+}
+
+.float-none-center {
+  float: none !important;
+  margin: 0 auto;
+}
+
+/** 
+ * Pre-defined width and height, handy at few places.
+ */
+.width {
+  width: 100%;
+}
+.width.width-auto {
+  width: auto;
+}
+.width.width-25 {
+  width: 25%;
+}
+.width.width-50 {
+  width: 50%;
+}
+.width.width-75 {
+  width: 75%;
+}
+.width.width-80 {
+  width: 80%;
+}
+
+.height {
+  height: 100%;
+}
+.height.height-auto {
+  height: auto;
+}
+.height.height-25 {
+  height: 25%;
+}
+.height.height-50 {
+  height: 50%;
+}
+.height.height-75 {
+  height: 75%;
+}
+
+/** 
+ * Alignments for centered box and text.
+ */
+.center {
+  margin: 0 auto;
+}
+
+.align {
+  text-align: left !important;
+}
+.align.align-center {
+  text-align: center !important;
+}
+.align.align-right {
+  text-align: right !important;
+}
+
+/** 
+ * Height fillers to seperate boxes.
+ */
+.filler-height {
+  height: 1em;
+}
+.filler-height.filler-height-small {
+  height: 1.5em;
+}
+.filler-height.filler-height-medium {
+  height: 2em;
+}
+.filler-height.filler-height-large {
+  height: 2.5em;
+}
+
+.absolute {
+  position: absolute !important;
+}
+.absolute.absolute-top-left {
+  top: 0px;
+  left: 0px;
+}
+.absolute.absolute-top-right {
+  top: 0px;
+  right: 0px;
+}
+.absolute.absolute-bottom-left {
+  bottom: 0px;
+  left: 0px;
+}
+.absolute.absolute-bottom-right {
+  bottom: 0px;
+  right: 0px;
+}
+
+.relative {
+  position: relative !important;
+}
+
+.fixed {
+  position: fixed !important;
+}
+
+.block {
+  display: block !important;
+}
+
+.inline-block {
+  display: inline-block !important;
+}
+
+.inline {
+  display: inline !important;
+}
+
+.disabled {
+  background-color: #7F7F7F !important;
+  color: #FFFFFF !important;
+  cursor: default !important;
+}
+.disabled:hover {
+  background-color: #7F7F7F !important;
+  color: #FFFFFF !important;
+}
+
+.visible {
+  display: block !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.visible-space {
+  visibility: visible !important;
+}
+
+.hidden-space {
+  visibility: hidden !important;
+}
+
+.fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.warning, .error, .success, .help-block {
+  width: 100%;
+  font-size: 0.75em;
+}
+
+.error, .help-block {
+  color: #E74343;
+}
+
+.warning {
+  color: #EF9300;
+}
+
+.success {
+  color: #A5D75A;
+}
+
+.error-field {
+  border: 1px solid #E74343;
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(231, 67, 67, 0.25);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(231, 67, 67, 0.25);
+  box-shadow: 1px 1px 5px 0px rgba(231, 67, 67, 0.25);
+}
+
+.rounded.rounded-50 {
+  border-radius: 50px !important;
+}
+
+.title, .title a {
+  color: #3498db !important;
+}
+.title.title-small {
+  font-size: 1em;
+}
+.title.title-medium {
+  font-size: 1.5em;
+}
+
+/**********************************************************************
+Description: The default text elements and font styles for CMGTools.
+Dependencies: variables, mixins
+***********************************************************************/
+html, body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1;
+}
+
+html, body {
+  font-size: 12px;
+}
+@media only screen and (min-width: 481px) {
+  html, body {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  html, body {
+    font-size: 16px;
+  }
+}
+
 /** 
  * Fonts - The font classes default, heading and code can be used for global headers and code font.
  */
@@ -2061,322 +1431,6 @@ Dependencies: variables
   font-size: 0.65em;
 }
 
-/**
- * Screen Resolutions - The large number of device resolutions and to serve content decorated specific to these devices is a tedius task without going responsive. 
- * CMGTools have used the most commonly used standard resolutions to cover maximum screens.
- */
-.screen.screen-mobile-small {
-  width: 320px;
-}
-.screen.screen-mobile-large {
-  width: 480px;
-}
-.screen.screen-tablet-small {
-  width: 768px;
-}
-.screen.screen-tablet-large {
-  width: 1024px;
-}
-.screen.screen-desktop-small {
-  width: 1280px;
-}
-.screen.screen-desktop-medium {
-  width: 1360px;
-}
-.screen.screen-desktop-large {
-  width: 1600px;
-}
-.screen.screen-desktop-xlarge {
-  width: 1920px;
-}
-
-/**
- * Coloring - It is one of the most important factor while designing website following a theme approach. CMGTools have taken extra care in 
- * this area and tried to manage colors by dividing them into 3 major variations forming a standard color palette. The primary color is dominating 
- * for the entire design and secondary is contrary to primary to be used for components. The tertiary color can also be used apart from secondary.
- */
-.color {
-  /**
-   * Color Palatte:
-   * 1. primary: #ecf0f1
-   * 2. primary text: #464646
-   * 3. primary light: #ffffff
-   * 4. primary text light: #464646
-   * 5. primary dark: #f5f5f5
-   * 6. primary text dark: #000000
-   * 7. secondary: #3498db
-   * 8. secondary text: #ffffff
-   * 9. secondary light: #d3effe
-   * 10. secondary text light: #464646
-   * 11. secondary dark: #256e9e
-   * 12. secondary text dark: #ffffff
-   * 13. tertiary: #e74c3c
-   * 14. tertiary text: #ffffff
-   * 15. tertiary light: #f98a7f
-   * 16. tertiary text light: #ffffff
-   * 17. tertiary dark: #a72012
-   * 18. tertiary text dark: #ffffff
-   */
-}
-.color.color-primary {
-  background-color: #ecf0f1;
-  color: #464646;
-}
-.color.color-primary-l {
-  background-color: #ffffff;
-  color: #464646;
-}
-.color.color-primary-d {
-  background-color: #f5f5f5;
-  color: #000000;
-}
-.color.color-secondary {
-  background-color: #3498db;
-  color: #ffffff;
-}
-.color.color-secondary-l {
-  background-color: #d3effe;
-  color: #464646;
-}
-.color.color-secondary-d {
-  background-color: #256e9e;
-  color: #ffffff;
-}
-.color.color-tertiary {
-  background-color: #e74c3c;
-  color: #ffffff;
-}
-.color.color-tertiary-l {
-  background-color: #f98a7f;
-  color: #ffffff;
-}
-.color.color-tertiary-d {
-  background-color: #a72012;
-  color: #ffffff;
-}
-
-/**
- * Make all box elements to follow border-box. It gives flexibility to use css width as the element width including border and 
- * padding. The remaining space deducting border and padding from given width will be used by element content.
- */
-html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
-  box-sizing: inherit;
-}
-
-/** 
- * The primary color will be used as default color for document body and text.
- */
-body {
-  background-color: #ecf0f1;
-  color: #464646;
-}
-
-.margin-none {
-  margin: 0;
-}
-
-.padding-none {
-  padding: 0;
-}
-
-.mp-none {
-  margin: 0;
-  padding: 0;
-}
-
-/** 
- * The global pre-loader can be displayed to hide content till all the images are loaded. It depends on the Javascript library used to detect image loading.
- */
-#pre-loader-main {
-  display: block;
-}
-
-/** 
- * Floating - These classes can be used to clear or float the elements.
- */
-.clear {
-  clear: both !important;
-}
-
-.left {
-  float: left !important;
-}
-
-.right {
-  float: right !important;
-}
-
-.float-none {
-  float: none !important;
-}
-
-.float-none-center {
-  float: none !important;
-  margin: 0 auto;
-}
-
-/** 
- * Pre-defined width and height, handy at few places.
- */
-.width.width-auto {
-  width: auto;
-}
-.width.width-25 {
-  width: 25%;
-}
-.width.width-50 {
-  width: 50%;
-}
-.width.width-75 {
-  width: 75%;
-}
-.width.width-80 {
-  width: 80%;
-}
-.width.width-100 {
-  width: 100%;
-}
-
-.height.height-auto {
-  height: auto;
-}
-.height.height-25 {
-  height: 25%;
-}
-.height.height-50 {
-  height: 50%;
-}
-.height.height-75 {
-  height: 75%;
-}
-.height.height-100 {
-  height: 100%;
-}
-
-/** 
- * Alignments for centered box and text.
- */
-.align.align-center {
-  margin: 0 auto;
-}
-.align.align-left {
-  text-align: left !important;
-}
-.align.align-middle {
-  text-align: center !important;
-}
-.align.align-right {
-  text-align: right !important;
-}
-
-/** 
- * Height fillers to seperate boxes.
- */
-.filler-height.filler-height-default {
-  height: 1em;
-}
-.filler-height.filler-height-small {
-  height: 1.5em;
-}
-.filler-height.filler-height-medium {
-  height: 2em;
-}
-.filler-height.filler-height-large {
-  height: 2.5em;
-}
-
-.visible {
-  display: block;
-}
-
-.hidden {
-  display: none;
-}
-
-.visible-space {
-  visibility: visible;
-}
-
-.hidden-space {
-  visibility: hidden;
-}
-
-.fluid {
-  max-width: 100%;
-  height: auto;
-}
-
-.warning, .error, .success {
-  display: inline-block;
-  width: 100%;
-  font-size: 0.75em;
-}
-
-.error {
-  color: #e74343;
-}
-
-.warning {
-  color: #800020;
-}
-
-.success {
-  color: #a5d75a;
-}
-
-.error-field {
-  border: 1px solid #e74343;
-  -webkit-box-shadow: 1px 1px 4px 0px rgba(231, 67, 67, 0.25);
-  -moz-box-shadow: 1px 1px 4px 0px rgba(231, 67, 67, 0.25);
-  box-shadow: 1px 1px 4px 0px rgba(231, 67, 67, 0.25);
-}
-
-.rounded.rounded-50 {
-  border-radius: 50px !important;
-}
-
-.title, .title a {
-  color: #3498db !important;
-}
-.title.title-small {
-  font-size: 1em;
-}
-.title.title-medium {
-  font-size: 1.5em;
-}
-
-/**********************************************************************
-Description: The default text elements styles for CMGTools.
-Dependencies: variables, mixins
-***********************************************************************/
-html, body {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1;
-}
-
-body {
-  font-size: 12px;
-  color: #464646;
-}
-@media only screen and (min-width: 481px) {
-  body {
-    font-size: 14px;
-  }
-}
-@media only screen and (min-width: 1025px) {
-  body {
-    font-size: 16px;
-  }
-}
-
 h1, .h1 {
   font-size: 2.5em;
 }
@@ -2401,23 +1455,26 @@ h6, .h6 {
   font-size: 1.25em;
 }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .default-header {
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .header-default {
   verticle-align: middle;
   padding: 0.25em 0;
-  margin: 0.5em 0;
+  margin: 0.25em 0;
   font-family: Verdana, Geneva, sans-serif;
-}
-
-.h1, .h2, .h3, .h4, .h5, .h6, .default-header {
-  font-weight: bold;
 }
 
 p, span, em, div, a {
   font-size: 1em;
 }
 
+.reader {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
 pre {
   font-family: "Courier New", Courier, monospace;
+  color: #595959;
+  background-color: #A5A5A5;
 }
 
 .bold {
@@ -2426,6 +1483,91 @@ pre {
 
 .normal {
   font-weight: normal;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+a, .link {
+  color: #298ccf;
+}
+a:hover, .link:hover {
+  color: #E74343;
+}
+
+.text {
+  color: #464646 !important;
+}
+.text.text-secondary {
+  color: #ffffff !important;
+}
+.text.text-tertiary {
+  color: #ffffff !important;
+}
+.text.text-black {
+  color: #000000 !important;
+}
+.text.text-gray {
+  color: #7F7F7F !important;
+}
+.text.text-white {
+  color: #FFFFFF !important;
+}
+.text.text-blue {
+  color: #3F62A0 !important;
+}
+.text.text-purple {
+  color: #663096 !important;
+}
+.text.text-orange {
+  color: #F3702E !important;
+}
+.text.text-yellow {
+  color: #FFD800 !important;
+}
+.text.text-red {
+  color: #B42A1A !important;
+}
+.text.text-pink {
+  color: #FF9DAB !important;
+}
+.text.text-magenta {
+  color: #B200B2 !important;
+}
+.text.text-green {
+  color: #87C442 !important;
+}
+.text.text-green-d {
+  color: #56832A !important;
+}
+
+.text-with-line {
+  text-align: center;
+  border-top: 1px solid #000000;
+  margin: 1rem 0;
+}
+.text-with-line .text-content {
+  display: inline-block;
+  margin-top: -1.25em;
+  padding: 0 1rem;
+  background-color: #ecf0f1;
 }
 
 /**********************************************************************
@@ -2448,11 +1590,21 @@ Dependencies: variables, mixins
 .row.row-large {
   width: 80%;
 }
+.row.row-xlarge {
+  width: 90%;
+}
+.row.row-inline {
+  text-align: center;
+}
+.row.row-inline .col, .row.row-inline .colf {
+  display: inline-block !important;
+  float: none !important;
+}
 
 .col, .col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12, .col3x2, .col4x2, .col4x3, .col5x2, .col5x3, .col5x4, .col6x2, .col6x3, .col6x4, .col6x5, .col12x2, .col12x3, .col12x4, .col12x5, .col12x6, .col12x7, .col12x8, .col12x9, .col12x10, .col12x11 {
   display: block;
   float: left;
-  margin: 1% 1%;
+  margin: 0.5rem 1%;
   word-wrap: break-word;
 }
 
@@ -2507,7 +1659,7 @@ Dependencies: variables, mixins
 .col13, .col14, .col15, .col15x2, .col15x3, .col15x4, .col15x5, .col15x6, .col15x7, .col15x8, .col15x9, .col15x10, .col15x11, .col15x12, .col15x13, .col15x14 {
   display: block;
   float: left;
-  margin: 0.5% 0.5%;
+  margin: 0.5rem 0.5%;
   word-wrap: break-word;
 }
 
@@ -2524,29 +1676,20 @@ Dependencies: variables, mixins
 }
 
 @media only screen and (max-width: 1024px) {
-  .row.row-small {
-    width: 100%;
-  }
-  .row.row-medium {
-    width: 100%;
-  }
-  .row.row-large {
+  .row.row-small, .row.row-medium, .row.row-large, .row.row-xlarge {
     width: 100%;
   }
 
-  .max-cols .col1, .max-cols .col2, .max-cols .col3, .max-cols .col4, .max-cols .col5, .max-cols .col6, .max-cols .col7, .max-cols .col8, .max-cols .col9, .max-cols .col10, .max-cols .col11, .max-cols .col12, .max-cols .col13, .max-cols .col14, .max-cols .col15 {
+  .max-cols-50 > .col1, .max-cols-50 > .col2, .max-cols-50 > .col3, .max-cols-50 > .col4, .max-cols-50 > .col5, .max-cols-50 > .col6, .max-cols-50 > .col7, .max-cols-50 > .col8, .max-cols-50 > .col9, .max-cols-50 > .col10, .max-cols-50 > .col11, .max-cols-50 > .col12, .max-cols-50 > .col13, .max-cols-50 > .col14, .max-cols-50 > .col15 {
     width: 48%;
   }
-  .max-cols .col1:nth-child(odd), .max-cols .col2:nth-child(odd), .max-cols .col3:nth-child(odd), .max-cols .col4:nth-child(odd), .max-cols .col5:nth-child(odd), .max-cols .col6:nth-child(odd), .max-cols .col7:nth-child(odd), .max-cols .col8:nth-child(odd), .max-cols .col9:nth-child(odd), .max-cols .col10:nth-child(odd), .max-cols .col11:nth-child(odd), .max-cols .col12:nth-child(odd), .max-cols .col13:nth-child(odd), .max-cols .col14:nth-child(odd), .max-cols .col15:nth-child(odd) {
-    clear: both;
-  }
 
-  .max-cols-100 .col1, .max-cols-100 .col2, .max-cols-100 .col3, .max-cols-100 .col4, .max-cols-100 .col5, .max-cols-100 .col6, .max-cols-100 .col7, .max-cols-100 .col8, .max-cols-100 .col9, .max-cols-100 .col10, .max-cols-100 .col11, .max-cols-100 .col12, .max-cols-100 .col13, .max-cols-100 .col14, .max-cols-100 .col15 {
+  .max-cols-100 > .col1, .max-cols-100 > .col2, .max-cols-100 > .col3, .max-cols-100 > .col4, .max-cols-100 > .col5, .max-cols-100 > .col6, .max-cols-100 > .col7, .max-cols-100 > .col8, .max-cols-100 > .col9, .max-cols-100 > .col10, .max-cols-100 > .col11, .max-cols-100 > .col12, .max-cols-100 > .col13, .max-cols-100 > .col14, .max-cols-100 > .col15 {
     width: 98%;
   }
 }
 @media only screen and (max-width: 480px) {
-  .max-cols .col1, .max-cols .col2, .max-cols .col3, .max-cols .col4, .max-cols .col5, .max-cols .col6, .max-cols .col7, .max-cols .col8, .max-cols .col9, .max-cols .col10, .max-cols .col11, .max-cols .col12, .max-cols .col13, .max-cols .col14, .max-cols .col15, .max-cols-100 .col1, .max-cols-100 .col2, .max-cols-100 .col3, .max-cols-100 .col4, .max-cols-100 .col5, .max-cols-100 .col6, .max-cols-100 .col7, .max-cols-100 .col8, .max-cols-100 .col9, .max-cols-100 .col10, .max-cols-100 .col11, .max-cols-100 .col12, .max-cols-100 .col13, .max-cols-100 .col14, .max-cols-100 .col15 {
+  .max-cols-50 > .col1, .max-cols-50 > .col2, .max-cols-50 > .col3, .max-cols-50 > .col4, .max-cols-50 > .col5, .max-cols-50 > .col6, .max-cols-50 > .col7, .max-cols-50 > .col8, .max-cols-50 > .col9, .max-cols-50 > .col10, .max-cols-50 > .col11, .max-cols-50 > .col12, .max-cols-50 > .col13, .max-cols-50 > .col14, .max-cols-50 > .col15, .max-cols-100 > .col1, .max-cols-100 > .col2, .max-cols-100 > .col3, .max-cols-100 > .col4, .max-cols-100 > .col5, .max-cols-100 > .col6, .max-cols-100 > .col7, .max-cols-100 > .col8, .max-cols-100 > .col9, .max-cols-100 > .col10, .max-cols-100 > .col11, .max-cols-100 > .col12, .max-cols-100 > .col13, .max-cols-100 > .col14, .max-cols-100 > .col15 {
     width: 98%;
   }
 }
@@ -2684,15 +1827,8 @@ Dependencies: variables, mixins
 
 /* full width for mobile, tablet */
 @media only screen and (max-width: 1024px) {
-  .max-cols .col3x2, .max-cols .col4x2, .max-cols .col4x3, .max-cols .col5x2, .max-cols .col5x3, .max-cols .col5x4, .max-cols .col6x2, .max-cols .col6x3, .max-cols .col6x4, .max-cols .col6x5,
-  .max-cols .col12x2, .max-cols .col12x3, .max-cols .col12x4, .max-cols .col12x5, .max-cols .col12x6, .max-cols .col12x7, .max-cols .col12x8, .max-cols .col12x9, .max-cols .col12x10, .max-cols .col12x11,
-  .max-cols .col15x2, .max-cols .col15x3, .max-cols .col15x4, .max-cols .col15x5, .max-cols .col15x6, .max-cols .col15x7, .max-cols .col15x8, .max-cols .col15x9, .max-cols .col15x10, .max-cols .col15x11, .max-cols .col15x12, .max-cols .col15x13, .max-cols .col15x14 {
+  .max-cols-50 > .col3x2, .max-cols-50 > .col4x2, .max-cols-50 > .col4x3, .max-cols-50 > .col5x2, .max-cols-50 > .col5x3, .max-cols-50 > .col5x4, .max-cols-50 > .col6x2, .max-cols-50 > .col6x3, .max-cols-50 > .col6x4, .max-cols-50 > .col6x5, .max-cols-50 > .col12x2, .max-cols-50 > .col12x3, .max-cols-50 > .col12x4, .max-cols-50 > .col12x5, .max-cols-50 > .col12x6, .max-cols-50 > .col12x7, .max-cols-50 > .col12x8, .max-cols-50 > .col12x9, .max-cols-50 > .col12x10, .max-cols-50 > .col12x11, .max-cols-50 > .col15x2, .max-cols-50 > .col15x3, .max-cols-50 > .col15x4, .max-cols-50 > .col15x5, .max-cols-50 > .col15x6, .max-cols-50 > .col15x7, .max-cols-50 > .col15x8, .max-cols-50 > .col15x9, .max-cols-50 > .col15x10, .max-cols-50 > .col15x11, .max-cols-50 > .col15x12, .max-cols-50 > .col15x13, .max-cols-50 > .col15x14 {
     width: 48%;
-  }
-  .max-cols .col3x2:nth-child(odd), .max-cols .col4x2:nth-child(odd), .max-cols .col4x3:nth-child(odd), .max-cols .col5x2:nth-child(odd), .max-cols .col5x3:nth-child(odd), .max-cols .col5x4:nth-child(odd), .max-cols .col6x2:nth-child(odd), .max-cols .col6x3:nth-child(odd), .max-cols .col6x4:nth-child(odd), .max-cols .col6x5:nth-child(odd),
-  .max-cols .col12x2:nth-child(odd), .max-cols .col12x3:nth-child(odd), .max-cols .col12x4:nth-child(odd), .max-cols .col12x5:nth-child(odd), .max-cols .col12x6:nth-child(odd), .max-cols .col12x7:nth-child(odd), .max-cols .col12x8:nth-child(odd), .max-cols .col12x9:nth-child(odd), .max-cols .col12x10:nth-child(odd), .max-cols .col12x11:nth-child(odd),
-  .max-cols .col15x2:nth-child(odd), .max-cols .col15x3:nth-child(odd), .max-cols .col15x4:nth-child(odd), .max-cols .col15x5:nth-child(odd), .max-cols .col15x6:nth-child(odd), .max-cols .col15x7:nth-child(odd), .max-cols .col15x8:nth-child(odd), .max-cols .col15x9:nth-child(odd), .max-cols .col15x10:nth-child(odd), .max-cols .col15x11:nth-child(odd), .max-cols .col15x12:nth-child(odd), .max-cols .col15x13:nth-child(odd), .max-cols .col15x14:nth-child(odd) {
-    clear: both;
   }
 
   .max-cols-100 > .col3x2, .max-cols-100 > .col4x2, .max-cols-100 > .col4x3, .max-cols-100 > .col5x2, .max-cols-100 > .col5x3, .max-cols-100 > .col5x4, .max-cols-100 > .col6x2, .max-cols-100 > .col6x3, .max-cols-100 > .col6x4, .max-cols-100 > .col6x5, .max-cols-100 > .col12x2, .max-cols-100 > .col12x3, .max-cols-100 > .col12x4, .max-cols-100 > .col12x5, .max-cols-100 > .col12x6, .max-cols-100 > .col12x7, .max-cols-100 > .col12x8, .max-cols-100 > .col12x9, .max-cols-100 > .col12x10, .max-cols-100 > .col12x11, .max-cols-100 > .col15x2, .max-cols-100 > .col15x3, .max-cols-100 > .col15x4, .max-cols-100 > .col15x5, .max-cols-100 > .col15x6, .max-cols-100 > .col15x7, .max-cols-100 > .col15x8, .max-cols-100 > .col15x9, .max-cols-100 > .col15x10, .max-cols-100 > .col15x11, .max-cols-100 > .col15x12, .max-cols-100 > .col15x13, .max-cols-100 > .col15x14 {
@@ -2700,7 +1836,7 @@ Dependencies: variables, mixins
   }
 }
 @media only screen and (max-width: 480px) {
-  .max-cols > .col3x2, .max-cols > .col4x2, .max-cols > .col4x3, .max-cols > .col5x2, .max-cols > .col5x3, .max-cols > .col5x4, .max-cols > .col6x2, .max-cols > .col6x3, .max-cols > .col6x4, .max-cols > .col6x5, .max-cols > .col12x2, .max-cols > .col12x3, .max-cols > .col12x4, .max-cols > .col12x5, .max-cols > .col12x6, .max-cols > .col12x7, .max-cols > .col12x8, .max-cols > .col12x9, .max-cols > .col12x10, .max-cols > .col12x11, .max-cols > .col15x2, .max-cols > .col15x3, .max-cols > .col15x4, .max-cols > .col15x5, .max-cols > .col15x6, .max-cols > .col15x7, .max-cols > .col15x8, .max-cols > .col15x9, .max-cols > .col15x10, .max-cols > .col15x11, .max-cols > .col15x12, .max-cols > .col15x13, .max-cols > .col15x14, .max-cols-100 > .col3x2, .max-cols-100 > .col4x2, .max-cols-100 > .col4x3, .max-cols-100 > .col5x2, .max-cols-100 > .col5x3, .max-cols-100 > .col5x4, .max-cols-100 > .col6x2, .max-cols-100 > .col6x3, .max-cols-100 > .col6x4, .max-cols-100 > .col6x5, .max-cols-100 > .col12x2, .max-cols-100 > .col12x3, .max-cols-100 > .col12x4, .max-cols-100 > .col12x5, .max-cols-100 > .col12x6, .max-cols-100 > .col12x7, .max-cols-100 > .col12x8, .max-cols-100 > .col12x9, .max-cols-100 > .col12x10, .max-cols-100 > .col12x11, .max-cols-100 > .col15x2, .max-cols-100 > .col15x3, .max-cols-100 > .col15x4, .max-cols-100 > .col15x5, .max-cols-100 > .col15x6, .max-cols-100 > .col15x7, .max-cols-100 > .col15x8, .max-cols-100 > .col15x9, .max-cols-100 > .col15x10, .max-cols-100 > .col15x11, .max-cols-100 > .col15x12, .max-cols-100 > .col15x13, .max-cols-100 > .col15x14 {
+  .max-cols-50 > .col3x2, .max-cols-50 > .col4x2, .max-cols-50 > .col4x3, .max-cols-50 > .col5x2, .max-cols-50 > .col5x3, .max-cols-50 > .col5x4, .max-cols-50 > .col6x2, .max-cols-50 > .col6x3, .max-cols-50 > .col6x4, .max-cols-50 > .col6x5, .max-cols-50 > .col12x2, .max-cols-50 > .col12x3, .max-cols-50 > .col12x4, .max-cols-50 > .col12x5, .max-cols-50 > .col12x6, .max-cols-50 > .col12x7, .max-cols-50 > .col12x8, .max-cols-50 > .col12x9, .max-cols-50 > .col12x10, .max-cols-50 > .col12x11, .max-cols-50 > .col15x2, .max-cols-50 > .col15x3, .max-cols-50 > .col15x4, .max-cols-50 > .col15x5, .max-cols-50 > .col15x6, .max-cols-50 > .col15x7, .max-cols-50 > .col15x8, .max-cols-50 > .col15x9, .max-cols-50 > .col15x10, .max-cols-50 > .col15x11, .max-cols-50 > .col15x12, .max-cols-50 > .col15x13, .max-cols-50 > .col15x14, .max-cols-100 > .col3x2, .max-cols-100 > .col4x2, .max-cols-100 > .col4x3, .max-cols-100 > .col5x2, .max-cols-100 > .col5x3, .max-cols-100 > .col5x4, .max-cols-100 > .col6x2, .max-cols-100 > .col6x3, .max-cols-100 > .col6x4, .max-cols-100 > .col6x5, .max-cols-100 > .col12x2, .max-cols-100 > .col12x3, .max-cols-100 > .col12x4, .max-cols-100 > .col12x5, .max-cols-100 > .col12x6, .max-cols-100 > .col12x7, .max-cols-100 > .col12x8, .max-cols-100 > .col12x9, .max-cols-100 > .col12x10, .max-cols-100 > .col12x11, .max-cols-100 > .col15x2, .max-cols-100 > .col15x3, .max-cols-100 > .col15x4, .max-cols-100 > .col15x5, .max-cols-100 > .col15x6, .max-cols-100 > .col15x7, .max-cols-100 > .col15x8, .max-cols-100 > .col15x9, .max-cols-100 > .col15x10, .max-cols-100 > .col15x11, .max-cols-100 > .col15x12, .max-cols-100 > .col15x13, .max-cols-100 > .col15x14 {
     width: 98%;
   }
 }
@@ -2772,19 +1908,16 @@ Dependencies: variables, mixins
 }
 
 @media only screen and (max-width: 1024px) {
-  .max-cols .colf1, .max-cols .colf2, .max-cols .colf3, .max-cols .colf4, .max-cols .colf5, .max-cols .colf6, .max-cols .colf7, .max-cols .colf8, .max-cols .colf9, .max-cols .colf10, .max-cols .colf11, .max-cols .colf12, .max-cols .colf13, .max-cols .colf14, .max-cols .colf15 {
+  .max-cols-50 > .colf1, .max-cols-50 > .colf2, .max-cols-50 > .colf3, .max-cols-50 > .colf4, .max-cols-50 > .colf5, .max-cols-50 > .colf6, .max-cols-50 > .colf7, .max-cols-50 > .colf8, .max-cols-50 > .colf9, .max-cols-50 > .colf10, .max-cols-50 > .colf11, .max-cols-50 > .colf12, .max-cols-50 > .colf13, .max-cols-50 > .colf14, .max-cols-50 > .colf15 {
     width: 50%;
   }
-  .max-cols .colf1:nth-child(odd), .max-cols .colf2:nth-child(odd), .max-cols .colf3:nth-child(odd), .max-cols .colf4:nth-child(odd), .max-cols .colf5:nth-child(odd), .max-cols .colf6:nth-child(odd), .max-cols .colf7:nth-child(odd), .max-cols .colf8:nth-child(odd), .max-cols .colf9:nth-child(odd), .max-cols .colf10:nth-child(odd), .max-cols .colf11:nth-child(odd), .max-cols .colf12:nth-child(odd), .max-cols .colf13:nth-child(odd), .max-cols .colf14:nth-child(odd), .max-cols .colf15:nth-child(odd) {
-    clear: both;
-  }
 
-  .max-cols-100 .colf1, .max-cols-100 .colf2, .max-cols-100 .colf3, .max-cols-100 .colf4, .max-cols-100 .colf5, .max-cols-100 .colf6, .max-cols-100 .colf7, .max-cols-100 .colf8, .max-cols-100 .colf9, .max-cols-100 .colf10, .max-cols-100 .colf11, .max-cols-100 .colf12, .max-cols-100 .colf13, .max-cols-100 .colf14, .max-cols-100 .colf15 {
+  .max-cols-100 > .colf1, .max-cols-100 > .colf2, .max-cols-100 > .colf3, .max-cols-100 > .colf4, .max-cols-100 > .colf5, .max-cols-100 > .colf6, .max-cols-100 > .colf7, .max-cols-100 > .colf8, .max-cols-100 > .colf9, .max-cols-100 > .colf10, .max-cols-100 > .colf11, .max-cols-100 > .colf12, .max-cols-100 > .colf13, .max-cols-100 > .colf14, .max-cols-100 > .colf15 {
     width: 100%;
   }
 }
 @media only screen and (max-width: 480px) {
-  .max-cols .colf1, .max-cols .colf2, .max-cols .colf3, .max-cols .colf4, .max-cols .colf5, .max-cols .colf6, .max-cols .colf7, .max-cols .colf8, .max-cols .colf9, .max-cols .colf10, .max-cols .colf11, .max-cols .colf12, .max-cols .colf13, .max-cols .colf14, .max-cols .colf15, .max-cols-100 .colf1, .max-cols-100 .colf2, .max-cols-100 .colf3, .max-cols-100 .colf4, .max-cols-100 .colf5, .max-cols-100 .colf6, .max-cols-100 .colf7, .max-cols-100 .colf8, .max-cols-100 .colf9, .max-cols-100 .colf10, .max-cols-100 .colf11, .max-cols-100 .colf12, .max-cols-100 .colf13, .max-cols-100 .colf14, .max-cols-100 .colf15 {
+  .max-cols-50 > .colf1, .max-cols-50 > .colf2, .max-cols-50 > .colf3, .max-cols-50 > .colf4, .max-cols-50 > .colf5, .max-cols-50 > .colf6, .max-cols-50 > .colf7, .max-cols-50 > .colf8, .max-cols-50 > .colf9, .max-cols-50 > .colf10, .max-cols-50 > .colf11, .max-cols-50 > .colf12, .max-cols-50 > .colf13, .max-cols-50 > .colf14, .max-cols-50 > .colf15, .max-cols-100 > .colf1, .max-cols-100 > .colf2, .max-cols-100 > .colf3, .max-cols-100 > .colf4, .max-cols-100 > .colf5, .max-cols-100 > .colf6, .max-cols-100 > .colf7, .max-cols-100 > .colf8, .max-cols-100 > .colf9, .max-cols-100 > .colf10, .max-cols-100 > .colf11, .max-cols-100 > .colf12, .max-cols-100 > .colf13, .max-cols-100 > .colf14, .max-cols-100 > .colf15 {
     width: 100%;
   }
 }
@@ -2921,31 +2054,24 @@ Dependencies: variables, mixins
 }
 
 @media only screen and (max-width: 1024px) {
-  .max-cols .colf3x2, .max-cols .colf4x2, .max-cols .colf4x3, .max-cols .colf5x2, .max-cols .colf5x3, .max-cols .colf5x4, .max-cols .colf6x2, .max-cols .colf6x3, .max-cols .colf6x4, .max-cols .colf6x5,
-  .max-cols .colf12x2, .max-cols .colf12x3, .max-cols .colf12x4, .max-cols .colf12x5, .max-cols .colf12x6, .max-cols .colf12x7, .max-cols .colf12x8, .max-cols .colf12x9, .max-cols .colf12x10, .max-cols .colf12x11,
-  .max-cols .colf15x2, .max-cols .colf15x3, .max-cols .colf15x4, .max-cols .colf15x5, .max-cols .colf15x6, .max-cols .colf15x7, .max-cols .colf15x8, .max-cols .colf15x9, .max-cols .colf15x10, .max-cols .colf15x11, .max-cols .colf15x12, .max-cols .colf15x13, .max-cols .colf15x14 {
+  .max-cols-50 > .colf3x2, .max-cols-50 > .colf4x2, .max-cols-50 > .colf4x3, .max-cols-50 > .colf5x2, .max-cols-50 > .colf5x3, .max-cols-50 > .colf5x4, .max-cols-50 > .colf6x2, .max-cols-50 > .colf6x3, .max-cols-50 > .colf6x4, .max-cols-50 > .colf6x5, .max-cols-50 > .colf12x2, .max-cols-50 > .colf12x3, .max-cols-50 > .colf12x4, .max-cols-50 > .colf12x5, .max-cols-50 > .colf12x6, .max-cols-50 > .colf12x7, .max-cols-50 > .colf12x8, .max-cols-50 > .colf12x9, .max-cols-50 > .colf12x10, .max-cols-50 > .colf12x11, .max-cols-50 > .colf15x2, .max-cols-50 > .colf15x3, .max-cols-50 > .colf15x4, .max-cols-50 > .colf15x5, .max-cols-50 > .colf15x6, .max-cols-50 > .colf15x7, .max-cols-50 > .colf15x8, .max-cols-50 > .colf15x9, .max-cols-50 > .colf15x10, .max-cols-50 > .colf15x11, .max-cols-50 > .colf15x12, .max-cols-50 > .colf15x13, .max-cols-50 > .colf15x14 {
     width: 50%;
   }
-  .max-cols .colf3x2:nth-child(odd), .max-cols .colf4x2:nth-child(odd), .max-cols .colf4x3:nth-child(odd), .max-cols .colf5x2:nth-child(odd), .max-cols .colf5x3:nth-child(odd), .max-cols .colf5x4:nth-child(odd), .max-cols .colf6x2:nth-child(odd), .max-cols .colf6x3:nth-child(odd), .max-cols .colf6x4:nth-child(odd), .max-cols .colf6x5:nth-child(odd),
-  .max-cols .colf12x2:nth-child(odd), .max-cols .colf12x3:nth-child(odd), .max-cols .colf12x4:nth-child(odd), .max-cols .colf12x5:nth-child(odd), .max-cols .colf12x6:nth-child(odd), .max-cols .colf12x7:nth-child(odd), .max-cols .colf12x8:nth-child(odd), .max-cols .colf12x9:nth-child(odd), .max-cols .colf12x10:nth-child(odd), .max-cols .colf12x11:nth-child(odd),
-  .max-cols .colf15x2:nth-child(odd), .max-cols .colf15x3:nth-child(odd), .max-cols .colf15x4:nth-child(odd), .max-cols .colf15x5:nth-child(odd), .max-cols .colf15x6:nth-child(odd), .max-cols .colf15x7:nth-child(odd), .max-cols .colf15x8:nth-child(odd), .max-cols .colf15x9:nth-child(odd), .max-cols .colf15x10:nth-child(odd), .max-cols .colf15x11:nth-child(odd), .max-cols .colf15x12:nth-child(odd), .max-cols .colf15x13:nth-child(odd), .max-cols .colf15x14:nth-child(odd) {
-    clear: both;
-  }
 
-  .max-cols > .colf3x2, .max-cols > .colf4x2, .max-cols > .colf4x3, .max-cols > .colf5x2, .max-cols > .colf5x3, .max-cols > .colf5x4, .max-cols > .colf6x2, .max-cols > .colf6x3, .max-cols > .colf6x4, .max-cols > .colf6x5, .max-cols > .colf12x2, .max-cols > .colf12x3, .max-cols > .colf12x4, .max-cols > .colf12x5, .max-cols > .colf12x6, .max-cols > .colf12x7, .max-cols > .colf12x8, .max-cols > .colf12x9, .max-cols > .colf12x10, .max-cols > .colf12x11, .max-cols > .colf15x2, .max-cols > .colf15x3, .max-cols > .colf15x4, .max-cols > .colf15x5, .max-cols > .colf15x6, .max-cols > .colf15x7, .max-cols > .colf15x8, .max-cols > .colf15x9, .max-cols > .colf15x10, .max-cols > .colf15x11, .max-cols > .colf15x12, .max-cols > .colf15x13, .max-cols .colf15x14, .max-cols-100 > .colf3x2, .max-cols-100 > .colf4x2, .max-cols-100 > .colf4x3, .max-cols-100 > .colf5x2, .max-cols-100 > .colf5x3, .max-cols-100 > .colf5x4, .max-cols-100 > .colf6x2, .max-cols-100 > .colf6x3, .max-cols-100 > .colf6x4, .max-cols-100 > .colf6x5, .max-cols-100 > .colf12x2, .max-cols-100 > .colf12x3, .max-cols-100 > .colf12x4, .max-cols-100 > .colf12x5, .max-cols-100 > .colf12x6, .max-cols-100 > .colf12x7, .max-cols-100 > .colf12x8, .max-cols-100 > .colf12x9, .max-cols-100 > .colf12x10, .max-cols-100 > .colf12x11, .max-cols-100 > .colf15x2, .max-cols-100 > .colf15x3, .max-cols-100 > .colf15x4, .max-cols-100 > .colf15x5, .max-cols-100 > .colf15x6, .max-cols-100 > .colf15x7, .max-cols-100 > .colf15x8, .max-cols-100 > .colf15x9, .max-cols-100 > .colf15x10, .max-cols-100 > .colf15x11, .max-cols-100 > .colf15x12, .max-cols-100 > .colf15x13, .max-cols-100 .colf15x14 {
-    width: 100%;
-  }
-}
-@media only screen and (max-width: 480px) {
   .max-cols-100 > .colf3x2, .max-cols-100 > .colf4x2, .max-cols-100 > .colf4x3, .max-cols-100 > .colf5x2, .max-cols-100 > .colf5x3, .max-cols-100 > .colf5x4, .max-cols-100 > .colf6x2, .max-cols-100 > .colf6x3, .max-cols-100 > .colf6x4, .max-cols-100 > .colf6x5, .max-cols-100 > .colf12x2, .max-cols-100 > .colf12x3, .max-cols-100 > .colf12x4, .max-cols-100 > .colf12x5, .max-cols-100 > .colf12x6, .max-cols-100 > .colf12x7, .max-cols-100 > .colf12x8, .max-cols-100 > .colf12x9, .max-cols-100 > .colf12x10, .max-cols-100 > .colf12x11, .max-cols-100 > .colf15x2, .max-cols-100 > .colf15x3, .max-cols-100 > .colf15x4, .max-cols-100 > .colf15x5, .max-cols-100 > .colf15x6, .max-cols-100 > .colf15x7, .max-cols-100 > .colf15x8, .max-cols-100 > .colf15x9, .max-cols-100 > .colf15x10, .max-cols-100 > .colf15x11, .max-cols-100 > .colf15x12, .max-cols-100 > .colf15x13, .max-cols-100 .colf15x14 {
     width: 100%;
   }
 }
-.full-height-cols {
-  position: relative;
+@media only screen and (max-width: 480px) {
+  .max-cols-50 > .colf3x2, .max-cols-50 > .colf4x2, .max-cols-50 > .colf4x3, .max-cols-50 > .colf5x2, .max-cols-50 > .colf5x3, .max-cols-50 > .colf5x4, .max-cols-50 > .colf6x2, .max-cols-50 > .colf6x3, .max-cols-50 > .colf6x4, .max-cols-50 > .colf6x5, .max-cols-50 > .colf12x2, .max-cols-50 > .colf12x3, .max-cols-50 > .colf12x4, .max-cols-50 > .colf12x5, .max-cols-50 > .colf12x6, .max-cols-50 > .colf12x7, .max-cols-50 > .colf12x8, .max-cols-50 > .colf12x9, .max-cols-50 > .colf12x10, .max-cols-50 > .colf12x11, .max-cols-50 > .colf15x2, .max-cols-50 > .colf15x3, .max-cols-50 > .colf15x4, .max-cols-50 > .colf15x5, .max-cols-50 > .colf15x6, .max-cols-50 > .colf15x7, .max-cols-50 > .colf15x8, .max-cols-50 > .colf15x9, .max-cols-50 > .colf15x10, .max-cols-50 > .colf15x11, .max-cols-50 > .colf15x12, .max-cols-50 > .colf15x13, .max-cols-50 .colf15x14, .max-cols-100 > .colf3x2, .max-cols-100 > .colf4x2, .max-cols-100 > .colf4x3, .max-cols-100 > .colf5x2, .max-cols-100 > .colf5x3, .max-cols-100 > .colf5x4, .max-cols-100 > .colf6x2, .max-cols-100 > .colf6x3, .max-cols-100 > .colf6x4, .max-cols-100 > .colf6x5, .max-cols-100 > .colf12x2, .max-cols-100 > .colf12x3, .max-cols-100 > .colf12x4, .max-cols-100 > .colf12x5, .max-cols-100 > .colf12x6, .max-cols-100 > .colf12x7, .max-cols-100 > .colf12x8, .max-cols-100 > .colf12x9, .max-cols-100 > .colf12x10, .max-cols-100 > .colf12x11, .max-cols-100 > .colf15x2, .max-cols-100 > .colf15x3, .max-cols-100 > .colf15x4, .max-cols-100 > .colf15x5, .max-cols-100 > .colf15x6, .max-cols-100 > .colf15x7, .max-cols-100 > .colf15x8, .max-cols-100 > .colf15x9, .max-cols-100 > .colf15x10, .max-cols-100 > .colf15x11, .max-cols-100 > .colf15x12, .max-cols-100 > .colf15x13, .max-cols-100 .colf15x14 {
+    width: 100%;
+  }
 }
-
-.col-filler {
+.wrap-col-filler {
+  position: relative;
+  z-index: 0;
+}
+.wrap-col-filler .col-filler {
   position: absolute;
   z-index: -1;
   top: 0px;
@@ -2955,20 +2081,27 @@ Dependencies: variables, mixins
 
 /* These containers work considering header at top and footer at bottom whether content is there or not. The concept behind this is:
  * 1. keep body and html to 100% width and height to occupy full screen.
- * 2. The main container should also occupy full width and set min-height to 100%.
- * 3. The main container can have it's child elements as header, footer, sidebar, content wrapper.
- * 3. The header within main container can be either fixed or regular. We can also have header outside of main container.
- * 4. The footer within main container need to be positioned with bottom 0 to stick at bottom in case enough content is not there. Please refer footers section.
- * 5. The content wrapper block can have the page content in this setup. It will adjust it's height automatically.
- * 6. The sidebar within main container can have navigation links and ui widgets.
+ * 2. The main container should also occupy full width and set min-height to 100% to allow content grow vertically. The content will overflow html/body set to 100% height.
+ * 3. The main container can have it's child elements as header, footer, sidebar, content wrapper. Header and Footer can also be placed outside main container, though sidebar and content are expected within content wrapper.
+ * 4. The header within main container can be either fixed or regular. It need to add appropriate margin/padding to content wrapper in fixed header case. We can also have header outside of main container.
+ * 5. The footer within main container need to be positioned with bottom 0 to stick at bottom in case enough content is not there, but we need to add appropriate margin/padding to content wrapper. We can also have footer outside of main container.
+ * 6. The content wrapper can have the page content in this setup. It will adjust it's height automatically.
+ * 7. The sidebar within content wrapper can have navigation links and ui widgets. In presence of sidebar, appropriate columns can be used to divide content wrapper width among sidebar and content.
  */
-.container-main, .wrap-content-main {
+.container-main {
+  position: relative;
+  z-index: 1;
+}
+.container-main .wrap-content-main {
   position: relative;
   z-index: 1;
 }
 
-.container h1, .container h2, .container h3, .container h4, .container h5, .container h6, .container .content {
-  padding: 2.5%;
+.content-90 {
+  position: relative;
+  padding-left: 5% !important;
+  padding-right: 5% !important;
+  width: 100% !important;
 }
 
 .content-80 {
@@ -2999,6 +2132,20 @@ Dependencies: variables, mixins
   width: 100% !important;
 }
 
+@media only screen and (max-width: 1024px) {
+  .max-content-50 > .content-90, .max-content-50 > .content-80, .max-content-50 > .content-74, .max-content-50 > .content-50, .max-content-50 > .content-26 {
+    width: 50% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 auto;
+  }
+
+  .max-content-100 > .content-90, .max-content-100 > .content-80, .max-content-100 > .content-74, .max-content-100 > .content-50, .max-content-100 > .content-26 {
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
 .content-left-25 {
   position: relative;
   padding-right: 75% !important;
@@ -3046,6 +2193,96 @@ Dependencies: variables, mixins
   position: absolute;
 }
 
+.padding.padding-small {
+  padding: 0.5rem;
+}
+.padding.padding-small-v {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.padding.padding-small-h {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.padding.padding-medium {
+  padding: 1rem;
+}
+.padding.padding-medium-v {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.padding.padding-medium-h {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.padding.padding-large {
+  padding: 1.5rem;
+}
+.padding.padding-large-v {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.padding.padding-large-h {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.padding.padding-xlarge {
+  padding: 2rem;
+}
+.padding.padding-xlarge-v {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.padding.padding-xlarge-h {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.margin.margin-small {
+  margin: 0.5rem;
+}
+.margin.margin-small-v {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.margin.margin-small-h {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.margin.margin-medium {
+  margin: 1rem;
+}
+.margin.margin-medium-v {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.margin.margin-medium-h {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.margin.margin-large {
+  margin: 1.5rem;
+}
+.margin.margin-large-v {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.margin.margin-large-h {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+.margin.margin-xlarge {
+  margin: 2rem;
+}
+.margin.margin-xlarge-v {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.margin.margin-xlarge-h {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
 html, body {
   width: 100%;
   height: 100%;
@@ -3078,61 +2315,109 @@ html, body {
 }
 
 /**********************************************************************
+Description: It defines the html elements styles for CMGTools excluding form, form elements and table.
+Dependencies: variables, mixins
+***********************************************************************/
+fieldset {
+  border: 1px solid #3498db;
+}
+fieldset legend {
+  background-color: #3498db;
+  color: #FFFFFF;
+  padding: 1rem;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -khtml-border-radius: 5px;
+}
+
+optgroup {
+  font-style: italic;
+}
+
+/**********************************************************************
+Description: It defines the default table style available in CMGTools.
+Dependencies: variables, mixins
+***********************************************************************/
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th {
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+td {
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/**********************************************************************
 Description: It defines the form elements styles for CMGTools.
 Dependencies: variables, mixins
 ***********************************************************************/
 form {
   margin: 0 auto;
-  margin-top: 1em;
-  margin-bottom: 1em;
 }
 form.form-small {
   width: 230px;
-  padding: 10px;
+  padding: 0.5rem;
   position: relative;
 }
 form.form-medium {
   width: 430px;
-  padding: 10px;
+  padding: 1rem;
   position: relative;
 }
 form.form-large {
   width: 630px;
-  padding: 10px;
+  padding: 1rem;
   position: relative;
 }
 @media only screen and (max-width: 1024px) {
   form.form-small, form.form-medium, form.form-large {
     width: 80%;
-    padding: 5%;
+    padding: 1rem 5%;
   }
 }
 
-label {
+label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .btn, .cmt-checkbox, .cmt-switch {
   border: none;
   box-shadow: none;
-  font-size: 1em;
-  line-height: 1.4;
-  margin: 0.5em 0;
-  width: 100%;
-  padding: 0.5em;
-  display: inline-block;
-  text-align: left;
-}
-
-input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .btn {
-  vertical-align: middle;
-  font-size: 1em;
-  line-height: 1.4;
-  margin: 0.5em 0;
-  width: 100%;
-  padding: 0.5em;
   outline: none;
-  box-shadow: none;
-  border: none;
+  font-size: 1em;
+  line-height: 1.25;
+  margin: 0.25em 0;
+  padding: 0.25em;
+  display: inline-block;
+  width: 100%;
 }
 
-input[type="text"], input[type="email"], input[type="password"], textarea, select {
+label.element-25, input.element-25[type="text"], input.element-25[type="email"], input.element-25[type="password"], textarea.element-25, select.element-25, input.element-25[type="submit"], input.element-25[type="button"], button.element-25 {
+  width: 25% !important;
+}
+label.element-50, input.element-50[type="text"], input.element-50[type="email"], input.element-50[type="password"], textarea.element-50, select.element-50, input.element-50[type="submit"], input.element-50[type="button"], button.element-50 {
+  width: 50% !important;
+}
+label.element-75, input.element-75[type="text"], input.element-75[type="email"], input.element-75[type="password"], textarea.element-75, select.element-75, input.element-75[type="submit"], input.element-75[type="button"], button.element-75 {
+  width: 75% !important;
+}
+label.element-small, input.element-small[type="text"], input.element-small[type="email"], input.element-small[type="password"], textarea.element-small, select.element-small, input.element-small[type="submit"], input.element-small[type="button"], button.element-small {
+  width: 80px !important;
+}
+label.element-medium, input.element-medium[type="text"], input.element-medium[type="email"], input.element-medium[type="password"], textarea.element-medium, select.element-medium, input.element-medium[type="submit"], input.element-medium[type="button"], button.element-medium {
+  width: 120px !important;
+}
+label.element-large, input.element-large[type="text"], input.element-large[type="email"], input.element-large[type="password"], textarea.element-large, select.element-large, input.element-large[type="submit"], input.element-large[type="button"], button.element-large {
+  width: 180px !important;
+}
+label.element-xlarge, input.element-xlarge[type="text"], input.element-xlarge[type="email"], input.element-xlarge[type="password"], textarea.element-xlarge, select.element-xlarge, input.element-xlarge[type="submit"], input.element-xlarge[type="button"], button.element-xlarge {
+  width: 250px !important;
+}
+
+label, input[type="text"], input[type="email"], input[type="password"], textarea, select, .cmt-checkbox, .cmt-switch {
   -moz-transition: all 250ms ease-in-out 0s;
   -ms-transition: all 250ms ease-in-out 0s;
   -o-transition: all 250ms ease-in-out 0s;
@@ -3142,85 +2427,67 @@ input[type="text"], input[type="email"], input[type="password"], textarea, selec
   color: #3f3f46;
   text-align: left;
 }
-input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover, textarea:hover, select:hover {
-  background-color: #e9e9e9;
+label:hover, input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover, textarea:hover, select:hover, .cmt-checkbox:hover, .cmt-switch:hover {
+  background-color: #E9E9E9;
   color: #363636;
 }
-input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:focus {
-  color: #363636;
-  -webkit-box-shadow: inset 0 0 0 1px #e74343;
-  -moz-box-shadow: inset 0 0 0 1px #e74343;
-  box-shadow: inset 0 0 0 1px #e74343;
+label:focus, input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:focus, .cmt-checkbox:focus, .cmt-switch:focus {
+  color: #4F688E;
+  -webkit-box-shadow: inset 0 0 0 1px #E1E1E1;
+  -moz-box-shadow: inset 0 0 0 1px #E1E1E1;
+  box-shadow: inset 0 0 0 1px #E1E1E1;
 }
-input[type="text"]:disabled, input[type="email"]:disabled, input[type="password"]:disabled, textarea:disabled, select:disabled {
-  background-color: #e1e1e1;
-  color: #464646;
-}
-
-/* input[placeholder]:before {
-    color:$color-placeholder;
+label:disabled, input[type="text"]:disabled, input[type="email"]:disabled, input[type="password"]:disabled, textarea:disabled, select:disabled, .cmt-checkbox:disabled, .cmt-switch:disabled {
+  background-color: #CCCCCC;
+  color: #909090;
 }
 
-input[placeholder] {
-    color:red;
-} 
-
-input:valid {
-  border: 1px solid $color-success;
-}
-
-input:invalid {
-  border: 1px solid $color-error;
-}
-
- */
 input[type="submit"], input[type="button"], button, .btn {
-  -moz-transition: all 250ms ease-in-out 0s;
-  -ms-transition: all 250ms ease-in-out 0s;
-  -o-transition: all 250ms ease-in-out 0s;
-  -webkit-transition: all 250ms ease-in-out 0s;
-  transition: all 250ms ease-in-out 0s;
-  background-color: #e74343;
+  -moz-transition: all 350ms ease-in-out 0s;
+  -ms-transition: all 350ms ease-in-out 0s;
+  -o-transition: all 350ms ease-in-out 0s;
+  -webkit-transition: all 350ms ease-in-out 0s;
+  transition: all 350ms ease-in-out 0s;
+  background-color: #E74343;
   color: #FFFFFF;
   text-align: center;
-  margin: 10px 0;
   cursor: pointer;
 }
 input[type="submit"]:hover, input[type="button"]:hover, button:hover, .btn:hover {
-  background-color: #ff5555;
-  color: white;
+  background-color: #FF3636;
+  color: #FFFFFF;
 }
 input[type="submit"]:active, input[type="button"]:active, button:active, .btn:active {
   background-color: #b51717;
-  color: white;
+  color: #FFFFFF;
 }
 input[type="submit"]:disabled, input[type="button"]:disabled, button:disabled, .btn:disabled {
   background-color: gray;
   color: #363636;
 }
 
-.btn {
-  display: inline-block;
+label {
+  text-align: left;
+  background: none;
 }
-.btn.btn-half {
-  width: 50%;
-}
-.btn.btn-small {
-  width: 80px;
-}
-.btn.btn-medium {
-  width: 120px;
-}
-.btn.btn-large {
-  width: 180px;
-}
-.btn.btn-xlarge {
-  width: 250px;
+
+.frm-ignore-100 label, .frm-ignore-100 input[type="text"], .frm-ignore-100 input[type="email"], .frm-ignore-100 input[type="password"], .frm-ignore-100 textarea, .frm-ignore-100 select, .frm-ignore-100 input[type="submit"], .frm-ignore-100 input[type="button"], .frm-ignore-100 button {
+  width: auto;
 }
 
 .frm-split-40-60 label, .element-40 {
+  clear: both;
   width: 40%;
   float: left;
+}
+
+.required .control-label:after {
+  content: " *";
+  color: #B42A1A;
+}
+
+.element-40 label {
+  width: 100%;
 }
 
 .frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
@@ -3229,116 +2496,488 @@ input[type="submit"]:disabled, input[type="button"]:disabled, button:disabled, .
   float: left;
 }
 
-.element-40 label {
-  width: 100%;
-}
-
 .element-60 input[type="text"], .element-60 input[type="email"], .element-60 input[type="password"],
 .element-60 textarea, .element-60 select {
   width: 100%;
 }
 
 .frm-rounded-all input[type="text"], .frm-rounded-all input[type="email"], .frm-rounded-all input[type="password"],
-.frm-rounded-all textarea, .frm-rounded-all input[type="submit"], .frm-rounded-all input[type="button"],
-.frm-rounded-all button, .frm-rounded-all .btn {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -khtml-border-radius: 4px;
+.frm-rounded-all textarea, .frm-rounded-all input[type="submit"], .frm-rounded-all input[type="button"], .frm-rounded-all button {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -khtml-border-radius: 5px;
 }
 
 .frm-rounded-top input[type="text"], .frm-rounded-top input[type="email"], .frm-rounded-top input[type="password"],
-.frm-rounded-top textarea, .frm-rounded-top input[type="submit"], .frm-rounded-top input[type="button"],
-.frm-rounded-top button, .frm-rounded-top .btn {
-  -moz-border-radius-top-left: 4px;
-  -moz-border-radius-top-right: 4px;
-  -webkit-border-radius-top-left: 4px;
-  -webkit-border-radius-top-right: 4px;
-  border-radius: 4px 4px 0 0;
-  -khtml-border-radius-top-left: 4px;
-  -khtml-border-radius-top-right: 4px;
+.frm-rounded-top textarea, .frm-rounded-top input[type="submit"], .frm-rounded-top input[type="button"], .frm-rounded-top button {
+  -moz-border-radius-top-left: 5px;
+  -moz-border-radius-top-right: 5px;
+  -webkit-border-radius-top-left: 5px;
+  -webkit-border-radius-top-right: 5px;
+  border-radius: 5px 5px 0 0;
+  -khtml-border-radius-top-left: 5px;
+  -khtml-border-radius-top-right: 5px;
 }
 
 .frm-rounded-right input[type="text"], .frm-rounded-right input[type="email"], .frm-rounded-right input[type="password"],
-.frm-rounded-right textarea, .frm-rounded-right input[type="submit"], .frm-rounded-right input[type="button"],
-.frm-rounded-right button, .frm-rounded-right .btn {
-  -moz-border-radius-top-right: 4px;
-  -moz-border-radius-bottom-right: 4px;
-  -webkit-border-radius-top-right: 4px;
-  -webkit-border-radius-bottom-right: 4px;
-  border-radius: 0 4px 4px 0;
-  -khtml-border-radius-top-right: 4px;
-  -khtml-border-radius-bottom-right: 4px;
+.frm-rounded-right textarea, .frm-rounded-right input[type="submit"], .frm-rounded-right input[type="button"], .frm-rounded-right button {
+  -moz-border-radius-top-right: 5px;
+  -moz-border-radius-bottom-right: 5px;
+  -webkit-border-radius-top-right: 5px;
+  -webkit-border-radius-bottom-right: 5px;
+  border-radius: 0 5px 5px 0;
+  -khtml-border-radius-top-right: 5px;
+  -khtml-border-radius-bottom-right: 5px;
 }
 
 .frm-rounded-bottom input[type="text"], .frm-rounded-bottom input[type="email"], .frm-rounded-bottom input[type="password"],
-.frm-rounded-bottom textarea, .frm-rounded-bottom input[type="submit"], .frm-rounded-bottom input[type="button"],
-.frm-rounded-bottom button, .frm-rounded-bottom .btn {
-  -moz-border-radius-bottom-left: 4px;
-  -moz-border-radius-bottom-right: 4px;
-  -webkit-border-radius-bottom-left: 4px;
-  -webkit-border-radius-bottom-right: 4px;
-  border-radius: 0 0 4px 4px;
-  -khtml-border-radius-bottom-left: 4px;
-  -khtml-border-radius-bottom-right: 4px;
+.frm-rounded-bottom textarea, .frm-rounded-bottom input[type="submit"], .frm-rounded-bottom input[type="button"], .frm-rounded-bottom button {
+  -moz-border-radius-bottom-left: 5px;
+  -moz-border-radius-bottom-right: 5px;
+  -webkit-border-radius-bottom-left: 5px;
+  -webkit-border-radius-bottom-right: 5px;
+  border-radius: 0 0 5px 5px;
+  -khtml-border-radius-bottom-left: 5px;
+  -khtml-border-radius-bottom-right: 5px;
 }
 
 .frm-rounded-left input[type="text"], .frm-rounded-left input[type="email"], .frm-rounded-left input[type="password"],
-.frm-rounded-left textarea, .frm-rounded-left input[type="submit"], .frm-rounded-left input[type="button"],
-.frm-rounded-left button, .frm-rounded-left .btn {
-  -moz-border-radius-top-left: 4px;
-  -moz-border-radius-bottom-left: 4px;
-  -webkit-border-radius-top-left: 4px;
-  -webkit-border-radius-bottom-left: 4px;
-  border-radius: 4px 0 0 4px;
-  -khtml-border-radius-top-left: 4px;
-  -khtml-border-radius-bottom-left: 4px;
+.frm-rounded-left textarea, .frm-rounded-left input[type="submit"], .frm-rounded-left input[type="button"], .frm-rounded-left button {
+  -moz-border-radius-top-left: 5px;
+  -moz-border-radius-bottom-left: 5px;
+  -webkit-border-radius-top-left: 5px;
+  -webkit-border-radius-bottom-left: 5px;
+  border-radius: 5px 0 0 5px;
+  -khtml-border-radius-top-left: 5px;
+  -khtml-border-radius-bottom-left: 5px;
 }
 
-.frm-icon-field {
+/** Iconified Elements - Works in presence of CMGTools IconLib. It can be overriden to use any preferred icon font library. */
+.frm-icon-element {
+  position: relative;
   display: inline-block;
   width: 100%;
 }
-.frm-icon-field .wrap-icon {
-  display: inline-block;
+.frm-icon-element.element-25 {
+  width: 25% !important;
+}
+.frm-icon-element.element-50 {
+  width: 50% !important;
+}
+.frm-icon-element.element-75 {
+  width: 75% !important;
+}
+.frm-icon-element.element-small {
+  width: 80px !important;
+}
+.frm-icon-element.element-medium {
+  width: 120px !important;
+}
+.frm-icon-element.element-large {
+  width: 180px !important;
+}
+.frm-icon-element.element-xlarge {
+  width: 250px !important;
+}
+.frm-icon-element input[type="text"], .frm-icon-element input[type="email"], .frm-icon-element input[type="password"], .frm-icon-element textarea, .frm-icon-element select, .frm-icon-element input[type="submit"], .frm-icon-element input[type="button"], .frm-icon-element button {
+  padding-left: 1.75em;
+  width: 100%;
+}
+.frm-icon-element .icon, .frm-icon-element .cmti {
+  position: absolute;
   border: none;
-  margin: 0;
-  padding: 8px 1%;
-  width: 10%;
+  box-shadow: none;
+  outline: none;
   font-size: 1em;
-  line-height: 2em;
-  background-color: #f5f5f5;
-  color: #3f3f46;
+  line-height: 1.25;
+  margin: 0.25em 0;
+  padding: 0.25em;
 }
-.frm-icon-field input[type="text"], .frm-icon-field input[type="email"], .frm-icon-field input[type="password"], .frm-icon-field textarea, .frm-icon-field input[type="submit"], .frm-icon-field input[type="button"], .frm-icon-field button, .frm-icon-field .btn {
-  display: inline-block;
-  border: none;
-  margin: 0;
-  width: 90%;
-  line-height: 2em;
-  padding: 5px 10px;
+
+.frm-split-40-60 .frm-icon-element {
+  width: 60%;
+  float: left;
 }
-.frm-icon-field.rounded .wrap-icon {
-  -moz-border-radius-top-left: 4px;
-  -moz-border-radius-bottom-left: 4px;
-  -webkit-border-radius-top-left: 4px;
-  -webkit-border-radius-bottom-left: 4px;
-  border-radius: 4px 0 0 4px;
-  -khtml-border-radius-top-left: 4px;
-  -khtml-border-radius-bottom-left: 4px;
-}
-.frm-icon-field.rounded input[type="text"], .frm-icon-field.rounded input[type="email"], .frm-icon-field.rounded input[type="password"], .frm-icon-field.rounded textarea, .frm-icon-field.rounded input[type="submit"], .frm-icon-field.rounded input[type="button"], .frm-icon-field.rounded button, .frm-icon-field.rounded .btn {
-  -moz-border-radius-top-right: 4px;
-  -moz-border-radius-bottom-right: 4px;
-  -webkit-border-radius-top-right: 4px;
-  -webkit-border-radius-bottom-right: 4px;
-  border-radius: 0 4px 4px 0;
-  -khtml-border-radius-top-right: 4px;
-  -khtml-border-radius-bottom-right: 4px;
+.frm-split-40-60 .frm-icon-element input[type="text"], .frm-split-40-60 .frm-icon-element input[type="email"], .frm-split-40-60 .frm-icon-element input[type="password"], .frm-split-40-60 .frm-icon-element textarea, .frm-split-40-60 .frm-icon-element select, .frm-split-40-60 .frm-icon-element input[type="submit"], .frm-split-40-60 .frm-icon-element input[type="button"], .frm-split-40-60 .frm-icon-element button {
+  float: none;
 }
 
 button {
   line-height: 1em;
+}
+
+/**********************************************************************
+Description: The custom elements for CMGTools.
+Dependencies: variables, mixins, transitions, transformation
+***********************************************************************/
+.wrap-icon-picker {
+  width: 100%;
+}
+.wrap-icon-picker .icon-picker {
+  position: relative;
+  display: inline-block;
+}
+.wrap-icon-picker .icon-picker .wrap-icon {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #3498db;
+  color: #ffffff;
+  -moz-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
+  -ms-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
+  -o-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
+  -webkit-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
+  transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
+}
+.wrap-icon-picker .icon-picker .wrap-icon:hover {
+  background-color: #E74343;
+  color: #FFFFFF;
+}
+.wrap-icon-picker .icon-picker .wrap-icon .picker-icon {
+  display: inline-block;
+  height: 64px;
+  line-height: 64px;
+  font-size: 48px;
+}
+.wrap-icon-picker .icon-picker .icon-sets {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 64px;
+  width: 254px;
+  padding: 5px;
+  height: 216px;
+  background-color: #f5f5f5;
+  z-index: 1000000;
+}
+.wrap-icon-picker .icon-picker .icon-sets .wrap-icon {
+  margin: 2px;
+}
+
+.cmt-select-wrap {
+  margin: 0.25em 0;
+  width: 100%;
+}
+.cmt-select-wrap select {
+  display: none;
+}
+.cmt-select-wrap .cmt-select {
+  position: relative;
+  background-color: #f5f5f5;
+}
+.cmt-select-wrap .cmt-select .cmt-selected {
+  cursor: pointer;
+  position: relative;
+  z-index: 100000;
+  padding-right: 1.5em;
+}
+.cmt-select-wrap .cmt-select .cmt-selected .s-text {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  text-align: left;
+  padding: 0.25em;
+  color: #3f3f46;
+}
+.cmt-select-wrap .cmt-select .cmt-selected .s-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  padding: 0.25em;
+}
+.cmt-select-wrap .cmt-select .cmt-selected.disabled {
+  cursor: default;
+}
+.cmt-select-wrap .cmt-select .cmt-select-list {
+  position: absolute;
+  width: 100%;
+  background-color: #f5f5f5;
+  z-index: 100001;
+  max-height: 180px;
+  overflow-y: auto;
+}
+.cmt-select-wrap .cmt-select .cmt-select-list li {
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #FFFFFF;
+}
+.cmt-select-wrap .cmt-select .cmt-select-list li:hover {
+  color: #FFFFFF;
+  background-color: #E74343;
+}
+
+.cmt-choice input[type=checkbox], .cmt-choice input[type=radio], .cmt-rating input[type=checkbox], .cmt-rating input[type=radio] {
+  cursor: pointer;
+  display: none;
+}
+.cmt-choice input[type=checkbox] + .label.pad-label::before, .cmt-choice input[type=radio] + .label.pad-label::before, .cmt-rating input[type=checkbox] + .label.pad-label::before, .cmt-rating input[type=radio] + .label.pad-label::before {
+  margin-right: 8px;
+}
+.cmt-choice input[type=radio] + .label::before, .cmt-choice input[type=checkbox] + .label::before, .cmt-rating input[type=radio] + .label::before, .cmt-rating input[type=checkbox] + .label::before {
+  font-family: "cmti-core";
+  font-weight: normal;
+  color: gray;
+  border-radius: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -5px;
+  line-height: 13px;
+}
+.cmt-choice input[type=checkbox]:checked, .cmt-choice input[type=radio]:checked, .cmt-choice input[type=checkbox]:focus, .cmt-choice input[type=radio]:focus, .cmt-rating input[type=checkbox]:checked, .cmt-rating input[type=radio]:checked, .cmt-rating input[type=checkbox]:focus, .cmt-rating input[type=radio]:focus {
+  outline: none !important;
+}
+.cmt-choice input[type=checkbox]:checked + .label::before, .cmt-choice input[type=radio]:checked + .label::before, .cmt-rating input[type=checkbox]:checked + .label::before, .cmt-rating input[type=radio]:checked + .label::before {
+  display: inline-block;
+  background-color: #F5F8FC;
+  color: #E74343;
+}
+.cmt-choice input[type=checkbox]:checked + .label, .cmt-choice input[type=radio]:checked + .label, .cmt-rating input[type=checkbox]:checked + .label, .cmt-rating input[type=radio]:checked + .label {
+  color: #b51717;
+}
+.cmt-choice input[type=checkbox]:hover + .label::before, .cmt-choice input[type=radio]:hover + .label::before, .cmt-choice input[type=checkbox] + .label:hover::before, .cmt-choice input[type=radio] + .label:hover::before, .cmt-rating input[type=checkbox]:hover + .label::before, .cmt-rating input[type=radio]:hover + .label::before, .cmt-rating input[type=checkbox] + .label:hover::before, .cmt-rating input[type=radio] + .label:hover::before {
+  color: #FF3636;
+}
+.cmt-choice input[type=checkbox]:disabled + .label::before, .cmt-choice input[type=radio]:disabled + .label::before, .cmt-rating input[type=checkbox]:disabled + .label::before, .cmt-rating input[type=radio]:disabled + .label::before {
+  background-color: #DDD !important;
+  color: #BBB;
+}
+.cmt-choice input[type=radio] + .label::before, .cmt-choice input[type=radio]:disabled + .label::before, .cmt-rating input[type=radio] + .label::before, .cmt-rating input[type=radio]:disabled + .label::before {
+  content: "\e0a2";
+}
+.cmt-choice input[type=radio]:checked + .label::before, .cmt-rating input[type=radio]:checked + .label::before {
+  content: "\e0a3";
+}
+.cmt-choice input[type=checkbox] + .label::before, .cmt-choice input[type=checkbox]:disabled + .label::before, .cmt-rating input[type=checkbox] + .label::before, .cmt-rating input[type=checkbox]:disabled + .label::before {
+  content: "\3b";
+}
+.cmt-choice input[type=checkbox]:checked + .label::before, .cmt-rating input[type=checkbox]:checked + .label::before {
+  content: "\3a";
+}
+
+.cmt-rating input[type=checkbox] + .label.label-rating::before, .cmt-rating input[type=radio] + .label.label-rating::before {
+  margin-right: 8px;
+}
+.cmt-rating input[type=radio] + .label::before, .cmt-rating input[type=radio]:disabled + .label::before {
+  content: "\e0f3";
+}
+.cmt-rating input[type=radio]:checked + .label::before {
+  content: "\e0f3";
+}
+
+.cmt-switch {
+  position: relative;
+  display: inline-block;
+}
+.cmt-switch .cmt-toggle {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+.cmt-switch .cmt-toggle + label {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.cmt-switch .cmt-toggle-round + label {
+  width: 5em !important;
+  height: 1.5em;
+  padding: 0.5em;
+  background-color: #f5f5f5;
+  border-radius: 0.5em;
+}
+.cmt-switch .cmt-toggle-round + label:before,
+.cmt-switch .cmt-toggle-round + label:after {
+  display: inline-block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+  content: "";
+}
+.cmt-switch .cmt-toggle-round + label:before {
+  right: 1px;
+  background-color: #FFFFFF;
+  border-radius: 0.5em;
+  -moz-transition: background-color 350ms ease-in-out 0s;
+  -ms-transition: background-color 350ms ease-in-out 0s;
+  -o-transition: background-color 350ms ease-in-out 0s;
+  -webkit-transition: background-color 350ms ease-in-out 0s;
+  transition: background-color 350ms ease-in-out 0s;
+}
+.cmt-switch .cmt-toggle-round + label:after {
+  width: 1.5em;
+  background-color: #3F62A0;
+  border-radius: 0.5em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  -moz-transition: margin 350ms ease-out 0s;
+  -ms-transition: margin 350ms ease-out 0s;
+  -o-transition: margin 350ms ease-out 0s;
+  -webkit-transition: margin 350ms ease-out 0s;
+  transition: margin 350ms ease-out 0s;
+}
+.cmt-switch .cmt-toggle-round:checked + label:before {
+  background-color: #87C442;
+}
+.cmt-switch .cmt-toggle-round:checked + label:after {
+  margin-left: 3.5em;
+}
+
+.btn.btn-25 {
+  width: 25% !important;
+}
+.btn.btn-50 {
+  width: 50% !important;
+}
+.btn.btn-75 {
+  width: 75% !important;
+}
+.btn.btn-small {
+  width: 80px !important;
+}
+.btn.btn-medium {
+  width: 120px !important;
+}
+.btn.btn-large {
+  width: 180px !important;
+}
+.btn.btn-xlarge {
+  width: 250px !important;
+}
+.btn.btn-white {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+.btn.btn-white:hover {
+  background-color: #595959;
+  color: #A5A5A5;
+}
+.btn.btn-black {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+.btn.btn-black:hover {
+  background-color: #595959;
+  color: #A5A5A5;
+}
+.btn.btn-gray {
+  background-color: #7F7F7F;
+  color: #FFFFFF;
+}
+.btn.btn-gray:hover {
+  background-color: #595959;
+  color: #A5A5A5;
+}
+.btn.btn-reverse:hover {
+  background-color: #E74343 !important;
+  color: #FFFFFF !important;
+}
+
+.btn-delete {
+  position: absolute;
+  top: -0.5em;
+  right: -0.5em;
+  font-size: 1.25em;
+  color: #E74343;
+  cursor: pointer;
+  -moz-transition: color 250ms ease-in-out 0s;
+  -ms-transition: color 250ms ease-in-out 0s;
+  -o-transition: color 250ms ease-in-out 0s;
+  -webkit-transition: color 250ms ease-in-out 0s;
+  transition: color 250ms ease-in-out 0s;
+}
+.btn-delete:hover {
+  color: #464646;
+}
+
+.list-radio label {
+  width: auto;
+  clear: none;
+}
+
+.cmt-checkbox, .cmt-switch {
+  background: none;
+}
+.cmt-checkbox:hover, .cmt-switch:hover {
+  background: none;
+  color: #363636;
+}
+
+.frm-ignore-100 .cmt-checkbox, .frm-ignore-100 .cmt-switch {
+  width: auto;
+}
+
+.frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .list-radio, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap {
+  width: 60%;
+  float: left;
+}
+
+.element-60 .cmt-checkbox, .element-60 .cmt-select-wrap {
+  width: 100%;
+}
+
+.frm-rounded-all .btn {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -khtml-border-radius: 5px;
+}
+
+.frm-rounded-top .btn {
+  -moz-border-radius-top-left: 5px;
+  -moz-border-radius-top-right: 5px;
+  -webkit-border-radius-top-left: 5px;
+  -webkit-border-radius-top-right: 5px;
+  border-radius: 5px 5px 0 0;
+  -khtml-border-radius-top-left: 5px;
+  -khtml-border-radius-top-right: 5px;
+}
+
+.frm-rounded-right .btn {
+  -moz-border-radius-top-right: 5px;
+  -moz-border-radius-bottom-right: 5px;
+  -webkit-border-radius-top-right: 5px;
+  -webkit-border-radius-bottom-right: 5px;
+  border-radius: 0 5px 5px 0;
+  -khtml-border-radius-top-right: 5px;
+  -khtml-border-radius-bottom-right: 5px;
+}
+
+.frm-rounded-bottom .btn {
+  -moz-border-radius-bottom-left: 5px;
+  -moz-border-radius-bottom-right: 5px;
+  -webkit-border-radius-bottom-left: 5px;
+  -webkit-border-radius-bottom-right: 5px;
+  border-radius: 0 0 5px 5px;
+  -khtml-border-radius-bottom-left: 5px;
+  -khtml-border-radius-bottom-right: 5px;
+}
+
+.frm-rounded-left .btn {
+  -moz-border-radius-top-left: 5px;
+  -moz-border-radius-bottom-left: 5px;
+  -webkit-border-radius-top-left: 5px;
+  -webkit-border-radius-bottom-left: 5px;
+  border-radius: 5px 0 0 5px;
+  -khtml-border-radius-top-left: 5px;
+  -khtml-border-radius-bottom-left: 5px;
+}
+
+/** Iconified Elements - Works in presence of CMGTools IconLib. It can be overriden to use any preferred icon font library. */
+.frm-icon-element .btn {
+  padding-left: 1.75em;
+}
+
+.frm-split-40-60 .frm-icon-element .btn {
+  float: none;
 }
 
 .nav {
@@ -3488,7 +3127,7 @@ button {
 }
 .footer-main a {
   font-family: Arial, Helvetica, sans-serif;
-  color: #a5d75a;
+  color: #A5D75A;
 }
 .footer-main ul li:hover a {
   color: #ecf0f1;
@@ -3527,7 +3166,7 @@ button {
 }
 .footer-copyright a {
   font-family: Arial, Helvetica, sans-serif;
-  color: #a5d75a;
+  color: #A5D75A;
 }
 
 .popout-header {
@@ -3690,7 +3329,7 @@ Javascript: jquery, cmt-block
   color: #ffffff;
 }
 #block-public .block-wrap-content .help-block {
-  color: #e74343;
+  color: #E74343;
 }
 @media only screen and (max-width: 480px) {
   #block-public .block-wrap-content {
@@ -3736,11 +3375,11 @@ Javascript: jquery, cmt-block
   position: relative;
   margin: 0 auto;
 }
-.file-uploader .postview .wrap-image {
+.file-uploader .postview .wrap-file {
   text-align: center;
   padding: 1em;
 }
-.file-uploader .postview .wrap-image .cmt-icon {
+.file-uploader .postview .wrap-file .cmt-icon {
   font-size: 10em;
 }
 .file-uploader .postview .message-upload {

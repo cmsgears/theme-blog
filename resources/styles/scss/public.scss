@@ -1,35 +1,39 @@
-// Fonts ------------------------------------
-
-// CMGTools
-@import "cmti/core";
-@import "cmti/cmti-core";
-
 // Vendor -----------------------------------
-
-//@import "vendor-partials/jquery.mCustomScrollbar";
 
 // Core -------------------------------------
 
 @import "cmt/core/variables";
 @import "partials/core/fonts";
 @import "partials/core/variables";
+
 @import "cmt/core/variables-ext";
 @import "partials/core/variables-ext";
+
 @import "cmt/core/mixins";
 @import "cmt/core/transitions";
-@import "cmt/core/animations";
 @import "cmt/core/transformations";
+@import "cmt/core/animations";
+
 @import "cmt/core/reset";
 @import "cmt/core/basic";
 @import "partials/core/basic";
+
 @import "cmt/core/typography";
+
 @import "cmt/core/containers";
 @import "partials/core/containers";
 
 // Elements ---------------------------------
 
+@import "cmt/elements/common";
+
+@import "cmt/elements/table";
+
 @import "cmt/elements/form";
-@import "partials/elements/forms";
+@import "partials/elements/form";
+
+@import "cmt/elements/custom";
+@import "partials/elements/custom";
 
 // Components -------------------------------
 
@@ -37,8 +41,12 @@
 @import "partials/components/headers";
 @import "partials/components/footers";
 @import "partials/components/popouts";
+
 @import "cmt/components/blocks";
 @import "partials/components/blocks";
+
 @import "partials/components/blog";
+
 @import "partials/components/shapes";
+
 @import "partials/components/pagination";
