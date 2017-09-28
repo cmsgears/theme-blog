@@ -81,15 +81,15 @@ class m160623_072812_theme_blog extends \yii\db\Migration {
 
 	private function insertThemeTemplates() {
 
-		$columns = [ 'createdBy', 'modifiedBy', 'name', 'slug', 'icon', 'type', 'description', 'renderer', 'fileRender', 'layout', 'layoutGroup', 'viewPath', 'createdAt', 'modifiedAt', 'content', 'data' ];
+		$columns = [ 'createdBy', 'modifiedBy', 'name', 'slug', 'icon', 'type', 'active', 'description', 'renderer', 'fileRender', 'layout', 'layoutGroup', 'viewPath', 'createdAt', 'modifiedAt', 'content', 'data' ];
 
 		$templates = [
-			[ $this->master->id, $this->master->id, 'Page', 'page', null, 'page', 'Page layout for pages.', 'default', true, 'page/default', false, 'views/templates/page/default', DateUtil::getDateTime(), DateUtil::getDateTime(), null, null ],
-			[ $this->master->id, $this->master->id, 'Blog', 'blog', null, 'page', 'Blog layout to view all blog posts or filters(category, author).', 'default', true, 'page/blog', false, 'views/templates/page/blog', DateUtil::getDateTime(), DateUtil::getDateTime(), null, null ],
-			[ $this->master->id, $this->master->id, 'Post', 'post', null, 'blog', 'Post layout for posts.', 'default', true, 'post/default', true, 'views/templates/post/default', DateUtil::getDateTime(), DateUtil::getDateTime(), null, null ],
-			[ $this->master->id, $this->master->id, 'Form', 'form', null, 'form', 'It can be used to display public forms.', 'default', true, 'form/default', false, 'views/templates/form/default', DateUtil::getDateTime(), DateUtil::getDateTime(), null, null ],
-			[ $this->master->id, $this->master->id, 'Text Social', 'text-social', null, 'widget', 'It can be used to display key values for social links.', 'default', true, null, false, 'views/templates/widget/text/social', DateUtil::getDateTime(), DateUtil::getDateTime(), null, null ],
-			[ $this->master->id, $this->master->id, 'Text Address', 'text-address', null, 'widget', 'Used to display address on contact pages.', 'default', true, null, false, 'views/templates/widget/text/address', DateUtil::getDateTime(), DateUtil::getDateTime(), null, null ]
+			[ $this->master->id, $this->master->id, 'Page', 'page', null, 'page', true, 'Page layout for pages.', 'default', true, 'page/default', false, 'views/templates/page/default', DateUtil::getDateTime(), DateUtil::getDateTime(), null, null ],
+			[ $this->master->id, $this->master->id, 'Blog', 'blog', null, 'page', true, 'Blog layout to view all blog posts or filters(category, author).', 'default', true, 'page/blog', false, 'views/templates/page/blog', DateUtil::getDateTime(), DateUtil::getDateTime(), null, null ],
+			[ $this->master->id, $this->master->id, 'Post', 'post', null, 'blog', true, 'Post layout for posts.', 'default', true, 'post/default', true, 'views/templates/post/default', DateUtil::getDateTime(), DateUtil::getDateTime(), null, null ],
+			[ $this->master->id, $this->master->id, 'Form', 'form', null, 'form', true, 'It can be used to display public forms.', 'default', true, 'form/default', false, 'views/templates/form/default', DateUtil::getDateTime(), DateUtil::getDateTime(), null, null ],
+			[ $this->master->id, $this->master->id, 'Text Social', 'text-social', null, 'widget', true, 'It can be used to display key values for social links.', 'default', true, null, false, 'views/templates/widget/text/social', DateUtil::getDateTime(), DateUtil::getDateTime(), null, null ],
+			[ $this->master->id, $this->master->id, 'Text Address', 'text-address', null, 'widget', true, 'Used to display address on contact pages.', 'default', true, null, false, 'views/templates/widget/text/address', DateUtil::getDateTime(), DateUtil::getDateTime(), null, null ]
 		];
 
 		$this->batchInsert( $this->cmgPrefix . 'core_template', $columns, $templates );
