@@ -61,10 +61,10 @@ class m160623_072812_theme_blog extends \yii\db\Migration {
 
 	private function insertTheme() {
 
-		$columns = [ 'createdBy', 'modifiedBy', 'name', 'slug', 'description', 'renderer', 'basePath', 'createdAt', 'modifiedAt', 'data' ];
+		$columns = [ 'createdBy', 'modifiedBy', 'name', 'slug', 'type', 'description', 'renderer', 'basePath', 'createdAt', 'modifiedAt', 'data' ];
 
 		$themes = [
-			[ $this->master->id, $this->master->id, 'Blog', 'blog', 'Blog Theme.', null, '@themes/blog', DateUtil::getDateTime(), DateUtil::getDateTime(), null ]
+			[ $this->master->id, $this->master->id, 'Blog', 'blog', CoreGlobal::TYPE_SITE, 'Blog Theme.', null, '@themes/blog', DateUtil::getDateTime(), DateUtil::getDateTime(), null ]
 		];
 
 		$this->batchInsert( $this->cmgPrefix . 'core_theme', $columns, $themes );
