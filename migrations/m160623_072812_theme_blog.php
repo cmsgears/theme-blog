@@ -50,7 +50,7 @@ class m160623_072812_theme_blog extends \yii\db\Migration {
 		$this->insertThemeTemplates();
 
 		// Objects
-		$this->insertObjects();
+		$this->insertThemeObjects();
 
 		// Page
 		$this->configurePageTemplates();
@@ -95,7 +95,7 @@ class m160623_072812_theme_blog extends \yii\db\Migration {
 		$this->batchInsert( $this->cmgPrefix . 'core_template', $columns, $templates );
 	}
 
-	private function insertObjects() {
+	private function insertThemeObjects() {
 
 		$tSocialTemplate	= Template::findBySlugType( 'text-social', CmsGlobal::TYPE_WIDGET );
 		$tAddressTemplate	= Template::findBySlugType( 'text-address', CmsGlobal::TYPE_WIDGET );
