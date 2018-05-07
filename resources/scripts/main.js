@@ -33,10 +33,19 @@ function initCmgTools() {
 		}
 	});
 
+	// Perspective Header
+	jQuery( '#header-main' ).cmtHeader( { scrollDistance: 350 } );
+
+	// Smooth Scroll
+	jQuery( '.smooth-scroll' ).cmtSmoothScroll();
+
+	// Box Forms
+	jQuery( '.box-form' ).cmtFormInfo();
+
 	// Ratings
 	jQuery( '.cmt-rating' ).cmtRate();
 
-	// Custom Select
+	// Select
 	jQuery( '.cmt-select' ).cmtSelect( { iconHtml: '<span class="fa fa-caret-down"></span>' } );
 	jQuery( '.cmt-select-c' ).cmtSelect( { iconHtml: '<span class="fa fa-caret-down"></span>', copyOptionClass: true } );
 	jQuery( '.cmt-select-s' ).cmtSelect( { iconHtml: '<span class="fa fa-caret-down"></span>', wrapperClass: 'element-small' } );
@@ -65,11 +74,11 @@ function initCmgTools() {
 	// Grid
 	jQuery( '.grid-data' ).cmtGrid();
 
-	// Collapsible Sidebar
-	jQuery( '#sidebar-main' ).cmtCollapsibleMenu();
-
 	// Icon Picker
 	jQuery( '.icon-picker' ).cmtIconPicker();
+	
+	// Collapsible Sidebar
+	jQuery( '#sidebar-main' ).cmtCollapsibleMenu();
 }
 
 // == JS Listeners ========================
