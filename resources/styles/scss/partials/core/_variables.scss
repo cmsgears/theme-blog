@@ -1,35 +1,63 @@
 // Primary Color:
-$color-primary: #ecf0f1;
-$color-primary-l: #ffffff;
-$color-primary-d: #f5f5f5;
-$color-primary-text: #464646;
-$color-primary-text-l: #464646;
-$color-primary-text-d: #000000;
+$color-primary: #F8F8F8;
+$color-primary-l: #FFFFFF;
+$color-primary-d: #F2F2F2;
+$color-primary-text: #A5A5A5;
+$color-primary-text-l: #A5A5A5;
+$color-primary-text-d: #A5A5A5;
 
 // Secondary Color:
-$color-secondary: #3498db;
-$color-secondary-l: #d3effe;
-$color-secondary-d: #256e9e;
-$color-secondary-text: #ffffff;
+$color-secondary: #F8F8F8;
+$color-secondary-l: #FFFFFF;
+$color-secondary-d: #F2F2F2;
+$color-secondary-text: #464646;
 $color-secondary-text-l: #464646;
-$color-secondary-text-d: #ffffff;
+$color-secondary-text-d: #464646;
 
 // Tertiary Color:
-$color-tertiary: #e74c3c;
-$color-tertiary-l: #f98a7f;
-$color-tertiary-d: #a72012;
-$color-tertiary-text: #ffffff;
-$color-tertiary-text-l: #ffffff;
-$color-tertiary-text-d: #ffffff;
+$color-tertiary: #F2BB40;
+$color-tertiary-l: #FFFFFF;
+$color-tertiary-d: #E2A730;
+$color-tertiary-text: #464646;
+$color-tertiary-text-l: #E2A730;
+$color-tertiary-text-d: #464646;
 
-// Form Fields Default Color
-$color-field: #f5f5f5;
-$color-field-text: #3f3f46;
-$color-button: #e74c3c;
-$color-button-text: #ffffff;
-$color-button-h: #aa382c;
-$color-button-h-text: #ffffff;
+// Form Fields Color
+$color-field: rgba( #FFFFFF, 0.2 );
+$color-field-text: #FFFFFF;
+$color-field-h: rgba( #FFFFFF, 0.2 ); // Field Hover
+$color-field-text-h: #FFFFFF;
+$color-field-f: rgba( #FFFFFF, 0.2 ); // Focused Field
+$color-field-text-f: #E2A730;
+$color-field-d: #CCCCCC;      // Disabled Field
+$color-field-text-d: #909090;
+$color-placeholder: #D1D2D3;  // Placeholder
+
+$color-shadow-inset: #E6E7E8; // Inset color for fields
+$color-shadow-inset-h: #E6E7E8; // Inset color for field hover
+$color-shadow-inset-f: #F2BB40; // Inset color for field focus
+$color-shadow-inset-d: #E6E7E8; // Inset color for disabled field
+
+// Regular Buttons
+$color-btn: #F2BB40;
+$color-btn-text: #464646;
+$color-btn-h: #E2A730; // Button Hover
+$color-btn-text-h: #464646;
+$color-btn-a: #F2BB40; // Active Button
+$color-btn-text-a: #464646;
+$color-btn-d: #A5A5A5; // Disabled Button
+$color-btn-text-d: #FFFFFF;
 
 // Additional Colors
-$color-header: #ffffff;
-$color-social: #e74c3c;
+
+$color-header: #F2BB40;
+$color-header-text: #464646;
+
+$color-footer: #F2F2F2;
+$color-footer-text: #464646;
+
+$color-link: #E2A730;
+
+$color-border: #F4F4F4; // Default border color
+$color-border-l: #D1D2D3; // Light border color
+$color-border-d: #A5A5A5; // Dark border color

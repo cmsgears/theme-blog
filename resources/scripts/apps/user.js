@@ -1,19 +1,5 @@
-var mainApp	= null;
+jQuery( document ).ready( function() {
 
-jQuery(document).ready( function() {
-
-	mainApp		= new cmt.api.Application( { basePath: ajaxUrl } );
-
-	var appControllers				= [];
-
-	appControllers[ 'form' ] 		= 'FormController';
-	appControllers[ 'newsletter' ] 	= 'NewsletterController';
-	appControllers[ 'user' ]		= 'UserController';
-
-	jQuery( '.cmt-form, .cmt-request' ).cmtRequestProcessor({
-		app: mainApp,
-		controllers: appControllers
-	});
 });
 
 // DefaultController ----------------------------------------
