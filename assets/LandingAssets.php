@@ -49,7 +49,7 @@ class LandingAssets extends AssetBundle {
 
 		parent::init();
 
-		//$this->depends[] = 'foxslider\widgets\assets\FxsAssets';
+		$this->depends[] = 'foxslider\widgets\assets\FxsAssets';
 	}
 
     // Instance methods --------------------------------------------

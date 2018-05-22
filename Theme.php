@@ -21,8 +21,9 @@ class Theme extends BaseTheme {
 
 	// Globals ----------------
 
-	const MENU_MAIN		= 'main';
-	const MENU_LINKS	= 'links';
+	const MENU_MAIN			= 'main';
+	const MENU_SECONDARY	= 'secondary';
+	const MENU_LINKS		= 'links';
 
 	// Public -----------------
 

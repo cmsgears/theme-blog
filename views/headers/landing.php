@@ -1,18 +1,30 @@
 <?php
+// Yii Imports
 use yii\helpers\Html;
-use yii\helpers\Url;
 
-use cmsgears\widgets\dnav\DynamicNav;
+// CMG Imports
+use cmsgears\widgets\elements\Nav;
+
+// SF Imports
+use themes\blog\Theme;
 ?>
-<header id="header-main" class="header-main content-80 max-cols clearfix">
-	<a id="nav-mobile-icon" class="cmti cmti-2x cmti-list"></a>
-	<div class="colf12x3">
-		<?=Html::a( "<img class='fluid logo' src='" . Yii::getAlias( '@images' ) . "/logo.png'>", [ '/' ], null )?>
-	</div>
-	<div class="colf12x9">
-		<div class="nav-main stick-bottom">			
-			<?=DynamicNav::widget( [ 'view' => $this, 'options' => [ 'class' => 'nav' ] ] );?>
+<header class="header header-basic header-landing header-fixed shadow shadow-primary">
+	<div class="header-logo">
+		<div class="logo valign-center">
+			<?= Html::a( "<img class=\"fluid\" src=\"" . Yii::getAlias( '@images' ) . "/logo.png\">", [ '/' ], null ) ?>
 		</div>
 	</div>
-	<?=DynamicNav::widget( [ 'view' => $this, 'options' => [ 'id' => 'nav-mobile', 'class' => 'nav nav-mobile' ] ] );?>
+	<div id="btn-menu-mobile">
+		<i class="cmti cmti-menu cmti-action"></i>
+	</div>
+	<?= Nav::widget([
+		'view' => $this, 'slug' => Theme::MENU_MAIN,
+		'options' => [ 'id' => 'menu-main-mobile', 'class' => 'vnav uppercase' ]
+	])?>
 </header>
+<div class="menu-main-wrap row row-large">
+	<?= Nav::widget([
+		'view' => $this, 'slug' => Theme::MENU_MAIN,
+		'options' => [ 'id' => 'menu-main', 'class' => 'nav uppercase' ]
+	])?>
+</div>

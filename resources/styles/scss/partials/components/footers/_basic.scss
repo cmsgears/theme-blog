@@ -1,0 +1,83 @@
+.footer-basic {
+	min-height: 200px;
+	padding: 2em 0;
+
+	.footer-part {
+
+		&:last-child {
+			border-right: none;
+		}
+
+		.part-header {
+			color: $color-footer-text;
+			padding-bottom: 1em;
+		}
+	}
+
+	#menu-links {
+		
+		li {
+			width: 49%;
+
+			a, .link {
+				display: inline-block;
+				padding: 1em 0;
+				color: $color-primary-text;
+			}
+		}
+	}
+
+	.blog-post {
+		display: inline-block;
+		width: 80px;
+		height: 80px;
+		margin: 0.5em 0.5em 0 0;
+		overflow: hidden;
+		border: 2px solid $color-secondary;
+
+		img {
+			height: 100%;
+		}
+	}
+
+	@include responsive-max( screen-tablet-large ) {
+
+		.footer-part {
+			margin-bottom: 2em;
+		}
+	
+		.footer-newsletter-wrap {
+			text-align: center;
+			padding-top: 1em;
+
+			form {
+				display: inline-block;
+				width: 200px;
+			}
+		}
+	}
+}
+
+.footer-copyright {
+	background-color: $color-secondary-text;
+	text: $color-secondary;
+	z-index: 10001;
+
+	.btn {
+		position: absolute;
+		right: 0;
+		margin-top: -1.5em;
+	}
+}
+
+#btn-scroll-top {
+	font-size: 2em;
+	background-color: $color-tertiary;
+	color: $color-tertiary-text;
+	display: inline-block;
+	width: 1.5em;
+	height: 1.5em;
+	position: absolute;
+	top: -0.75em;
+	right: 5%;
+}

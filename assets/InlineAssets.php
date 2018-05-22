@@ -35,9 +35,6 @@ class InlineAssets extends AssetBundle {
 
 	// Public -----------------
 
-	// Path Configuration
-	public $sourcePath	= '@themes/blog/resources';
-
 	// Protected --------------
 
 	// Private ----------------

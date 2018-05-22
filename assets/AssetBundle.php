@@ -73,16 +73,16 @@ class AssetBundle extends BaseAssetBundle {
 	 * @inheritdoc
 	 */
     public $depends = [
-    	//'cmsgears\core\common\assets\Jquery',
-		'cmsgears\core\common\assets\Conditionizr',
-		'cmsgears\core\common\assets\JqueryUi',
-		'cmsgears\core\common\assets\CmgToolsJs',
-		'cmsgears\core\common\assets\Handlebars',
-		'cmsgears\core\common\assets\ImagesLoaded',
-		'cmsgears\core\common\assets\MCustomScrollbar',
-		'cmsgears\core\common\assets\NoUiSlider',
-		'cmsgears\core\common\assets\ProgressBar',
-		'cmsgears\core\common\assets\Animate',
+    	'cmsgears\assets\jquery\Jquery',
+		//'cmsgears\assets\utilities\Conditionizr',
+		'cmsgears\assets\utilities\ImagesLoaded',
+		'cmsgears\assets\jquery\JqueryUi',
+		'cmsgears\assets\cmgtools\Velocity',
+		'cmsgears\assets\templates\Handlebars',
+		'cmsgears\assets\components\MCustomScrollbar',
+		//'cmsgears\assets\components\NoUiSlider',
+		//'cmsgears\assets\components\ProgressBar',
+		//'cmsgears\assets\effects\Animate',
 		'cmsgears\widgets\aform\assets\FormAssets',
 		'cmsgears\icons\assets\IconAssets'
     ];

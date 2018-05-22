@@ -13,8 +13,10 @@ jQuery( document ).ready( function() {
 
 function initPreloaders() {
 
+	// Hide global pre-loader spinner
 	jQuery( '.container-main' ).imagesLoaded( { background: true }, function() {
 
+		jQuery( '#pre-loader-main .spinner' ).addClass( 'animate animate-zoom-out' );
 		jQuery( '#pre-loader-main' ).fadeOut( 'slow' );
 	});
 }
@@ -23,18 +25,22 @@ function initPreloaders() {
 
 function initCmgTools() {
 
-	// Page Blocks
+	// Blocks
 	jQuery( '.block' ).cmtBlock({
 		// Generic
-		fullHeight: true,
+		halfHeight: true,
+		heightAuto: true,
 		// Block Specific - Ignores generic
 		blocks: {
-			'block-public': { fullHeight: true, heightAutoMobile: true, heightAutoMobileWidth: 1024 }
+			'block-slider': { fullHeight: true },
+			'block-testimonials': { qtfHeight: true },
+			'block-public': { fullHeight: true, heightAuto: true, heightAutoMobile: true, heightAutoMobileWidth: 1024 },
+			'block-form': { qtfHeight: true, heightAuto: true, heightAutoMobile: true, heightAutoMobileWidth: 1024 }
 		}
 	});
 
 	// Perspective Header
-	jQuery( '#header-main' ).cmtHeader( { scrollDistance: 350 } );
+	jQuery( '#header-main' ).cmtHeader( { scrollDistance: 280 } );
 
 	// Smooth Scroll
 	jQuery( '.smooth-scroll' ).cmtSmoothScroll();
@@ -68,48 +74,54 @@ function initCmgTools() {
 	// Auto Fillers
 	jQuery( '.auto-fill' ).cmtAutoFill();
 
-	// Vertical & Horizontal Tabs
-	jQuery( '.tabs-v, .tabs-h' ).cmtTabs();
+	// Tabs
+	jQuery( '.tabs' ).cmtTabs();
+
+	// Accordians
+	jQuery( '.accordian' ).cmtAccordian();
 
 	// Grid
 	jQuery( '.grid-data' ).cmtGrid();
 
 	// Icon Picker
 	jQuery( '.icon-picker' ).cmtIconPicker();
-	
-	// Collapsible Sidebar
-	jQuery( '#sidebar-main' ).cmtCollapsibleMenu();
 }
 
 // == JS Listeners ========================
 
 function initListeners() {
 
-	// Datepicker
-	if( jQuery().datepicker ) {
+	jQuery( '#btn-menu-mobile' ).click( function() {
 
-		var start = jQuery( '.datepicker' ).attr( 'start' );
+		jQuery( '#menu-main-mobile' ).slideToggle();
+	});
+
+	// Datepicker
+	var datepickers = jQuery( '.datepicker' );
+	
+	datepickers.each( function() {
+
+		var datepicker = jQuery( this );
+
+		var start = datepicker.attr( 'start' );
 
 		if( null != start ) {
 
-			jQuery( '.datepicker' ).datepicker({
+			datepicker.datepicker({
 				dateFormat: 'yy-mm-dd',
 				minDate: start
 			});
 		}
 		else {
-			
-			jQuery( '.datepicker' ).datepicker({
+
+			datepicker.datepicker({
 				dateFormat: 'yy-mm-dd'
 			});
 		}
-	}
+	});
 
-	// Custom Scroller
-	if( jQuery().mCustomScrollbar ) {
-
-		jQuery( '.cscroller' ).mCustomScrollbar( { autoHideScrollbar: true } );
-	}
+	// Scrollbar
+	jQuery( '.cscroller' ).mCustomScrollbar( { autoHideScrollbar: true } );
 }
 
 // == Auto Hide ===========================

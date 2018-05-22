@@ -45,6 +45,13 @@ class PublicAssets extends AssetBundle {
 
     // Constructor and Initialisation ------------------------------
 
+	public function init() {
+
+		parent::init();
+
+		$this->depends[] = 'foxslider\widgets\assets\FxsAssets';
+	}
+
     // Instance methods --------------------------------------------
 
     // Yii interfaces ------------------------

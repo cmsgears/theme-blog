@@ -1,0 +1,11 @@
+#pre-loader-main {
+	position: absolute;
+	width: 100%;
+	z-index: 10000000;
+
+	.spinner {
+	    display: block;
+		width: 3em;
+	    margin: 0 auto;
+	}
+}

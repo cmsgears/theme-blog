@@ -1,5 +1,5 @@
 // ---------------------------------------//
-// Core Division - Required
+// Core Division
 // ---------------------------------------//
 
 @import "cmt/core/variables";
@@ -22,6 +22,7 @@
 @import "cmt/core/spacing";
 
 @import "cmt/core/typography";
+@import "partials/core/typography";
 
 @import "cmt/core/containers";
 @import "partials/core/containers";
@@ -30,17 +31,23 @@
 // Effects Division
 // ---------------------------------------//
 
-//@import "cmt/effects/hover";
+//@import "cmt/effects/hover/color";
+@import "cmt/effects/hover/transform";
+@import "cmt/effects/hover/animate";
+
+@import "cmt/effects/animations/basic";
 
 // ---------------------------------------//
 // Elements Division
 // ---------------------------------------//
 
-//@import "cmt/elements/basic";
+@import "cmt/elements/basic";
 
-//@import "cmt/elements/custom";
+@import "cmt/elements/custom";
+//@import "partials/elements/custom";
 
-//@import "cmt/elements/form";
+@import "cmt/elements/form";
+//@import "partials/elements/form";
 
 //@import "cmt/elements/table";
 
@@ -48,21 +55,27 @@
 
 //@import "cmt/elements/auto-fill";
 
+//@import "cmt/elements/tabs";
+//@import "cmt/elements/accordians";
+//@import "partials/elements/accordians";
+
 // ---------------------------------------//
 // Components Division
 // ---------------------------------------//
 
-//@import "cmt/components/menus/basic";
+@import "cmt/components/menus/basic";
 //@import "cmt/components/menus/collapsible";
-//@import "cmt/components/menus/social";
+@import "cmt/components/menus/social";
 
-//@import "cmt/components/headers/basic";
+@import "cmt/components/headers/basic";
+@import "partials/components/headers/basic";
 
-//@import "cmt/components/footers/basic";
+@import "cmt/components/footers/basic";
+@import "partials/components/footers/basic";
 
 //@import "cmt/components/sidebars/basic";
 
-//@import "cmt/components/mappers/basic";
+//@import "cmt/elements/mappers";
 
 //@import "cmt/components/popups/basic";
 //@import "cmt/components/popups/popouts";
@@ -72,24 +85,33 @@
 //@import "cmt/components/galleries/basic";
 
 //@import "cmt/components/cards/basic";
+//@import "cmt/components/cards/icon";
+//@import "cmt/components/cards/banner";
+//@import "partials/components/cards/banner";
 
-//@import "cmt/components/boxes/basic";
+@import "cmt/components/boxes/basic";
 //@import "cmt/components/boxes/login";
 //@import "cmt/components/boxes/form";
 //@import "cmt/components/boxes/file";
+//@import "partials/components/boxes/basic";
 
 //@import "cmt/components/widgets/basic";
 //@import "cmt/components/widgets/blog/post";
 //@import "cmt/components/widgets/cart/cart";
 //@import "cmt/components/widgets/cart/product";
 
-//@import "cmt/components/blocks/basic";
+@import "cmt/components/blocks/basic";
+@import "partials/components/blocks/basic";
+//@import "partials/components/blocks/page";
+//@import "partials/components/blocks/article";
+//@import "partials/components/blocks/post";
 
 //@import "cmt/components/grid/pagination";
 //@import "cmt/components/grid/sorting";
 //@import "cmt/components/grid/filters";
 //@import "cmt/components/grid/data";
 //@import "cmt/components/grid/table";
+//@import "partials/components/grid/pagination";
 
 //@import "cmt/components/blog/blog";
 //@import "cmt/components/blog/post";
@@ -103,3 +125,11 @@
 // ---------------------------------------//
 // Extensions Division
 // ---------------------------------------//
+
+@import "cmt/extensions/fox-slider";
+@import "partials/extensions/fox-slider";
+
+//@import "cmt/extensions/m-custom-scrollbar";
+//@import "safaricities/extensions/m-custom-scrollbar";
+
+//@import "safaricities/components/sliders";

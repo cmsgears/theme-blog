@@ -9,9 +9,70 @@ function initSearch() {
 
 	var pageUrl	= window.location.href;
 
+	// Regular Search
 	jQuery( '#btn-search' ).click( function() {
 
 		searchBro( '#search-terms', pageUrl );
+	});
+	
+	// Page Search
+	jQuery( '#btn-search-page' ).click( function() {
+
+		pageUrl = siteUrl + 'page/search';
+
+		searchBro( '#search-page', pageUrl );
+	});
+	
+	// Article Search
+	jQuery( '#btn-search-article' ).click( function() {
+
+		pageUrl = siteUrl + 'article/search';
+
+		searchBro( '#search-article', pageUrl );
+	});
+	
+	// Blog Search
+	jQuery( '#btn-search-post' ).click( function() {
+
+		pageUrl = siteUrl + 'blog/search';
+
+		searchBro( '#search-post', pageUrl );
+	});
+
+	// Page Search
+	jQuery( '#search-page' ).keypress( function( e ) {
+
+		// Listen to enter key
+    	if( e.which == 13 ) {
+
+			pageUrl = siteUrl + 'page/search';
+
+			searchBro( '#search-page', pageUrl );
+    	}
+	});
+	
+	// Article Search
+	jQuery( '#search-article' ).keypress( function( e ) {
+
+		// Listen to enter key
+    	if( e.which == 13 ) {
+
+			pageUrl = siteUrl + 'article/search';
+
+			searchBro( '#search-article', pageUrl );
+    	}
+	});
+
+	// Blog Search
+	jQuery( '#search-post' ).keypress( function( e ) {
+
+		// Listen to enter key
+    	if( e.which == 13 ) {
+
+			pageUrl = siteUrl + 'blog/search';
+
+			searchBro( '#search-post', pageUrl );
+    	}
 	});
 
 	// Init Default Filters
