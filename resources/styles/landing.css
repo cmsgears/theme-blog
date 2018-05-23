@@ -2828,6 +2828,25 @@ html, body {
   position: fixed !important;
 }
 
+.layer {
+  z-index: 1;
+}
+.layer.layer-1 {
+  z-index: 10;
+}
+.layer.layer-2 {
+  z-index: 20;
+}
+.layer.layer-3 {
+  z-index: 30;
+}
+.layer.layer-4 {
+  z-index: 40;
+}
+.layer.layer-5 {
+  z-index: 50;
+}
+
 .block {
   display: block !important;
 }
@@ -4847,7 +4866,7 @@ Details: It defines the grid system and basic containers as listed below:
 }
 @media only screen and (max-width: 1024px) {
   .container-main-landing {
-    margin-top: 50px;
+    margin-top: 0px;
   }
 }
 
@@ -7206,6 +7225,7 @@ Details: It defines the styles for header components as listed below:
     -ms-transition: all 250ms linear 0s;
     -o-transition: all 250ms linear 0s;
     transition: all 250ms linear 0s;
+    color: #FFFFFF;
   }
   .header-public #btn-menu-mobile:hover {
     color: #E2A730;
@@ -7271,6 +7291,7 @@ Details: It defines the styles for header components as listed below:
     font-size: 24px;
     line-height: 30px;
     top: 0;
+    color: #FFFFFF;
     -webkit-transition: all 250ms linear 0s;
     -moz-transition: all 250ms linear 0s;
     -ms-transition: all 250ms linear 0s;
@@ -7307,9 +7328,6 @@ Details: It defines the styles for header components as listed below:
   }
 }
 
-.menu-main-wrap {
-  margin-top: 140px;
-}
 .menu-main-wrap #menu-main {
   height: 80px;
   line-height: 80px;
@@ -7341,6 +7359,49 @@ Details: It defines the styles for header components as listed below:
 @media only screen and (max-width: 1024px) {
   .menu-main-wrap {
     display: none;
+  }
+}
+
+.header-banner {
+  height: 280px;
+}
+.header-banner .header-logo {
+  margin-top: 60px;
+}
+@media only screen and (max-width: 1024px) {
+  .header-banner {
+    height: 180px;
+  }
+  .header-banner .header-logo {
+    margin-top: 70px;
+  }
+  .header-banner .header-logo .logo {
+    float: none;
+  }
+  .header-banner #menu-main-mobile {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 25;
+  }
+  .header-banner #btn-menu-mobile {
+    z-index: 30;
+    color: #FFFFFF;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .header-banner-no {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10001;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .header-banner-no + .menu-main-wrap + .container-main-landing {
+    margin-top: 50px;
   }
 }
 
