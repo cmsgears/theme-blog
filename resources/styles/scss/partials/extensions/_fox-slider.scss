@@ -1,4 +1,4 @@
-#block-slider, #page-slider, #post-slider {
+#block-slider, #page-slider, #article-slider, #post-slider {
 
 	.slides-wrap {
 
@@ -39,12 +39,5 @@
 				background-position: 0px 0px;
 			}
 		}
-	}
-}
-
-#post-slider {
-
-	.bullets {
-		bottom: 10px;
 	}
 }

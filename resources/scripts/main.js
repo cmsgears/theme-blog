@@ -91,6 +91,7 @@ function initCmgTools() {
 
 function initListeners() {
 
+	// Main Menu
 	jQuery( '#btn-menu-mobile' ).click( function() {
 
 		jQuery( '#menu-main-mobile' ).slideToggle();

@@ -31,12 +31,6 @@ class m180502_112655_theme_blog extends Migration {
 
 	// Public variables
 
-	// Make this theme as default theme.
-	public $default 	= true;
-
-	// Allow this theme to be applied for site using current site slug.
-	public $activate	= true;
-
 	// Private Variables
 
 	private $cmgPrefix;
@@ -91,7 +85,7 @@ class m180502_112655_theme_blog extends Migration {
 
 		$this->batchInsert( $this->cmgPrefix . 'core_theme', $columns, $themes );
 
-		if( $this->default ) {
+		if( Yii::$app->controller->default ) {
 
 			// Update default
 			$this->update( $this->cmgPrefix . 'core_theme', [ 'default' => false ], [ 'default' => true ] );
@@ -128,13 +122,13 @@ class m180502_112655_theme_blog extends Migration {
 
 		$templates = [
 			// Theme Templates - Widget
-			[ $theme->id, $this->master->id, $this->master->id, 'Social', "social", null, CmsGlobal::TYPE_WIDGET, true, 'It can be used to display social links.', null, 'default', true, null, true, 'views/templates/widget/social', 'default', DateUtil::getDateTime(), DateUtil::getDateTime(), null, null ],
-			[ $theme->id, $this->master->id, $this->master->id, 'Address', "address", null, CmsGlobal::TYPE_WIDGET, true, 'It can be used to display address and location.', null, 'default', true, null, true, 'views/templates/widget/address', 'default', DateUtil::getDateTime(), DateUtil::getDateTime(), null, null ],
 			[ $theme->id, $this->master->id, $this->master->id, 'Search', "search", null, CmsGlobal::TYPE_WIDGET, true, 'It can be used to display page, article and post search form.', null, 'default', true, null, true, 'views/templates/widget/search', 'default', DateUtil::getDateTime(), DateUtil::getDateTime(), null, null ],
+			[ $theme->id, $this->master->id, $this->master->id, 'Archive', "archive", null, CmsGlobal::TYPE_WIDGET, true, 'It can be used to display post and article archive list.', null, 'default', true, null, true, 'views/templates/widget/archive', 'default', DateUtil::getDateTime(), DateUtil::getDateTime(), null, null ],
 			[ $theme->id, $this->master->id, $this->master->id, 'Page', "page", null, CmsGlobal::TYPE_WIDGET, true, 'It can be used to display popular, recent and related pages.', null, 'default', true, null, true, 'views/templates/widget/page', 'default', DateUtil::getDateTime(), DateUtil::getDateTime(), null, null ],
 			[ $theme->id, $this->master->id, $this->master->id, 'Article', "article", null, CmsGlobal::TYPE_WIDGET, true, 'It can be used to display popular, recent and related articles.', null, 'default', true, null, true, 'views/templates/widget/article', 'default', DateUtil::getDateTime(), DateUtil::getDateTime(), null, null ],
 			[ $theme->id, $this->master->id, $this->master->id, 'Post', "post", null, CmsGlobal::TYPE_WIDGET, true, 'It can be used to display popular, recent, similar and related posts.', null, 'default', true, null, true, 'views/templates/widget/post', 'default', DateUtil::getDateTime(), DateUtil::getDateTime(), null, null ],
-			[ $theme->id, $this->master->id, $this->master->id, 'Archive', "archive", null, CmsGlobal::TYPE_WIDGET, true, 'It can be used to display post and article archive list.', null, 'default', true, null, true, 'views/templates/widget/archive', 'default', DateUtil::getDateTime(), DateUtil::getDateTime(), null, null ],
+			[ $theme->id, $this->master->id, $this->master->id, 'Social', "social", null, CmsGlobal::TYPE_WIDGET, true, 'It can be used to display social links.', null, 'default', true, null, true, 'views/templates/widget/social', 'default', DateUtil::getDateTime(), DateUtil::getDateTime(), null, null ],
+			[ $theme->id, $this->master->id, $this->master->id, 'Address', "address", null, CmsGlobal::TYPE_WIDGET, true, 'It can be used to display address and location.', null, 'default', true, null, true, 'views/templates/widget/address', 'default', DateUtil::getDateTime(), DateUtil::getDateTime(), null, null ],
 			[ $theme->id, $this->master->id, $this->master->id, 'Adsense', "adsense", null, CmsGlobal::TYPE_WIDGET, true, 'It can be used to display adsense ads.', null, 'default', true, null, true, 'views/templates/widget/adsense', 'default', DateUtil::getDateTime(), DateUtil::getDateTime(), null, null ],
 			// Theme Templates - Sidebar
 			[ $theme->id, $this->master->id, $this->master->id, 'Vertical Sidebar', "vertical-sidebar", null, CmsGlobal::TYPE_SIDEBAR, true, 'Main Sidebar displayed vertically on a page.', null, 'default', true, null, false, 'views/templates/sidebar/main', 'vertical', DateUtil::getDateTime(), DateUtil::getDateTime(), null, null ],
@@ -146,16 +140,17 @@ class m180502_112655_theme_blog extends Migration {
 
 	private function insertMenus() {
 
+		$site	= $this->site;
 		$theme	= Theme::findBySlug( 'blog' );
 		$status	= ObjectData::STATUS_ACTIVE;
 
 		$columns = [ 'siteId', 'themeId', 'templateId', 'avatarId', 'bannerId', 'createdBy', 'modifiedBy', 'name', 'slug', 'type', 'icon', 'description', 'status', 'classPath', 'createdAt', 'modifiedAt', 'htmlOptions', 'content', 'data' ];
 
 		$objects = [
-			[ $this->site->id, $theme->id, NULL, NULL ,NULL, 1, 1, 'Main', "main", CmsGlobal::TYPE_MENU, NULL, 'Main Menu used on landing header.', $status, NULL, '2014-10-11 14:22:54', '2016-04-16 10:00:10', NULL, NULL, NULL ],
-			[ $this->site->id, $theme->id, NULL, NULL ,NULL, 1, 1, 'Secondary', "secondary", CmsGlobal::TYPE_MENU, NULL, 'Secondary Menu used on public header.', $status, NULL, '2014-10-11 14:22:54', '2016-04-16 10:00:10', NULL, NULL, NULL ],
-			[ $this->site->id, $theme->id, NULL, NULL, NULL, 1, 1, 'Links', "links", CmsGlobal::TYPE_MENU, NULL, 'Links menu used on footer.', $status, NULL,'2016-04-16 09:27:00', '2016-04-16 09:27:00', NULL, NULL, NULL ],
-			[ $this->site->id, $theme->id, NULL, NULL, NULL, 1, 1, 'Page', "page", 'menu', NULL, 'Page menu used on system pages.', $status, NULL, '2016-04-16 09:27:00', '2016-04-16 09:27:00', NULL, NULL, NULL ]
+			[ $site->id, $theme->id, NULL, NULL ,NULL, 1, 1, 'Main', "main", CmsGlobal::TYPE_MENU, NULL, 'Main Menu used on landing header.', $status, NULL, '2014-10-11 14:22:54', '2016-04-16 10:00:10', NULL, NULL, NULL ],
+			[ $site->id, $theme->id, NULL, NULL ,NULL, 1, 1, 'Secondary', "secondary", CmsGlobal::TYPE_MENU, NULL, 'Secondary Menu used on public header.', $status, NULL, '2014-10-11 14:22:54', '2016-04-16 10:00:10', NULL, NULL, NULL ],
+			[ $site->id, $theme->id, NULL, NULL, NULL, 1, 1, 'Links', "links", CmsGlobal::TYPE_MENU, NULL, 'Links menu used on footer.', $status, NULL,'2016-04-16 09:27:00', '2016-04-16 09:27:00', NULL, NULL, NULL ],
+			[ $site->id, $theme->id, NULL, NULL, NULL, 1, 1, 'Page', "page", 'menu', NULL, 'Page menu used on system pages.', $status, NULL, '2016-04-16 09:27:00', '2016-04-16 09:27:00', NULL, NULL, NULL ]
 		];
 
 		$this->batchInsert( $this->cmgPrefix . 'core_object', $columns, $objects );
@@ -164,6 +159,7 @@ class m180502_112655_theme_blog extends Migration {
 	private function insertWidgets() {
 
 		$site	= $this->site;
+		$theme	= Theme::findBySlug( 'blog' );
 		$status	= ObjectData::STATUS_ACTIVE;
 
 		$searchTemplate		= Template::findBySlugType( "search", CmsGlobal::TYPE_WIDGET );
@@ -221,7 +217,7 @@ class m180502_112655_theme_blog extends Migration {
 		// Site
 		$siteId = $this->site->id;
 
-		if( $this->activate ) {
+		if( Yii::$app->controller->activate ) {
 
 			$this->update( $this->cmgPrefix . 'core_site', [ 'themeId' => $mainTheme->id ], "id=$siteId" );
 		}

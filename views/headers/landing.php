@@ -22,7 +22,7 @@ use themes\blog\Theme;
 		'options' => [ 'id' => 'menu-main-mobile', 'class' => 'vnav uppercase' ]
 	])?>
 </header>
-<div class="menu-main-wrap row row-large">
+<div class="menu-main-wrap row row-xlarge">
 	<?= Nav::widget([
 		'view' => $this, 'slug' => Theme::MENU_MAIN,
 		'options' => [ 'id' => 'menu-main', 'class' => 'nav uppercase' ]

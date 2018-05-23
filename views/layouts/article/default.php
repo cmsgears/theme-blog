@@ -29,12 +29,7 @@ $user			= Yii::$app->user->getIdentity();
     	<?= CodeGenUtil::generateSeoH1( $this->params ) ?>
         <?php $this->beginBody(); ?>
 		<div id="pre-loader-main" class="pre-loader valign-center align align-center">
-			<div class="wrap-spinner">
-				<div class="first-layer">
-					<div class="second-layer"></div>
-				</div>
-				<div class="top-layer"></div>
-			</div>
+			<div class="spinner cmti cmti-3x cmti-spinner-1 spin"></div>
 		</div>
 		<?php
 			if( isset( $user ) ) {
