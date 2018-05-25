@@ -53,6 +53,9 @@ class PrivateAssets extends AssetBundle {
 		$this->js[] = 'scripts/apix/private.js';
 		$this->js[] = 'scripts/apps/private.js';
 		$this->js[] = 'scripts/apps/user.js';
+
+		$this->depends[] = 'themes\blog\assets\vapps\CoreAssets';
+		$this->depends[] = 'themes\blog\assets\vapps\NotifyAssets';
 	}
 
     // Instance methods --------------------------------------------

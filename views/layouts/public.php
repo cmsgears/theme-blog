@@ -10,7 +10,6 @@ ContentUtil::initPage( $this );
 InlineAssets::register( $this );
 
 $this->registerAssetBundle( 'public' );
-$this->registerAssetBundle( 'cmtjs' );
 
 // Common variables available for headers, sidebars and footers included within this layout
 $coreProperties = $this->context->getCoreProperties();

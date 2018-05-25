@@ -84,7 +84,8 @@ class AssetBundle extends BaseAssetBundle {
 		//'cmsgears\assets\components\ProgressBar',
 		//'cmsgears\assets\effects\Animate',
 		'cmsgears\widgets\aform\assets\FormAssets',
-		'cmsgears\icons\assets\IconAssets'
+		'cmsgears\icons\assets\IconAssets',
+		'themes\blog\assets\vapps\BaseAssets'
     ];
 
     // Protected --------------
