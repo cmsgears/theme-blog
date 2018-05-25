@@ -29,9 +29,10 @@ use themes\blog\Theme;
 		</div>
 		<div class="footer-col col col12x4">
 			<div class="h5 col-header">Newsletter</div>
-			<div class="text text-primary">Join our newsletter to get frequent updates from us.</div>
+			<div class="text text-primary">Sign Up to receive updates from us.</div>
 			<?= FollowMeWidget::widget([
-				'wrap' => true, 'options' => [ 'class' => 'footer-newsletter-wrap' ]
+				'wrap' => true, 'options' => [ 'class' => 'footer-newsletter-wrap' ],
+				'templateDir' => '@themeTemplates/widget/newsletter'
 			]) ?>
 		</div>
 	</div>

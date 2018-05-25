@@ -3,7 +3,7 @@ jQuery( document ).ready( function() {
 	initSearch();
 });
 
-// Initialize Search -----------------------------------------------------------
+// == Initialize Search ===================
 
 function initSearch() {
 
@@ -98,7 +98,7 @@ function searchBro( selector, pageUrl ) {
 	window.location	= pageUrl;
 }
 
-// Search Filters --------------------------------------------------------------
+// == Search Filters ======================
 
 function initTextFilter( selector ) {
 

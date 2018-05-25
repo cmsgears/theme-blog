@@ -33,6 +33,23 @@
 
 	.footer-newsletter-wrap {
 		margin-top: 1em;
+		
+		.frm-actions {
+			
+			input[type="text"] {
+				width: 72%;
+				display: inline-block;
+				padding-right: 0;
+				margin-bottom: 0;
+			}
+
+			input[type="submit"] {
+				width: 25%;
+				display: inline-block;
+				padding-left: 0;
+				margin-left: -0.3em;			
+			}
+		}
 	}
 
 	@include responsive-max( screen-tablet-large ) {
@@ -43,12 +60,18 @@
 		}
 	
 		.footer-newsletter-wrap {
-			text-align: center;
 
 			form {
 				display: inline-block;
 				width: 200px;
 			}
+		}
+	}
+	
+	@include responsive-max( screen-mobile-large ) {
+
+		.footer-newsletter-wrap {
+			text-align: center;
 		}
 	}
 }

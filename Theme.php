@@ -24,6 +24,7 @@ class Theme extends BaseTheme {
 	const MENU_MAIN			= 'main';
 	const MENU_SECONDARY	= 'secondary';
 	const MENU_LINKS		= 'links';
+	const MENU_PAGE			= 'page';
 
 	// Public -----------------
 
