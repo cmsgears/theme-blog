@@ -32,10 +32,15 @@ function initCmgTools() {
 		heightAuto: true,
 		// Block Specific - Ignores generic
 		blocks: {
-			'block-slider': { fullHeight: true },
-			'block-testimonials': { qtfHeight: true },
-			'block-public': { fullHeight: true, heightAuto: true, heightAutoMobile: true, heightAutoMobileWidth: 1024 },
-			'block-form': { qtfHeight: true, heightAuto: true, heightAutoMobile: true, heightAutoMobileWidth: 1024 }
+			'block-half': { halfHeight: true },
+			'block-qtf': { qtfHeight: true },
+			'block-full': { fullHeight: true },
+			'block-half-auto': { halfHeight: true, heightAuto: true },
+			'block-qtf-auto': { qtfHeight: true, heightAuto: true },
+			'block-full-auto': { fullHeight: true, heightAuto: true },
+			'block-half-mauto': { halfHeight: true, heightAutoMobile: true, heightAutoMobileWidth: 1024 },
+			'block-qtf-mauto': { qtfHeight: true, heightAutoMobile: true, heightAutoMobileWidth: 1024 },
+			'block-full-mauto': { fullHeight: true, heightAutoMobile: true, heightAutoMobileWidth: 1024 }
 		}
 	});
 

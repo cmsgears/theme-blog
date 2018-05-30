@@ -1,270 +1,71 @@
-.header-public {
-	height: 80px;
-	@include transit-all( $transit-eio, $transit-time-medium );
-
-	.header-logo {
-		left: 5%;
-		padding-left: 0px;
-
-		.logo {
-			width: 338px;
-		}
-
-		.logo-small {
-			display: none;
-		}
-	}
-
-	#menu-main {
-		height: 80px;
-		line-height: 80px;
-		margin: 0 5%;
-		padding: 0px;
-
-		li {
-			margin-left: -4px;
-
-			&.active {
-				background-color: $color-transparent-white;
-			}
-
-			a {
-				@include transit-all( $transit-linear, $transit-time-small );
-		        text-align: center;
-		        padding: 0 2em;
-				color: $color-header-text;
-
-		        &:hover {
-		    		background-color: $color-transparent-white;
-					color: $color-link;
-		        }
-			}
-		}
-	}
-
-	&.header-small {
-		height: 50px;
-
-		.logo {
-			display: none;
-		}
-
-		.logo-small {
-			display: block;
-			width: 48px;
-		}
-
-		#menu-main {
-			height: 50px;
-			line-height: 50px;
-
-			li {
-
-				&.active {
-					line-height: 50px;
-				}
-			}
-		}
-	}
+.header-basic {
+	@include transit-width-height( $transit-eio, $transit-time-small );
 
 	@include responsive-max( screen-tablet-large ) {
-		height: 50px;
 
-		.header-logo {
-			left: 0;
+		#mobile-actions {
 
-			.logo {
-				display: none;
-			}
-
-			.logo-small {
-				display: block;
-				width: 48px;
-				padding-left: 5px;
+			.mobile-action {
+				color: $color-white;
 			}
 		}
-		
-		#btn-menu-mobile {
-			display: block;
-			font-size: 26px;
-			@include transit-all( $transit-linear, $transit-time-small );
-			color: $color-white;
+	}
 
-			&:hover {
-				color: $color-link;
-				background-color: $color-transparent-white;
-			}
-		}
-		
-		#menu-main-mobile {
-			margin-top: 50px;
-			background-color: $color-white;
+	@include responsive-min( screen-tablet-large ) {
 
-			li {
-				box-shadow: 0 -4px 2px -5px $color-tertiary;
-
-				&.active {
-					border-left: 4px solid $color-btn-h;
-					background-color: $color-transparent-white;
-				}
-
-				a {
-					@include transit-all( $transit-linear, $transit-time-small );
-					padding: 1em 0;
-					color: $color-header-text;
-
-					&:hover {
-						background-color: $color-transparent-white;
-						color: $color-link;
-					}
-				}
-			}
+		#menu-main {
+			height: 80px;
+			line-height: 80px;
+			padding: 0px;
 		}
 	}
 }
 
 .header-landing {
-	height: 140px;
-	@include transit-all( $transit-eio, $transit-time-medium );
-
-	.header-logo {
-		margin: 0 auto;
-		height: 140px;
-		position: relative;
-
-		.logo {
-			width: 338px;
-			margin: 0 auto;
-		}
-	}
 
 	@include responsive-max( screen-tablet-large ) {
 		height: 50px;
+	}
+
+	@include responsive-min( screen-tablet-large ) {
+		height: auto;
 
 		.header-logo {
-			width: 100%;
-			height: 50px;
+			height: 140px;
+			float: none;
+			text-align: center;
 
 			.logo {
-				width: 180px;
-				float: left;
+				@include valign-center();
 			}
 		}
-
-		#btn-menu-mobile {
-			display: block;
-			font-size: 24px;
-			line-height: 30px;
-			top: 0;
-			color: $color-white;
-			@include transit-all( $transit-linear, $transit-time-small );
-
-			&:hover {
-				color: $color-link;
-				background-color: $color-transparent-white;
-			}
-		}
-
-		#menu-main-mobile {
-			margin-top: 0px;
-			background-color: $color-white;
-
-			li {
-				box-shadow: 0 -4px 2px -5px $color-tertiary;
-
-				&.active {
-					border-left: 4px solid $color-btn-h;
-					background-color: $color-transparent-white;
-				}
-
-				a {
-					@include transit-all( $transit-linear, $transit-time-small );
-					padding: 1em 0;
-					color: $color-header-text;
-
-					&:hover {
-						background-color: $color-transparent-white;
-						color: $color-link;
-					}
-				}
-			}
-		}
-	}
-}
-
-.menu-main-wrap {
-
-	#menu-main {
-		height: 80px;
-		line-height: 80px;
-		padding: 0px;
-		border-bottom: 2px solid $color-border;
-
-		li {
-
-			&.active {
-				border-bottom: 2px solid $color-link;
-				padding-top: 4px;
-				line-height: 74px;
-
-				a {
-					color: $color-link;
-				}
-			}
-
-			a {
-				@include transit-all( $transit-linear, $transit-time-small );
-		        text-align: center;
-		        padding: 0 2em;
-				color: $color-header-text;
-
-		        &:hover {
-		    		color: $color-link;
-		    		background-color: $color-primary;
-		        }
-			}
-		}
-	}
-	
-	@include responsive-max( screen-tablet-large ) {
-		display: none;
 	}
 }
 
 .header-banner {
-	height: 280px;
-	
+	height: 320px;
+
 	.header-logo {
 		margin-top: 60px;
 	}
-	
+
 	@include responsive-max( screen-tablet-large ) {
 		height: 180px;
-		
+
 		.header-logo {
 			margin-top: 70px;
-
-			.logo {
-				float: none;
-			}
-		}
-		
-		#menu-main-mobile {
-			position: absolute;
-			width: 100%;
-			top: 0;
-			z-index: 25;
+			float: none;
+			text-align: center;
 		}
 
-		#btn-menu-mobile {
-			z-index: 30;
-			color: $color-white;
+		#menu-mobile-wrap {
+			margin-top: 10px;
 		}
 	}
 }
 
 .header-banner-no {
-	
+
 	@include responsive-max( screen-tablet-large ) {
 		position: fixed;
 		top: 0;
@@ -273,8 +74,8 @@
 	}
 }
 
-.header-banner-no + .menu-main-wrap + .container-main-landing {
-	
+.header-banner-no + .container-main-landing {
+
 	@include responsive-max( screen-tablet-large ) {
 		margin-top: 50px;
 	}

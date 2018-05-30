@@ -43,20 +43,25 @@
 
 @import "cmt/elements/basic";
 
-@import "cmt/elements/custom";
-//@import "partials/elements/custom";
+@import "cmt/elements/icon-picker";
+@import "cmt/elements/time-picker";
+@import "cmt/elements/list";
+@import "cmt/elements/select";
+@import "cmt/elements/choice";
+@import "cmt/elements/rating";
+@import "cmt/elements/switch";
+@import "cmt/elements/button";
 
 @import "cmt/elements/form";
-//@import "partials/elements/form";
-
 //@import "cmt/elements/table";
+@import "partials/elements/form";
 
-//@import "cmt/elements/breadcrumbs";
-
+//@import "cmt/elements/splitter";
+@import "cmt/elements/tabs";
+@import "cmt/elements/accordian";
+@import "cmt/elements/breadcrumb";
 //@import "cmt/elements/auto-fill";
-
-//@import "cmt/elements/tabs";
-//@import "cmt/elements/accordians";
+//@import "cmt/elements/uploader";
 
 // ---------------------------------------//
 // Components Division
@@ -65,6 +70,7 @@
 @import "cmt/components/menus/basic";
 //@import "cmt/components/menus/collapsible";
 @import "cmt/components/menus/social";
+@import "partials/components/menus/basic";
 
 @import "cmt/components/headers/basic";
 @import "partials/components/headers/basic";
@@ -83,16 +89,16 @@
 
 //@import "cmt/components/galleries/basic";
 
-//@import "cmt/components/cards/basic";
+@import "cmt/components/cards/basic";
 //@import "cmt/components/cards/icon";
 //@import "cmt/components/cards/banner";
-//@import "partials/components/cards/banner";
+@import "partials/components/cards/basic";
 
 @import "cmt/components/boxes/basic";
 //@import "cmt/components/boxes/login";
 //@import "cmt/components/boxes/form";
 //@import "cmt/components/boxes/file";
-//@import "partials/components/boxes/basic";
+@import "partials/components/boxes/basic";
 
 //@import "cmt/components/widgets/basic";
 //@import "cmt/components/widgets/blog/post";
@@ -101,9 +107,6 @@
 
 @import "cmt/components/blocks/basic";
 @import "partials/components/blocks/basic";
-//@import "partials/components/blocks/page";
-//@import "partials/components/blocks/article";
-//@import "partials/components/blocks/post";
 
 //@import "cmt/components/grid/pagination";
 //@import "cmt/components/grid/sorting";
@@ -127,8 +130,3 @@
 
 @import "cmt/extensions/fox-slider";
 @import "partials/extensions/fox-slider";
-
-//@import "cmt/extensions/m-custom-scrollbar";
-//@import "safaricities/extensions/m-custom-scrollbar";
-
-//@import "safaricities/components/sliders";

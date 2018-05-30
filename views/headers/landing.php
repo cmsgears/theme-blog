@@ -10,21 +10,24 @@ use themes\blog\Theme;
 $banner			= Yii::$app->core->site->banner;
 $headerClass	= isset( $banner ) ? 'header-basic header-landing header-banner' : 'header-basic header-landing header-banner-no';
 ?>
-
 <header class="header <?= $headerClass ?> shadow shadow-primary">
 	<?php if( isset( $banner ) ) { ?>
 		<div class="max-area bkg-image layer" style="background-image:url(<?= $banner->getFileUrl() ?>);"></div>
 		<div class="texture texture-black layer layer-1"></div>
 	<?php } ?>
-	<div class="row header-content-wrap layer layer-2">
+	<div class="row layer layer-2">
 		<div class="header-logo">
-			<div class="logo valign-center">
-				<?= Html::a( "<img class=\"fluid\" src=\"" . Yii::getAlias( '@images' ) . "/logo.png\">", [ '/' ], null ) ?>
+			<div class="logo">
+				<?= Html::a( "<img src=\"" . Yii::getAlias( '@images' ) . "/logo.png\">", [ '/' ], null ) ?>
 			</div>
 		</div>
-		<div id="btn-menu-mobile">
-			<i class="cmti cmti-menu cmti-action"></i>
+		<div id="mobile-actions">
+			<span id="btn-menu-mobile" class="mobile-action">
+				<i class="cmti cmti-menu"></i>
+			</span>
 		</div>
+	</div>
+	<div id="menu-mobile-wrap" class="relative">
 		<?= Nav::widget([
 			'view' => $this, 'slug' => Theme::MENU_MAIN,
 			'options' => [ 'id' => 'menu-main-mobile', 'class' => 'vnav uppercase' ]

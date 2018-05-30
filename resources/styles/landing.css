@@ -157,16 +157,16 @@ Blur				-	Blus is another mixin adding lens effect to blur underlying content an
 Media Queries		-	These mixins are pre-defined media queries using the screen sizes declared in variables file. This 
 						section includes mixins for in-between, desktop first and mobile first approaches.
 ***********************************************************************/
-.clearfix, .row, .frm-split-40-60 .form-group {
+.clearfix, .row, .frm-split-40-60 .form-group, .header-basic {
   zoom: 1;
 }
-.clearfix:before, .row:before, .frm-split-40-60 .form-group:before, .clearfix:after, .row:after, .frm-split-40-60 .form-group:after {
+.clearfix:before, .row:before, .frm-split-40-60 .form-group:before, .header-basic:before, .clearfix:after, .row:after, .frm-split-40-60 .form-group:after, .header-basic:after {
   content: "\0020";
   display: block;
   height: 0;
   overflow: hidden;
 }
-.clearfix:after, .row:after, .frm-split-40-60 .form-group:after {
+.clearfix:after, .row:after, .frm-split-40-60 .form-group:after, .header-basic:after {
   clear: both;
 }
 
@@ -1746,8 +1746,8 @@ Notes:
   filter: blur(13px);
 }
 
-.pattern {
-  background-image: url("../images/pattern-default.jpg");
+.pattern.pattern-default {
+  background-image: url("../images/pattern-default.png");
 }
 
 /**********************************************************************
@@ -4867,6 +4867,176 @@ Details: It defines the grid system and basic containers as listed below:
   }
 }
 
+.hover-color-primary {
+  -moz-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -ms-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -o-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -webkit-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+}
+.hover-color-primary:hover {
+  background-color: #F8F8F8;
+  color: #A5A5A5;
+}
+
+.hover-color-secondary {
+  -moz-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -ms-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -o-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -webkit-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+}
+.hover-color-secondary:hover {
+  background-color: #F8F8F8;
+  color: #464646;
+}
+
+.hover-color-tertiary {
+  -moz-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -ms-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -o-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -webkit-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+}
+.hover-color-tertiary:hover {
+  background-color: #F2BB40;
+  color: #464646;
+}
+
+.hover-color-white {
+  -moz-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -ms-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -o-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -webkit-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+}
+.hover-color-white:hover {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.hover-color-black {
+  -moz-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -ms-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -o-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -webkit-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+}
+.hover-color-black:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.hover-bkg-primary {
+  -moz-transition: background-color 420ms ease-in-out 0s;
+  -ms-transition: background-color 420ms ease-in-out 0s;
+  -o-transition: background-color 420ms ease-in-out 0s;
+  -webkit-transition: background-color 420ms ease-in-out 0s;
+  transition: background-color 420ms ease-in-out 0s;
+}
+.hover-bkg-primary:hover {
+  background-color: #F8F8F8;
+}
+
+.hover-bkg-secondary {
+  -moz-transition: background-color 420ms ease-in-out 0s;
+  -ms-transition: background-color 420ms ease-in-out 0s;
+  -o-transition: background-color 420ms ease-in-out 0s;
+  -webkit-transition: background-color 420ms ease-in-out 0s;
+  transition: background-color 420ms ease-in-out 0s;
+}
+.hover-bkg-secondary:hover {
+  background-color: #F8F8F8;
+}
+
+.hover-bkg-tertiary {
+  -moz-transition: background-color 420ms ease-in-out 0s;
+  -ms-transition: background-color 420ms ease-in-out 0s;
+  -o-transition: background-color 420ms ease-in-out 0s;
+  -webkit-transition: background-color 420ms ease-in-out 0s;
+  transition: background-color 420ms ease-in-out 0s;
+}
+.hover-bkg-tertiary:hover {
+  background-color: #F2BB40;
+}
+
+.hover-bkg-white {
+  -moz-transition: background-color 420ms ease-in-out 0s;
+  -ms-transition: background-color 420ms ease-in-out 0s;
+  -o-transition: background-color 420ms ease-in-out 0s;
+  -webkit-transition: background-color 420ms ease-in-out 0s;
+  transition: background-color 420ms ease-in-out 0s;
+}
+.hover-bkg-white:hover {
+  background-color: #FFFFFF;
+}
+
+.hover-bkg-black {
+  -moz-transition: background-color 420ms ease-in-out 0s;
+  -ms-transition: background-color 420ms ease-in-out 0s;
+  -o-transition: background-color 420ms ease-in-out 0s;
+  -webkit-transition: background-color 420ms ease-in-out 0s;
+  transition: background-color 420ms ease-in-out 0s;
+}
+.hover-bkg-black:hover {
+  background-color: #000000;
+}
+
+.hover-text-primary {
+  -moz-transition: color 420ms ease-in-out 0s;
+  -ms-transition: color 420ms ease-in-out 0s;
+  -o-transition: color 420ms ease-in-out 0s;
+  -webkit-transition: color 420ms ease-in-out 0s;
+  transition: color 420ms ease-in-out 0s;
+}
+.hover-text-primary:hover {
+  color: #A5A5A5;
+}
+
+.hover-text-secondary {
+  -moz-transition: color 420ms ease-in-out 0s;
+  -ms-transition: color 420ms ease-in-out 0s;
+  -o-transition: color 420ms ease-in-out 0s;
+  -webkit-transition: color 420ms ease-in-out 0s;
+  transition: color 420ms ease-in-out 0s;
+}
+.hover-text-secondary:hover {
+  color: #464646;
+}
+
+.hover-text-tertiary {
+  -moz-transition: color 420ms ease-in-out 0s;
+  -ms-transition: color 420ms ease-in-out 0s;
+  -o-transition: color 420ms ease-in-out 0s;
+  -webkit-transition: color 420ms ease-in-out 0s;
+  transition: color 420ms ease-in-out 0s;
+}
+.hover-text-tertiary:hover {
+  color: #464646;
+}
+
+.hover-text-white {
+  -moz-transition: color 420ms ease-in-out 0s;
+  -ms-transition: color 420ms ease-in-out 0s;
+  -o-transition: color 420ms ease-in-out 0s;
+  -webkit-transition: color 420ms ease-in-out 0s;
+  transition: color 420ms ease-in-out 0s;
+}
+.hover-text-white:hover {
+  color: #FFFFFF;
+}
+
+.hover-text-black {
+  -moz-transition: color 420ms ease-in-out 0s;
+  -ms-transition: color 420ms ease-in-out 0s;
+  -o-transition: color 420ms ease-in-out 0s;
+  -webkit-transition: color 420ms ease-in-out 0s;
+  transition: color 420ms ease-in-out 0s;
+}
+.hover-text-black:hover {
+  color: #000000;
+}
+
 .hover-move {
   -webkit-transition: transform 420ms ease-in-out 0s;
   -moz-transition: transform 420ms ease-in-out 0s;
@@ -5377,25 +5547,6 @@ Details: It defines the custom element styles as listed below:
 * Icon picker     - The icon picker element allows users to pick an item. It depends on cmtIconPicker jQuery
 *                   plugin available in CMT-JS framework.
 *
-* Select          - The custom select allows user to select an item. It override the default select ui dependent
-*                   on browsers. It depends on cmtSelect jQuery plugin available in CMT-JS framework.
-*
-* Choice          - The choice allows user to select single or multiple options from available options. It include
-*                   radio and checkbox html components and change their default behaviour by showing good looking
-*                   icons instead of browser dependentent graphics. These are indepedent of JS and purely css solutions.
-*
-* Rating          - The rating element can be used to provide ratings.
-*
-* Switch          - It's an advanced and custom element overriding default behavoir of radio to act like a switch.
-*
-* Button          - This class turns an element into button and does not need any JS to work.
-*
-* Button Group    - It can be used to show a group of bottons placed absolutely at the corners of parent element. The
-*                   parent element must use positioning i.e. absolute, relative etc in order to place group at
-*                   appropriate postion.
-*
-* Splitter		  - The splitters can be used to split an element either vertically or horizontally.
-*
 ***********************************************************************/
 .icon-picker-wrap {
   width: 100%;
@@ -5455,6 +5606,107 @@ Details: It defines the custom element styles as listed below:
   cursor: pointer;
 }
 
+.cmt-timepicker {
+  position: absolute;
+  display: none;
+}
+.cmt-timepicker .cmt-timepicker-content .cmt-timepicker-hr-wrap .cmt-timepicker-hr {
+  text-align: center;
+}
+.cmt-timepicker .cmt-timepicker-content .cmt-timepicker-min-wrap .cmt-timepicker-min {
+  text-align: center;
+}
+
+.cmt-timepicker-basic {
+  background: #F8F8F8;
+  color: #464646;
+  border: 1px solid #A5A5A5;
+}
+.cmt-timepicker-basic .cmt-timepicker-header {
+  border-bottom: 1px solid #A5A5A5;
+}
+.cmt-timepicker-basic .cmt-timepicker-header .cmt-timepicker-apm {
+  padding: 0.5em;
+}
+.cmt-timepicker-basic .cmt-timepicker-header .cmt-timepicker-apm.cmt-timepicker-am {
+  cursor: pointer;
+  border-right: 1px solid #D1D2D3;
+}
+.cmt-timepicker-basic .cmt-timepicker-header .cmt-timepicker-apm.cmt-timepicker-pm {
+  cursor: pointer;
+}
+.cmt-timepicker-basic .cmt-timepicker-header .cmt-timepicker-apm.cmt-timepicker-mm {
+  border-left: 1px solid #A5A5A5;
+}
+.cmt-timepicker-basic .cmt-timepicker-header .cmt-timepicker-apm.active {
+  background: #FFFFFF;
+  color: #464646;
+}
+.cmt-timepicker-basic .cmt-timepicker-content {
+  border-bottom: 1px solid #A5A5A5;
+}
+.cmt-timepicker-basic .cmt-timepicker-content .cmt-timepicker-hr-wrap .cmt-timepicker-hr {
+  padding: 0.5em;
+  border-left: 1px solid #D1D2D3;
+  border-bottom: 1px solid #D1D2D3;
+  cursor: pointer;
+}
+.cmt-timepicker-basic .cmt-timepicker-content .cmt-timepicker-hr-wrap .cmt-timepicker-hr.active {
+  background: #FFFFFF;
+  color: #464646;
+}
+.cmt-timepicker-basic .cmt-timepicker-content .cmt-timepicker-min-wrap {
+  border-left: 1px solid #A5A5A5;
+}
+.cmt-timepicker-basic .cmt-timepicker-content .cmt-timepicker-min-wrap .cmt-timepicker-min {
+  padding: 0.5em;
+  border-left: 1px solid #D1D2D3;
+  border-bottom: 1px solid #D1D2D3;
+  cursor: pointer;
+}
+.cmt-timepicker-basic .cmt-timepicker-content .cmt-timepicker-min-wrap .cmt-timepicker-min.active {
+  background: #FFFFFF;
+  color: #464646;
+}
+.cmt-timepicker-basic .cmt-timepicker-footer {
+  padding: 0.25em;
+}
+.cmt-timepicker-basic .cmt-timepicker-footer .cmt-timepicker-ok {
+  margin-left: 0.25em;
+}
+.cmt-timepicker-basic .cmt-timepicker-footer .cmt-timepicker-close {
+  margin-left: 0.25em;
+}
+
+/**********************************************************************
+Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
+			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
+			 for other standard libraries.
+
+Dependencies: variables, mixins, transitions, transformation
+
+Details: It defines the custom element styles as listed below:
+
+* List		  - 
+***********************************************************************/
+.list-radio label {
+  width: auto;
+  clear: none;
+}
+
+/**********************************************************************
+Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
+			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
+			 for other standard libraries.
+
+Dependencies: variables, mixins, transitions, transformation
+
+Details: It defines the custom element styles as listed below:
+
+* Select          - The custom select allows user to select an item. It override the default select ui dependent
+*                   on browsers. It depends on cmtSelect jQuery plugin available in CMT-JS framework.
+*
+***********************************************************************/
 .cmt-select-wrap {
   width: 100%;
   display: inline-block;
@@ -5608,6 +5860,20 @@ Details: It defines the custom element styles as listed below:
   margin: 0;
 }
 
+/**********************************************************************
+Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
+			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
+			 for other standard libraries.
+
+Dependencies: variables, mixins, transitions, transformation
+
+Details: It defines the custom element styles as listed below:
+
+* Choice          - The choice allows user to select single or multiple options from available options. It include
+*                   radio and checkbox html components and change their default behaviour by showing good looking
+*                   icons instead of browser dependentent graphics. These are indepedent of JS and purely css solutions.
+*
+***********************************************************************/
 .cmt-choice input[type=checkbox],
 .cmt-choice input[type=radio] {
   cursor: pointer;
@@ -5671,6 +5937,18 @@ Details: It defines the custom element styles as listed below:
   content: "\3a";
 }
 
+/**********************************************************************
+Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
+			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
+			 for other standard libraries.
+
+Dependencies: variables, mixins, transitions, transformation
+
+Details: It defines the custom element styles as listed below:
+
+* Rating          - The rating element can be used to provide ratings.
+*
+***********************************************************************/
 .cmt-rating {
   text-align: left;
 }
@@ -5702,6 +5980,17 @@ Details: It defines the custom element styles as listed below:
   content: "\e0f3";
 }
 
+/**********************************************************************
+Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
+			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
+			 for other standard libraries.
+
+Dependencies: variables, mixins, transitions, transformation
+
+Details: It defines the custom element styles as listed below:
+
+* Switch          - It's an advanced and custom element overriding default behavoir of radio to act like a switch.
+***********************************************************************/
 .cmt-switch {
   position: relative;
   display: inline-block;
@@ -5762,6 +6051,21 @@ Details: It defines the custom element styles as listed below:
   margin-left: 3.5em;
 }
 
+/**********************************************************************
+Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
+			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
+			 for other standard libraries.
+
+Dependencies: variables, mixins, transitions, transformation
+
+Details: It defines the custom element styles as listed below:
+
+* Button          - This class turns an element into button and does not need any JS to work.
+*
+* Button Group    - It can be used to show a group of bottons placed absolutely at the corners of parent element. The
+*                   parent element must use positioning i.e. absolute, relative etc in order to place group at
+*                   appropriate postion.
+***********************************************************************/
 .btn.btn-auto {
   width: auto;
 }
@@ -5911,8 +6215,11 @@ Details: It defines the custom element styles as listed below:
   color: #464646 !important;
 }
 
-a.btn {
+a.btn, .link.btn {
   color: #464646;
+}
+a:hover, .link:hover {
+  color: #E2A730;
 }
 
 .btn-icon-o {
@@ -6008,71 +6315,11 @@ a.btn {
   color: #E2A730;
 }
 
-.splitter {
-  margin: 0 auto;
-}
-.splitter.splitter-h {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  border-bottom: 1px solid #D1D2D3;
-}
-.splitter.splitter-h.splitter-h-25 {
-  width: 25%;
-}
-.splitter.splitter-h.splitter-h-50 {
-  width: 50%;
-}
-.splitter.splitter-h.splitter-h-75 {
-  width: 75%;
-}
-.splitter.splitter-h.splitter-h-80 {
-  width: 80%;
-}
-.splitter.splitter-h.splitter-h-small {
-  width: 25px;
-}
-.splitter.splitter-h.splitter-h-medium {
-  width: 50px;
-}
-.splitter.splitter-h.splitter-h-large {
-  width: 150px;
-}
-.splitter.splitter-v {
-  border-right: 1px solid #D1D2D3;
-  width: 1px;
-}
-.splitter.splitter-v.splitter-v-25 {
-  height: 25%;
-}
-.splitter.splitter-v.splitter-v-50 {
-  height: 50%;
-}
-.splitter.splitter-v.splitter-v-75 {
-  height: 75%;
-}
-.splitter.splitter-v.splitter-v-80 {
-  height: 80%;
-}
-.splitter.splitter-v.splitter-v-small {
-  height: 125px;
-}
-.splitter.splitter-v.splitter-v-medium {
-  height: 250px;
-}
-.splitter.splitter-v.splitter-v-large {
-  height: 500px;
-}
-
 .cmt-click {
   cursor: pointer;
 }
 .cmt-click.disabled {
   cursor: default;
-}
-
-.list-radio label {
-  width: auto;
-  clear: none;
 }
 
 /**********************************************************************
@@ -6529,6 +6776,94 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
     width: 80%;
     padding: 2rem 2%;
   }
+}
+
+.tabs-basic .tab-links-wrap {
+  border-bottom: 1px solid #A5A5A5;
+}
+.tabs-basic .tab-links-wrap .tab-link {
+  display: inline-block;
+  padding: 0.5em 1em;
+  margin-left: -4px;
+  cursor: pointer;
+}
+.tabs-basic .tab-links-wrap .tab-link.active {
+  border: 1px solid #A5A5A5;
+  border-bottom: 1px solid #FFFFFF;
+  margin-bottom: -1px;
+}
+.tabs-basic .tab-content-wrap .tab-content {
+  display: none;
+}
+
+.accordian {
+  position: relative;
+}
+.accordian .accordian-trigger {
+  position: relative;
+}
+.accordian .accordian-view {
+  position: relative;
+}
+
+.accordian-basic .accordian-trigger {
+  background-color: #F2BB40;
+  color: #464646;
+  font-family: Poppins Medium, Sans-Serif, Arial;
+  font-size: 1.08em;
+  padding: 0.25em 1em;
+  cursor: pointer;
+}
+.accordian-basic .accordian-view {
+  background-color: #F8F8F8;
+  color: #464646;
+  padding: 1em;
+}
+.accordian-basic.accordian-primary .accordian-trigger {
+  background-color: #F8F8F8;
+  color: #F2BB40;
+}
+.accordian-basic.accordian-primary .accordian-view {
+  background-color: #F8F8F8;
+  color: #A5A5A5;
+}
+.accordian-basic.accordian-secondary .accordian-trigger {
+  background-color: #F8F8F8;
+  color: #F8F8F8;
+}
+.accordian-basic.accordian-secondary .accordian-view {
+  background-color: #F8F8F8;
+  color: #464646;
+}
+
+.accordian-border .accordian-trigger.active {
+  border-left: 2px solid #F2BB40;
+}
+.accordian-border .accordian-view {
+  border: 1px solid #D1D2D3;
+}
+.accordian-border .accordian-view.active {
+  border-left: 2px solid #F2BB40;
+}
+
+/**********************************************************************
+Description: It defines the styles for breadcrumbs available in CMT-UI css framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for breadcrumbs.
+***********************************************************************/
+.breadcrumb {
+  list-style: none;
+}
+.breadcrumb .breadcrumb-seperator {
+  padding: 0 0.25em;
+}
+.breadcrumb li {
+  display: inline-block;
+}
+.breadcrumb a {
+  display: inline-block;
 }
 
 /**********************************************************************
@@ -7061,6 +7396,59 @@ Details: It defines the social network menu components as listed below:
   background-color: #880000;
 }
 
+#menu-main {
+  padding: 0px;
+}
+#menu-main li {
+  margin-left: -4px;
+}
+#menu-main li a {
+  text-align: center;
+  padding: 0 2em;
+  color: #FFFFFF;
+  -webkit-transition: all 250ms linear 0s;
+  -moz-transition: all 250ms linear 0s;
+  -ms-transition: all 250ms linear 0s;
+  -o-transition: all 250ms linear 0s;
+  transition: all 250ms linear 0s;
+}
+#menu-main li a:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #E2A730;
+}
+#menu-main li.active a {
+  background-color: #FFFFFF;
+  color: #E2A730;
+}
+
+.menu-main-wrap #menu-main {
+  height: 80px;
+  line-height: 80px;
+  padding: 0px;
+  border-bottom: 2px solid #D1D2D3;
+}
+.menu-main-wrap #menu-main li.active {
+  border-bottom: 2px solid #E2A730;
+  padding-top: 4px;
+  line-height: 74px;
+}
+.menu-main-wrap #menu-main li.active a {
+  background-color: transparent;
+  color: #E2A730;
+}
+.menu-main-wrap #menu-main li a {
+  color: #464646;
+}
+.menu-main-wrap #menu-main li a:hover {
+  background-color: transparent;
+  color: #E2A730;
+}
+@media only screen and (max-width: 1024px) {
+  .menu-main-wrap {
+    display: none;
+  }
+}
+
 /**********************************************************************
 Description: It defines the styles for header components available in CMT-UI css framework.
 
@@ -7089,11 +7477,9 @@ Details: It defines the styles for header components as listed below:
 }
 
 /* Basic Header having fixed width logo, main menu and mobile menu icon.
- * Responsive approach - Desktop first
  * Logo - Placed on left side
  * Main Menu - Placed on right side, hidden for tablet and mobile
- * Mobile Menu - Placed on right side, hidden for desktop - Use it only if required.
- * Main menu can alone do the job in most of the cases.
+ * Mobile Menu - Placed on right side, hidden for desktop
  */
 .header-basic {
   background-color: #F2BB40;
@@ -7103,264 +7489,168 @@ Details: It defines the styles for header components as listed below:
 }
 .header-basic .header-logo {
   cursor: pointer;
-  padding: 10px;
   display: block;
-  position: absolute;
   z-index: 2;
-}
-.header-basic .header-logo .logo {
-  width: 140px;
-}
-.header-basic #menu-main {
-  padding: 10px;
-  text-align: right;
-  display: block;
-  z-index: 1;
-}
-.header-basic #menu-main-mobile {
-  display: none;
-}
-.header-basic #btn-menu-mobile {
-  position: absolute;
-  right: 0px;
-  cursor: pointer;
-  padding: 10px;
-  display: none;
-  z-index: 2;
+  float: left;
 }
 @media only screen and (max-width: 1024px) {
-  .header-basic .header-logo {
-    width: 70px;
-  }
-  .header-basic #menu-main {
-    margin-top: 55px;
-    display: none;
-  }
-}
-
-.header-public {
-  height: 80px;
-  -webkit-transition: all 420ms ease-in-out 0s;
-  -moz-transition: all 420ms ease-in-out 0s;
-  -ms-transition: all 420ms ease-in-out 0s;
-  -o-transition: all 420ms ease-in-out 0s;
-  transition: all 420ms ease-in-out 0s;
-}
-.header-public .header-logo {
-  left: 5%;
-  padding-left: 0px;
-}
-.header-public .header-logo .logo {
-  width: 338px;
-}
-.header-public .header-logo .logo-small {
-  display: none;
-}
-.header-public #menu-main {
-  height: 80px;
-  line-height: 80px;
-  margin: 0 5%;
-  padding: 0px;
-}
-.header-public #menu-main li {
-  margin-left: -4px;
-}
-.header-public #menu-main li.active {
-  background-color: rgba(255, 255, 255, 0.6);
-}
-.header-public #menu-main li a {
-  -webkit-transition: all 250ms linear 0s;
-  -moz-transition: all 250ms linear 0s;
-  -ms-transition: all 250ms linear 0s;
-  -o-transition: all 250ms linear 0s;
-  transition: all 250ms linear 0s;
-  text-align: center;
-  padding: 0 2em;
-  color: #464646;
-}
-.header-public #menu-main li a:hover {
-  background-color: rgba(255, 255, 255, 0.6);
-  color: #E2A730;
-}
-.header-public.header-small {
-  height: 50px;
-}
-.header-public.header-small .logo {
-  display: none;
-}
-.header-public.header-small .logo-small {
-  display: block;
-  width: 48px;
-}
-.header-public.header-small #menu-main {
-  height: 50px;
-  line-height: 50px;
-}
-.header-public.header-small #menu-main li.active {
-  line-height: 50px;
-}
-@media only screen and (max-width: 1024px) {
-  .header-public {
+  .header-basic {
     height: 50px;
   }
-  .header-public .header-logo {
-    left: 0;
+  .header-basic .header-logo {
+    padding: 5px 10px;
   }
-  .header-public .header-logo .logo {
+  .header-basic .header-logo .logo img {
+    height: 40px;
+  }
+  .header-basic #menu-main {
     display: none;
   }
-  .header-public .header-logo .logo-small {
-    display: block;
-    width: 48px;
-    padding-left: 5px;
+  .header-basic #menu-main-mobile {
+    position: absolute;
+    display: none;
+    width: 320px;
+    right: 0;
   }
-  .header-public #btn-menu-mobile {
-    display: block;
-    font-size: 26px;
-    -webkit-transition: all 250ms linear 0s;
-    -moz-transition: all 250ms linear 0s;
-    -ms-transition: all 250ms linear 0s;
-    -o-transition: all 250ms linear 0s;
-    transition: all 250ms linear 0s;
-    color: #FFFFFF;
-  }
-  .header-public #btn-menu-mobile:hover {
-    color: #E2A730;
-    background-color: rgba(255, 255, 255, 0.6);
-  }
-  .header-public #menu-main-mobile {
-    margin-top: 50px;
-    background-color: #FFFFFF;
-  }
-  .header-public #menu-main-mobile li {
+  .header-basic #menu-main-mobile li {
     box-shadow: 0 -4px 2px -5px #F2BB40;
   }
-  .header-public #menu-main-mobile li.active {
-    border-left: 4px solid #E2A730;
-    background-color: rgba(255, 255, 255, 0.6);
-  }
-  .header-public #menu-main-mobile li a {
-    -webkit-transition: all 250ms linear 0s;
-    -moz-transition: all 250ms linear 0s;
-    -ms-transition: all 250ms linear 0s;
-    -o-transition: all 250ms linear 0s;
-    transition: all 250ms linear 0s;
+  .header-basic #menu-main-mobile li a, .header-basic #menu-main-mobile li .link {
+    background-color: #FFFFFF;
+    color: #A5A5A5;
     padding: 1em 0;
+    -webkit-transition: all 250ms ease-in-out 0s;
+    -moz-transition: all 250ms ease-in-out 0s;
+    -ms-transition: all 250ms ease-in-out 0s;
+    -o-transition: all 250ms ease-in-out 0s;
+    transition: all 250ms ease-in-out 0s;
+  }
+  .header-basic #menu-main-mobile li a:hover, .header-basic #menu-main-mobile li .link:hover {
+    background-color: #F2F2F2;
+    color: #E2A730;
+  }
+  .header-basic #menu-main-mobile li:active a, .header-basic #menu-main-mobile li:active .link {
+    background-color: #F2BB40;
     color: #464646;
   }
-  .header-public #menu-main-mobile li a:hover {
-    background-color: rgba(255, 255, 255, 0.6);
+  .header-basic #mobile-actions {
+    margin: 5px 10px;
+    line-height: 40px;
+    text-align: right;
+    display: block;
+    z-index: 1;
+    float: right;
+  }
+  .header-basic #mobile-actions .mobile-action {
+    color: #A5A5A5;
+    cursor: pointer;
+    margin-left: 0.5em;
+    font-size: 2em;
+    -webkit-transition: all 250ms ease-in-out 0s;
+    -moz-transition: all 250ms ease-in-out 0s;
+    -ms-transition: all 250ms ease-in-out 0s;
+    -o-transition: all 250ms ease-in-out 0s;
+    transition: all 250ms ease-in-out 0s;
+  }
+  .header-basic #mobile-actions .mobile-action:hover {
     color: #E2A730;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .header-basic #menu-main-mobile {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .header-basic {
+    height: 80px;
+    padding: 0 5%;
+  }
+  .header-basic .header-logo {
+    padding: 5px 10px 5px 0;
+  }
+  .header-basic .header-logo .logo img {
+    height: 70px;
+  }
+  .header-basic #menu-main {
+    padding: 10px;
+    padding-right: 0;
+    text-align: right;
+    display: block;
+    z-index: 1;
+    float: right;
+  }
+  .header-basic #mobile-actions, .header-basic #menu-mobile-wrap {
+    display: none;
+  }
+  .header-basic.header-small {
+    height: 50px;
+  }
+  .header-basic.header-small #menu-main {
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
   }
 }
 
-.header-landing {
-  height: 140px;
-  -webkit-transition: all 420ms ease-in-out 0s;
-  -moz-transition: all 420ms ease-in-out 0s;
-  -ms-transition: all 420ms ease-in-out 0s;
-  -o-transition: all 420ms ease-in-out 0s;
-  transition: all 420ms ease-in-out 0s;
+.header-basic-duo .header-logo .logo-small {
+  display: none;
 }
-.header-landing .header-logo {
-  margin: 0 auto;
-  height: 140px;
-  position: relative;
+.header-basic-duo.header-small .logo {
+  display: none;
 }
-.header-landing .header-logo .logo {
-  width: 338px;
-  margin: 0 auto;
+.header-basic-duo.header-small .header-logo .logo-small {
+  display: inline-block;
 }
+.header-basic-duo.header-small .header-logo .logo-small img {
+  height: 40px;
+}
+
+.header-basic {
+  -webkit-transition: width 250ms ease-in-out 0s, height 250ms ease-in-out 0s;
+  -moz-transition: width 250ms ease-in-out 0s, height 250ms ease-in-out 0s;
+  -ms-transition: width 250ms ease-in-out 0s, height 250ms ease-in-out 0s;
+  -o-transition: width 250ms ease-in-out 0s, height 250ms ease-in-out 0s;
+  transition: width 250ms ease-in-out 0s, height 250ms ease-in-out 0s;
+}
+@media only screen and (max-width: 1024px) {
+  .header-basic #mobile-actions .mobile-action {
+    color: #FFFFFF;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .header-basic #menu-main {
+    height: 80px;
+    line-height: 80px;
+    padding: 0px;
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   .header-landing {
     height: 50px;
   }
+}
+@media only screen and (min-width: 1025px) {
+  .header-landing {
+    height: auto;
+  }
   .header-landing .header-logo {
-    width: 100%;
-    height: 50px;
+    height: 140px;
+    float: none;
+    text-align: center;
   }
   .header-landing .header-logo .logo {
-    width: 180px;
-    float: left;
-  }
-  .header-landing #btn-menu-mobile {
-    display: block;
-    font-size: 24px;
-    line-height: 30px;
-    top: 0;
-    color: #FFFFFF;
-    -webkit-transition: all 250ms linear 0s;
-    -moz-transition: all 250ms linear 0s;
-    -ms-transition: all 250ms linear 0s;
-    -o-transition: all 250ms linear 0s;
-    transition: all 250ms linear 0s;
-  }
-  .header-landing #btn-menu-mobile:hover {
-    color: #E2A730;
-    background-color: rgba(255, 255, 255, 0.6);
-  }
-  .header-landing #menu-main-mobile {
-    margin-top: 0px;
-    background-color: #FFFFFF;
-  }
-  .header-landing #menu-main-mobile li {
-    box-shadow: 0 -4px 2px -5px #F2BB40;
-  }
-  .header-landing #menu-main-mobile li.active {
-    border-left: 4px solid #E2A730;
-    background-color: rgba(255, 255, 255, 0.6);
-  }
-  .header-landing #menu-main-mobile li a {
-    -webkit-transition: all 250ms linear 0s;
-    -moz-transition: all 250ms linear 0s;
-    -ms-transition: all 250ms linear 0s;
-    -o-transition: all 250ms linear 0s;
-    transition: all 250ms linear 0s;
-    padding: 1em 0;
-    color: #464646;
-  }
-  .header-landing #menu-main-mobile li a:hover {
-    background-color: rgba(255, 255, 255, 0.6);
-    color: #E2A730;
-  }
-}
-
-.menu-main-wrap #menu-main {
-  height: 80px;
-  line-height: 80px;
-  padding: 0px;
-  border-bottom: 2px solid #D1D2D3;
-}
-.menu-main-wrap #menu-main li.active {
-  border-bottom: 2px solid #E2A730;
-  padding-top: 4px;
-  line-height: 74px;
-}
-.menu-main-wrap #menu-main li.active a {
-  color: #E2A730;
-}
-.menu-main-wrap #menu-main li a {
-  -webkit-transition: all 250ms linear 0s;
-  -moz-transition: all 250ms linear 0s;
-  -ms-transition: all 250ms linear 0s;
-  -o-transition: all 250ms linear 0s;
-  transition: all 250ms linear 0s;
-  text-align: center;
-  padding: 0 2em;
-  color: #464646;
-}
-.menu-main-wrap #menu-main li a:hover {
-  color: #E2A730;
-  background-color: #F8F8F8;
-}
-@media only screen and (max-width: 1024px) {
-  .menu-main-wrap {
-    display: none;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
   }
 }
 
 .header-banner {
-  height: 280px;
+  height: 320px;
 }
 .header-banner .header-logo {
   margin-top: 60px;
@@ -7371,19 +7661,11 @@ Details: It defines the styles for header components as listed below:
   }
   .header-banner .header-logo {
     margin-top: 70px;
-  }
-  .header-banner .header-logo .logo {
     float: none;
+    text-align: center;
   }
-  .header-banner #menu-main-mobile {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    z-index: 25;
-  }
-  .header-banner #btn-menu-mobile {
-    z-index: 30;
-    color: #FFFFFF;
+  .header-banner #menu-mobile-wrap {
+    margin-top: 10px;
   }
 }
 
@@ -7397,7 +7679,7 @@ Details: It defines the styles for header components as listed below:
 }
 
 @media only screen and (max-width: 1024px) {
-  .header-banner-no + .menu-main-wrap + .container-main-landing {
+  .header-banner-no + .container-main-landing {
     margin-top: 50px;
   }
 }
@@ -7502,6 +7784,65 @@ Details: It defines the styles for footer components as listed below:
   position: absolute;
   right: 0;
   margin-top: -1.5em;
+}
+
+/**********************************************************************
+Description: It defines the styles of data card components available in CMT-UI css framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of card components as listed below:
+
+* Card        - The barebone card class with minimum styles.
+*
+* Element     - The element cards will be used by blocks to show content having header icon and text.
+***********************************************************************/
+.card {
+  position: relative;
+}
+.card .card-bkg {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.card > .texture {
+  z-index: 10;
+}
+.card .card-content-wrap {
+  position: relative;
+  z-index: 15;
+}
+.card .card-content-wrap .card-header {
+  position: relative;
+}
+.card .card-content-wrap .card-data {
+  position: relative;
+}
+.card .card-content-wrap .card-footer {
+  position: relative;
+}
+
+.card-element .card-content-wrap .card-header {
+  text-align: center;
+  padding: 1em;
+}
+.card-element .card-content-wrap .card-data {
+  text-align: center;
+  padding: 1em;
+}
+.card-element .card-content-wrap .card-footer {
+  text-align: center;
+  padding: 1em;
 }
 
 /**********************************************************************

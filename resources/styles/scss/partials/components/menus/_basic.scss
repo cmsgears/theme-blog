@@ -1,0 +1,64 @@
+#menu-main {
+	padding: 0px;
+
+	li {
+		margin-left: -4px;
+
+		a {
+			text-align: center;
+			padding: 0 2em;
+			color: $color-white;
+			@include transit-all( $transit-linear, $transit-time-small );
+
+			&:hover {
+				background-color: $color-transparent-white;
+				color: $color-link;
+			}
+		}
+
+		&.active {
+
+			a {
+				background-color: $color-white;
+				color: $color-link;
+			}
+		}
+	}
+}
+
+.menu-main-wrap {
+
+	#menu-main {
+		height: 80px;
+		line-height: 80px;
+		padding: 0px;
+		border-bottom: 2px solid $color-border;
+
+		li {
+
+			&.active {
+				border-bottom: 2px solid $color-link;
+				padding-top: 4px;
+				line-height: 74px;
+
+				a {
+					background-color: transparent;
+					color: $color-link;
+				}
+			}
+
+			a {
+				color: $color-header-text;
+
+		        &:hover {
+					background-color: transparent;
+		    		color: $color-link;
+		        }
+			}
+		}
+	}
+	
+	@include responsive-max( screen-tablet-large ) {
+		display: none;
+	}
+}
