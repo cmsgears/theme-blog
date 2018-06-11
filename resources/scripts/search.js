@@ -7,83 +7,33 @@ jQuery( document ).ready( function() {
 
 function initSearch() {
 
-	var pageUrl	= window.location.href;
+	// Click
+	jQuery( '.btn-search' ).click( function() {
 
-	// Regular Search
-	jQuery( '#btn-search' ).click( function() {
+		searchBro( jQuery( this ).closest( '.search-box' ) );
+	});
 
-		searchBro( '#search-terms', pageUrl );
+	// Keypress
+	jQuery( '.search-terms' ).keypress( function( e ) {
+
+		searchBro( jQuery( this ).closest( '.search-box' ) );
 	});
 	
-	// Page Search
-	jQuery( '#btn-search-page' ).click( function() {
-
-		pageUrl = siteUrl + 'page/search';
-
-		searchBro( '#search-page', pageUrl );
-	});
-	
-	// Article Search
-	jQuery( '#btn-search-article' ).click( function() {
-
-		pageUrl = siteUrl + 'article/search';
-
-		searchBro( '#search-article', pageUrl );
-	});
-	
-	// Blog Search
-	jQuery( '#btn-search-post' ).click( function() {
-
-		pageUrl = siteUrl + 'blog/search';
-
-		searchBro( '#search-post', pageUrl );
-	});
-
-	// Page Search
-	jQuery( '#search-page' ).keypress( function( e ) {
-
-		// Listen to enter key
-    	if( e.which == 13 ) {
-
-			pageUrl = siteUrl + 'page/search';
-
-			searchBro( '#search-page', pageUrl );
-    	}
-	});
-	
-	// Article Search
-	jQuery( '#search-article' ).keypress( function( e ) {
-
-		// Listen to enter key
-    	if( e.which == 13 ) {
-
-			pageUrl = siteUrl + 'article/search';
-
-			searchBro( '#search-article', pageUrl );
-    	}
-	});
-
-	// Blog Search
-	jQuery( '#search-post' ).keypress( function( e ) {
-
-		// Listen to enter key
-    	if( e.which == 13 ) {
-
-			pageUrl = siteUrl + 'blog/search';
-
-			searchBro( '#search-post', pageUrl );
-    	}
-	});
-
 	// Init Default Filters
 	initTextFilter( '.filter-text' );
 	initCheckboxFilter( '.filter-checkbox' );
 	initRangeFilter( '.filter-range' );
 }
 
-function searchBro( selector, pageUrl ) {
+function searchBro( searchBox ) {
 
-	var keywords = jQuery( selector ).val();
+	var pageUrl		= window.location.href;
+	var keywords	= searchBox.find( '.search-keywords' ).val();
+
+	if( cmt.utils.data.hasAttribute( searchBox, 'url' ) ) {
+
+		pageUrl = siteUrl + searchBox.attr( 'url' );
+	}
 
 	// Search Keywords
 	if( null != keywords && keywords.length > 0 ) {

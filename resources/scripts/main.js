@@ -6,6 +6,8 @@ jQuery( document ).ready( function() {
 
 	initListeners();
 
+	initDatePickers();
+
 	initAutoHide();
 });
 
@@ -57,9 +59,9 @@ function initCmgTools() {
 	jQuery( '.cmt-rating' ).cmtRate();
 
 	// Select
-	jQuery( '.cmt-select' ).cmtSelect( { iconHtml: '<span class="fa fa-caret-down"></span>' } );
-	jQuery( '.cmt-select-c' ).cmtSelect( { iconHtml: '<span class="fa fa-caret-down"></span>', copyOptionClass: true } );
-	jQuery( '.cmt-select-s' ).cmtSelect( { iconHtml: '<span class="fa fa-caret-down"></span>', wrapperClass: 'element-small' } );
+	jQuery( '.cmt-select' ).cmtSelect( { iconHtml: '<span class="cmti cmti-chevron-down"></span>' } );
+	jQuery( '.cmt-select-c' ).cmtSelect( { iconHtml: '<span class="cmti cmti-chevron-down"></span>', copyOptionClass: true } );
+	jQuery( '.cmt-select-s' ).cmtSelect( { iconHtml: '<span class="cmti cmti-chevron-down"></span>', wrapperClass: 'element-small' } );
 
 	// Checkboxes
 	jQuery( '.cmt-checkbox' ).cmtCheckbox();
@@ -90,6 +92,13 @@ function initCmgTools() {
 
 	// Icon Picker
 	jQuery( '.icon-picker' ).cmtIconPicker();
+	
+    // Sliders
+    jQuery( '.cmt-slider' ).cmtSlider( {
+        "lControlContent" : "<i class=\"cmti cmti-chevron-left icon\"></i>",
+        "rControlContent" : "<i class=\"cmti cmti-chevron-right icon\"></i>",
+        "circular" : false
+    });
 }
 
 // == JS Listeners ========================
@@ -102,6 +111,12 @@ function initListeners() {
 		jQuery( '#menu-main-mobile' ).slideToggle();
 	});
 
+	// Scrollbar
+	jQuery( '.cscroller' ).mCustomScrollbar( { autoHideScrollbar: true } );
+}
+
+function initDatePickers() {
+	
 	// Datepicker
 	var datepickers = jQuery( '.datepicker' );
 	
@@ -125,9 +140,6 @@ function initListeners() {
 			});
 		}
 	});
-
-	// Scrollbar
-	jQuery( '.cscroller' ).mCustomScrollbar( { autoHideScrollbar: true } );
 }
 
 // == Auto Hide ===========================
