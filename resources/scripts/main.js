@@ -142,26 +142,6 @@ function initDatePickers() {
 	});
 }
 
-// == Auto Hide ===========================
-
-function initAutoHide() {
-
-	hideElement( jQuery( '.popout-trigger' ), jQuery( '.popout' ) );
-}
-
-function hideElement( targetElement, hideElement ) {
-
-	jQuery( window ).click( function( e ) {
-
-	    if ( !targetElement.is( e.target ) && targetElement.has( e.target ).length === 0 ) {
-
-			jQuery( hideElement ).slideUp();
-
-	        targetElement.removeClass( 'active' );
-	    }
-	});
-}
-
 // == Window Resize, Scroll ===============
 
 function initWindowResize() {
@@ -176,15 +156,20 @@ function initWindowResize() {
 
 function initWindowScroll() {
 
-	jQuery( window ).scroll(function() {
+	jQuery( window ).scroll( function() {
 
 		var scrolledY = jQuery( window ).scrollTop();
 
-	  	// Do scroll specific tasks
+		configScrollAt( scrolledY );
 	});
 }
 
 function resizeElements() {
 
 	// Resize elements on window resize
+}
+
+function configScrollAt() {
+
+	// Show hidden elements with animation effects
 }

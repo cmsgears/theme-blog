@@ -35,11 +35,12 @@ class CoreAssets extends AssetBundle {
 	// Public -----------------
 
 	// Path Configuration
-	public $sourcePath = '@bower/cmt-vapps/src';
+	public $sourcePath = '@bower/cmt-velocity-apps/src/apps';
 
 	// Load JS
 	public $js = [
-		'core/mapper.js'
+		'core/mapper.js',
+		'core/address.js'
 	];
 
 	// JS Position
