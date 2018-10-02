@@ -24,4 +24,7 @@ use cmsgears\social\meta\components\SocialMeta;
 <link href="images/icons/favicon.ico" rel="shortcut icon">
 <link href="images/icons/apple-icon-precomposed.png" rel="apple-touch-icon-precomposed">
 
+<!-- Google Ads -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
 <?php $this->head(); ?>

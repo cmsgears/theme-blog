@@ -1,84 +1,109 @@
+// == Application =========================
+
 jQuery( document ).ready( function() {
 
+	var app	= cmt.api.root.registerApplication( 'user', 'cmt.api.Application', { basePath: ajaxUrl } );
+
+	// Map Controllers
+	app.mapController( 'user', 'blog.controllers.UserController' );
+
+	// Map Services
+	app.mapService( 'user', 'blog.services.UserService' );
+
+	// Register Listeners
+	cmt.api.utils.request.register( app, jQuery( '[cmt-app=user]' ) );
+
+	// Event Listeners
+	app.getService( 'user' ).initListeners();
 });
 
-// DefaultController ----------------------------------------
+// == Controller Namespace ================
 
-cmt.api.controllers.DefaultController.prototype.avatarActionPost = function( success, requestElement, response ) {
+// == User Controller =====================
 
-	requestElement.parent().hide();
+blog.controllers.UserController = function() {};
 
-	jQuery( '.wrap-popout-actions .wrap-user .cmti-user' ).remove();
-	jQuery( '.wrap-popout-actions .wrap-user' ).prepend( '<img class="user-avatar" src="' + response.data.fileUrl + '" />' );
+blog.controllers.UserController.inherits( cmt.api.controllers.RequestController );
+
+blog.controllers.UserController.prototype.avatarActionSuccess = function( requestElement, response ) {
+
+	var uploader = requestElement.closest( '.file-uploader' );
+
+	// Update Header Popuout
+	jQuery( '.popout-group-main .wrap-user .fa-user' ).remove();
+	jQuery( '.popout-group-main .wrap-user .user-avatar' ).remove();
+	jQuery( '.popout-group-main .wrap-user' ).prepend( '<img class="user-avatar" src="' + response.data.thumbUrl + '" />' );
+
+	// Update Uploader
+	uploader.find( '.post-action' ).hide();
 };
 
-// UserController -------------------------------------------
+blog.controllers.UserController.prototype.clearAvatarActionSuccess = function( requestElement, response ) {
 
-UserController	= function() {};
+	var uploader = requestElement.closest( '.file-uploader' );
 
-UserController.inherits( cmt.api.controllers.BaseController );
+	// Update Header Popuout
+	jQuery( '.popout-group-main .wrap-user .fa-user' ).remove();
+	jQuery( '.popout-group-main .wrap-user .user-avatar' ).remove();
+	jQuery( '.popout-group-main .wrap-user' ).prepend( '<span class="fa fa-user icon"></span>' );
 
-UserController.prototype.loginActionPost = function( success, parentElement, message, response ) {
-
-	if( success ) {
-
-		window.location.replace( siteUrl + "home" );
-	}
+	// Update Uploader
+	uploader.find( '.file-wrap .file-data' ).html( '<i class="cmti cmti-5x cmti-user"></i>');
+	uploader.find( '.file-clear' ).hide();
 };
 
-UserController.prototype.registerActionPost = function( success, parentElement, message, response ) {
-	// do nothing
+blog.controllers.UserController.prototype.profileActionSuccess = function( requestElement, response ) {
+
+	// Profile success
 };
 
-UserController.prototype.avatarActionPost = function( success, requestElement, response ) {
+blog.controllers.UserController.prototype.accountActionSuccess = function( requestElement, response ) {
 
-	requestElement.parent().hide();
-
-	jQuery( ".wrap-popout-actions .wrap-user img" ).attr( 'src', response.data.fileUrl );
+	// Show old password field
+	requestElement.find( '.data-crud-wrap .hidden-easy' ).removeClass( 'hidden-easy' );
 };
 
-UserController.prototype.profileActionPost = function( success, requestElement, response ) {
+blog.controllers.UserController.prototype.addressActionSuccess = function( requestElement, response ) {
 
-	if( success ) {
-
-		var source 		= document.getElementById( 'userProfileTemplate' ).innerHTML;
-		var template 	= Handlebars.compile( source );
-		var output 		= template( response.data );
-		var parent		= requestElement.closest( '.box-form' );
-
-		parent.find( '.wrap-info' ).html( output );
-
-		parent.find( '.btn-edit' ).click();
-	}
+	// Address success
 };
 
-UserController.prototype.accountActionPost = function( success, requestElement, response ) {
+blog.controllers.UserController.prototype.settingsActionSuccess = function( requestElement, response ) {
 
-	if( success ) {
-
-		var source 		= document.getElementById( 'userAccountTemplate' ).innerHTML;
-		var template 	= Handlebars.compile( source );
-		var output 		= template( response.data );
-		var parent		= requestElement.closest( '.box-form' );
-
-		parent.find( '.wrap-info' ).html( output );
-
-		parent.find( '.btn-edit' ).click();
-	}
+	// Settings success
 };
 
-UserController.prototype.settingsActionPost = function( success, requestElement, response ) {
+blog.controllers.UserController.prototype.workActionSuccess = function( requestElement, response ) {
 
-	if( success ) {
-
-		var source 		= document.getElementById( 'userSettingsTemplate' ).innerHTML;
-		var template 	= Handlebars.compile( source );
-		var data		= { settings: response.data };
-		var output 		= template( data );
-		var parent		= requestElement.closest( '.box-form' );
-
-		parent.find( '.wrap-info' ).html( output );
-
-		parent.find( '.btn-edit' ).click();
-	}
+	// Settings success
 };
+
+// == Card Service ========================
+
+blog.services.UserService = function() {};
+
+blog.services.UserService.inherits( cmt.api.services.BaseService );
+
+blog.services.UserService.prototype.initListeners = function() {
+
+	//var self = this;
+}
+
+// == Direct Calls ========================
+
+function updateUserAttribute( key, value ) {
+
+	cmt.utils.ajax.triggerPost( ajaxUrl + "user/set-attribute", "Meta[key]=" + key + "&Meta[value]=" + value );
+}
+
+function updateUserConfig( key, value ) {
+
+	cmt.utils.ajax.triggerPost( ajaxUrl + "user/set-config", "Meta[key]=" + key + "&Meta[value]=" + value );
+}
+
+function removeUserConfig( key ) {
+
+	cmt.utils.ajax.triggerPost( ajaxUrl + "user/remove-config", "Meta[key]=" + key );
+}
+
+// == Additional Methods ==================

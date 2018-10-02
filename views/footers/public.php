@@ -4,14 +4,14 @@ use cmsgears\widgets\elements\Nav;
 use cmsgears\widgets\blog\PostWidget;
 use cmsgears\widgets\newsletter\FollowMeWidget;
 
-// SF Imports
+// Blog Imports
 use themes\blog\Theme;
 ?>
 <footer class="footer footer-basic footer-main">
 	<div class="footer-content row row-xlarge max-cols-100 col-filler-wrap">
 		<div class="col col12x4 col-filler"></div>
 		<div class="footer-col col col12x4">
-			<div class="h5 col-header">Useful Links</div>
+			<div class="h5 col-header">Links</div>
 			<?= Nav::widget([
 				'view' => $this, 'slug' => Theme::MENU_LINKS,
 				'options' => [ 'id' => 'menu-links', 'class' => 'nav' ]

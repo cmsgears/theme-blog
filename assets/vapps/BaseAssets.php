@@ -35,13 +35,14 @@ class BaseAssets extends AssetBundle {
 	// Public -----------------
 
 	// Path Configuration
-	public $sourcePath = '@bower/cmt-velocity-apps/src/apps';
+	public $sourcePath = '@bower/cmt-velocity-apps/src';
 
 	// Load JS
 	public $js = [
-		'core/grid.js',
-		'core/comment.js',
-		'core/location.js'
+		'apps/core/base.js',
+		'apps/core/comment.js',
+		'apps/core/grid.js',
+		'apps/core/location.js'
 	];
 
 	// JS Position

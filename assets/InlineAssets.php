@@ -55,9 +55,9 @@ class InlineAssets extends AssetBundle {
 
 		$rootUrl = Url::toRoute( '/', true );
 
-		$siteUrl = "var siteUrl	= '$rootUrl';
-					var ajaxUrl	= '" . $rootUrl ."apix/';
-					var fileUploadUrl	= '" . $rootUrl . "apix/file/file-handler';";
+		$siteUrl = "var siteUrl	= '{$rootUrl}';
+					var ajaxUrl	= '{$rootUrl}apix/';
+					var fileUploadUrl = '{$rootUrl}apix/file/file-handler';";
 
 		$view->registerJs( $siteUrl, View::POS_END );
 	}

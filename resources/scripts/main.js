@@ -5,10 +5,12 @@ jQuery( document ).ready( function() {
 	initCmgTools();
 
 	initListeners();
-
+	
 	initDatePickers();
 
-	initAutoHide();
+	initWindowResize();
+	
+	initWindowScroll();
 });
 
 // == Pre Loaders =========================
@@ -34,6 +36,7 @@ function initCmgTools() {
 		heightAuto: true,
 		// Block Specific - Ignores generic
 		blocks: {
+			'block-auto': { autoHeight: true, heightAuto: true },
 			'block-half': { halfHeight: true },
 			'block-qtf': { qtfHeight: true },
 			'block-full': { fullHeight: true },
@@ -58,10 +61,15 @@ function initCmgTools() {
 	// Ratings
 	jQuery( '.cmt-rating' ).cmtRate();
 
+	jQuery( '.rating-emoticons' ).cmtRate({
+		same: [ 'cmti cmti-2x cmti-emoticons-sad', 'cmti cmti-2x cmti-emoticons-sulk', 'cmti cmti-2x cmti-emoticons-intense', 'cmti cmti-2x cmti-emoticons-hopeful', 'cmti cmti-2x cmti-emoticons-happy' ],
+		emptyColor: '#7F7F7F'
+	});
+
 	// Select
-	jQuery( '.cmt-select' ).cmtSelect( { iconHtml: '<span class="cmti cmti-chevron-down"></span>' } );
-	jQuery( '.cmt-select-c' ).cmtSelect( { iconHtml: '<span class="cmti cmti-chevron-down"></span>', copyOptionClass: true } );
-	jQuery( '.cmt-select-s' ).cmtSelect( { iconHtml: '<span class="cmti cmti-chevron-down"></span>', wrapperClass: 'element-small' } );
+	jQuery( '.cmt-select' ).cmtSelect( { iconHtml: '<span class="fa fa-caret-down"></span>' } );
+	jQuery( '.cmt-select-c' ).cmtSelect( { iconHtml: '<span class="fa fa-caret-down"></span>', copyOptionClass: true } );
+	jQuery( '.cmt-select-s' ).cmtSelect( { iconHtml: '<span class="fa fa-caret-down"></span>', wrapperClass: 'element-small' } );
 
 	// Checkboxes
 	jQuery( '.cmt-checkbox' ).cmtCheckbox();
@@ -90,15 +98,22 @@ function initCmgTools() {
 	// Grid
 	jQuery( '.grid-data' ).cmtGrid();
 
+	// Actions
+	jQuery( '.cmt-actions' ).cmtActions();
+
+	// Auto Hide
+	jQuery( '.cmt-auto-hide' ).cmtAutoHide();
+
 	// Icon Picker
 	jQuery( '.icon-picker' ).cmtIconPicker();
-	
-    // Sliders
-    jQuery( '.cmt-slider' ).cmtSlider( {
-        "lControlContent" : "<i class=\"cmti cmti-chevron-left icon\"></i>",
-        "rControlContent" : "<i class=\"cmti cmti-chevron-right icon\"></i>",
-        "circular" : false
-    });
+
+	// Time Picker
+	jQuery( '.timepicker' ).cmtTimePicker();
+
+	jQuery( '.cmt-slider' ).cmtSlider({
+		lControlContent: "<i class=\"fa fa-angle-left valign-center\"></i>",
+		rControlContent: "<i class=\"fa fa-angle-right valign-center\"></i>"
+	});
 }
 
 // == JS Listeners ========================
@@ -111,26 +126,48 @@ function initListeners() {
 		jQuery( '#menu-main-mobile' ).slideToggle();
 	});
 
-	// Scrollbar
+	// Custom scroller
 	jQuery( '.cscroller' ).mCustomScrollbar( { autoHideScrollbar: true } );
+
+	// Auto save checkbox action
+	jQuery( '.cmt-checkbox input' ).on( 'input', function() {
+
+		jQuery( this ).parent().find( '.cmt-click' ).click();
+	});
 }
 
 function initDatePickers() {
-	
+
 	// Datepicker
 	var datepickers = jQuery( '.datepicker' );
-	
+
 	datepickers.each( function() {
 
 		var datepicker = jQuery( this );
 
-		var start = datepicker.attr( 'start' );
+		var start	= datepicker.attr( 'ldata-start' );
+		var end		= datepicker.attr( 'ldata-end' );
 
-		if( null != start ) {
+		if( null != start && null != end ) {
+
+			datepicker.datepicker({
+				dateFormat: 'yy-mm-dd',
+				minDate: start,
+				maxDate: end
+			});
+		}
+		else if( null != start ) {
 
 			datepicker.datepicker({
 				dateFormat: 'yy-mm-dd',
 				minDate: start
+			});
+		}
+		else if( null != end ) {
+
+			datepicker.datepicker({
+				dateFormat: 'yy-mm-dd',
+				maxDate: end
 			});
 		}
 		else {

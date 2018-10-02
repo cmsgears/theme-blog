@@ -1,27 +1,29 @@
 <?php
 // Yii Imports
 use yii\helpers\Html;
-use yii\widgets\ActiveForm;
-
-// CMG Imports
-use cmsgears\widgets\block\BasicBlock;
 
 $coreProperties = $this->context->getCoreProperties();
 $this->title 	= 'Error | ' . $coreProperties->getSiteTitle();
+
+$code		= $exception->statusCode;
+$message	= nl2br( Html::encode( $message ) );
 ?>
-<?php if ( Yii::$app->user->isGuest ) { ?>
-
-<?=BasicBlock::widget([
-	'options' => [ 'id' => 'block-public', 'class' => 'block block-basic' ],
-	'bkg' => true,
-	'texture' => true,
-	'header' => true, 'headerContent' => '<h2 class="align align-center">ERROR</h2>',
-	'contentWrapClass' => 'center','content' => true,
-	'contentData' => nl2br( Html::encode( $message ) )
-]);?>
-
-<?php } else { ?>
-	<h1 class="align-middle">ERROR</h1>
-
-	<p> <?= nl2br( Html::encode( $message ) ) ?> </p>
-<?php } ?>
+<div class="block block-basic block-error" cmt-block="block-qtf-auto">
+	<div class="filler-height filler-height-medium"></div>
+	<div class="block-content-wrap">
+		<div class="block-header-wrap">
+			<div class="block-header">
+				<div class="block-header-title h3 align align-center"><?= $code ?></div>
+				<div class="block-header-info h5 align align-center"><?= $message ?></div>
+			</div>
+		</div>
+		<div class="filler-height filler-height-medium"></div>
+		<div class="block-content row row-medium">
+			<div class="block-content-data">
+				<div class="error align align-center">
+					<img class="fluid" src="<?= Yii::getAlias( '@images' ) ?>/blog/error.png" />
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

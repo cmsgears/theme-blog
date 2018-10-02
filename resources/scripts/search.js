@@ -28,7 +28,7 @@ function initSearch() {
 function searchBro( searchBox ) {
 
 	var pageUrl		= window.location.href;
-	var keywords	= searchBox.find( '.search-keywords' ).val();
+	var keywords	= searchBox.find( '.search-terms' ).val();
 
 	if( cmt.utils.data.hasAttribute( searchBox, 'url' ) ) {
 

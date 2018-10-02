@@ -45,7 +45,7 @@ $user			= Yii::$app->user->getIdentity();
 	        	</div>
 	        </div>
         </div>
-        <?php //include "$themePath/views/footers/public.php"; ?>
+        <?php include "$themePath/views/footers/public.php"; ?>
         <?php $this->endBody(); ?>
     </body>
 </html>

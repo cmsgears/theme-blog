@@ -1,0 +1,48 @@
+%element-style {
+	padding: 0.5em;
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea, select {
+    @include shadow-inset( 0, 0, 0, $color-tertiary, $spread: 1px );
+    @include rounded( $size-small );
+    font-family: $font-default !important;
+
+    &:focus {
+        @include shadow-inset( 0, 0, 0, $color-btn, $spread: 1px );
+    }
+}
+
+input[type="submit"], input[type="button"], button, .btn, .btn-icon {
+	@include rounded( $size-small );
+	font-family: $font-heading !important;
+}
+
+.frm-icon-element {
+
+    input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .btn {
+        padding-left: 2.25em;
+    }
+
+    .cmti {
+        @include rounded-left( $size-small );
+        padding: 0.5em 0.75em;
+    }
+
+    .icon {
+        @include rounded-left( $size-small );
+        padding: 0.8em 0.5em;
+        line-height: 0;
+    }
+}
+
+.form {
+
+    .help-block {
+		color: $color-error !important;
+		margin-bottom: 0.5em;
+    }
+
+	label {
+		font-weight: bold;
+	}
+}

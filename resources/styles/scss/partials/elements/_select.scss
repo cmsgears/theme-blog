@@ -1,0 +1,52 @@
+.cmt-select-wrap {
+
+    .cmt-select {
+        @include rounded( $size-small );
+
+        .cmt-selected {
+            @include rounded( $size-small );
+
+            .s-text {
+                padding: 0.25em;
+            }
+
+            .s-icon {
+                color: $color-gray;
+                padding: 0.5em;
+            }
+        }
+
+        .cmt-selected, .cmt-select-list {
+            @include shadow-inset( 0, 0, 0, $color-secondary-l, $spread: 1px );
+        }
+
+        .cmt-select-list {
+
+            li {
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+.form {
+
+	.cmt-select-wrap {
+
+		.cmt-select {
+
+			.cmt-selected {
+
+				.s-text {
+					padding: 0;
+				}
+
+				.s-icon {
+					padding: 0;
+					padding-top: 0.25em;
+					padding-right: 0.5em;
+				}
+			}
+		}
+	}
+}

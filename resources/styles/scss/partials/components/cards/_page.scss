@@ -1,0 +1,56 @@
+// Post Cards
+.widget-card-post {
+	background-color: $color-primary-l;
+	color: $color-primary-text-l;
+
+	.card-page-wrap-title {
+		background-color: $color-secondary-d;
+		color: $color-secondary-text-d;
+		font: $font-heading;
+		font-size: $font-size-3;
+		padding: 1rem;
+	}
+
+	.card-page {
+		padding: 1rem;
+
+		.card-content-wrap {
+			padding-bottom: 1em;
+			border-bottom: 1px solid $color-border;
+
+			.card-content {
+
+				.card-content-title {
+					font: $font-heading;
+					font-size: $font-size-4;
+					margin-bottom: 1rem;
+
+					a {
+						color: $color-primary-text;
+
+						&:hover {
+							color: $color-link;
+						}
+					}
+				}
+			}
+
+			&.card-content-split {
+
+				.card-header {
+					float: left;
+					overflow: hidden;
+
+					.bkg-element-wrap {
+						width: 100px;
+						height: 80px;
+					}
+				}
+
+				.card-content {
+					padding-left: 110px;
+				}
+			}
+		}
+	}
+}
