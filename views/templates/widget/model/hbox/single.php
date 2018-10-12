@@ -33,7 +33,9 @@ $bannerUrl	= CodeGenUtil::getFileUrl( $content->banner, [ 'image' => $banner ] )
 			<div class="box-header">
 				<div class="bkg-element-wrap">
 					<div class="bkg-element bkg-element-medium">
-						<img src="<?= $bannerUrl ?>" title="<?= "{$model->displayName}" ?>" />
+						<a href="<?= "{$siteUrl}/blog/{$model->slug}" ?>">
+							<img src="<?= $bannerUrl ?>" title="<?= "{$model->displayName}" ?>" />
+						</a>
 					</div>
 				</div>
 			</div>
@@ -44,7 +46,7 @@ $bannerUrl	= CodeGenUtil::getFileUrl( $content->banner, [ 'image' => $banner ] )
 			<?= $publishedAt ?>
 		</div>
 		<div class="box-content-title reader">
-			<?= $model->displayName ?>
+			<a href="<?= "{$siteUrl}/blog/{$model->slug}" ?>"><?= $model->displayName ?></a>
 		</div>
 		<div class="box-content-data reader">
 			<?= $content->getDisplaySummary( $widget->textLimit ) ?> &nbsp;&nbsp;

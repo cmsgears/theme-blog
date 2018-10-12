@@ -8326,6 +8326,29 @@ Details: It defines the styles for footer components as listed below:
 }
 
 /**********************************************************************
+Description: The Default Sidebar with/without background image with default alignment.
+
+Details: Default Sidebar to be used as page sidebars as listed below:
+
+1. Sidebar - Overrides the breeze sidebar and add more basic options to it.
+
+2. Default Sidebar - The default sidebar.
+
+Usage: Sidebars can be used to manage page widgets on sidebars.
+***********************************************************************/
+.sidebar-vertical .widget {
+  background-color: #FFFFFF;
+  color: #A5A5A5;
+  margin-bottom: 2em;
+}
+.sidebar-vertical .widget .widget-content-wrap .widget-content {
+  padding: 0;
+}
+.sidebar-vertical .widget .widget-content-wrap .widget-content .widget-content-data {
+  padding: 0;
+}
+
+/**********************************************************************
 Description: It defines the styles of data card components available in Breeze Framework.
 
 Dependencies: variables, variables-ext, mixins
@@ -9824,6 +9847,47 @@ Details: It defines the styles of default layout of page component as listed bel
 }
 .page-default.page-model-article .page-content-wrap .page-content .page-content-summary {
   text-align: left;
+}
+
+.page-default {
+  background-color: #F8F8F8;
+  color: #A5A5A5;
+}
+.page-default .page-sidebar-wrap {
+  margin-bottom: 2em;
+}
+
+.page-model-blog .page-content-wrap .page-content, .page-home .page-content-wrap .page-content {
+  background-color: #FFFFFF;
+  color: #A5A5A5;
+  padding: 1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.page-model-blog .page-content-wrap .page-content .page-content-banner + .page-content-title, .page-home .page-content-wrap .page-content .page-content-banner + .page-content-title {
+  margin-top: 1em;
+}
+.page-model-blog .page-content-wrap .page-content-comments, .page-home .page-content-wrap .page-content-comments {
+  background-color: #FFFFFF;
+  color: #A5A5A5;
+  padding: 1em;
+  margin-top: 2em;
+}
+.page-model-blog .page-content-wrap .page-content-disqus, .page-home .page-content-wrap .page-content-disqus {
+  background-color: #FFFFFF;
+  color: #A5A5A5;
+  padding: 1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.page-search .page-content-wrap .page-content .page-content-info {
+  background-color: #FFFFFF;
+  color: #A5A5A5;
+  padding-top: 1em;
+}
+.page-search .page-content-wrap .page-content .page-widget-wrap {
+  margin-top: 2em;
 }
 
 /**********************************************************************

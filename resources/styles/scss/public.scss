@@ -88,6 +88,8 @@
 @import "partials/components/footers/basic";
 
 //@import "breeze/components/sidebars/basic";
+@import "breeze-templates/components/sidebars/default";
+@import "partials/components/sidebars/default";
 
 //@import "breeze/components/mappers/basic";
 
@@ -122,7 +124,7 @@
 @import "breeze-templates/components/widgets/default";
 @import "breeze-templates/components/widgets/card";
 @import "breeze-templates/components/widgets/box";
-@import "partials/components/widgets/basic";
+@import "partials/components/widgets/default";
 
 @import "breeze/components/blocks/basic";
 @import "breeze-templates/components/blocks/default";

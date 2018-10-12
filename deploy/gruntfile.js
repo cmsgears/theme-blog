@@ -25,9 +25,9 @@ module.exports = function( grunt ) {
 					loadPath: [ 'e:/development/projects-vc/css/cmt-ui/breeze/src/scss', 'e:/development/projects-vc/css/cmt-ui/breeze-templates/src/scss' ]
 				},
 				files: {
-					'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/ladbt2rs-20181001-src.css': 'e:/development/projects-vc/php/tutorials24x7/themes/blog/resources/styles/scss/landing.scss',
-					'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/pubbt2rs-20181001-src.css': 'e:/development/projects-vc/php/tutorials24x7/themes/blog/resources/styles/scss/public.scss',
-					'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/prvbt2rs-20181001-src.css': 'e:/development/projects-vc/php/tutorials24x7/themes/blog/resources/styles/scss/private.scss'
+					'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/ladbt2rs-20181010-src.css': 'e:/development/projects-vc/php/tutorials24x7/themes/blog/resources/styles/scss/landing.scss',
+					'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/pubbt2rs-20181010-src.css': 'e:/development/projects-vc/php/tutorials24x7/themes/blog/resources/styles/scss/public.scss',
+					'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/prvbt2rs-20181010-src.css': 'e:/development/projects-vc/php/tutorials24x7/themes/blog/resources/styles/scss/private.scss'
 				}
 			}
 		},
@@ -44,7 +44,7 @@ module.exports = function( grunt ) {
 					'e:/development/projects-vc/php/tutorials24x7/vendor/bower-asset/datetimepicker/build/jquery.datetimepicker.min.css',
 					'e:/development/projects-vc/php/tutorials24x7/vendor/bower-asset/fullcalendar/dist/fullcalendar.min.css'
 				],
-        		dest: 'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/cmnbt2rs-20181001-src.css'
+        		dest: 'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/cmnbt2rs-20181010-src.css'
       		}
     	},
         concatJsCommon: {
@@ -77,7 +77,7 @@ module.exports = function( grunt ) {
 					'e:/development/projects-vc/php/tutorials24x7/vendor/bower-asset/cmt-velocity-apps/src/apps/core/grid.js',
 					'e:/development/projects-vc/php/tutorials24x7/vendor/bower-asset/cmt-velocity-apps/src/apps/core/location.js'
 				],
-        		dest: 'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/cmnbt2rs-20181001-src.js'
+        		dest: 'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/cmnbt2rs-20181010-src.js'
       		}
     	},
         concatJsLanding: {
@@ -92,7 +92,7 @@ module.exports = function( grunt ) {
 
 					'e:/development/projects-vc/php/tutorials24x7/themes/blog/resources/scripts/apps/public.js'
 				],
-        		dest: 'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/ladst2rs-20181001-src.js'
+        		dest: 'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/ladst2rs-20181010-src.js'
       		}
     	},
         concatJsPublic: {
@@ -107,7 +107,7 @@ module.exports = function( grunt ) {
 
 					'e:/development/projects-vc/php/tutorials24x7/themes/blog/resources/scripts/apps/public.js'
 				],
-        		dest: 'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/pubst2rs-20181001-src.js'
+        		dest: 'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/pubst2rs-20181010-src.js'
       		}
     	},
         concatJsPrivate: {
@@ -137,7 +137,7 @@ module.exports = function( grunt ) {
 					'e:/development/projects-vc/php/tutorials24x7/themes/blog/resources/scripts/apps/private.js',
 					'e:/development/projects-vc/php/tutorials24x7/themes/blog/resources/scripts/apps/user.js'
 				],
-        		dest: 'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/prvat2rs-20181001-src.js'
+        		dest: 'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/prvat2rs-20181010-src.js'
       		}
     	},
     	cssmin: {
@@ -146,10 +146,10 @@ module.exports = function( grunt ) {
 			},
       		target: {
 	        	files: {
-					'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/cmnbt2rs-20181001.css': [ 'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/cmnbt2rs-20181001-src.css' ],
-	          		'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/ladbt2rs-20181001.css': [ 'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/ladbt2rs-20181001-src.css' ],
-					'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/pubbt2rs-20181001.css': [ 'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/pubbt2rs-20181001-src.css' ],
-					'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/prvbt2rs-20181001.css': [ 'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/prvbt2rs-20181001-src.css' ]
+					'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/cmnbt2rs-20181010.css': [ 'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/cmnbt2rs-20181010-src.css' ],
+	          		'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/ladbt2rs-20181010.css': [ 'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/ladbt2rs-20181010-src.css' ],
+					'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/pubbt2rs-20181010.css': [ 'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/pubbt2rs-20181010-src.css' ],
+					'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/prvbt2rs-20181010.css': [ 'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/prvbt2rs-20181010-src.css' ]
 	        	}
       		}
     	},
@@ -159,10 +159,10 @@ module.exports = function( grunt ) {
 			},
       		main_target: {
 	        	files: {
-	          		'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/cmnbt2rs-20181001.js': [ 'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/cmnbt2rs-20181001-src.js' ],
-					'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/ladst2rs-20181001.js': [ 'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/ladst2rs-20181001-src.js' ],
-					'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/pubst2rs-20181001.js': [ 'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/pubst2rs-20181001-src.js' ],
-					'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/prvat2rs-20181001.js': [ 'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/prvat2rs-20181001-src.js' ]
+	          		'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/cmnbt2rs-20181010.js': [ 'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/cmnbt2rs-20181010-src.js' ],
+					'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/ladst2rs-20181010.js': [ 'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/ladst2rs-20181010-src.js' ],
+					'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/pubst2rs-20181010.js': [ 'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/pubst2rs-20181010-src.js' ],
+					'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/prvat2rs-20181010.js': [ 'e:/development/projects-vc/php/tutorials24x7/frontend/web/blog/prvat2rs-20181010-src.js' ]
 	        	}
       		}
     	},
