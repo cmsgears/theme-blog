@@ -1,7 +1,7 @@
 <?php
 // CMG Imports
 use cmsgears\widgets\elements\Nav;
-use cmsgears\widgets\blog\PostWidget;
+use cmsgears\widgets\club\cms\PostWidget;
 use cmsgears\widgets\newsletter\FollowMeWidget;
 
 // Blog Imports

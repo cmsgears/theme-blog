@@ -1609,10 +1609,10 @@ Notes:
 .bkg-element-medium {
   display: block;
   position: relative;
-  top: -30%;
-  left: -30%;
-  width: 160%;
-  height: 160%;
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  height: 140%;
   overflow: hidden;
 }
 .bkg-element-medium img {
@@ -1622,8 +1622,8 @@ Notes:
   right: 0;
   bottom: 0;
   margin: auto;
-  min-width: 70%;
-  min-height: 70%;
+  min-width: 80%;
+  min-height: 80%;
   max-width: 100%;
   max-height: 100%;
 }
@@ -1631,10 +1631,10 @@ Notes:
 .bkg-element-small {
   display: block;
   position: relative;
-  top: -20%;
-  left: -20%;
-  width: 140%;
-  height: 140%;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
   overflow: hidden;
 }
 .bkg-element-small img {
@@ -1644,8 +1644,8 @@ Notes:
   right: 0;
   bottom: 0;
   margin: auto;
-  min-width: 80%;
-  min-height: 80%;
+  min-width: 90%;
+  min-height: 90%;
   max-width: 100%;
   max-height: 100%;
 }
@@ -1738,11 +1738,11 @@ Notes:
   filter: blur(1px);
 }
 .blur.blur-small {
-  -webkit-filter: blur(3px);
-  -moz-filter: blur(3px);
-  -o-filter: blur(3px);
-  -ms-filter: blur(3px);
-  filter: blur(3px);
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
 }
 .blur.blur-medium {
   -webkit-filter: blur(5px);
@@ -1759,11 +1759,11 @@ Notes:
   filter: blur(8px);
 }
 .blur.blur-xlarge {
-  -webkit-filter: blur(13px);
-  -moz-filter: blur(13px);
-  -o-filter: blur(13px);
-  -ms-filter: blur(13px);
-  filter: blur(13px);
+  -webkit-filter: blur(12px);
+  -moz-filter: blur(12px);
+  -o-filter: blur(12px);
+  -ms-filter: blur(12px);
+  filter: blur(12px);
 }
 
 .pattern.pattern-default {
@@ -2322,8 +2322,9 @@ input, select {
   vertical-align: middle;
 }
 
-::selection {
-  background: #F8F8F8;
+::-moz-selection, ::selection {
+  background: #0074D9;
+  color: #FFFFFF;
   text-shadow: none;
 }
 
@@ -2458,14 +2459,15 @@ input[type="checkbox"], input[type="radio"] {
   padding: 0;
 }
 
+/*
 input[type="radio"] {
-  vertical-align: text-bottom;
+	vertical-align: text-bottom;
 }
 
 input[type="checkbox"] {
-  vertical-align: bottom;
+	vertical-align: bottom;
 }
-
+*/
 .wysiwyg {
   color: #A5A5A5;
 }
@@ -2938,6 +2940,21 @@ html, body {
 .layer.layer-5 {
   z-index: 50;
 }
+.layer.layer-6 {
+  z-index: 60;
+}
+.layer.layer-7 {
+  z-index: 70;
+}
+.layer.layer-8 {
+  z-index: 80;
+}
+.layer.layer-9 {
+  z-index: 90;
+}
+.layer.layer-10 {
+  z-index: 100;
+}
 
 .block {
   display: block !important;
@@ -2971,7 +2988,7 @@ html, body {
   visibility: hidden !important;
 }
 
-.pointer {
+.pointer, .cmt-click {
   cursor: pointer;
 }
 
@@ -3024,6 +3041,11 @@ html, body {
 .fluid {
   max-width: 100%;
   height: auto;
+}
+
+.fluid-both {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .warning, .error, .success, .info, .help-block {
@@ -3979,6 +4001,9 @@ html, body {
 .text.text-micro {
   font-size: 0.5em;
 }
+.text.text-bottom {
+  vertical-align: text-bottom;
+}
 
 .line-height {
   line-height: 1em;
@@ -4076,10 +4101,10 @@ p, span, em, div, a {
   vertical-align: middle;
 }
 
-pre {
+code, pre {
   font-family: "Courier New", Courier, monospace;
-  color: #595959;
-  background-color: #A5A5A5;
+  background-color: #363636;
+  color: #FFFFFF;
 }
 
 .normal {
@@ -4411,7 +4436,7 @@ Details: It defines the grid system and basic containers as listed below:
   .max-cols-25 > .col1, .max-cols-25 > .col2, .max-cols-25 > .col3, .max-cols-25 > .col4, .max-cols-25 > .col5, .max-cols-25 > .col6, .max-cols-25 > .col7, .max-cols-25 > .col8, .max-cols-25 > .col9, .max-cols-25 > .col10, .max-cols-25 > .col11, .max-cols-25 > .col12, .max-cols-25 > .col13, .max-cols-25 > .col14, .max-cols-25 > .col15, .max-cols-25s > .col1, .max-cols-25s > .col2, .max-cols-25s > .col3, .max-cols-25s > .col4, .max-cols-25s > .col5, .max-cols-25s > .col6, .max-cols-25s > .col7, .max-cols-25s > .col8, .max-cols-25s > .col9, .max-cols-25s > .col10, .max-cols-25s > .col11, .max-cols-25s > .col12, .max-cols-25s > .col13, .max-cols-25s > .col14, .max-cols-25s > .col15 {
     width: 23%;
   }
-  .max-cols-25 > .col:nth-child(4), .max-cols-25s > .col:nth-child(4) {
+  .max-cols-25 > .col:nth-child(5), .max-cols-25s > .col:nth-child(5) {
     clear: both;
   }
 
@@ -4590,14 +4615,14 @@ Details: It defines the grid system and basic containers as listed below:
   min-height: 1px;
 }
 
-.colc2, .colc3, .colc4, .colc5, .colc6, .colc7, .colc8, .colc9, .colc10, .colc11, .colc12 {
+.colc2, .colc3, .colc4, .colc5, .colc6, .colc7, .colc8, .colc9, .colc10, .colc11, .colc12, .colc5x2, .colc5x3, .colc5x4, .colc6x2, .colc6x3, .colc6x4, .colc6x5, .colc12x2, .colc12x3, .colc12x4, .colc12x5, .colc12x6, .colc12x7, .colc12x8, .colc12x9, .colc12x10, .colc12x11 {
   margin: 0 1%;
 }
-.colc2:first-child, .colc3:first-child, .colc4:first-child, .colc5:first-child, .colc6:first-child, .colc7:first-child, .colc8:first-child, .colc9:first-child, .colc10:first-child, .colc11:first-child, .colc12:first-child {
+.colc2:first-child, .colc3:first-child, .colc4:first-child, .colc5:first-child, .colc6:first-child, .colc7:first-child, .colc8:first-child, .colc9:first-child, .colc10:first-child, .colc11:first-child, .colc12:first-child, .colc5x2:first-child, .colc5x3:first-child, .colc5x4:first-child, .colc6x2:first-child, .colc6x3:first-child, .colc6x4:first-child, .colc6x5:first-child, .colc12x2:first-child, .colc12x3:first-child, .colc12x4:first-child, .colc12x5:first-child, .colc12x6:first-child, .colc12x7:first-child, .colc12x8:first-child, .colc12x9:first-child, .colc12x10:first-child, .colc12x11:first-child {
   margin-left: 0;
   margin-right: 1%;
 }
-.colc2:last-child, .colc3:last-child, .colc4:last-child, .colc5:last-child, .colc6:last-child, .colc7:last-child, .colc8:last-child, .colc9:last-child, .colc10:last-child, .colc11:last-child, .colc12:last-child {
+.colc2:last-child, .colc3:last-child, .colc4:last-child, .colc5:last-child, .colc6:last-child, .colc7:last-child, .colc8:last-child, .colc9:last-child, .colc10:last-child, .colc11:last-child, .colc12:last-child, .colc5x2:last-child, .colc5x3:last-child, .colc5x4:last-child, .colc6x2:last-child, .colc6x3:last-child, .colc6x4:last-child, .colc6x5:last-child, .colc12x2:last-child, .colc12x3:last-child, .colc12x4:last-child, .colc12x5:last-child, .colc12x6:last-child, .colc12x7:last-child, .colc12x8:last-child, .colc12x9:last-child, .colc12x10:last-child, .colc12x11:last-child {
   margin-left: 1%;
   margin-right: 0;
 }
@@ -4650,20 +4675,120 @@ Details: It defines the grid system and basic containers as listed below:
   width: 6.5%;
 }
 
+.colc5x2 {
+  width: 39.2%;
+}
+
+.colc5x3 {
+  width: 58.8%;
+}
+
+.colc5x4 {
+  width: 78.4%;
+}
+
+.colc6x2 {
+  width: 32.66666%;
+}
+
+.colc6x3 {
+  width: 49%;
+}
+
+.colc6x4 {
+  width: 65.33333%;
+}
+
+.colc6x5 {
+  width: 81.66666%;
+}
+
+.colc12x2 {
+  width: 16.33333%;
+}
+
+.colc12x3 {
+  width: 24.5%;
+}
+
+.colc12x4 {
+  width: 32.66666%;
+}
+
+.colc12x5 {
+  width: 40.83333%;
+}
+
+.colc12x6 {
+  width: 49%;
+}
+
+.colc12x7 {
+  width: 57.16666%;
+}
+
+.colc12x8 {
+  width: 65.33333%;
+}
+
+.colc12x9 {
+  width: 73.5%;
+}
+
+.colc12x10 {
+  width: 81.66666%;
+}
+
+.colc12x11 {
+  width: 89.83333%;
+}
+
 @media only screen and (max-width: 1024px) {
+  .max-cols-25 > .colc1, .max-cols-25 > .colc2, .max-cols-25 > .colc3, .max-cols-25 > .colc4, .max-cols-25 > .colc5, .max-cols-25 > .colc6, .max-cols-25 > .colc7, .max-cols-25 > .colc8, .max-cols-25 > .colc9, .max-cols-25 > .colc10, .max-cols-25 > .colc11, .max-cols-25 > .colc12, .max-cols-25s > .colc1, .max-cols-25s > .colc2, .max-cols-25s > .colc3, .max-cols-25s > .colc4, .max-cols-25s > .colc5, .max-cols-25s > .colc6, .max-cols-25s > .colc7, .max-cols-25s > .colc8, .max-cols-25s > .colc9, .max-cols-25s > .colc10, .max-cols-25s > .colc11, .max-cols-25s > .colc12 {
+    width: 23%;
+  }
+  .max-cols-25 > .col:nth-child(5), .max-cols-25s > .col:nth-child(5) {
+    clear: both;
+  }
+
+  .max-cols-50 .colc:first-child, .max-cols-50s .colc:first-child {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+  .max-cols-50 .colc:last-child, .max-cols-50s .colc:last-child {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
   .max-cols-50 > .colc1, .max-cols-50 > .colc2, .max-cols-50 > .colc3, .max-cols-50 > .colc4, .max-cols-50 > .colc5, .max-cols-50 > .colc6, .max-cols-50 > .colc7, .max-cols-50 > .colc8, .max-cols-50 > .colc9, .max-cols-50 > .colc10, .max-cols-50 > .colc11, .max-cols-50 > .colc12, .max-cols-50s > .colc1, .max-cols-50s > .colc2, .max-cols-50s > .colc3, .max-cols-50s > .colc4, .max-cols-50s > .colc5, .max-cols-50s > .colc6, .max-cols-50s > .colc7, .max-cols-50s > .colc8, .max-cols-50s > .colc9, .max-cols-50s > .colc10, .max-cols-50s > .colc11, .max-cols-50s > .colc12 {
+    width: 48%;
+  }
+  .max-cols-50 > .colc5x2, .max-cols-50 > .colc5x3, .max-cols-50 > .colc5x4, .max-cols-50 > .colc6x2, .max-cols-50 > .colc6x3, .max-cols-50 > .colc6x4, .max-cols-50 > .colc6x5, .max-cols-50s > .colc5x2, .max-cols-50s > .colc5x3, .max-cols-50s > .colc5x4, .max-cols-50s > .colc6x2, .max-cols-50s > .colc6x3, .max-cols-50s > .colc6x4, .max-cols-50s > .colc6x5 {
     width: 48%;
   }
   .max-cols-50 > .colc:nth-child(odd), .max-cols-50s > .colc:nth-child(odd) {
     clear: both;
   }
 
+  .max-cols-100 .colc:first-child {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+  .max-cols-100 .colc:last-child {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
   .max-cols-100 > .colc1, .max-cols-100 > .colc2, .max-cols-100 > .colc3, .max-cols-100 > .colc4, .max-cols-100 > .colc5, .max-cols-100 > .colc6, .max-cols-100 > .colc7, .max-cols-100 > .colc8, .max-cols-100 > .colc9, .max-cols-100 > .colc10, .max-cols-100 > .colc11, .max-cols-100 > .colc12 {
+    width: 98%;
+  }
+  .max-cols-100 > .colc5x2, .max-cols-100 > .colc5x3, .max-cols-100 > .colc5x4, .max-cols-100 > .colc6x2, .max-cols-100 > .colc6x3, .max-cols-100 > .colc6x4, .max-cols-100 > .colc6x5 {
     width: 98%;
   }
 }
 @media only screen and (max-width: 480px) {
   .max-cols-50 > .colc1, .max-cols-50 > .colc2, .max-cols-50 > .colc3, .max-cols-50 > .colc4, .max-cols-50 > .colc5, .max-cols-50 > .colc6, .max-cols-50 > .colc7, .max-cols-50 > .colc8, .max-cols-50 > .colc9, .max-cols-50 > .colc10, .max-cols-50 > .colc11, .max-cols-50 > .colc12, .max-cols-100 > .colc1, .max-cols-100 > .colc2, .max-cols-100 > .colc3, .max-cols-100 > .colc4, .max-cols-100 > .colc5, .max-cols-100 > .colc6, .max-cols-100 > .colc7, .max-cols-100 > .colc8, .max-cols-100 > .colc9, .max-cols-100 > .colc10, .max-cols-100 > .colc11, .max-cols-100 > .colc12 {
+    width: 98%;
+  }
+  .max-cols-50 > .colc5x2, .max-cols-50 > .colc5x3, .max-cols-50 > .colc5x4, .max-cols-50 > .colc6x2, .max-cols-50 > .colc6x3, .max-cols-50 > .colc6x4, .max-cols-50 > .colc6x5, .max-cols-100 > .colc5x2, .max-cols-100 > .colc5x3, .max-cols-100 > .colc5x4, .max-cols-100 > .colc6x2, .max-cols-100 > .colc6x3, .max-cols-100 > .colc6x4, .max-cols-100 > .colc6x5 {
     width: 98%;
   }
 }
@@ -4765,7 +4890,7 @@ Details: It defines the grid system and basic containers as listed below:
   .max-cols-25 > .colf1, .max-cols-25 > .colf2, .max-cols-25 > .colf3, .max-cols-25 > .colf4, .max-cols-25 > .colf5, .max-cols-25 > .colf6, .max-cols-25 > .colf7, .max-cols-25 > .colf8, .max-cols-25 > .colf9, .max-cols-25 > .colf10, .max-cols-25 > .colf11, .max-cols-25 > .colf12, .max-cols-25 > .colf13, .max-cols-25 > .colf14, .max-cols-25 > .colf15, .max-cols-25s > .colf1, .max-cols-25s > .colf2, .max-cols-25s > .colf3, .max-cols-25s > .colf4, .max-cols-25s > .colf5, .max-cols-25s > .colf6, .max-cols-25s > .colf7, .max-cols-25s > .colf8, .max-cols-25s > .colf9, .max-cols-25s > .colf10, .max-cols-25s > .colf11, .max-cols-25s > .colf12, .max-cols-25s > .colf13, .max-cols-25s > .colf14, .max-cols-25s > .colf15 {
     width: 25%;
   }
-  .max-cols-25 > .colf:nth-child(4), .max-cols-25s > .colf:nth-child(4) {
+  .max-cols-25 > .colf:nth-child(5), .max-cols-25s > .colf:nth-child(5) {
     clear: both;
   }
 
@@ -4975,6 +5100,56 @@ Details: It defines the grid system and basic containers as listed below:
   right: 0;
 }
 
+.col-pad.col-pad-small {
+  padding: 0.5em;
+}
+.col-pad.col-pad-small .col, .col-pad.col-pad-small .colf {
+  padding: 1em;
+}
+.col-pad.col-pad-medium {
+  padding: 1em;
+}
+.col-pad.col-pad-medium .col, .col-pad.col-pad-medium .colf {
+  padding: 2em;
+}
+.col-pad.col-pad-large {
+  padding: 1.5em;
+}
+.col-pad.col-pad-large .col, .col-pad.col-pad-large .colf {
+  padding: 3em;
+}
+.col-pad.col-pad-xlarge {
+  padding: 2em;
+}
+.col-pad.col-pad-xlarge .col, .col-pad.col-pad-xlarge .colf {
+  padding: 4em;
+}
+
+.col-pad-h.col-pad-small {
+  padding: 0 0.5em;
+}
+.col-pad-h.col-pad-small .col, .col-pad-h.col-pad-small .colf {
+  padding: 0 1em;
+}
+.col-pad-h.col-pad-medium {
+  padding: 0 1em;
+}
+.col-pad-h.col-pad-medium .col, .col-pad-h.col-pad-medium .colf {
+  padding: 0 2em;
+}
+.col-pad-h.col-pad-large {
+  padding: 0 1.5em;
+}
+.col-pad-h.col-pad-large .col, .col-pad-h.col-pad-large .colf {
+  padding: 0 3em;
+}
+.col-pad-h.col-pad-xlarge {
+  padding: 0 2em;
+}
+.col-pad-h.col-pad-xlarge .col, .col-pad-h.col-pad-xlarge .colf {
+  padding: 0 4em;
+}
+
 /* These containers work considering header at top and footer at bottom whether content is there or not. The concept behind this is:
  * 1. keep body and html to 100% width and height to occupy full screen.
  * 2. The main container should also occupy full width and set min-height to 100% to allow content grow vertically. The content will overflow html/body set to 100% height.
@@ -5029,6 +5204,12 @@ Details: It defines the grid system and basic containers as listed below:
 }
 
 @media only screen and (max-width: 1024px) {
+  .max-content-25.content-90, .max-content-25.content-80, .max-content-25.content-75, .max-content-25.content-50, .max-content-25.content-25 {
+    width: 25% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 auto;
+  }
   .max-content-25 > .content-90, .max-content-25 > .content-80, .max-content-25 > .content-75, .max-content-25 > .content-50, .max-content-25 > .content-25 {
     width: 25% !important;
     padding-left: 0 !important;
@@ -5036,6 +5217,12 @@ Details: It defines the grid system and basic containers as listed below:
     margin: 0 auto;
   }
 
+  .max-content-50.content-90, .max-content-50.content-80, .max-content-50.content-75, .max-content-50.content-50, .max-content-50.content-25 {
+    width: 50% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 auto;
+  }
   .max-content-50 > .content-90, .max-content-50 > .content-80, .max-content-50 > .content-75, .max-content-50 > .content-50, .max-content-50 > .content-25 {
     width: 50% !important;
     padding-left: 0 !important;
@@ -5043,6 +5230,11 @@ Details: It defines the grid system and basic containers as listed below:
     margin: 0 auto;
   }
 
+  .max-content-100.content-90, .max-content-100.content-80, .max-content-100.content-75, .max-content-100.content-50, .max-content-100.content-25 {
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
   .max-content-100 > .content-90, .max-content-100 > .content-80, .max-content-100 > .content-75, .max-content-100 > .content-50, .max-content-100 > .content-25 {
     width: 100% !important;
     padding-left: 0 !important;
@@ -5116,14 +5308,129 @@ Details: It defines the grid system and basic containers as listed below:
   }
 }
 
-.shape {
-  margin: 0 auto;
+.shape.shape-square.shape-square-small {
+  background: #F2BB40;
+  color: #464646;
+  width: 50px;
+  height: 50px;
+}
+.shape.shape-square.shape-square-medium {
+  background: #F2BB40;
+  color: #464646;
+  width: 100px;
+  height: 100px;
+}
+.shape.shape-square.shape-square-large {
+  background: #F2BB40;
+  color: #464646;
+  width: 250px;
+  height: 250px;
+}
+.shape.shape-square.shape-square-xlarge {
+  background: #F2BB40;
+  color: #464646;
+  width: 500px;
+  height: 500px;
+}
+.shape.shape-rectangle.shape-rectangle-small {
+  background: #F2BB40;
+  color: #464646;
+  width: 75px;
+  height: 50px;
+}
+.shape.shape-rectangle.shape-rectangle-medium {
+  background: #F2BB40;
+  color: #464646;
+  width: 150px;
+  height: 100px;
+}
+.shape.shape-rectangle.shape-rectangle-large {
+  background: #F2BB40;
+  color: #464646;
+  width: 325px;
+  height: 250px;
+}
+.shape.shape-rectangle.shape-rectangle-xlarge {
+  background: #F2BB40;
+  color: #464646;
+  width: 750px;
+  height: 500px;
+}
+.shape.shape-circle {
+  border-radius: 50%;
+}
+.shape.shape-circle.shape-circle-small {
+  background: #F2BB40;
+  color: #464646;
+  width: 50px;
+  height: 50px;
+}
+.shape.shape-circle.shape-circle-medium {
+  background: #F2BB40;
+  color: #464646;
+  width: 100px;
+  height: 100px;
+}
+.shape.shape-circle.shape-circle-large {
+  background: #F2BB40;
+  color: #464646;
+  width: 250px;
+  height: 250px;
+}
+.shape.shape-circle.shape-circle-xlarge {
+  background: #F2BB40;
+  color: #464646;
+  width: 500px;
+  height: 500px;
+}
+.shape.shape-oval {
+  border-radius: 100%/50%;
+}
+.shape.shape-oval.shape-oval-small {
+  background: #F2BB40;
+  color: #464646;
+  width: 50px;
+  height: 50px;
+}
+.shape.shape-oval.shape-oval-medium {
+  background: #F2BB40;
+  color: #464646;
+  width: 100px;
+  height: 100px;
+}
+.shape.shape-oval.shape-oval-large {
+  background: #F2BB40;
+  color: #464646;
+  width: 250px;
+  height: 250px;
+}
+.shape.shape-oval.shape-oval-xlarge {
+  background: #F2BB40;
+  color: #464646;
+  width: 500px;
+  height: 500px;
+}
+.shape.shape-triangle {
+  width: 0;
+  height: 0;
+}
+.shape.shape-triangle.shape-triangle-small {
+  background: #F2BB40;
+  color: #464646;
+  width: 25px;
+  height: 50px;
+}
+.shape.shape-triangle.shape-triangle-medium {
+  background: #F2BB40;
+  color: #464646;
+  width: 50px;
+  height: 100px;
 }
 .shape.shape-hexagon {
-  background: #FFFFFF;
-  height: 29px;
-  position: relative;
   width: 50px;
+  height: 29px;
+  background: #FFFFFF;
+  position: relative;
   top: -12px;
 }
 .shape.shape-hexagon:before {
@@ -5147,6 +5454,100 @@ Details: It defines the grid system and basic containers as listed below:
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
   border-top: 13.5px solid #FFFFFF;
+}
+
+.filter-blur {
+  -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -o-filter: blur(1px);
+  -ms-filter: blur(1px);
+  filter: blur(1px);
+}
+.filter-blur.filter-blur-small {
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+}
+.filter-blur.filter-blur-medium {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+.filter-blur.filter-blur-large {
+  -webkit-filter: blur(8px);
+  -moz-filter: blur(8px);
+  -o-filter: blur(8px);
+  -ms-filter: blur(8px);
+  filter: blur(8px);
+}
+.filter-blur.filter-blur-xlarge {
+  -webkit-filter: blur(12px);
+  -moz-filter: blur(12px);
+  -o-filter: blur(12px);
+  -ms-filter: blur(12px);
+  filter: blur(12px);
+}
+
+.filter-grayscale.filter-grayscale-25 {
+  -webkit-filter: grayscale(0.25);
+  -moz-filter: grayscale(0.25);
+  -o-filter: grayscale(0.25);
+  -ms-filter: grayscale(0.25);
+  filter: grayscale(0.25);
+}
+.filter-grayscale.filter-grayscale-50 {
+  -webkit-filter: grayscale(0.5);
+  -moz-filter: grayscale(0.5);
+  -o-filter: grayscale(0.5);
+  -ms-filter: grayscale(0.5);
+  filter: grayscale(0.5);
+}
+.filter-grayscale.filter-grayscale-75 {
+  -webkit-filter: grayscale(0.75);
+  -moz-filter: grayscale(0.75);
+  -o-filter: grayscale(0.75);
+  -ms-filter: grayscale(0.75);
+  filter: grayscale(0.75);
+}
+.filter-grayscale.filter-grayscale-100 {
+  -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+  -o-filter: grayscale(1);
+  -ms-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
+.filter-sepia.filter-sepia-25 {
+  -webkit-filter: sepia(0.25);
+  -moz-filter: sepia(0.25);
+  -o-filter: sepia(0.25);
+  -ms-filter: sepia(0.25);
+  filter: sepia(0.25);
+}
+.filter-sepia.filter-sepia-50 {
+  -webkit-filter: sepia(0.5);
+  -moz-filter: sepia(0.5);
+  -o-filter: sepia(0.5);
+  -ms-filter: sepia(0.5);
+  filter: sepia(0.5);
+}
+.filter-sepia.filter-sepia-75 {
+  -webkit-filter: sepia(0.75);
+  -moz-filter: sepia(0.75);
+  -o-filter: sepia(0.75);
+  -ms-filter: sepia(0.75);
+  filter: sepia(0.75);
+}
+.filter-sepia.filter-sepia-100 {
+  -webkit-filter: sepia(1);
+  -moz-filter: sepia(1);
+  -o-filter: sepia(1);
+  -ms-filter: sepia(1);
+  filter: sepia(1);
 }
 
 .hover-color-primary {
@@ -5608,6 +6009,56 @@ Details: It defines the grid system and basic containers as listed below:
   transform: scale(1, -1);
 }
 
+.hover-zoom-in.hover-zoom-in-small {
+  transition: transform 420ms;
+}
+.hover-zoom-in.hover-zoom-in-small:hover {
+  transform: scale(1.05);
+}
+.hover-zoom-in.hover-zoom-in-medium {
+  transition: transform 420ms;
+}
+.hover-zoom-in.hover-zoom-in-medium:hover {
+  transform: scale(1.1);
+}
+.hover-zoom-in.hover-zoom-in-large {
+  transition: transform 420ms;
+}
+.hover-zoom-in.hover-zoom-in-large:hover {
+  transform: scale(1.25);
+}
+.hover-zoom-in.hover-zoom-in-xlarge {
+  transition: transform 420ms;
+}
+.hover-zoom-in.hover-zoom-in-xlarge:hover {
+  transform: scale(1.5);
+}
+
+.hover-zoom-out.hover-zoom-out-small {
+  transition: transform 420ms;
+}
+.hover-zoom-out.hover-zoom-out-small:hover {
+  transform: scale(0.95);
+}
+.hover-zoom-out.hover-zoom-out-medium {
+  transition: transform 420ms;
+}
+.hover-zoom-out.hover-zoom-out-medium:hover {
+  transform: scale(0.9);
+}
+.hover-zoom-out.hover-zoom-out-large {
+  transition: transform 420ms;
+}
+.hover-zoom-out.hover-zoom-out-large:hover {
+  transform: scale(0.75);
+}
+.hover-zoom-out.hover-zoom-out-xlarge {
+  transition: transform 420ms;
+}
+.hover-zoom-out.hover-zoom-out-xlarge:hover {
+  transform: scale(0.5);
+}
+
 .hover-spin:hover {
   -webkit-animation: spin 2s infinite linear;
   animation: spin 2s infinite linear;
@@ -5970,6 +6421,7 @@ dependent on browsers. It depends on cmtSelect jQuery plugin available in Veloci
 .cmt-select-native {
   position: relative;
   display: inline-block;
+  width: 100%;
 }
 .cmt-select-native select {
   -webkit-appearance: none;
@@ -6206,6 +6658,30 @@ Details: It defines the custom element styles as listed below:
 *                   parent element must use positioning i.e. absolute, relative etc in order to place group at
 *                   appropriate postion.
 ***********************************************************************/
+.btn {
+  -webkit-transition: all 420ms ease-in-out 0s;
+  -moz-transition: all 420ms ease-in-out 0s;
+  -ms-transition: all 420ms ease-in-out 0s;
+  -o-transition: all 420ms ease-in-out 0s;
+  transition: all 420ms ease-in-out 0s;
+  background-color: #F2BB40;
+  color: #464646;
+  text-align: center;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #E2A730;
+  color: #464646;
+}
+.btn:active {
+  background-color: #F2BB40;
+  color: #464646;
+}
+.btn:disabled {
+  background-color: #A5A5A5 !important;
+  color: #FFFFFF !important;
+  cursor: default;
+}
 .btn.btn-auto {
   width: auto;
 }
@@ -6230,6 +6706,38 @@ Details: It defines the custom element styles as listed below:
 .btn.btn-xlarge {
   width: 250px !important;
 }
+.btn.btn-primary {
+  background-color: #F8F8F8;
+  color: #A5A5A5;
+}
+.btn.btn-primary:hover {
+  background-color: #F2F2F2;
+  color: #A5A5A5;
+}
+.btn.btn-secondary {
+  background-color: #F8F8F8;
+  color: #464646;
+}
+.btn.btn-secondary:hover {
+  background-color: #F2F2F2;
+  color: #464646;
+}
+.btn.btn-tertiary {
+  background-color: #F2BB40;
+  color: #464646;
+}
+.btn.btn-tertiary:hover {
+  background-color: #E2A730;
+  color: #464646;
+}
+.btn.btn-link {
+  background-color: #E2A730;
+  color: #FFFFFF;
+}
+.btn.btn-link:hover {
+  background-color: #E74343;
+  color: #FFFFFF;
+}
 .btn.btn-white {
   background-color: #FFFFFF;
   color: #000000;
@@ -6238,15 +6746,6 @@ Details: It defines the custom element styles as listed below:
   background-color: #595959;
   color: #A5A5A5;
 }
-.btn.btn-white-border {
-  background-color: #FFFFFF;
-  color: #000000;
-  border: 1px solid #000000;
-}
-.btn.btn-white-border:hover {
-  background-color: #7F7F7F;
-  color: #FFFFFF;
-}
 .btn.btn-black {
   background-color: #000000;
   color: #FFFFFF;
@@ -6254,15 +6753,6 @@ Details: It defines the custom element styles as listed below:
 .btn.btn-black:hover {
   background-color: #595959;
   color: #A5A5A5;
-}
-.btn.btn-black-border {
-  background-color: #000000;
-  color: #FFFFFF;
-  border: 1px solid #FFFFFF;
-}
-.btn.btn-black-border:hover {
-  background-color: #A5A5A5;
-  color: #FFFFFF;
 }
 .btn.btn-gray {
   background-color: #7F7F7F;
@@ -6278,29 +6768,11 @@ Details: It defines the custom element styles as listed below:
 .btn.btn-blue:hover {
   background-color: #0059A6;
 }
-.btn.btn-blue-border {
-  background-color: #FFFFFF;
-  color: #0074D9;
-  border: 1px solid #0074D9;
-}
-.btn.btn-blue-border:hover {
-  background-color: #0059A6;
-  color: #FFFFFF;
-}
 .btn.btn-purple {
   background-color: #8946C4;
 }
 .btn.btn-purple:hover {
   background-color: #663096;
-}
-.btn.btn-purple-border {
-  background-color: #FFFFFF;
-  color: #8946C4;
-  border: 1px solid #8946C4;
-}
-.btn.btn-purple-border:hover {
-  background-color: #663096;
-  color: #FFFFFF;
 }
 .btn.btn-orange {
   background-color: #FF851B;
@@ -6308,29 +6780,11 @@ Details: It defines the custom element styles as listed below:
 .btn.btn-orange:hover {
   background-color: #E76B00;
 }
-.btn.btn-orange-border {
-  background-color: #FFFFFF;
-  color: #FF851B;
-  border: 1px solid #FF851B;
-}
-.btn.btn-orange-border:hover {
-  background-color: #E76B00;
-  color: #FFFFFF;
-}
 .btn.btn-yellow {
   background-color: #FFDC00;
 }
 .btn.btn-yellow:hover {
   background-color: #DDBF00;
-}
-.btn.btn-yellow-border {
-  background-color: #FFFFFF;
-  color: #FFDC00;
-  border: 1px solid #FFDC00;
-}
-.btn.btn-yellow-border:hover {
-  background-color: #DDBF00;
-  color: #FFFFFF;
 }
 .btn.btn-red {
   background-color: #FF4136;
@@ -6338,29 +6792,11 @@ Details: It defines the custom element styles as listed below:
 .btn.btn-red:hover {
   background-color: #F10D00;
 }
-.btn.btn-red-border {
-  background-color: #FFFFFF;
-  color: #FF4136;
-  border: 1px solid #FF4136;
-}
-.btn.btn-red-border:hover {
-  background-color: #F10D00;
-  color: #FFFFFF;
-}
 .btn.btn-pink {
   background-color: #E4287C;
 }
 .btn.btn-pink:hover {
   background-color: #B2165C;
-}
-.btn.btn-pink-border {
-  background-color: #FFFFFF;
-  color: #E4287C;
-  border: 1px solid #E4287C;
-}
-.btn.btn-pink-border:hover {
-  background-color: #B2165C;
-  color: #FFFFFF;
 }
 .btn.btn-magenta {
   background-color: #B200B2;
@@ -6368,29 +6804,11 @@ Details: It defines the custom element styles as listed below:
 .btn.btn-magenta:hover {
   background-color: #6E006E;
 }
-.btn.btn-magenta-border {
-  background-color: #FFFFFF;
-  color: #B200B2;
-  border: 1px solid #B200B2;
-}
-.btn.btn-magenta-border:hover {
-  background-color: #6E006E;
-  color: #FFFFFF;
-}
 .btn.btn-green {
   background-color: #7CAA2D;
 }
 .btn.btn-green:hover {
   background-color: #55741F;
-}
-.btn.btn-green-border {
-  background-color: #FFFFFF;
-  color: #7CAA2D;
-  border: 1px solid #7CAA2D;
-}
-.btn.btn-green-border:hover {
-  background-color: #55741F;
-  color: #FFFFFF;
 }
 .btn.btn-brown {
   background-color: #8B4513;
@@ -6398,29 +6816,11 @@ Details: It defines the custom element styles as listed below:
 .btn.btn-brown:hover {
   background-color: #4F270B;
 }
-.btn.btn-brown-border {
-  background-color: #FFFFFF;
-  color: #8B4513;
-  border: 1px solid #8B4513;
-}
-.btn.btn-brown-border:hover {
-  background-color: #4F270B;
-  color: #FFFFFF;
-}
 .btn.btn-aqua {
   background-color: #8AE2E3;
 }
 .btn.btn-aqua:hover {
   background-color: #4cd3d4;
-}
-.btn.btn-aqua-border {
-  background-color: #FFFFFF;
-  color: #8AE2E3;
-  border: 1px solid #8AE2E3;
-}
-.btn.btn-aqua-border:hover {
-  background-color: #4cd3d4;
-  color: #FFFFFF;
 }
 .btn.btn-golden {
   background-color: #E9C011;
@@ -6428,29 +6828,11 @@ Details: It defines the custom element styles as listed below:
 .btn.btn-golden:hover {
   background-color: #a2850c;
 }
-.btn.btn-golden-border {
-  background-color: #FFFFFF;
-  color: #E9C011;
-  border: 1px solid #E9C011;
-}
-.btn.btn-golden-border:hover {
-  background-color: #a2850c;
-  color: #FFFFFF;
-}
 .btn.btn-silver {
   background-color: #E7E8E7;
 }
 .btn.btn-silver:hover {
   background-color: #c0c3c0;
-}
-.btn.btn-silver-border {
-  background-color: #FFFFFF;
-  color: #E7E8E7;
-  border: 1px solid #E7E8E7;
-}
-.btn.btn-silver-border:hover {
-  background-color: #c0c3c0;
-  color: #FFFFFF;
 }
 .btn.btn-maroon {
   background-color: #542628;
@@ -6458,29 +6840,11 @@ Details: It defines the custom element styles as listed below:
 .btn.btn-maroon:hover {
   background-color: #1f0e0f;
 }
-.btn.btn-maroon-border {
-  background-color: #FFFFFF;
-  color: #542628;
-  border: 1px solid #542628;
-}
-.btn.btn-maroon-border:hover {
-  background-color: #1f0e0f;
-  color: #FFFFFF;
-}
 .btn.btn-olive {
   background-color: #A3A54C;
 }
 .btn.btn-olive:hover {
   background-color: #6f7134;
-}
-.btn.btn-olive-border {
-  background-color: #FFFFFF;
-  color: #A3A54C;
-  border: 1px solid #A3A54C;
-}
-.btn.btn-olive-border:hover {
-  background-color: #6f7134;
-  color: #FFFFFF;
 }
 .btn.btn-lime {
   background-color: #D3F235;
@@ -6488,33 +6852,239 @@ Details: It defines the custom element styles as listed below:
 .btn.btn-lime:hover {
   background-color: #aecd0d;
 }
-.btn.btn-lime-border {
-  background-color: #FFFFFF;
-  color: #D3F235;
-  border: 1px solid #D3F235;
-}
-.btn.btn-lime-border:hover {
-  background-color: #aecd0d;
-  color: #FFFFFF;
-}
 .btn.btn-navy {
   background-color: #003653;
 }
 .btn.btn-navy:hover {
   background-color: #000407;
 }
-.btn.btn-navy-border {
-  background-color: #FFFFFF;
-  color: #003653;
-  border: 1px solid #003653;
-}
-.btn.btn-navy-border:hover {
-  background-color: #000407;
-  color: #FFFFFF;
-}
 .btn.btn-reverse:hover {
   background-color: #F2BB40 !important;
   color: #464646 !important;
+}
+
+.btn-border {
+  background: transparent !important;
+}
+.btn-border.btn-border-primary {
+  color: #F8F8F8 !important;
+  -webkit-box-shadow: inset 0 0 0 1px #F8F8F8;
+  -moz-box-shadow: inset 0 0 0 1px #F8F8F8;
+  box-shadow: inset 0 0 0 1px #F8F8F8;
+}
+.btn-border.btn-border-primary:hover {
+  color: #A5A5A5 !important;
+  background-color: #F8F8F8 !important;
+}
+.btn-border.btn-border-secondary {
+  color: #F8F8F8 !important;
+  -webkit-box-shadow: inset 0 0 0 1px #F8F8F8;
+  -moz-box-shadow: inset 0 0 0 1px #F8F8F8;
+  box-shadow: inset 0 0 0 1px #F8F8F8;
+}
+.btn-border.btn-border-secondary:hover {
+  color: #464646 !important;
+  background-color: #F8F8F8 !important;
+}
+.btn-border.btn-border-tertiary {
+  color: #F2BB40 !important;
+  -webkit-box-shadow: inset 0 0 0 1px #F2BB40;
+  -moz-box-shadow: inset 0 0 0 1px #F2BB40;
+  box-shadow: inset 0 0 0 1px #F2BB40;
+}
+.btn-border.btn-border-tertiary:hover {
+  color: #464646 !important;
+  background-color: #F2BB40 !important;
+}
+.btn-border.btn-border-link {
+  color: #E2A730 !important;
+  -webkit-box-shadow: inset 0 0 0 1px #E2A730;
+  -moz-box-shadow: inset 0 0 0 1px #E2A730;
+  box-shadow: inset 0 0 0 1px #E2A730;
+}
+.btn-border.btn-border-link:hover {
+  color: #464646 !important;
+  background-color: #E2A730 !important;
+}
+.btn-border.btn-border-white {
+  color: #000000 !important;
+  -webkit-box-shadow: inset 0 0 0 1px #000000;
+  -moz-box-shadow: inset 0 0 0 1px #000000;
+  box-shadow: inset 0 0 0 1px #000000;
+}
+.btn-border.btn-border-white:hover {
+  color: #FFFFFF !important;
+  background-color: #000000 !important;
+}
+.btn-border.btn-border-black {
+  color: #FFFFFF !important;
+  -webkit-box-shadow: inset 0 0 0 1px #FFFFFF;
+  -moz-box-shadow: inset 0 0 0 1px #FFFFFF;
+  box-shadow: inset 0 0 0 1px #FFFFFF;
+}
+.btn-border.btn-border-black:hover {
+  color: #FFFFFF !important;
+  background-color: #FFFFFF !important;
+}
+.btn-border.btn-border-blue {
+  color: #0074D9 !important;
+  -webkit-box-shadow: inset 0 0 0 1px #0074D9;
+  -moz-box-shadow: inset 0 0 0 1px #0074D9;
+  box-shadow: inset 0 0 0 1px #0074D9;
+}
+.btn-border.btn-border-blue:hover {
+  color: #FFFFFF !important;
+  background-color: #0074D9 !important;
+}
+.btn-border.btn-border-purple {
+  color: #8946C4 !important;
+  -webkit-box-shadow: inset 0 0 0 1px #8946C4;
+  -moz-box-shadow: inset 0 0 0 1px #8946C4;
+  box-shadow: inset 0 0 0 1px #8946C4;
+}
+.btn-border.btn-border-purple:hover {
+  color: #FFFFFF !important;
+  background-color: #8946C4 !important;
+}
+.btn-border.btn-border-orange {
+  color: #FF851B !important;
+  -webkit-box-shadow: inset 0 0 0 1px #FF851B;
+  -moz-box-shadow: inset 0 0 0 1px #FF851B;
+  box-shadow: inset 0 0 0 1px #FF851B;
+}
+.btn-border.btn-border-orange:hover {
+  color: #FFFFFF !important;
+  background-color: #FF851B !important;
+}
+.btn-border.btn-border-yellow {
+  color: #FFDC00 !important;
+  -webkit-box-shadow: inset 0 0 0 1px #FFDC00;
+  -moz-box-shadow: inset 0 0 0 1px #FFDC00;
+  box-shadow: inset 0 0 0 1px #FFDC00;
+}
+.btn-border.btn-border-yellow:hover {
+  color: #FFFFFF !important;
+  background-color: #FFDC00 !important;
+}
+.btn-border.btn-border-red {
+  color: #FF4136 !important;
+  -webkit-box-shadow: inset 0 0 0 1px #FF4136;
+  -moz-box-shadow: inset 0 0 0 1px #FF4136;
+  box-shadow: inset 0 0 0 1px #FF4136;
+}
+.btn-border.btn-border-red:hover {
+  color: #FFFFFF !important;
+  background-color: #FF4136 !important;
+}
+.btn-border.btn-border-pink {
+  color: #E4287C !important;
+  -webkit-box-shadow: inset 0 0 0 1px #E4287C;
+  -moz-box-shadow: inset 0 0 0 1px #E4287C;
+  box-shadow: inset 0 0 0 1px #E4287C;
+}
+.btn-border.btn-border-pink:hover {
+  color: #FFFFFF !important;
+  background-color: #E4287C !important;
+}
+.btn-border.btn-border-magenta {
+  color: #B200B2 !important;
+  -webkit-box-shadow: inset 0 0 0 1px #B200B2;
+  -moz-box-shadow: inset 0 0 0 1px #B200B2;
+  box-shadow: inset 0 0 0 1px #B200B2;
+}
+.btn-border.btn-border-magenta:hover {
+  color: #FFFFFF !important;
+  background-color: #B200B2 !important;
+}
+.btn-border.btn-border-aqua {
+  color: #8AE2E3 !important;
+  -webkit-box-shadow: inset 0 0 0 1px #8AE2E3;
+  -moz-box-shadow: inset 0 0 0 1px #8AE2E3;
+  box-shadow: inset 0 0 0 1px #8AE2E3;
+}
+.btn-border.btn-border-aqua:hover {
+  color: #FFFFFF !important;
+  background-color: #8AE2E3 !important;
+}
+.btn-border.btn-border-green {
+  color: #7CAA2D !important;
+  -webkit-box-shadow: inset 0 0 0 1px #7CAA2D;
+  -moz-box-shadow: inset 0 0 0 1px #7CAA2D;
+  box-shadow: inset 0 0 0 1px #7CAA2D;
+}
+.btn-border.btn-border-green:hover {
+  color: #FFFFFF !important;
+  background-color: #7CAA2D !important;
+}
+.btn-border.btn-border-brown {
+  color: #8B4513 !important;
+  -webkit-box-shadow: inset 0 0 0 1px #8B4513;
+  -moz-box-shadow: inset 0 0 0 1px #8B4513;
+  box-shadow: inset 0 0 0 1px #8B4513;
+}
+.btn-border.btn-border-brown:hover {
+  color: #FFFFFF !important;
+  background-color: #8B4513 !important;
+}
+.btn-border.btn-border-golden {
+  color: #E9C011 !important;
+  -webkit-box-shadow: inset 0 0 0 1px #E9C011;
+  -moz-box-shadow: inset 0 0 0 1px #E9C011;
+  box-shadow: inset 0 0 0 1px #E9C011;
+}
+.btn-border.btn-border-golden:hover {
+  color: #FFFFFF !important;
+  background-color: #E9C011 !important;
+}
+.btn-border.btn-border-silver {
+  color: #E7E8E7 !important;
+  -webkit-box-shadow: inset 0 0 0 1px #E7E8E7;
+  -moz-box-shadow: inset 0 0 0 1px #E7E8E7;
+  box-shadow: inset 0 0 0 1px #E7E8E7;
+}
+.btn-border.btn-border-silver:hover {
+  color: #FFFFFF !important;
+  background-color: #E7E8E7 !important;
+}
+.btn-border.btn-border-maroon {
+  color: #542628 !important;
+  -webkit-box-shadow: inset 0 0 0 1px #542628;
+  -moz-box-shadow: inset 0 0 0 1px #542628;
+  box-shadow: inset 0 0 0 1px #542628;
+}
+.btn-border.btn-border-maroon:hover {
+  color: #FFFFFF !important;
+  background-color: #542628 !important;
+}
+.btn-border.btn-border-olive {
+  color: #A3A54C !important;
+  -webkit-box-shadow: inset 0 0 0 1px #A3A54C;
+  -moz-box-shadow: inset 0 0 0 1px #A3A54C;
+  box-shadow: inset 0 0 0 1px #A3A54C;
+}
+.btn-border.btn-border-olive:hover {
+  color: #FFFFFF !important;
+  background-color: #A3A54C !important;
+}
+.btn-border.btn-border-lime {
+  color: #D3F235 !important;
+  -webkit-box-shadow: inset 0 0 0 1px #D3F235;
+  -moz-box-shadow: inset 0 0 0 1px #D3F235;
+  box-shadow: inset 0 0 0 1px #D3F235;
+}
+.btn-border.btn-border-lime:hover {
+  color: #FFFFFF !important;
+  background-color: #D3F235 !important;
+}
+.btn-border.btn-border-navy {
+  color: #003653 !important;
+  -webkit-box-shadow: inset 0 0 0 1px #003653;
+  -moz-box-shadow: inset 0 0 0 1px #003653;
+  box-shadow: inset 0 0 0 1px #003653;
+}
+.btn-border.btn-border-navy:hover {
+  color: #FFFFFF !important;
+  background-color: #003653 !important;
 }
 
 a.btn, .link.btn {
@@ -6617,10 +7187,10 @@ a:hover, .link:hover {
   color: #E2A730;
 }
 
-.cmt-click {
+.click {
   cursor: pointer;
 }
-.cmt-click.disabled {
+.click.disabled {
   cursor: default;
 }
 
@@ -6775,8 +7345,8 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
   box-shadow: inset 0 0 0 1px #F2BB40;
 }
 input[type="text"]:disabled, input[type="email"]:disabled, input[type="password"]:disabled, textarea:disabled, select:disabled, .form .cmt-select-wrap .cmt-selected:disabled {
-  background-color: #CCCCCC;
-  color: #909090;
+  background-color: #CCCCCC !important;
+  color: #909090 !important;
   -webkit-box-shadow: inset 0 0 0 1px #E6E7E8;
   -moz-box-shadow: inset 0 0 0 1px #E6E7E8;
   box-shadow: inset 0 0 0 1px #E6E7E8;
@@ -6798,10 +7368,10 @@ input[type="text"]:disabled, input[type="email"]:disabled, input[type="password"
   color: #E2A730;
 }
 .form .cmt-checkbox:disabled, .form .cmt-switch:disabled {
-  color: #909090;
+  color: #909090 !important;
 }
 
-.btn, .btn-icon, input[type="submit"], input[type="button"], button {
+.btn-icon, input[type="submit"], input[type="button"], button {
   -webkit-transition: all 420ms ease-in-out 0s;
   -moz-transition: all 420ms ease-in-out 0s;
   -ms-transition: all 420ms ease-in-out 0s;
@@ -6812,17 +7382,17 @@ input[type="text"]:disabled, input[type="email"]:disabled, input[type="password"
   text-align: center;
   cursor: pointer;
 }
-.btn:hover, .btn-icon:hover, input[type="submit"]:hover, input[type="button"]:hover, button:hover {
+.btn-icon:hover, input[type="submit"]:hover, input[type="button"]:hover, button:hover {
   background-color: #E2A730;
   color: #464646;
 }
-.btn:active, .btn-icon:active, input[type="submit"]:active, input[type="button"]:active, button:active {
+.btn-icon:active, input[type="submit"]:active, input[type="button"]:active, button:active {
   background-color: #F2BB40;
   color: #464646;
 }
-.btn:disabled, .btn-icon:disabled, input[type="submit"]:disabled, input[type="button"]:disabled, button:disabled {
-  background-color: #A5A5A5;
-  color: #FFFFFF;
+.btn-icon:disabled, input[type="submit"]:disabled, input[type="button"]:disabled, button:disabled {
+  background-color: #A5A5A5 !important;
+  color: #FFFFFF !important;
   cursor: default;
 }
 
@@ -6889,8 +7459,8 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 .frm-icon-element.frm-element-xlarge {
   width: 250px !important;
 }
-.frm-icon-element input[type="text"], .frm-icon-element input[type="email"], .frm-icon-element input[type="password"], .frm-icon-element textarea, .frm-icon-element select, .frm-icon-element input[type="submit"], .frm-icon-element input[type="button"], .frm-icon-element button,
-.frm-icon-element .btn {
+.frm-icon-element input[type="text"], .frm-icon-element input[type="email"], .frm-icon-element input[type="password"], .frm-icon-element textarea, .frm-icon-element select,
+.frm-icon-element input[type="submit"], .frm-icon-element input[type="button"], .frm-icon-element button, .frm-icon-element .btn {
   padding-left: 2.1em;
   width: 100% !important;
 }
@@ -6904,8 +7474,8 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
   margin: 0;
   line-height: 1.4;
 }
-.frm-icon-element.icon-right input[type="text"], .frm-icon-element.icon-right input[type="email"], .frm-icon-element.icon-right input[type="password"], .frm-icon-element.icon-right textarea, .frm-icon-element.icon-right select, .frm-icon-element.icon-right input[type="submit"], .frm-icon-element.icon-right input[type="button"], .frm-icon-element.icon-right button,
-.frm-icon-element.icon-right .btn {
+.frm-icon-element.icon-right input[type="text"], .frm-icon-element.icon-right input[type="email"], .frm-icon-element.icon-right input[type="password"], .frm-icon-element.icon-right textarea, .frm-icon-element.icon-right select,
+.frm-icon-element.icon-right input[type="submit"], .frm-icon-element.icon-right input[type="button"], .frm-icon-element.icon-right button, .frm-icon-element.icon-right .btn {
   padding-left: 0.30em;
   padding-right: 2.1em;
 }
@@ -7462,6 +8032,12 @@ Details: It defines the menu components as listed below:
   display: inline-block;
   width: 100%;
   text-align: center;
+}
+.vnav.vnav-left li a, .vnav.vnav-left li .link {
+  text-align: left;
+}
+.vnav.vnav-right li a, .vnav.vnav-right li .link {
+  text-align: right;
 }
 
 .nav-table {
@@ -8387,6 +8963,12 @@ Details: It defines the styles of card components as listed below:
 .card .card-content-wrap .card-header {
   position: relative;
 }
+.card .card-content-wrap .card-header .card-bkg {
+  z-index: 1;
+}
+.card .card-content-wrap .card-header > .texture {
+  z-index: 10;
+}
 .card .card-content-wrap .card-data {
   position: relative;
 }
@@ -8469,7 +9051,7 @@ Details: It defines the styles of card components as listed below:
 .card-basic .card-content-wrap .card-footer .card-footer-info {
   font-size: 1.08em;
 }
-.card-basic .card-content-wrap .card-footer .card-footer-icon + .card-header-title, .card-basic .card-content-wrap .card-footer .card-footer-icon + .card-header-info, .card-basic .card-content-wrap .card-footer .card-footer-icon + .card-header-content {
+.card-basic .card-content-wrap .card-footer .card-footer-icon + .card-footer-title, .card-basic .card-content-wrap .card-footer .card-footer-icon + .card-footer-info, .card-basic .card-content-wrap .card-footer .card-footer-icon + .card-footer-content {
   margin-top: 0.5rem;
 }
 .card-basic .card-content-wrap .card-footer .card-footer-title + .card-footer-info, .card-basic .card-content-wrap .card-footer .card-footer-title + .card-footer-content {
@@ -8773,6 +9355,12 @@ Details: It defines the styles of box components as listed below:
   position: relative;
   z-index: 20;
 }
+.box .box-content-wrap .box-header-wrap .box-header .box-bkg {
+  z-index: 1;
+}
+.box .box-content-wrap .box-header-wrap .box-header > .texture {
+  z-index: 10;
+}
 .box .box-content-wrap .box-data {
   position: relative;
 }
@@ -8843,10 +9431,13 @@ Details: It defines the styles of box components as listed below:
 .box-basic .box-content-wrap .box-content .box-content-summary {
   font-size: 1.08em;
 }
-.box-basic .box-content-wrap .box-content .box-content-title + .box-content-info, .box-basic .box-content-wrap .box-content .box-content-title + .box-content-data {
+.box-basic .box-content-wrap .box-content .box-content-title + .box-content-info, .box-basic .box-content-wrap .box-content .box-content-title + .box-content-summary, .box-basic .box-content-wrap .box-content .box-content-title + .box-content-data {
   margin-top: 0.5rem;
 }
-.box-basic .box-content-wrap .box-content .box-content-info + .box-content-data {
+.box-basic .box-content-wrap .box-content .box-content-info + .box-content-summary, .box-basic .box-content-wrap .box-content .box-content-info + .box-content-data {
+  margin-top: 0.5rem;
+}
+.box-basic .box-content-wrap .box-content .box-content-summary + .box-content-data {
   margin-top: 0.5rem;
 }
 .box-basic .box-content-wrap .box-content .box-content-data {
@@ -9084,7 +9675,7 @@ Basic - The basic widget defines the styles of widget having text and background
 .widget-basic .widget-content-wrap .widget-footer .widget-footer-info {
   font-size: 1.08em;
 }
-.widget-basic .widget-content-wrap .widget-footer .widget-footer-icon + .widget-header-title, .widget-basic .widget-content-wrap .widget-footer .widget-footer-icon + .widget-header-info, .widget-basic .widget-content-wrap .widget-footer .widget-footer-icon + .widget-header-content {
+.widget-basic .widget-content-wrap .widget-footer .widget-footer-icon + .widget-footer-title, .widget-basic .widget-content-wrap .widget-footer .widget-footer-icon + .widget-footer-info, .widget-basic .widget-content-wrap .widget-footer .widget-footer-icon + .widget-footer-content {
   margin-top: 0.5rem;
 }
 .widget-basic .widget-content-wrap .widget-footer .widget-footer-title + .widget-footer-info, .widget-basic .widget-content-wrap .widget-footer .widget-footer-title + .widget-footer-content {
@@ -9190,6 +9781,21 @@ Details: It defines the styles for header components as listed below:
   position: relative;
   z-index: 20;
 }
+.block .block-content-wrap .block-header-wrap .block-header .block-bkg {
+  z-index: 1;
+}
+.block .block-content-wrap .block-header-wrap .block-header .block-bkg-fixed {
+  z-index: 1;
+}
+.block .block-content-wrap .block-header-wrap .block-header .block-bkg-scroll {
+  z-index: 1;
+}
+.block .block-content-wrap .block-header-wrap .block-header .block-bkg-parallax {
+  z-index: 5;
+}
+.block .block-content-wrap .block-header-wrap .block-header > .texture {
+  z-index: 10;
+}
 .block .block-content-wrap .block-content {
   position: relative;
 }
@@ -9271,10 +9877,13 @@ Details: It defines the styles for header components as listed below:
 .block-basic .block-content-wrap .block-content .block-content-summary {
   font-size: 1.08em;
 }
-.block-basic .block-content-wrap .block-content .block-content-title + .block-content-info, .block-basic .block-content-wrap .block-content .block-content-title + .block-content-data {
+.block-basic .block-content-wrap .block-content .block-content-title + .block-content-info, .block-basic .block-content-wrap .block-content .block-content-title + .block-content-summary, .block-basic .block-content-wrap .block-content .block-content-title + .block-content-data {
   margin-top: 0.5rem;
 }
-.block-basic .block-content-wrap .block-content .block-content-info + .block-content-data {
+.block-basic .block-content-wrap .block-content .block-content-info + .block-content-summary, .block-basic .block-content-wrap .block-content .block-content-info + .block-content-data {
+  margin-top: 0.5rem;
+}
+.block-basic .block-content-wrap .block-content .block-content-summary + .block-content-data {
   margin-top: 0.5rem;
 }
 .block-basic .block-content-wrap .block-content .block-content-data {
@@ -9293,7 +9902,7 @@ Details: It defines the styles for header components as listed below:
 .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-content {
   font-size: 1.08em;
 }
-.block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-icon + .block-header-title, .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-icon + .block-header-info, .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-icon + .block-header-content {
+.block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-icon + .block-footer-title, .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-icon + .block-footer-info, .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-icon + .block-footer-content {
   margin-top: 0.5rem;
 }
 .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-title + .block-footer-info, .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-title + .block-footer-content {
@@ -9407,6 +10016,7 @@ Full - Full pagination having both info and pagination links.
   list-style: none;
 }
 .pagination li span, .pagination li a, .pagination .page-link span, .pagination .page-link a {
+  display: inline-block;
   text-decoration: none;
 }
 
@@ -9643,16 +10253,19 @@ page background and even content wrapper background in the form of image or text
   padding: 1rem 0;
   font-size: 1.08em;
 }
-.page-basic .page-content-wrap .page-content .page-content-banner + .page-content-title, .page-basic .page-content-wrap .page-content .page-content-banner + .page-content-info, .page-basic .page-content-wrap .page-content .page-content-banner + .page-content-data {
+.page-basic .page-content-wrap .page-content .page-content-banner + .page-content-title, .page-basic .page-content-wrap .page-content .page-content-banner + .page-content-info, .page-basic .page-content-wrap .page-content .page-content-banner + .page-content-summary, .page-basic .page-content-wrap .page-content .page-content-banner + .page-content-data {
   margin-top: 0.5rem;
 }
-.page-basic .page-content-wrap .page-content .page-content-video + .page-content-title, .page-basic .page-content-wrap .page-content .page-content-video + .page-content-info, .page-basic .page-content-wrap .page-content .page-content-video + .page-content-data {
+.page-basic .page-content-wrap .page-content .page-content-video + .page-content-title, .page-basic .page-content-wrap .page-content .page-content-video + .page-content-info, .page-basic .page-content-wrap .page-content .page-content-video + .page-content-summary, .page-basic .page-content-wrap .page-content .page-content-video + .page-content-data {
   margin-top: 0.5rem;
 }
-.page-basic .page-content-wrap .page-content .page-content-title + .page-content-info, .page-basic .page-content-wrap .page-content .page-content-title + .page-content-data {
+.page-basic .page-content-wrap .page-content .page-content-title + .page-content-info, .page-basic .page-content-wrap .page-content .page-content-title + .page-content-summary, .page-basic .page-content-wrap .page-content .page-content-title + .page-content-data {
   margin-top: 0.5rem;
 }
-.page-basic .page-content-wrap .page-content .page-content-info + .page-content-data {
+.page-basic .page-content-wrap .page-content .page-content-info + .page-content-summary, .page-basic .page-content-wrap .page-content .page-content-info + .page-content-data {
+  margin-top: 0.5rem;
+}
+.page-basic .page-content-wrap .page-content .page-content-summary + .page-content-data {
   margin-top: 0.5rem;
 }
 .page-basic .page-content-wrap .page-content .page-content-data {
@@ -9766,21 +10379,10 @@ Details: It defines the styles of default layout of page component as listed bel
 .page-default .page-content-wrap .page-content .page-content-data {
   text-align: justify;
 }
-.page-default .page-content-wrap .page-sidebar-wrap.page-sidebar-wrap-left {
-  padding-top: 2em;
-}
-.page-default .page-content-wrap .page-sidebar-wrap.page-sidebar-wrap-right {
-  padding-top: 2em;
-}
-.page-default .page-content-wrap .colf-sidebar-filler {
-  padding-right: 1.5em;
-}
-@media only screen and (max-width: 1024px) {
-  .page-default .page-content-wrap .colf-sidebar-filler {
-    padding-right: 0;
-  }
-}
 
+.page-default .page-content-wrap .page-content-row {
+  padding: 0 10%;
+}
 .page-default .page-content-wrap .page-content-social .widget-social-share {
   display: inline-block;
   float: right;
@@ -9813,6 +10415,23 @@ Details: It defines the styles of default layout of page component as listed bel
 .page-default .page-content-wrap .page-avatar-wrap img {
   width: 100%;
   height: auto;
+}
+.page-default .page-content-wrap .page-sidebar-wrap.page-sidebar-wrap-left {
+  padding-top: 2em;
+}
+.page-default .page-content-wrap .page-sidebar-wrap.page-sidebar-wrap-right {
+  padding-top: 2em;
+}
+.page-default .page-content-wrap .colf-sidebar-filler {
+  padding-right: 1.5em;
+}
+@media only screen and (max-width: 1024px) {
+  .page-default .page-content-wrap .page-content-row {
+    padding: 0 5%;
+  }
+  .page-default .page-content-wrap .colf-sidebar-filler {
+    padding-right: 0;
+  }
 }
 
 .page-default.page-system .page-content-wrap .page-content .page-content-form {

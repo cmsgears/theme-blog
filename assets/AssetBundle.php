@@ -81,8 +81,8 @@ class AssetBundle extends \yii\web\AssetBundle {
 		//'cmsgears\assets\components\ProgressBar',
 		//'cmsgears\assets\effects\Animate',
 		'cmsgears\icons\assets\IconAssets',
-		'themes\century\assets\vapps\BaseAssets',
-		'themes\century\assets\vapps\FormAssets'
+		'themes\blog\assets\vapps\BaseAssets',
+		'themes\blog\assets\vapps\FormAssets'
     ];
 
     // Protected --------------
