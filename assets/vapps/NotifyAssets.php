@@ -10,7 +10,6 @@
 namespace themes\blog\assets\vapps;
 
 // Yii Imports
-use yii\web\AssetBundle;
 use yii\web\View;
 
 /**
@@ -18,7 +17,7 @@ use yii\web\View;
  *
  * @since 1.0.0
  */
-class NotifyAssets extends AssetBundle {
+class NotifyAssets extends \yii\web\AssetBundle {
 
 	// Variables ---------------------------------------------------
 
@@ -40,7 +39,7 @@ class NotifyAssets extends AssetBundle {
 	// Load JS
 	public $js = [
 		'apps/notify/base.js',
-		'apps/notify/notification.js',
+		'apps/notify/controllers/notification.js'
 	];
 
 	// JS Position

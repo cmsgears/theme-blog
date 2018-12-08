@@ -30,7 +30,7 @@ function initPreloaders() {
 function initCmgTools() {
 
 	// Blocks
-	jQuery( '.block' ).cmtBlock({
+	jQuery( '.cmt-block' ).cmtBlock({
 		// Generic
 		halfHeight: true,
 		heightAuto: true,
@@ -50,18 +50,18 @@ function initCmgTools() {
 	});
 
 	// Perspective Header
-	jQuery( '#header-main' ).cmtHeader( { scrollDistance: 280 } );
+	jQuery( '#cmt-header-main' ).cmtHeader( { scrollDistance: 280 } );
 
 	// Smooth Scroll
-	jQuery( '.smooth-scroll' ).cmtSmoothScroll();
+	jQuery( '.cmt-smooth-scroll' ).cmtSmoothScroll();
 
 	// Box Forms
-	jQuery( '.box-form' ).cmtFormInfo();
+	jQuery( '.cmt-box-form' ).cmtFormInfo();
 
 	// Ratings
 	jQuery( '.cmt-rating' ).cmtRate();
 
-	jQuery( '.rating-emoticons' ).cmtRate({
+	jQuery( '.cmt-rating-emoticons' ).cmtRate({
 		same: [ 'cmti cmti-2x cmti-emoticons-sad', 'cmti cmti-2x cmti-emoticons-sulk', 'cmti cmti-2x cmti-emoticons-intense', 'cmti cmti-2x cmti-emoticons-hopeful', 'cmti cmti-2x cmti-emoticons-happy' ],
 		emptyColor: '#7F7F7F'
 	});
@@ -78,25 +78,25 @@ function initCmgTools() {
 	jQuery( '.cmt-field-group' ).cmtFieldGroup();
 
 	// File Uploader
-	jQuery( '.file-uploader' ).cmtFileUploader();
+	jQuery( '.cmt-file-uploader' ).cmtFileUploader();
 
 	// Popups
-	jQuery( '.popup' ).cmtPopup();
+	jQuery( '.cmt-popup' ).cmtPopup();
 
 	// Popouts
-	jQuery( '.popout-group' ).cmtPopoutGroup();
+	jQuery( '.cmt-popout-group' ).cmtPopoutGroup();
 
 	// Auto Fillers
-	jQuery( '.auto-fill' ).cmtAutoFill();
+	jQuery( '.cmt-auto-fill' ).cmtAutoFill();
 
 	// Tabs
-	jQuery( '.tabs' ).cmtTabs();
+	jQuery( '.cmt-tabs' ).cmtTabs();
 
 	// Accordians
-	jQuery( '.accordian' ).cmtAccordian();
+	jQuery( '.cmt-accordian' ).cmtAccordian();
 
 	// Grid
-	jQuery( '.grid-data' ).cmtGrid();
+	jQuery( '.cmt-grid-data' ).cmtGrid();
 
 	// Actions
 	jQuery( '.cmt-actions' ).cmtActions();
@@ -105,10 +105,10 @@ function initCmgTools() {
 	jQuery( '.cmt-auto-hide' ).cmtAutoHide();
 
 	// Icon Picker
-	jQuery( '.icon-picker' ).cmtIconPicker();
+	jQuery( '.cmt-icon-picker, .cmt-texture-picker' ).cmtIconPicker();
 
 	// Time Picker
-	jQuery( '.timepicker' ).cmtTimePicker();
+	jQuery( '.cmt-timepicker' ).cmtTimePicker();
 
 	jQuery( '.cmt-slider' ).cmtSlider({
 		lControlContent: "<i class=\"fa fa-angle-left valign-center\"></i>",

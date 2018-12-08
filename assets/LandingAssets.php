@@ -49,6 +49,9 @@ class LandingAssets extends AssetBundle {
 
 		parent::init();
 
+		$this->js[] = 'scripts/main.js';
+		$this->js[] = 'scripts/search.js';
+
 		$this->depends[] = 'foxslider\widgets\assets\FxsAssets';
 	}
 

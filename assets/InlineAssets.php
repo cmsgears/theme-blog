@@ -11,7 +11,6 @@ namespace themes\blog\assets;
 
 // Yii Imports
 use yii\helpers\Url;
-use yii\web\AssetBundle;
 use yii\web\View;
 
 /**
@@ -19,7 +18,7 @@ use yii\web\View;
  *
  * @since 1.0.0
  */
-class InlineAssets extends AssetBundle {
+class InlineAssets extends \yii\web\AssetBundle {
 
 	// Variables ---------------------------------------------------
 

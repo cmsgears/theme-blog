@@ -13,11 +13,11 @@ namespace themes\blog\assets\vapps;
 use yii\web\View;
 
 /**
- * CoreAssets registers the Velocity Apps of Core Module.
+ * FormAssets registers the Velocity Apps of Form Module.
  *
  * @since 1.0.0
  */
-class CoreAssets extends \yii\web\AssetBundle {
+class FormAssets extends \yii\web\AssetBundle {
 
 	// Variables ---------------------------------------------------
 
@@ -38,23 +38,8 @@ class CoreAssets extends \yii\web\AssetBundle {
 
 	// Load JS
 	public $js = [
-		'apps/core/data.js',
-		'apps/core/social.js',
-		'apps/core/gallery.js',
-		'apps/core/mapper.js',
-		'apps/core/services/address.js',
-		'apps/core/services/location.js',
-		'apps/core/services/file.js',
-		'apps/core/services/meta.js',
-		'apps/core/services/model.js',
-		'apps/core/services/user.js',
-		'apps/core/controllers/main.js',
-		'apps/core/controllers/address.js',
-		'apps/core/controllers/location.js',
-		'apps/core/controllers/file.js',
-		'apps/core/controllers/meta.js',
-		'apps/core/controllers/model.js',
-		'apps/core/controllers/user.js'
+		'apps/forms/base.js',
+		'apps/forms/controllers/form.js'
 	];
 
 	// JS Position
@@ -80,6 +65,6 @@ class CoreAssets extends \yii\web\AssetBundle {
 
 	// CMG parent classes --------------------
 
-	// CoreAssets ----------------------------
+	// FormAssets ----------------------------
 
 }
