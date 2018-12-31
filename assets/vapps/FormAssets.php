@@ -1,15 +1,16 @@
 <?php
 /**
- * This file is part of CMSGears Framework. Please view License file distributed
+ * This file is part of project EmpathyConnects. Please view License file distributed
  * with the source code for license details.
  *
- * @link https://www.cmsgears.org/
- * @copyright Copyright (c) 2015 VulpineCode Technologies Pvt. Ltd.
+ * @link https://www.empathyconnects.org/
+ * @copyright Copyright (c) 2018 Tathastu Social Initiatives
  */
 
 namespace themes\blog\assets\vapps;
 
 // Yii Imports
+use yii\web\AssetBundle;
 use yii\web\View;
 
 /**
@@ -17,7 +18,7 @@ use yii\web\View;
  *
  * @since 1.0.0
  */
-class FormAssets extends \yii\web\AssetBundle {
+class FormAssets extends AssetBundle {
 
 	// Variables ---------------------------------------------------
 

@@ -50,7 +50,7 @@ function initCmgTools() {
 	});
 
 	// Perspective Header
-	jQuery( '#cmt-header-main' ).cmtHeader( { scrollDistance: 280 } );
+	jQuery( '.cmt-header-main' ).cmtHeader( { scrollDistance: 280 } );
 
 	// Smooth Scroll
 	jQuery( '.cmt-smooth-scroll' ).cmtSmoothScroll();

@@ -1,17 +1,7 @@
 // Post Cards
-.widget-card-post {
-	background-color: $color-primary-l;
-	color: $color-primary-text-l;
+.card-model-wrap {
 
-	.card-page-wrap-title {
-		background-color: $color-secondary-d;
-		color: $color-secondary-text-d;
-		font: $font-heading;
-		font-size: $font-size-3;
-		padding: 1rem;
-	}
-
-	.card-page {
+	.card-model {
 		padding: 1rem;
 
 		.card-content-wrap {
@@ -24,14 +14,6 @@
 					font: $font-heading;
 					font-size: $font-size-4;
 					margin-bottom: 1rem;
-
-					a {
-						color: $color-primary-text;
-
-						&:hover {
-							color: $color-link;
-						}
-					}
 				}
 			}
 

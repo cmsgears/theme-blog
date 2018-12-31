@@ -1,5 +1,5 @@
 <?php
-$siteProperties = $this->context->getSiteProperties();
+$siteProperties	= $this->context->getSiteProperties();
 
 $model = Yii::$app->factory->get( 'pageService' )->getBySlugType( 'testimonial', 'page' );
 
@@ -7,21 +7,21 @@ $modelContent = $model->modelContent;
 
 // Config -------------------------
 
-$data			= json_decode( $model->data );
-$settings		= isset( $data->settings ) ? $data->settings : [];
-$templateClass	= isset( $modelContent->template ) ? "page-default page-{$modelContent->template->slug}" : 'page-default';
+$data		= json_decode( $model->data );
+$settings	= isset( $data->settings ) ? $data->settings : [];
 
 // Sidebars -----------------------
 
-$topSidebar		= !empty( $settings->topSidebar ) ? $settings->topSidebar : false;
-$bottomSidebar	= !empty( $settings->bottomSidebar ) ? $settings->bottomSidebar : false;
-$leftSidebar	= !empty( $settings->leftSidebar ) ? $settings->leftSidebar : false;
-$rightSidebar	= !empty( $settings->rightSidebar ) ? $settings->rightSidebar : false;
-$footerSidebar	= !empty( $settings->footerSidebar ) ? $settings->footerSidebar : false;
+$topSidebar		= isset( $settings->topSidebar ) ? $settings->topSidebar : false;
+$bottomSidebar	= isset( $settings->bottomSidebar ) ? $settings->bottomSidebar : false;
+$leftSidebar	= isset( $settings->leftSidebar ) ? $settings->leftSidebar : false;
+$rightSidebar	= isset( $settings->rightSidebar ) ? $settings->rightSidebar : false;
+$footerSidebar	= isset( $settings->footerSidebar ) ? $settings->footerSidebar : false;
 
-$defaultIncludes = Yii::getAlias( '@breeze' ) . '/templates/page/default/includes';
+$defaultIncludes	= Yii::getAlias( '@breeze' ) . '/templates/cms/page/default/includes';
+$templateIncludes	= Yii::getAlias( '@themes' ) . '/t24x7/modules/cmsgears/module-core/frontend/views/site/includes/testimonial';
 
-$buffer			= __DIR__ . '/includes/testimonial/buffer.php';
+$buffer			= "$templateIncludes/buffer.php";
 $preObjects		= "$defaultIncludes/objects-pre.php";
 $innerObjects	= "$defaultIncludes/objects-inner.php";
 $outerObjects	= "$defaultIncludes/objects-outer.php";
@@ -37,7 +37,7 @@ $outerObjects	= "$defaultIncludes/objects-outer.php";
 			<?php include "$defaultIncludes/sidebars/top.php"; ?>
 		<?php } ?>
 		<?php if( $leftSidebar || $rightSidebar ) { ?>
-			<div class="page-content-row row content-90 max-cols-100">
+			<div class="page-content-row row max-cols-100">
 				<?php if( $leftSidebar ) { ?>
 					<div class="colf colf12x3 colf-sidebar-filler">
 						<?php include "$defaultIncludes/sidebars/left.php"; ?>
@@ -53,7 +53,7 @@ $outerObjects	= "$defaultIncludes/objects-outer.php";
 				<?php } ?>
 			</div>
 		<?php } else { ?>
-			<div class="page-content-row row content-90">
+			<div class="page-content-row row">
 				<?php include "$defaultIncludes/content.php"; ?>
 			</div>
 		<?php } ?>
@@ -63,3 +63,4 @@ $outerObjects	= "$defaultIncludes/objects-outer.php";
 		<?php } ?>
 	</div>
 </div>
+<?php include "$defaultIncludes/scripts.php"; ?>

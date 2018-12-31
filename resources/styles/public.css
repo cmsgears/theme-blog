@@ -52,25 +52,19 @@ Social network		-	This section define the standard colors used by social network
 						snapchat, twitter, tumblr, vimeo, vine, vk, whatsapp, youtube.
 ***********************************************************************/
 @font-face {
-  font-family: 'Poppins Light';
+  font-family: 'Poppins-L';
   src: url("../fonts/poppins/Poppins-Light.eot");
-  src: url("../fonts/poppins/Poppins-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/poppins/Poppins-Light.woff") format("woff"), url("../fonts/poppins/Poppins-Light.ttf") format("truetype"), url("../fonts/poppins/Poppins-Light.svg#poppinsl") format("svg");
-  font-weight: normal;
-  font-style: normal;
+  src: url("../fonts/poppins/Poppins-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/poppins/Poppins-Light.woff") format("woff"), url("../fonts/poppins/Poppins-Light.ttf") format("truetype"), url("../fonts/poppins/Poppins-Light.svg#Poppins-Regular") format("svg");
 }
 @font-face {
-  font-family: 'Poppins Regular';
+  font-family: 'Poppins-R';
   src: url("../fonts/poppins/Poppins-Regular.eot");
-  src: url("../fonts/poppins/Poppins-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/poppins/Poppins-Regular.woff") format("woff"), url("../fonts/poppins/Poppins-Regular.ttf") format("truetype"), url("../fonts/poppins/Poppins-Regular.svg#poppinsr") format("svg");
-  font-weight: normal;
-  font-style: normal;
+  src: url("../fonts/poppins/Poppins-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/poppins/Poppins-Regular.woff") format("woff"), url("../fonts/poppins/Poppins-Regular.ttf") format("truetype"), url("../fonts/poppins/Poppins-Regular.svg#Poppins-Regular") format("svg");
 }
 @font-face {
-  font-family: 'Poppins Medium';
+  font-family: 'Poppins-M';
   src: url("../fonts/poppins/Poppins-Medium.eot");
-  src: url("../fonts/poppins/Poppins-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/poppins/Poppins-Medium.woff") format("woff"), url("../fonts/poppins/Poppins-Medium.ttf") format("truetype"), url("../fonts/poppins/Poppins-Medium.svg#poppinsm") format("svg");
-  font-weight: normal;
-  font-style: normal;
+  src: url("../fonts/poppins/Poppins-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/poppins/Poppins-Medium.woff") format("woff"), url("../fonts/poppins/Poppins-Medium.ttf") format("truetype"), url("../fonts/poppins/Poppins-Medium.svg#Poppins-Regular") format("svg");
 }
 /**********************************************************************
 Description	:	This file define the extended variables used by CMT-UI css framework. These are derived 
@@ -1586,6 +1580,12 @@ Notes:
   background-size: cover;
 }
 
+.bkg-element-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
 .bkg-element {
   display: block;
   position: relative;
@@ -2351,12 +2351,6 @@ textarea {
 pre {
   white-space: pre;
   /* CSS2 */
-  white-space: pre-wrap;
-  /* CSS 2.1 */
-  white-space: pre-line;
-  /* CSS 2.1 and 3 */
-  word-wrap: break-word;
-  /* IE */
 }
 
 td img {
@@ -2750,16 +2744,16 @@ html, body {
   height: 75%;
 }
 .height.height-default {
-  width: 64px;
+  height: 64px;
 }
 .height.height-small {
-  width: 128px;
+  height: 128px;
 }
 .height.height-medium {
-  width: 256px;
+  height: 256px;
 }
 .height.height-large {
-  width: 512px;
+  height: 512px;
 }
 
 /**
@@ -3115,7 +3109,7 @@ Details: It defines the text and background colors as listed below:
    * 1. primary: #F8F8F8
    * 2. primary text: #A5A5A5
    * 3. primary light: #FFFFFF
-   * 4. primary text light: #A5A5A5
+   * 4. primary text light: #464646
    * 5. primary dark: #F2F2F2
    * 6. primary text dark: #A5A5A5
    * 7. secondary: #F8F8F8
@@ -3138,7 +3132,7 @@ Details: It defines the text and background colors as listed below:
 }
 .color.color-primary-l {
   background-color: #FFFFFF !important;
-  color: #A5A5A5 !important;
+  color: #464646 !important;
 }
 .color.color-primary-d {
   background-color: #F2F2F2 !important;
@@ -3439,7 +3433,7 @@ Details: It defines the text and background colors as listed below:
   color: #A5A5A5 !important;
 }
 .text.text-primary-l {
-  color: #A5A5A5 !important;
+  color: #464646 !important;
 }
 .text.text-primary-d {
   color: #A5A5A5 !important;
@@ -3928,7 +3922,7 @@ Details: It defines the typography specific styles as listed below:
 * Text with line    - This class can be used to decorate text having background line at center.
 ***********************************************************************/
 html, body {
-  font-family: Poppins Light, Sans-Serif, Arial;
+  font-family: Poppins-L, Sans-Serif, Arial;
 }
 
 html, body {
@@ -3954,10 +3948,10 @@ html, body {
  * Standard Font Size - The font size for headers h1 to h6, default and small.
  */
 .text.text-default {
-  font-family: Poppins Light, Sans-Serif, Arial !important;
+  font-family: Poppins-L, Sans-Serif, Arial !important;
 }
 .text.text-heading {
-  font-family: Poppins Medium, Sans-Serif, Arial !important;
+  font-family: Poppins-M, Sans-Serif, Arial !important;
 }
 .text.text-code {
   font-family: "Courier New", Courier, monospace !important;
@@ -4054,7 +4048,7 @@ h6, .h6 {
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading {
   vertical-align: middle;
   line-height: 1.2;
-  font-family: Poppins Medium, Sans-Serif, Arial;
+  font-family: Poppins-M, Sans-Serif, Arial;
 }
 
 p, span, em, div, a {
@@ -4096,6 +4090,17 @@ p, span, em, div, a {
 .reader ul ul, .reader ul ol {
   margin-left: 2em;
 }
+.reader p {
+  min-height: 1em;
+}
+.reader .wrap-editor-image {
+  margin: 1em 0;
+  text-align: center;
+}
+.reader .wrap-editor-image .image-caption {
+  text-align: center;
+  margin-top: 0.5em;
+}
 
 .cmti, .fa {
   vertical-align: middle;
@@ -4105,6 +4110,8 @@ code, pre {
   font-family: "Courier New", Courier, monospace;
   background-color: #363636;
   color: #FFFFFF;
+  overflow-x: auto;
+  padding: 1em;
 }
 
 .normal {
@@ -4273,7 +4280,7 @@ html, body {
 }
 
 .text.text-default-r {
-  font-family: Poppins Regular, Sans-Serif, Arial !important;
+  font-family: Poppins-R, Sans-Serif, Arial !important;
 }
 
 /**********************************************************************
@@ -6310,7 +6317,7 @@ dependent on browsers. It depends on cmtSelect jQuery plugin available in Veloci
 .cmt-select-wrap .cmt-select .cmt-selected {
   cursor: pointer;
   position: relative;
-  z-index: 100000;
+  z-index: 99999;
   width: 100%;
   padding: 0.30em;
   background-color: rgba(255, 255, 255, 0.2);
@@ -6467,7 +6474,7 @@ by showing good looking icons instead of browser dependentent graphics. These ar
 of JS and purely css solutions.
 ***********************************************************************/
 .cmt-choice span, .cmt-choice a {
-  vertical-align: top;
+  vertical-align: middle;
 }
 .cmt-choice input[type=checkbox],
 .cmt-choice input[type=radio] {
@@ -7742,7 +7749,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea, selec
   -khtml-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  font-family: Poppins Light, Sans-Serif, Arial !important;
+  font-family: Poppins-L, Sans-Serif, Arial !important;
 }
 input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:focus {
   -webkit-box-shadow: inset 0 0 0 1px #F2BB40;
@@ -7755,7 +7762,7 @@ input[type="submit"], input[type="button"], button, .btn, .btn-icon {
   -khtml-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  font-family: Poppins Medium, Sans-Serif, Arial !important;
+  font-family: Poppins-M, Sans-Serif, Arial !important;
 }
 
 .frm-icon-element input[type="text"], .frm-icon-element input[type="email"], .frm-icon-element input[type="password"], .frm-icon-element textarea, .frm-icon-element select, .frm-icon-element input[type="submit"], .frm-icon-element input[type="button"], .frm-icon-element button, .frm-icon-element .btn {
@@ -7914,7 +7921,7 @@ Border Accordian - It's extension of Basic Accordian with default borders.
 .accordian-basic .accordian-tab .accordian-trigger {
   background-color: #F2BB40;
   color: #464646;
-  font-family: Poppins Medium, Sans-Serif, Arial;
+  font-family: Poppins-M, Sans-Serif, Arial;
   font-size: 1.08em;
   padding: 1em;
   cursor: pointer;
@@ -8632,7 +8639,7 @@ Details: It defines the styles for header components as listed below:
   }
   .header-basic #menu-main-mobile li a, .header-basic #menu-main-mobile li .link {
     background-color: #FFFFFF;
-    color: #A5A5A5;
+    color: #464646;
     padding: 1em 0;
     -webkit-transition: all 250ms ease-in-out 0s;
     -moz-transition: all 250ms ease-in-out 0s;
@@ -8657,7 +8664,7 @@ Details: It defines the styles for header components as listed below:
     float: right;
   }
   .header-basic #mobile-actions .mobile-action {
-    color: #A5A5A5;
+    color: #464646;
     cursor: pointer;
     margin-left: 0.5em;
     font-size: 2em;
@@ -8914,7 +8921,7 @@ Usage: Sidebars can be used to manage page widgets on sidebars.
 ***********************************************************************/
 .sidebar-vertical .widget {
   background-color: #FFFFFF;
-  color: #A5A5A5;
+  color: #464646;
   margin-bottom: 2em;
 }
 .sidebar-vertical .widget .widget-content-wrap .widget-content {
@@ -8922,6 +8929,417 @@ Usage: Sidebars can be used to manage page widgets on sidebars.
 }
 .sidebar-vertical .widget .widget-content-wrap .widget-content .widget-content-data {
   padding: 0;
+}
+
+/**********************************************************************
+Description: It defines the styles of cmt slider available in CMT-UI css framework. It requires cmtSlider plugin from CMT-JS library.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of cmt slider as listed below:
+
+* CMT Slider  - The barebone slider with minimum styles to arrange slides and controls.
+*
+* Basic       - The basic slider defines the styles of slider having fixed with slides and slider width is also defined.
+*
+* Basic Fixed - The basic fixed slider works on top of basic slider. It's full width and responsive slider considering
+				slides are visible fully on each device. The controls will be placed on left and right side without
+				overlapping slides.
+
+* Basic Lightbox - The lightbox will add effects on slides to show them on a lightbox. A larger image might be displayed
+				around the slides.
+
+***********************************************************************/
+.slider {
+  position: relative;
+}
+.slider .slider-slides-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.slider .slider-slides-wrap .slider-slides {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+.slider .slider-slides-wrap .slider-slides .slider-slide {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.slider .slider-slides-wrap .slider-slides .wrap-slide-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.slider .slider-control {
+  cursor: pointer;
+  position: absolute;
+}
+.slider .slider-control.slider-control-left {
+  top: 0;
+  left: 0;
+}
+.slider .slider-control.slider-control-right {
+  top: 0;
+  right: 0;
+}
+
+.slider-basic {
+  margin: 0px auto;
+  width: 450px;
+}
+.slider-basic .slider-slides-wrap {
+  height: 150px;
+}
+.slider-basic .slider-slides-wrap .slider-slides .slider-slide {
+  width: 150px;
+  height: 150px;
+  background-color: #F8F8F8;
+  color: #464646;
+  text-align: center;
+}
+.slider-basic .slider-control {
+  background-color: #F2BB40;
+  color: #464646;
+  top: 35px;
+  width: 64px;
+  height: 80px;
+}
+.slider-basic .slider-control:hover {
+  background-color: #FFFFFF;
+  color: #E2A730;
+}
+.slider-basic .slider-control.slider-control-bkg {
+  background-image: url("../images/slider-arrow.png");
+  background-repeat: none;
+  background-position: 0px 0px;
+}
+.slider-basic .slider-control.slider-control-bkg.slider-control-left {
+  left: 20px;
+  background-position: 0px 80px;
+}
+.slider-basic .slider-control.slider-control-bkg.slider-control-left:hover {
+  background-position: 0px 0px;
+}
+.slider-basic .slider-control.slider-control-bkg.slider-control-right {
+  right: 20px;
+  background-position: -48px 80px;
+}
+.slider-basic .slider-control.slider-control-bkg.slider-control-right:hover {
+  background-position: -48px 0px;
+}
+
+.slider-basic-fixed {
+  width: 1628px;
+}
+.slider-basic-fixed .slider-slides-wrap {
+  width: 1500px;
+  margin: 0 64px;
+}
+@media only screen and (max-width: 1600px) {
+  .slider-basic-fixed {
+    width: 1328px;
+  }
+  .slider-basic-fixed .slider-slides-wrap {
+    width: 1200px;
+  }
+}
+@media only screen and (max-width: 1360px) {
+  .slider-basic-fixed {
+    width: 1028px;
+  }
+  .slider-basic-fixed .slider-slides-wrap {
+    width: 900px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .slider-basic-fixed {
+    width: 690px;
+  }
+  .slider-basic-fixed .slider-slides-wrap {
+    width: 600px;
+    height: 100px;
+    margin: 0 45px;
+  }
+  .slider-basic-fixed .slider-slides-wrap .slider-slides .slider-slide {
+    width: 100px;
+    height: 100px;
+  }
+  .slider-basic-fixed .slider-control {
+    width: 45px;
+    height: 100px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .slider-basic-fixed {
+    width: 440px;
+  }
+  .slider-basic-fixed .slider-slides-wrap {
+    width: 360px;
+    height: 90px;
+  }
+  .slider-basic-fixed .slider-slides-wrap .slider-slides .slider-slide {
+    width: 90px;
+    height: 90px;
+  }
+  .slider-basic-fixed .slider-control {
+    width: 40px;
+    height: 90px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .slider-basic-fixed {
+    width: 260px;
+  }
+  .slider-basic-fixed .slider-slides-wrap {
+    width: 180px;
+  }
+}
+
+.slider-lightbox .slider-slides-wrap .slider-slides .slider-slide {
+  cursor: pointer;
+  -webkit-box-shadow: inset 1px 1px 100px 0px #000000;
+  -moz-box-shadow: inset 1px 1px 100px 0px #000000;
+  box-shadow: inset 1px 1px 100px 0px #000000;
+}
+.slider-lightbox .slider-slides-wrap .slider-slides .slider-slide:hover {
+  -webkit-transition: all 250ms ease-in-out 0s;
+  -moz-transition: all 250ms ease-in-out 0s;
+  -ms-transition: all 250ms ease-in-out 0s;
+  -o-transition: all 250ms ease-in-out 0s;
+  transition: all 250ms ease-in-out 0s;
+  -webkit-box-shadow: inset 0px 0px 0px 0px #000000;
+  -moz-box-shadow: inset 0px 0px 0px 0px #000000;
+  box-shadow: inset 0px 0px 0px 0px #000000;
+}
+
+.slider-collage-5 .crl-wrap .cr.cr-w-h {
+  width: 50%;
+}
+.slider-collage-5 .crl-wrap .cr.cr-w-f {
+  width: 100%;
+}
+.slider-collage-5 .crl-wrap .cr.cr-h-m {
+  height: 120px;
+}
+.slider-collage-5 .crl-wrap .cr.cr-h-l {
+  height: 180px;
+}
+.slider-collage-5 .crl-wrap .cr.cr-h-xl {
+  height: 240px;
+}
+.slider-collage-5 .crl-wrap .cl {
+  display: inline-block;
+}
+.slider-collage-5 .crl-wrap .cl.cl-w-ot {
+  width: 33.3333%;
+}
+.slider-collage-5 .crl-wrap .cl.cl-w-h {
+  width: 50%;
+}
+.slider-collage-5 .crl-wrap .cl.cl-h-m {
+  height: 120px;
+}
+.slider-collage-5 .crl-wrap .cl.cl-h-l {
+  height: 180px;
+}
+.slider-collage-5 .crl-wrap .cl.cl-h-xl {
+  height: 240px;
+}
+.slider-collage-5 .crl-wrap .cb {
+  display: inline-block;
+}
+.slider-collage-5 .crl-wrap .cb.cb-w-0 {
+  width: 0%;
+}
+.slider-collage-5 .crl-wrap .cb.cb-h-m {
+  height: 120px;
+}
+.slider-collage-5 .crl-wrap .cb.cb-h-l {
+  height: 180px;
+}
+.slider-collage-5 .crl-wrap .cb.cb-h-xl {
+  height: 240px;
+}
+.slider-collage-5 .crl-wrap .cl-wrap {
+  width: 100%;
+  height: 100%;
+}
+.slider-collage-5 .crl-wrap .cr-wrap {
+  width: 100%;
+  height: 100%;
+}
+.slider-collage-5 .crl-wrap .wrap-slide-content {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border: 5px solid white;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-transition: all 250ms ease-in-out 0s;
+  -moz-transition: all 250ms ease-in-out 0s;
+  -ms-transition: all 250ms ease-in-out 0s;
+  -o-transition: all 250ms ease-in-out 0s;
+  transition: all 250ms ease-in-out 0s;
+}
+.slider-collage-5 .crl-wrap .wrap-slide-content:hover {
+  -webkit-box-shadow: inset 1px 1px 50px 0px #000000;
+  -moz-box-shadow: inset 1px 1px 50px 0px #000000;
+  box-shadow: inset 1px 1px 50px 0px #000000;
+}
+@media only screen and (max-width: 1024px) {
+  .slider-collage-5 .crl-wrap .cr.cr-h-m {
+    height: 80px;
+  }
+  .slider-collage-5 .crl-wrap .cr.cr-h-l {
+    height: 120px;
+  }
+  .slider-collage-5 .crl-wrap .cr.cr-h-xl {
+    height: 160px;
+  }
+  .slider-collage-5 .crl-wrap .cl.cl-h-m {
+    height: 80px;
+  }
+  .slider-collage-5 .crl-wrap .cl.cl-h-l {
+    height: 120px;
+  }
+  .slider-collage-5 .crl-wrap .cl.cl-h-xl {
+    height: 160px;
+  }
+  .slider-collage-5 .crl-wrap .cb.cb-h-m {
+    height: 80px;
+  }
+  .slider-collage-5 .crl-wrap .cb.cb-h-l {
+    height: 120px;
+  }
+  .slider-collage-5 .crl-wrap .cb.cb-h-xl {
+    height: 160px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .slider-collage-5 .crl-wrap .cr.cr-h-m {
+    height: 50px;
+  }
+  .slider-collage-5 .crl-wrap .cr.cr-h-l {
+    height: 80px;
+  }
+  .slider-collage-5 .crl-wrap .cr.cr-h-xl {
+    height: 100px;
+  }
+  .slider-collage-5 .crl-wrap .cl.cl-h-m {
+    height: 50px;
+  }
+  .slider-collage-5 .crl-wrap .cl.cl-h-l {
+    height: 80px;
+  }
+  .slider-collage-5 .crl-wrap .cl.cl-h-xl {
+    height: 100px;
+  }
+  .slider-collage-5 .crl-wrap .cb.cb-h-m {
+    height: 50px;
+  }
+  .slider-collage-5 .crl-wrap .cb.cb-h-l {
+    height: 80px;
+  }
+  .slider-collage-5 .crl-wrap .cb.cb-h-xl {
+    height: 100px;
+  }
+}
+
+.slider-collage-5x2 .crl-wrap .cr.cr-h-m {
+  height: 240px;
+}
+.slider-collage-5x2 .crl-wrap .cr.cr-h-l {
+  height: 360px;
+}
+.slider-collage-5x2 .crl-wrap .cr.cr-h-xl {
+  height: 480px;
+}
+.slider-collage-5x2 .crl-wrap .cl.cl-h-m {
+  height: 240px;
+}
+.slider-collage-5x2 .crl-wrap .cl.cl-h-l {
+  height: 360px;
+}
+.slider-collage-5x2 .crl-wrap .cl.cl-h-xl {
+  height: 480px;
+}
+.slider-collage-5x2 .crl-wrap .cb.cb-h-m {
+  height: 240px;
+}
+.slider-collage-5x2 .crl-wrap .cb.cb-h-l {
+  height: 360px;
+}
+.slider-collage-5x2 .crl-wrap .cb.cb-h-xl {
+  height: 480px;
+}
+@media only screen and (max-width: 1024px) {
+  .slider-collage-5x2 .crl-wrap .cr.cr-h-m {
+    height: 160px;
+  }
+  .slider-collage-5x2 .crl-wrap .cr.cr-h-l {
+    height: 240px;
+  }
+  .slider-collage-5x2 .crl-wrap .cr.cr-h-xl {
+    height: 320px;
+  }
+  .slider-collage-5x2 .crl-wrap .cl.cl-h-m {
+    height: 160px;
+  }
+  .slider-collage-5x2 .crl-wrap .cl.cl-h-l {
+    height: 240px;
+  }
+  .slider-collage-5x2 .crl-wrap .cl.cl-h-xl {
+    height: 320px;
+  }
+  .slider-collage-5x2 .crl-wrap .cb.cb-h-m {
+    height: 160px;
+  }
+  .slider-collage-5x2 .crl-wrap .cb.cb-h-l {
+    height: 240px;
+  }
+  .slider-collage-5x2 .crl-wrap .cb.cb-h-xl {
+    height: 320px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .slider-collage-5x2 .crl-wrap .cr.cr-h-m {
+    height: 60px;
+  }
+  .slider-collage-5x2 .crl-wrap .cr.cr-h-l {
+    height: 100px;
+  }
+  .slider-collage-5x2 .crl-wrap .cr.cr-h-xl {
+    height: 120px;
+  }
+  .slider-collage-5x2 .crl-wrap .cl.cl-h-m {
+    height: 60px;
+  }
+  .slider-collage-5x2 .crl-wrap .cl.cl-h-l {
+    height: 100px;
+  }
+  .slider-collage-5x2 .crl-wrap .cl.cl-h-xl {
+    height: 120px;
+  }
+  .slider-collage-5x2 .crl-wrap .cb.cb-h-m {
+    height: 60px;
+  }
+  .slider-collage-5x2 .crl-wrap .cb.cb-h-l {
+    height: 100px;
+  }
+  .slider-collage-5x2 .crl-wrap .cb.cb-h-xl {
+    height: 120px;
+  }
 }
 
 /**********************************************************************
@@ -9002,7 +9420,7 @@ Details: It defines the styles of card components as listed below:
 }
 .card-basic .card-content-wrap .card-header .card-header-title {
   font-size: 1.33em;
-  font-family: Poppins Medium, Sans-Serif, Arial;
+  font-family: Poppins-M, Sans-Serif, Arial;
 }
 .card-basic .card-content-wrap .card-header .card-header-info {
   font-size: 1.08em;
@@ -9024,7 +9442,7 @@ Details: It defines the styles of card components as listed below:
 }
 .card-basic .card-content-wrap .card-content .card-content-title {
   font-size: 1.33em;
-  font-family: Poppins Medium, Sans-Serif, Arial;
+  font-family: Poppins-M, Sans-Serif, Arial;
 }
 .card-basic .card-content-wrap .card-content .card-content-info {
   font-size: 1.08em;
@@ -9046,7 +9464,7 @@ Details: It defines the styles of card components as listed below:
 }
 .card-basic .card-content-wrap .card-footer .card-footer-title {
   font-size: 1.17em;
-  font-family: Poppins Medium, Sans-Serif, Arial;
+  font-family: Poppins-M, Sans-Serif, Arial;
 }
 .card-basic .card-content-wrap .card-footer .card-footer-info {
   font-size: 1.08em;
@@ -9073,7 +9491,8 @@ Details: Default Card to be used to show data as listed below:
 Usage: Cards can be used to to show data of models.
 ***********************************************************************/
 /**********************************************************************
-Description: The Info Card with icon, avatar and text aligned at center to display text content.
+Description: The Info Card with icon, avatar, title and text aligned at center to display 
+text content with/without icon/avatar. It also provide top level classes to decorate the icon/avatar.
 
 Details: Info Card to be used as content card as listed below:
 
@@ -9088,7 +9507,7 @@ class specifies below listed options:
 title, description and summary.
 2.1. Header Icon - The icon/avatar will be displayed at center of header.
 2.2. Tiny Icon xxx - The classes to specify different sized icons.
-2.3. Color xxx - The classes to specify the icon color.
+2.3. Color Icon xxx - The classes to specify the icon color.
 
 3. Info Icon Box Card - Info icon card with icon having 1px square or rectangular border.
 3.1. Fat Border - Fat 5px border.
@@ -9191,10 +9610,10 @@ background banner of Block.
 .card-info-icon.card-info-icon-primary .card-content-wrap .card-header .card-header-icon .icon {
   color: #F8F8F8;
 }
-.card-info-icon.card-info-icon-primary .card-content-wrap .card-header .card-header-icon .icon {
+.card-info-icon.card-info-icon-secondary .card-content-wrap .card-header .card-header-icon .icon {
   color: #F8F8F8;
 }
-.card-info-icon.card-info-icon-primary .card-content-wrap .card-header .card-header-icon .icon {
+.card-info-icon.card-info-icon-tertiary .card-content-wrap .card-header .card-header-icon .icon {
   color: #F2BB40;
 }
 @media only screen and (max-width: 1024px) {
@@ -9272,44 +9691,27 @@ background banner of Block.
   border-radius: 100%;
 }
 
-.widget-card-post {
-  background-color: #FFFFFF;
-  color: #A5A5A5;
-}
-.widget-card-post .card-page-wrap-title {
-  background-color: #F2F2F2;
-  color: #464646;
-  font: Poppins Medium, Sans-Serif, Arial;
-  font-size: 1.58em;
+.card-model-wrap .card-model {
   padding: 1rem;
 }
-.widget-card-post .card-page {
-  padding: 1rem;
-}
-.widget-card-post .card-page .card-content-wrap {
+.card-model-wrap .card-model .card-content-wrap {
   padding-bottom: 1em;
   border-bottom: 1px solid #D1D2D3;
 }
-.widget-card-post .card-page .card-content-wrap .card-content .card-content-title {
-  font: Poppins Medium, Sans-Serif, Arial;
+.card-model-wrap .card-model .card-content-wrap .card-content .card-content-title {
+  font: Poppins-M, Sans-Serif, Arial;
   font-size: 1.33em;
   margin-bottom: 1rem;
 }
-.widget-card-post .card-page .card-content-wrap .card-content .card-content-title a {
-  color: #A5A5A5;
-}
-.widget-card-post .card-page .card-content-wrap .card-content .card-content-title a:hover {
-  color: #E2A730;
-}
-.widget-card-post .card-page .card-content-wrap.card-content-split .card-header {
+.card-model-wrap .card-model .card-content-wrap.card-content-split .card-header {
   float: left;
   overflow: hidden;
 }
-.widget-card-post .card-page .card-content-wrap.card-content-split .card-header .bkg-element-wrap {
+.card-model-wrap .card-model .card-content-wrap.card-content-split .card-header .bkg-element-wrap {
   width: 100px;
   height: 80px;
 }
-.widget-card-post .card-page .card-content-wrap.card-content-split .card-content {
+.card-model-wrap .card-model .card-content-wrap.card-content-split .card-content {
   padding-left: 110px;
 }
 
@@ -9401,7 +9803,7 @@ Details: It defines the styles of box components as listed below:
 }
 .box-basic .box-content-wrap .box-header-wrap .box-header .box-header-title {
   font-size: 1.58em;
-  font-family: Poppins Medium, Sans-Serif, Arial;
+  font-family: Poppins-M, Sans-Serif, Arial;
 }
 .box-basic .box-content-wrap .box-header-wrap .box-header .box-header-info {
   font-size: 1.17em;
@@ -9423,7 +9825,7 @@ Details: It defines the styles of box components as listed below:
 }
 .box-basic .box-content-wrap .box-content .box-content-title {
   font-size: 1.58em;
-  font-family: Poppins Medium, Sans-Serif, Arial;
+  font-family: Poppins-M, Sans-Serif, Arial;
 }
 .box-basic .box-content-wrap .box-content .box-content-info {
   font-size: 1.17em;
@@ -9448,7 +9850,7 @@ Details: It defines the styles of box components as listed below:
 }
 .box-basic .box-content-wrap .box-footer-wrap .box-footer .box-footer-title {
   font-size: 1.17em;
-  font-family: Poppins Medium, Sans-Serif, Arial;
+  font-family: Poppins-M, Sans-Serif, Arial;
 }
 .box-basic .box-content-wrap .box-footer-wrap .box-footer .box-footer-info {
   font-size: 1.08em;
@@ -9476,7 +9878,7 @@ Usage: Boxes can be used to to show data of models.
 ***********************************************************************/
 .widget-box-home-post {
   background-color: #FFFFFF;
-  color: #A5A5A5;
+  color: #464646;
   padding: 1rem;
 }
 .widget-box-home-post .box-home {
@@ -9486,15 +9888,9 @@ Usage: Boxes can be used to to show data of models.
   margin-bottom: 1.5em;
 }
 .widget-box-home-post .box-home .box-content-wrap .box-content .box-content-title {
-  font: Poppins Medium, Sans-Serif, Arial;
+  font: Poppins-M, Sans-Serif, Arial;
   font-size: 1.58em;
   margin: 0.75em 0;
-}
-.widget-box-home-post .box-home .box-content-wrap .box-content .box-content-title a {
-  color: #A5A5A5;
-}
-.widget-box-home-post .box-home .box-content-wrap .box-content .box-content-title a:hover {
-  color: #E2A730;
 }
 .widget-box-home-post .box-home .box-content-split .box-header-wrap {
   float: left;
@@ -9534,7 +9930,7 @@ Usage: Boxes can be used to to show data of models.
   height: 300px;
   margin-bottom: 1em;
   background-color: #FFFFFF;
-  color: #A5A5A5;
+  color: #464646;
   padding: 1rem;
 }
 .widget-box-search-post .box-page-search .box-content-wrap .box-header-wrap {
@@ -9546,15 +9942,9 @@ Usage: Boxes can be used to to show data of models.
   height: 160px;
 }
 .widget-box-search-post .box-page-search .box-content-wrap .box-content .box-content-title {
-  font: Poppins Medium, Sans-Serif, Arial;
+  font: Poppins-M, Sans-Serif, Arial;
   font-size: 1.17em;
   margin: 0.5em 0;
-}
-.widget-box-search-post .box-page-search .box-content-wrap .box-content .box-content-title a {
-  color: #A5A5A5;
-}
-.widget-box-search-post .box-page-search .box-content-wrap .box-content .box-content-title a:hover {
-  color: #E2A730;
 }
 @media only screen and (max-width: 1024px) {
   .widget-box-search-post .box-page-search {
@@ -9642,7 +10032,7 @@ Basic - The basic widget defines the styles of widget having text and background
 }
 .widget-basic .widget-content-wrap .widget-header .widget-header-title {
   font-size: 1.33em;
-  font-family: Poppins Medium, Sans-Serif, Arial;
+  font-family: Poppins-M, Sans-Serif, Arial;
 }
 .widget-basic .widget-content-wrap .widget-header .widget-header-info {
   font-size: 1.08em;
@@ -9670,7 +10060,7 @@ Basic - The basic widget defines the styles of widget having text and background
 }
 .widget-basic .widget-content-wrap .widget-footer .widget-footer-title {
   font-size: 1.17em;
-  font-family: Poppins Medium, Sans-Serif, Arial;
+  font-family: Poppins-M, Sans-Serif, Arial;
 }
 .widget-basic .widget-content-wrap .widget-footer .widget-footer-info {
   font-size: 1.08em;
@@ -9683,6 +10073,31 @@ Basic - The basic widget defines the styles of widget having text and background
 }
 .widget-basic .widget-content-wrap .widget-footer .widget-footer-info + .widget-footer-content {
   margin-top: 0.5rem;
+}
+
+.widget-search {
+  padding: 1em;
+}
+.widget-search .widget-content-wrap .widget-header-wrap {
+  font-size: 1.08em;
+}
+
+.widget-card-post {
+  background-color: #FFFFFF;
+  color: #464646;
+}
+.widget-card-post .widget-content-wrap .widget-header-wrap .widget-header {
+  background-color: #F2F2F2;
+  color: #464646;
+  padding: 1rem;
+}
+.widget-card-post .widget-content-wrap .widget-header-wrap .widget-header .widget-header-title {
+  font: Poppins-M, Sans-Serif, Arial;
+  font-size: 1.58em;
+}
+
+.widget-box-home .pagination-basic .info {
+  display: none;
 }
 
 /**********************************************************************
@@ -9850,7 +10265,7 @@ Details: It defines the styles for header components as listed below:
 }
 .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-title {
   font-size: 2em;
-  font-family: Poppins Medium, Sans-Serif, Arial;
+  font-family: Poppins-M, Sans-Serif, Arial;
 }
 .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-info {
   font-size: 1.33em;
@@ -9869,7 +10284,7 @@ Details: It defines the styles for header components as listed below:
 }
 .block-basic .block-content-wrap .block-content .block-content-title {
   font-size: 2em;
-  font-family: Poppins Medium, Sans-Serif, Arial;
+  font-family: Poppins-M, Sans-Serif, Arial;
 }
 .block-basic .block-content-wrap .block-content .block-content-info {
   font-size: 1.33em;
@@ -9894,7 +10309,7 @@ Details: It defines the styles for header components as listed below:
 }
 .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-title {
   font-size: 1.33em;
-  font-family: Poppins Medium, Sans-Serif, Arial;
+  font-family: Poppins-M, Sans-Serif, Arial;
 }
 .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-info {
   font-size: 1.17em;
@@ -9970,14 +10385,22 @@ Usage: Max Blocks can be used to divide page into multiple sections.
   text-align: center;
 }
 
-.block-max-area .block-content-wrap {
+.block-max-content .block-content-wrap {
   padding: 0;
 }
-.block-max-area .block-content-wrap .block-content {
+.block-max-content .block-content-wrap .block-content {
   width: 100%;
   height: 100%;
 }
-.block-max-area .block-content-wrap .block-content .block-content-buffer {
+
+.block-max-buffer .block-content-wrap {
+  padding: 0;
+}
+.block-max-buffer .block-content-wrap .block-content {
+  width: 100%;
+  height: 100%;
+}
+.block-max-buffer .block-content-wrap .block-content .block-content-buffer {
   width: 100%;
   height: 100%;
 }
@@ -9992,7 +10415,7 @@ Usage: Max Blocks can be used to divide page into multiple sections.
 
 .block-error {
   background-color: #FFFFFF;
-  color: #A5A5A5;
+  color: #464646;
 }
 
 /**********************************************************************
@@ -10177,6 +10600,16 @@ page background and even content wrapper background in the form of image or text
   left: 0;
   z-index: 5;
 }
+.page .page-bkg-fluid {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+.page .page-bkg-fluid img {
+  width: 100%;
+}
 .page > .texture {
   z-index: 10;
 }
@@ -10225,7 +10658,7 @@ page background and even content wrapper background in the form of image or text
 }
 .page-basic .page-content-wrap .page-header-wrap .page-header .page-header-title {
   font-size: 2.67em;
-  font-family: Poppins Medium, Sans-Serif, Arial;
+  font-family: Poppins-M, Sans-Serif, Arial;
 }
 .page-basic .page-content-wrap .page-header-wrap .page-header .page-header-info {
   font-size: 1.58em;
@@ -10244,7 +10677,7 @@ page background and even content wrapper background in the form of image or text
 }
 .page-basic .page-content-wrap .page-content .page-content-title {
   font-size: 2.67em;
-  font-family: Poppins Medium, Sans-Serif, Arial;
+  font-family: Poppins-M, Sans-Serif, Arial;
 }
 .page-basic .page-content-wrap .page-content .page-content-info {
   font-size: 1.58em;
@@ -10276,7 +10709,7 @@ page background and even content wrapper background in the form of image or text
 }
 .page-basic .page-content-wrap .page-footer-wrap .page-footer .page-footer-title {
   font-size: 1.58em;
-  font-family: Poppins Medium, Sans-Serif, Arial;
+  font-family: Poppins-M, Sans-Serif, Arial;
 }
 .page-basic .page-content-wrap .page-footer-wrap .page-footer .page-footer-info {
   font-size: 1.17em;
@@ -10332,7 +10765,7 @@ Details: It defines the styles of default layout of page component as listed bel
   padding-bottom: 0;
 }
 .page-default .page-content-wrap .page-header-wrap .page-header .page-header-title {
-  font-family: Poppins Medium, Sans-Serif, Arial;
+  font-family: Poppins-M, Sans-Serif, Arial;
   font-size: 2.67em;
   text-align: center;
   -webkit-text-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
@@ -10361,7 +10794,7 @@ Details: It defines the styles of default layout of page component as listed bel
   color: #464646;
 }
 .page-default .page-content-wrap .page-content .page-content-title {
-  font-family: Poppins Medium, Sans-Serif, Arial;
+  font-family: Poppins-M, Sans-Serif, Arial;
   font-size: 2.67em;
   text-align: center;
   -webkit-text-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
@@ -10378,6 +10811,22 @@ Details: It defines the styles of default layout of page component as listed bel
 }
 .page-default .page-content-wrap .page-content .page-content-data {
   text-align: justify;
+}
+@media only screen and (max-width: 1024px) {
+  .page-default .page-content-wrap .page-header-wrap.page-header-banner {
+    height: 280px;
+  }
+  .page-default .page-content-wrap .page-header-wrap .page-header {
+    max-height: 280px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .page-default .page-content-wrap .page-header-wrap.page-header-banner {
+    height: 180px;
+  }
+  .page-default .page-content-wrap .page-header-wrap .page-header {
+    max-height: 180px;
+  }
 }
 
 .page-default .page-content-wrap .page-content-row {
@@ -10472,13 +10921,38 @@ Details: It defines the styles of default layout of page component as listed bel
   background-color: #F8F8F8;
   color: #A5A5A5;
 }
+.page-default .page-content-wrap .page-header-wrap.page-header-banner {
+  height: 420px;
+}
+.page-default .page-content-wrap .page-header-wrap .page-header {
+  max-height: 420px;
+}
+.page-default .page-content-wrap .page-content-row {
+  padding: 0 5%;
+}
 .page-default .page-sidebar-wrap {
   margin-bottom: 2em;
+}
+@media only screen and (max-width: 1024px) {
+  .page-default .page-content-wrap .page-header-wrap.page-header-banner {
+    height: 320px;
+  }
+  .page-default .page-content-wrap .page-header-wrap .page-header {
+    max-height: 320px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .page-default .page-content-wrap .page-header-wrap.page-header-banner {
+    height: 280px;
+  }
+  .page-default .page-content-wrap .page-header-wrap .page-header {
+    max-height: 280px;
+  }
 }
 
 .page-model-blog .page-content-wrap .page-content, .page-home .page-content-wrap .page-content {
   background-color: #FFFFFF;
-  color: #A5A5A5;
+  color: #464646;
   padding: 1em;
   margin-top: 2em;
   margin-bottom: 2em;
@@ -10488,13 +10962,13 @@ Details: It defines the styles of default layout of page component as listed bel
 }
 .page-model-blog .page-content-wrap .page-content-comments, .page-home .page-content-wrap .page-content-comments {
   background-color: #FFFFFF;
-  color: #A5A5A5;
+  color: #464646;
   padding: 1em;
   margin-top: 2em;
 }
 .page-model-blog .page-content-wrap .page-content-disqus, .page-home .page-content-wrap .page-content-disqus {
   background-color: #FFFFFF;
-  color: #A5A5A5;
+  color: #464646;
   padding: 1em;
   margin-top: 2em;
   margin-bottom: 2em;
@@ -10502,7 +10976,7 @@ Details: It defines the styles of default layout of page component as listed bel
 
 .page-search .page-content-wrap .page-content .page-content-info {
   background-color: #FFFFFF;
-  color: #A5A5A5;
+  color: #464646;
   padding-top: 1em;
 }
 .page-search .page-content-wrap .page-content .page-widget-wrap {
@@ -10701,7 +11175,7 @@ Details: It defines the styles for foxslider components as listed below:
   position: relative;
   background-color: rgba(0, 0, 0, 0.6);
   color: #F8F8F8;
-  font-family: Poppins Light, Sans-Serif, Arial;
+  font-family: Poppins-L, Sans-Serif, Arial;
   font-size: 1.5em;
   width: 75%;
   padding: 50px;

@@ -99,7 +99,8 @@
 //@import "breeze/components/popups/basic";
 //@import "breeze/components/popups/popouts";
 
-//@import "breeze/components/sliders/basic";
+@import "breeze/components/sliders/basic";
+@import "breeze/components/sliders/collage";
 
 //@import "breeze/components/galleries/basic";
 
@@ -107,8 +108,8 @@
 //@import "breeze/components/cards/panel";
 //@import "breeze/components/cards/comment";
 @import "breeze-templates/components/cards/default";
-@import "breeze-templates/components/cards/info";
 @import "breeze-templates/components/cards/page";
+@import "breeze-templates/components/cards/info";
 @import "partials/components/cards/basic";
 @import "partials/components/cards/page";
 
@@ -119,8 +120,8 @@
 //@import "breeze/components/boxes/file";
 //@import "breeze/components/boxes/comment";
 @import "breeze-templates/components/boxes/default";
-@import "breeze-templates/components/boxes/info";
 @import "breeze-templates/components/boxes/page";
+@import "breeze-templates/components/boxes/info";
 @import "partials/components/boxes/basic";
 @import "partials/components/boxes/page";
 
@@ -130,6 +131,8 @@
 @import "breeze-templates/components/widgets/card";
 @import "breeze-templates/components/widgets/box";
 @import "partials/components/widgets/default";
+@import "partials/components/widgets/card";
+@import "partials/components/widgets/box";
 
 @import "breeze/components/blocks/basic";
 @import "breeze-templates/components/blocks/default";

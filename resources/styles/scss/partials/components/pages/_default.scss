@@ -1,9 +1,64 @@
+// == Default Page ==================
+
 .page-default {
 	background-color: $color-primary;
 	color: $color-primary-text;
 
+	.page-content-wrap {
+
+		.page-header-wrap {
+
+			&.page-header-banner {
+				height: 420px;
+			}
+
+			.page-header {
+				max-height: 420px;
+			}
+		}
+		
+		// Content Wrapper
+		.page-content-row {
+			padding: 0 5%;
+		}
+	}
+
 	.page-sidebar-wrap {
 		margin-bottom: 2em;
+	}
+
+	@include responsive-max( screen-tablet-large ) {
+
+		.page-content-wrap {
+
+			.page-header-wrap {
+
+				&.page-header-banner {
+					height: 320px;
+				}
+				
+				.page-header {
+					max-height: 320px;
+				}
+			}
+		}
+	}
+
+	@include responsive-max( screen-mobile-large ) {
+
+		.page-content-wrap {
+
+			.page-header-wrap {
+
+				&.page-header-banner {
+					height: 280px;
+				}
+				
+				.page-header {
+					max-height: 280px;
+				}
+			}
+		}
 	}
 }
 
@@ -30,7 +85,7 @@
 			padding: 1em;
 			margin-top: 2em;
 		}
-		
+
 		.page-content-disqus {
 			background-color: $color-primary-l;
 			color: $color-primary-text-l;

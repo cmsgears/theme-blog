@@ -10,6 +10,7 @@
 namespace themes\blog\assets\vapps;
 
 // Yii Imports
+use yii\web\AssetBundle;
 use yii\web\View;
 
 /**
@@ -17,7 +18,7 @@ use yii\web\View;
  *
  * @since 1.0.0
  */
-class NotifyAssets extends \yii\web\AssetBundle {
+class NotifyAssets extends AssetBundle {
 
 	// Variables ---------------------------------------------------
 

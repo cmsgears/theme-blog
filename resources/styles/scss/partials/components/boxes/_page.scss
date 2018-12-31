@@ -10,34 +10,12 @@
 		.box-content-wrap {
 			margin-bottom: 1.5em;
 
-			.box-header-wrap {
-
-				.box-header {
-
-					.box-header-info {
-
-					}
-				}
-			}
-
-			.box-data {
-
-			}
-
 			.box-content {
 
 				.box-content-title {
 					font: $font-heading;
 					font-size: $font-size-3;
 					margin: 0.75em 0;
-
-					a {
-						color: $color-primary-text;
-
-						&:hover {
-							color: $color-link;
-						}
-					}
 				}
 			}
 		}
@@ -126,14 +104,6 @@
 					font: $font-heading;
 					font-size: $font-size-5;
 					margin: 0.5em 0;
-
-					a {
-						color: $color-primary-text;
-
-						&:hover {
-							color: $color-link;
-						}
-					}
 				}
 			}
 		}

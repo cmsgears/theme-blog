@@ -1,13 +1,14 @@
-$font-default: Poppins Light, Sans-Serif, Arial;
-$font-heading: Poppins Medium, Sans-Serif, Arial;
-$font-default-r: Poppins Regular, Sans-Serif, Arial;
+$font-default: Poppins-L, Sans-Serif, Arial;
+$font-heading: Poppins-M, Sans-Serif, Arial;
+$font-default-r: Poppins-R, Sans-Serif, Arial;
 
 // Primary Color:
 $color-primary: #F8F8F8;
 $color-primary-l: #FFFFFF;
 $color-primary-d: #F2F2F2;
 $color-primary-text: #A5A5A5;
-$color-primary-text-l: #A5A5A5;
+//$color-primary-text-l: #A5A5A5;
+$color-primary-text-l: #464646; // Needed darker font for better readability on light background
 $color-primary-text-d: #A5A5A5;
 
 // Secondary Color:
