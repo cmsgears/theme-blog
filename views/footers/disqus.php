@@ -19,7 +19,7 @@ $forum		= $commentProperties->getDisqusForum();
 
 var disqus_config = function () {
 	this.page.url = '<?= Url::canonical() ?>';
-	this.page.identifier = <?= $model->slug ?>; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+	this.page.identifier = '<?= $model->slug ?>'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 
 (function() { // DON'T EDIT BELOW THIS LINE

@@ -27,10 +27,8 @@ $bannerUrl	= CodeGenUtil::getFileUrl( $content->banner, [ 'image' => $banner ] )
 <div class="card-content-wrap clearfix <?= !empty( $bannerUrl ) ? 'card-content-split' : null ?>">
 	<?php if( !empty( $bannerUrl ) ) { ?>
 		<div class="card-header">
-			<div class="bkg-element-wrap">
-				<div class="bkg-element bkg-element-medium">
-					<img src="<?= $bannerUrl ?>" title="<?= "{$model->displayName}" ?>" />
-				</div>
+			<div class="card-bkg">
+				<img class="fluid" src="<?= $bannerUrl ?>" title="<?= "{$model->displayName}" ?>" />
 			</div>
 		</div>
 	<?php } ?>

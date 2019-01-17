@@ -31,10 +31,7 @@ $bannerUrl	= CodeGenUtil::getFileUrl( $content->banner, [ 'image' => $banner ] )
 	<?php if( !empty( $bannerUrl ) ) { ?>
 		<div class="box-header-wrap">
 			<div class="box-header">
-				<div class="bkg-element-wrap">
-					<div class="bkg-element bkg-element-medium">
-						<img src="<?= $bannerUrl ?>" title="<?= "{$model->displayName}" ?>" />
-					</div>
+				<img class="fluid" src="<?= $bannerUrl ?>" title="<?= "{$model->displayName}" ?>" />
 				</div>
 			</div>
 		</div>

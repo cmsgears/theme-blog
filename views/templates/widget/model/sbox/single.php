@@ -28,11 +28,7 @@ $bannerUrl	= CodeGenUtil::getFileUrl( $content->banner, [ 'image' => $banner ] )
 <div class="box-content-wrap clearfix">
 	<div class="box-header-wrap">
 		<div class="box-header">
-			<div class="bkg-element-wrap">
-				<div class="bkg-element bkg-element-medium">
-					<img src="<?= $bannerUrl ?>" title="<?= "{$model->displayName}" ?>" />
-				</div>
-			</div>
+			<img class="fluid" src="<?= $bannerUrl ?>" title="<?= "{$model->displayName}" ?>" />
 		</div>
 	</div>
 	<div class="box-content">
