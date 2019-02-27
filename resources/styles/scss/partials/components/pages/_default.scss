@@ -21,9 +21,17 @@
 		.page-content-row {
 			padding: 0 5%;
 		}
+
+		.page-sidebar-wrap {
+
+			&.page-sidebar-wrap-right {
+				padding-top: 0;
+			}
+		}
 	}
 
 	.page-sidebar-wrap {
+		margin-top: 0;
 		margin-bottom: 2em;
 	}
 
@@ -71,7 +79,6 @@
 			background-color: $color-primary-l;
 			color: $color-primary-text-l;
 			padding: 1em;
-			margin-top: 2em;
 			margin-bottom: 2em;
 
 			.page-content-banner + .page-content-title {
