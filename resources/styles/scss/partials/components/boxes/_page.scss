@@ -1,0 +1,147 @@
+// Posts Box on Landing Page
+.widget-box-home-post {
+	background-color: $color-primary-l;
+	color: $color-primary-text-l;
+	padding: 1rem;
+
+	.box-home {
+		margin-bottom: 1.5em;
+
+		.box-content-wrap {
+			margin-bottom: 1.5em;
+			
+			.box-header-wrap {
+
+				.box-header {
+					
+					width: 100%;
+                    max-height: 220px;
+				}
+			}
+
+			.box-content {
+
+				.box-content-title {
+					font-family: $font-heading;
+					font-size: $font-size-3;
+					margin: 0.75em 0;
+				}
+			}
+		}
+
+		.box-content-split {
+
+			.box-header-wrap {
+				float: left;
+				overflow: hidden;
+				width: 40%;
+
+				.bkg-element-wrap {
+					//width: 320px;
+					//height: 220px;
+				}
+			}
+
+			.box-content {
+				//padding-left: 330px;
+				padding-left: 43%;
+			}
+		}
+
+		@include responsive-max( screen-tablet-large ) {
+
+			.box-content-split {
+
+				.box-header-wrap {
+
+					.bkg-element-wrap {
+						//width: 160px;
+						//height: 120px;
+					}
+				}
+
+				.box-content {
+					//padding-left: 170px;
+				}
+			}
+		}
+
+		@include responsive-max( screen-mobile-large ) {
+
+			.box-content-split {
+
+				.box-header-wrap {
+					float: none;
+					margin-bottom: 1.5em;
+					width: 100%;
+
+					.box-header {
+						//width: 100%;
+						//height: 160px;
+					}
+				}
+
+				.box-content {
+					padding-left: 0;
+				}
+			}
+		}
+	}
+}
+
+.widget-box-search-post {
+
+	.box-page-search {
+		height: 300px;
+		margin-bottom: 1em;
+		background-color: $color-primary-l;
+		color: $color-primary-text-l;
+		padding: 1rem;
+
+		.box-content-wrap {
+
+			.box-header-wrap {
+				overflow: hidden;
+				margin-bottom: 1em;
+
+				.bkg-element-wrap {
+					width: 100%;
+					height: 160px;
+				}
+			}
+			
+			.box-content {
+
+				.box-content-title {
+					font-family: $font-heading;
+					font-size: $font-size-5;
+					margin: 0.5em 0;
+				}
+			}
+		}
+
+		@include responsive-max( screen-tablet-large ) {
+			height: 280px;
+
+			.box-header-wrap {
+
+				.bkg-element-wrap {
+					width: 100%;
+					height: 120px;
+				}
+			}
+		}
+
+		@include responsive-max( screen-mobile-large ) {
+			height: 260px;
+
+			.box-header-wrap {
+
+				.bkg-element-wrap {
+					width: 100%;
+					height: 80px;
+				}
+			}
+		}
+	}
+}

@@ -1,18 +1,42 @@
 <?php
+// Yii Imports
 use yii\helpers\Html;
-use yii\helpers\Url;
 
-use cmsgears\widgets\dnav\DynamicNav;
+// CMG Imports
+use cmsgears\widgets\elements\Nav;
+
+use themes\blog\Theme;
+
+$banner			= Yii::$app->core->site->banner;
+$headerClass	= isset( $banner ) ? 'header-basic header-landing header-banner' : 'header-basic header-landing header-banner-no';
 ?>
-<header id="header-main" class="header-main content-80 max-cols clearfix">
-	<a id="nav-mobile-icon" class="cmti cmti-2x cmti-list"></a>
-	<div class="colf12x3">
-		<?=Html::a( "<img class='fluid logo' src='" . Yii::getAlias( '@images' ) . "/logo.png'>", [ '/' ], null )?>
-	</div>
-	<div class="colf12x9">
-		<div class="nav-main stick-bottom">			
-			<?=DynamicNav::widget( [ 'view' => $this, 'options' => [ 'class' => 'nav' ] ] );?>
+<header class="header <?= $headerClass ?> shadow shadow-primary">
+	<?php if( isset( $banner ) ) { ?>
+		<div class="max-area bkg-image layer" style="background-image:url(<?= $banner->getFileUrl() ?>);"></div>
+		<div class="texture texture-black layer layer-1"></div>
+	<?php } ?>
+	<div class="row layer layer-2">
+		<div class="header-logo">
+			<div class="logo">
+				<?= Html::a( "<img src=\"" . Yii::getAlias( '@images' ) . "/logo.png\">", [ '/' ], null ) ?>
+			</div>
+		</div>
+		<div id="mobile-actions">
+			<span id="btn-menu-mobile" class="mobile-action">
+				<i class="cmti cmti-menu"></i>
+			</span>
 		</div>
 	</div>
-	<?=DynamicNav::widget( [ 'view' => $this, 'options' => [ 'id' => 'nav-mobile', 'class' => 'nav nav-mobile' ] ] );?>
+	<div id="menu-mobile-wrap" class="relative">
+		<?= Nav::widget([
+			'view' => $this, 'slug' => Theme::MENU_MAIN,
+			'options' => [ 'id' => 'menu-main-mobile', 'class' => 'vnav uppercase' ]
+		])?>
+	</div>
 </header>
+<div class="menu-main-wrap row row-xlarge">
+	<?= Nav::widget([
+		'view' => $this, 'slug' => Theme::MENU_MAIN,
+		'options' => [ 'id' => 'menu-main', 'class' => 'nav uppercase' ]
+	])?>
+</div>

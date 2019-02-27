@@ -1,0 +1,17 @@
+// == Basic Block ===================
+
+.block-basic {
+	background-color: $color-primary;
+	color: $color-primary-text;
+
+	.adsbygoogle {
+		text-align: center;
+	}
+}
+
+// == Error Block ===================
+
+.block-error {
+	background-color: $color-primary-l;
+	color: $color-primary-text-l;
+}

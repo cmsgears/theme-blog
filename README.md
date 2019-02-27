@@ -12,3 +12,6 @@ Highlighted Features
 2. The landing page shows the most recent posts.
 3. Apart from landing page, it override the system pages including login, register, reset password.
 4. It also provide blog and blog post page templates.
+5. The search pages available in this theme include blog, category and tag to show post search results.
+6. It provide options to manage user profile and manage posts specific to user account.
+

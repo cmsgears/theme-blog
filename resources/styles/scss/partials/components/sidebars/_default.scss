@@ -1,0 +1,19 @@
+.sidebar-vertical {
+
+	.widget {
+		background-color: $color-primary-l;
+		color: $color-primary-text-l;
+		margin-bottom: 2em;
+
+		.widget-content-wrap {
+			
+			.widget-content {
+				padding: 0;
+
+				.widget-content-data {
+					padding: 0;
+				}
+			}
+		}
+	}
+}

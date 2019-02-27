@@ -1,0 +1,124 @@
+// == Default Page ==================
+
+.page-default {
+	background-color: $color-primary;
+	color: $color-primary-text;
+
+	.page-content-wrap {
+
+		.page-header-wrap {
+
+			&.page-header-banner {
+				height: 420px;
+			}
+
+			.page-header {
+				max-height: 420px;
+			}
+		}
+		
+		// Content Wrapper
+		.page-content-row {
+			padding: 0 5%;
+		}
+
+		.page-sidebar-wrap {
+
+			&.page-sidebar-wrap-right {
+				padding-top: 0;
+			}
+		}
+	}
+
+	.page-sidebar-wrap {
+		margin-top: 0;
+		margin-bottom: 2em;
+	}
+
+	@include responsive-max( screen-tablet-large ) {
+
+		.page-content-wrap {
+
+			.page-header-wrap {
+
+				&.page-header-banner {
+					height: 320px;
+				}
+				
+				.page-header {
+					max-height: 320px;
+				}
+			}
+		}
+	}
+
+	@include responsive-max( screen-mobile-large ) {
+
+		.page-content-wrap {
+
+			.page-header-wrap {
+
+				&.page-header-banner {
+					height: 280px;
+				}
+				
+				.page-header {
+					max-height: 280px;
+				}
+			}
+		}
+	}
+}
+
+// Blog & Public Page
+.page-model-blog, .page-home {
+
+	.page-content-wrap {
+
+		.page-content {
+			background-color: $color-primary-l;
+			color: $color-primary-text-l;
+			padding: 1em;
+			margin-bottom: 2em;
+
+			.page-content-banner + .page-content-title {
+				margin-top: 1em;
+			}
+		}
+
+		.page-content-comments {
+			background-color: $color-primary-l;
+			color: $color-primary-text-l;
+			padding: 1em;
+			margin-top: 2em;
+		}
+
+		.page-content-disqus {
+			background-color: $color-primary-l;
+			color: $color-primary-text-l;
+			padding: 1em;
+			margin-top: 2em;
+			margin-bottom: 2em;
+		}
+	}
+}
+
+// Search Pages
+.page-search {
+	
+	.page-content-wrap {
+		
+		.page-content {
+			
+			.page-content-info {
+				background-color: $color-primary-l;
+				color: $color-primary-text-l;
+				padding-top: 1em;
+			}
+			
+			.page-widget-wrap {
+				margin-top: 2em;
+			}
+		}
+	}
+}

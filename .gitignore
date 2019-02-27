@@ -1,7 +1,7 @@
 # Ignore sass cache files
 .sass-cache/
 resources/.sass-cache/
-/resources/styles/.sass-cache/
 resources/styles/scss/.sass-cache/
 deploy/.sass-cache/
 deploy/node_modules/
+deploy/package-lock.json

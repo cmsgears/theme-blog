@@ -1,19 +1,11 @@
-.rounded {
-    &.rounded-50 {
-        border-radius: 50px !important;
-    }
-}
+#pre-loader-main {
+	position: absolute;
+	width: 100%;
+	z-index: 10000000;
 
-.title {
-    &, a {
-        color: $color-secondary !important;
-    }
-    
-    &.title-small {
-        font-size: $font-size-7;
-    }
-    
-    &.title-medium {
-        font-size: $font-size-5;
-    }   
-} 
+	.spinner {
+	    display: block;
+		width: 3em;
+	    margin: 0 auto;
+	}
+}
