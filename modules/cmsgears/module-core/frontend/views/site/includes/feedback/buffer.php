@@ -9,7 +9,7 @@ $site = Yii::$app->core->site;
 		<p>We will like to hear from you about suggestions to improve site experience.</p>
 	</div>
 	<?= SubmitFeedback::widget([
-	   'model' => $site 'ratingClass' => 'cmt-rating rating-emoticons',
+	   'model' => $site, 'ratingClass' => 'cmt-rating rating-emoticons',
 	   'ajaxUrl' => "core/site/submit-feedback?slug=$site->slug",
 	   'templateDir' => '@themeTemplates/comment/feedback', 'template' => 'submit'
 	])?>
