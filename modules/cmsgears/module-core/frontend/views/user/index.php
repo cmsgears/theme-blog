@@ -1,11 +1,9 @@
 <?php
+$coreProperties	= $this->context->getCoreProperties();
+
 // Page
-$this->title = 'Home | User';
+$this->title = 'Home | ' . $coreProperties->getSiteTitle();
 
 // Sidebar
-$this->context->sidebar	= [ 'parent' => 'sidebar-home' ];
-
-// Breadcrumbs
-$this->context->breadcrumbs	= [
-	'home' => [ [ 'label' => 'Home' ] ]
-];
+$this->context->sidebar	= [ 'parent' => 'sidebar-dashboard' ];
+?>

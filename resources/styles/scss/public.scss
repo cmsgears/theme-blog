@@ -33,8 +33,6 @@
 // Effects Division
 // ---------------------------------------//
 
-@import "breeze/effects/filters";
-
 @import "breeze/effects/hover/color";
 @import "breeze/effects/hover/transform";
 @import "breeze/effects/hover/animate";
@@ -47,8 +45,8 @@
 
 @import "breeze/elements/basic";
 
-//@import "breeze/elements/icon-picker";
-//@import "breeze/elements/time-picker";
+@import "breeze/elements/icon-picker";
+@import "breeze/elements/time-picker";
 @import "breeze/elements/list";
 @import "breeze/elements/select";
 @import "breeze/elements/choice";
@@ -57,9 +55,10 @@
 @import "breeze/elements/button";
 @import "partials/elements/select";
 @import "partials/elements/choice";
+@import "partials/elements/rating";
 
 @import "breeze/elements/form";
-//@import "breeze/elements/table";
+@import "breeze/elements/table";
 @import "partials/elements/form";
 
 //@import "breeze/elements/splitter";
@@ -69,7 +68,7 @@
 @import "breeze/elements/breadcrumb";
 //@import "breeze/elements/auto-fill";
 //@import "breeze/elements/uploader";
-//@import "breeze/elements/flipper";
+@import "breeze/elements/flipper";
 //@import "breeze/elements/mapper";
 @import "partials/elements/accordian";
 
@@ -78,50 +77,58 @@
 // ---------------------------------------//
 
 //@import "breeze/components/data/basic";
-//@import "breeze/components/data/zigzag";
 //@import "breeze/components/data/crud";
+//@import "breeze/components/data/zigzag";
+//@import "partials/components/data/crud";
 
 @import "breeze/components/menus/basic";
 //@import "breeze/components/menus/collapsible";
 @import "breeze/components/menus/social";
 @import "partials/components/menus/basic";
+//@import "partials/components/menus/collapsible";
 
 @import "breeze/components/headers/basic";
 @import "partials/components/headers/basic";
+@import "partials/components/headers/private";
 
 @import "breeze/components/footers/basic";
 @import "partials/components/footers/basic";
 
-//@import "breeze/components/sidebars/basic";
+@import "breeze/components/sidebars/basic";
 @import "breeze-templates/components/sidebars/default";
+@import "partials/components/sidebars/basic";
 @import "partials/components/sidebars/default";
 
-//@import "breeze/components/popups/basic";
-//@import "breeze/components/popups/popouts";
+@import "breeze/components/popups/basic";
+@import "breeze/components/popups/popouts";
+@import "partials/components/popups/basic";
+@import "partials/components/popups/popouts";
 
 @import "breeze/components/sliders/basic";
-@import "breeze/components/sliders/collage";
+//@import "partials/components/sliders/basic";
 
-//@import "breeze/components/galleries/basic";
+@import "breeze/components/galleries/basic";
 
 @import "breeze/components/cards/basic";
 //@import "breeze/components/cards/panel";
-//@import "breeze/components/cards/comment";
+@import "breeze/components/cards/comment";
 @import "breeze-templates/components/cards/default";
-@import "breeze-templates/components/cards/page";
 @import "breeze-templates/components/cards/info";
+@import "breeze-templates/components/cards/page";
 @import "partials/components/cards/basic";
 @import "partials/components/cards/page";
+@import "partials/components/cards/comment";
+//@import "partials/components/cards/event";
 
 @import "breeze/components/boxes/basic";
 //@import "breeze/components/boxes/panel";
-//@import "breeze/components/boxes/login";
-//@import "breeze/components/boxes/form";
+@import "breeze/components/boxes/login";
+@import "breeze/components/boxes/form";
 //@import "breeze/components/boxes/file";
-//@import "breeze/components/boxes/comment";
+@import "breeze/components/boxes/comment";
 @import "breeze-templates/components/boxes/default";
-@import "breeze-templates/components/boxes/page";
 @import "breeze-templates/components/boxes/info";
+@import "breeze-templates/components/boxes/page";
 @import "partials/components/boxes/basic";
 @import "partials/components/boxes/page";
 
@@ -130,6 +137,7 @@
 @import "breeze-templates/components/widgets/default";
 @import "breeze-templates/components/widgets/card";
 @import "breeze-templates/components/widgets/box";
+@import "partials/components/widgets/basic";
 @import "partials/components/widgets/default";
 @import "partials/components/widgets/card";
 @import "partials/components/widgets/box";
@@ -138,15 +146,18 @@
 @import "breeze-templates/components/blocks/default";
 @import "breeze-templates/components/blocks/max";
 @import "partials/components/blocks/basic";
+@import "partials/components/blocks/error";
 
 @import "breeze/components/grid/pagination";
 //@import "breeze/components/grid/sorting";
 //@import "breeze/components/grid/filters";
 //@import "breeze/components/grid/data";
 //@import "breeze/components/grid/table";
+@import "partials/components/grid/pagination";
+
 //@import "breeze-templates/components/grid/default/pagination";
 //@import "breeze-templates/components/grid/default/data";
-@import "partials/components/grid/pagination";
+//@import "partials/components/grid/default/data";
 
 @import "breeze/components/pages/basic";
 @import "breeze-templates/components/pages/default";
@@ -156,10 +167,13 @@
 // Extensions Division
 // ---------------------------------------//
 
+//@import "partials/extensions/jquery/datepicker";
+//@import "partials/extensions/jquery/slider";
+
 @import "breeze/extensions/fox-slider";
 @import "partials/extensions/fox-slider";
 
 @import "breeze/extensions/m-custom-scrollbar";
-//@import "partials/extensions/m-custom-scrollbar";
+@import "partials/extensions/m-custom-scrollbar";
 
 //@import "partials/extensions/full-calendar";

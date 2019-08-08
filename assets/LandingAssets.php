@@ -53,8 +53,6 @@ class LandingAssets extends AssetBundle {
 		$this->js[] = 'scripts/search.js';
 		$this->js[] = 'scripts/sliders.js';
 		$this->js[] = 'scripts/popups.js';
-
-		$this->depends[] = 'foxslider\widgets\assets\FxsAssets';
 	}
 
     // Instance methods --------------------------------------------

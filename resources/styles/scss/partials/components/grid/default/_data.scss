@@ -1,0 +1,64 @@
+.grid-data-default {
+
+	.avatar {
+
+		img {
+			width: 48px;
+			border: 2px solid $color-border-d;
+		}
+	}
+
+	// Grid Search
+	.grid-search-wrap {
+
+		.grid-search {
+
+			.search-field {
+
+				input[type=text], .cmt-select-wrap {
+					width: 8em;
+					margin-right: -2px;
+					@include rounded( 0 );
+					@include shadow-inset( 0, 0, 0, $color-secondary-l, $spread: 0px );
+
+					&:focus {
+						@include shadow-inset( 0, 0, 0, $color-field, $spread: 1px );
+					}
+				}
+
+				input[type=text] {
+					@include rounded-left( $size-small );
+				}
+
+				.cmt-select-wrap {
+
+					.cmt-select {
+						@include rounded( 0 );
+
+						.cmt-selected {
+							@include rounded( 0 );
+						}
+
+						.cmt-selected, .cmt-select-list {
+							@include shadow-inset( 0, 0, 0, $color-secondary-l, $spread: 0px );
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// Grid Report
+	.grid-report-wrap {
+
+		.grid-report {
+
+			.grid-report-fields {
+
+				.field-title {
+					line-height: 2.4em;
+				}
+			}
+		}
+	}
+}

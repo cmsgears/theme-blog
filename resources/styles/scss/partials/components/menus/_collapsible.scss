@@ -1,0 +1,144 @@
+.collapsible-menu-sidebar {
+
+    .collapsible-tab {
+        width: 100%;
+        position: relative;
+		margin-bottom: 0.5em;
+		@include transit-color( $transit-eio, $transit-time-small );
+
+        .tab-header {
+            position: relative;
+            padding: 0.5em 0;
+			padding-left: 40px;
+            padding-right: 8px;
+            cursor: pointer;
+			height: 2em;
+
+			a {
+				color: $color-primary-text;
+			}
+
+            .tab-icon {
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 0.5em 10px 0.5em 20px;
+				@include transit-color( $transit-eio, $transit-time-small );
+            }
+			
+            .tab-title {
+				font-size: $font-size-5;
+				@include transit-color( $transit-eio, $transit-time-small );
+            }
+        }
+
+        .tab-content {
+            padding-left: 60px;
+            display: none;
+			border-left: 4px solid $color-btn;
+
+            ul {
+                width: 100%;
+                text-align: left;
+                padding: 0.5em 0;
+
+                li {
+                    cursor: pointer;
+                    font-size: $font-size-8;
+                    padding: 0.5em 0;
+
+                    a {
+                        color: $color-primary-text;
+                        display: block;
+						font-size: $font-size-6;
+						@include transit-color( $transit-eio, $transit-time-small );
+						
+						&:hover {
+							color: $color-btn;
+						}
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            color: $color-btn;
+
+            .tab-header {
+
+				.tab-icon {
+					color: $color-btn;
+				}
+
+                .tab-title {
+					color: $color-btn;
+                }
+            }
+        }
+
+        &.active {
+
+            .tab-header {
+				border-left: 4px solid $color-btn;
+
+				.tab-icon {
+					color: $color-btn;
+				}
+
+                .tab-title {
+                    font-weight: bold;
+					color: $color-btn;
+                }
+            }
+
+            .tab-content {
+
+                ul li {
+
+                    &.active a {
+                        font-weight: bold;
+						color: $color-btn;
+                    }
+                }
+            }
+        }
+
+        &.expanded {
+
+			.tab-header {
+				border-left: 4px solid $color-btn;
+			}
+        }
+    }
+}
+
+.sidebar-main-micro {
+
+	.collapsible-menu-sidebar {
+
+		.collapsible-tab {
+
+			.tab-header {
+				width: 40px;
+				border-left: none;
+
+				.tab-title {
+					display: none;
+				}
+			}
+
+			.tab-content {
+				background-color: $color-secondary;
+				color: $color-secondary-text;
+				position: absolute;
+				width: 180px;
+				top: 0px;
+				left: 70px;
+				padding-left: 10px;
+				border: 1px solid $color-border;
+				border-left: none;
+				display: none;
+			}
+		}
+	}
+}

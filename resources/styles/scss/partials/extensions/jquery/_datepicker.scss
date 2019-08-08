@@ -1,0 +1,34 @@
+.ui-datepicker {
+    z-index: 1000000 !important;
+    @include shadow(0, 2px, 4px, $color-gray, 0);
+}
+
+.ui-datepicker-prev-hover, .ui-datepicker-next-hover {
+    background-color: $color-btn-h;
+    color: $color-white;
+}
+
+.ui-datepicker-calendar {
+
+    th {
+        color: $color-primary-text-l;
+        background: $color-primary;
+    }
+
+    td {
+
+        a {
+            color: $color-primary-text-l;
+
+            &:hover {
+                background-color: $color-btn;
+                color: $color-tertiary-text;                
+            }
+
+            &.ui-state-active {
+                background-color: $color-btn-a;
+                color: $color-tertiary-text;              
+            }
+        }
+    }
+}

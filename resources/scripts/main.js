@@ -5,11 +5,14 @@ jQuery( document ).ready( function() {
 	initCmgTools();
 
 	initListeners();
-	
+
 	initDatePickers();
 
+	initSidebar();
+	initSidebarTabs();
+
 	initWindowResize();
-	
+
 	initWindowScroll();
 });
 
@@ -29,8 +32,11 @@ function initPreloaders() {
 
 function initCmgTools() {
 
+	// Perspective Header
+	jQuery( '.cmt-header-perspective' ).cmtHeader( { scrollDistance: 280 } );
+
 	// Blocks
-	jQuery( '.cmt-block' ).cmtBlock({
+	jQuery( '.cmt-block, .page' ).cmtBlock({
 		// Generic
 		halfHeight: true,
 		heightAuto: true,
@@ -49,9 +55,6 @@ function initCmgTools() {
 		}
 	});
 
-	// Perspective Header
-	jQuery( '.cmt-header-main' ).cmtHeader( { scrollDistance: 280 } );
-
 	// Smooth Scroll
 	jQuery( '.cmt-smooth-scroll' ).cmtSmoothScroll();
 
@@ -67,9 +70,9 @@ function initCmgTools() {
 	});
 
 	// Select
-	jQuery( '.cmt-select' ).cmtSelect( { iconHtml: '<span class="fa fa-caret-down"></span>' } );
-	jQuery( '.cmt-select-c' ).cmtSelect( { iconHtml: '<span class="fa fa-caret-down"></span>', copyOptionClass: true } );
-	jQuery( '.cmt-select-s' ).cmtSelect( { iconHtml: '<span class="fa fa-caret-down"></span>', wrapperClass: 'element-small' } );
+	jQuery( '.cmt-select' ).cmtSelect( { iconHtml: '<span class="fa fab fa-caret-down"></span>' } );
+	jQuery( '.cmt-select-c' ).cmtSelect( { iconHtml: '<span class="fa fab fa-caret-down"></span>', copyOptionClass: true } );
+	jQuery( '.cmt-select-s' ).cmtSelect( { iconHtml: '<span class="fa fab fa-caret-down"></span>', wrapperClass: 'element-small' } );
 
 	// Checkboxes
 	jQuery( '.cmt-checkbox' ).cmtCheckbox();
@@ -98,6 +101,9 @@ function initCmgTools() {
 	// Grid
 	jQuery( '.cmt-grid-data' ).cmtGrid();
 
+	// Collapsible Menu
+	jQuery( '#sidebar-main' ).cmtCollapsibleMenu();
+
 	// Actions
 	jQuery( '.cmt-actions' ).cmtActions();
 
@@ -110,10 +116,11 @@ function initCmgTools() {
 	// Time Picker
 	jQuery( '.cmt-timepicker' ).cmtTimePicker();
 
-	jQuery( '.cmt-slider' ).cmtSlider({
-		lControlContent: "<i class=\"fa fa-angle-left valign-center\"></i>",
-		rControlContent: "<i class=\"fa fa-angle-right valign-center\"></i>"
-	});
+	// Login & Register
+	jQuery( '#popup-login' ).cmtLoginRegister();
+
+	// Intl Tel Input
+	cmt.utils.intltel.initIntlTelInput( 'us' );
 }
 
 // == JS Listeners ========================
@@ -126,6 +133,14 @@ function initListeners() {
 		jQuery( '#menu-main-mobile' ).slideToggle();
 	});
 
+	// Login & Register
+	jQuery( '#btn-login' ).click( function( e ) {
+
+		e.preventDefault();
+
+		showPopup( '#popup-login' );
+	});
+
 	// Custom scroller
 	jQuery( '.cscroller' ).mCustomScrollbar( { autoHideScrollbar: true } );
 
@@ -135,6 +150,8 @@ function initListeners() {
 		jQuery( this ).parent().find( '.cmt-click' ).click();
 	});
 }
+
+// == Datepickers =========================
 
 function initDatePickers() {
 
@@ -177,6 +194,99 @@ function initDatePickers() {
 			});
 		}
 	});
+
+	// Datetimepicker
+	if( jQuery().datetimepicker ) {
+
+		jQuery( '.datetimepicker' ).datetimepicker( { format: 'Y-m-d H:i:00', step: 5 } );
+
+		jQuery( '.dt-date-picker' ).datetimepicker( { timepicker: false, format: 'Y-m-d' } );
+
+		jQuery( '.dt-dob-picker' ).datetimepicker( { timepicker: false, format: 'Y-m-d', yearStart: 1950, yearEnd: 2010, defaultDate: '2000-01-01' } );
+
+		jQuery( '.dt-time-picker' ).datetimepicker( { datepicker: false, format: 'H:i:00', step: 5 } );
+	}
+}
+
+// == Sidebars ============================
+
+function initSidebar() {
+
+	jQuery( '#btn-sidebar-main' ).click( function() {
+
+		if( jQuery( '#sidebar-main' ).hasClass( 'sidebar-main-micro' ) ) {
+
+			setUserConfig( 'microSidebar', 0 );
+		}
+		else {
+
+			setUserConfig( 'microSidebar', 1 );
+		}
+
+		jQuery( '#sidebar-main' ).toggleClass( 'sidebar-main-micro' );
+
+		initSidebarTabs();
+	});
+
+	jQuery( '#btn-sidebar-mobile' ).click( function() {
+
+		jQuery( '#sidebar-main' ).fadeIn( 'slow' );
+	});
+
+	jQuery( '#btn-sidebar-close' ).click( function() {
+
+		jQuery( '#sidebar-main' ).fadeOut( 'fast' );
+	});
+}
+
+function initSidebarTabs() {
+
+	if( jQuery( '#sidebar-main' ).hasClass( 'sidebar-main-micro' ) ) {
+
+		jQuery( '.sidebar-main-filler' ).addClass( 'sidebar-filler-micro' );
+		jQuery( '.container-main' ).addClass( 'container-main-micro' );
+		jQuery( '.content-main-wrap' ).addClass( 'content-main-wrap-micro' );
+
+		jQuery( '#sidebar-main .collapsible-tab .tab-header' ).addClass( 'tab-content-trigger' );
+		jQuery( '#sidebar-main .tab-content' ).removeClass( 'visible' );
+
+		jQuery( '#sidebar-main .tab-content-trigger' ).click( function() {
+
+			var parent = jQuery( this ).closest( '.collapsible-tab' );
+
+			if( parent.hasClass( 'has-children' ) ) {
+
+				var tab = parent.find( '.tab-content' );
+
+				if( tab.is( ':visible' ) ) {
+
+					tab.hide( 'fast' );
+				}
+				else {
+
+					jQuery( '#sidebar-main .tab-content' ).hide( 'fast' );
+
+					tab.fadeIn( 'slow' );
+				}
+			}
+		});
+
+		jQuery( '#btn-sidebar-main .sidebar-trigger-expanded' ).hide();
+		jQuery( '#btn-sidebar-main .sidebar-trigger-collapsed' ).show();
+	}
+	else {
+
+		jQuery( '.sidebar-main-filler' ).removeClass( 'sidebar-filler-micro' );
+		jQuery( '.container-main' ).removeClass( 'container-main-micro' );
+		jQuery( '.content-main-wrap' ).removeClass( 'content-main-wrap-micro' );
+
+		jQuery( '#sidebar-main .collapsible-tab .tab-header' ).unbind( 'click' );
+		jQuery( '#sidebar-main .collapsible-tab .tab-header' ).removeClass( 'tab-content-trigger' );
+		jQuery( '#sidebar-main .collapsible-tab.has-children.active .tab-content' ).addClass( 'visible' );
+
+		jQuery( '#btn-sidebar-main .sidebar-trigger-expanded' ).show();
+		jQuery( '#btn-sidebar-main .sidebar-trigger-collapsed' ).hide();
+	}
 }
 
 // == Window Resize, Scroll ===============

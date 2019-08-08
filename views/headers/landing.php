@@ -5,6 +5,7 @@ use yii\helpers\Html;
 // CMG Imports
 use cmsgears\widgets\elements\Nav;
 
+// Blog Imports
 use themes\blog\Theme;
 
 $banner			= Yii::$app->core->site->banner;
