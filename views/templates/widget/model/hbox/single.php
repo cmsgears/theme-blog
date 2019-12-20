@@ -30,10 +30,10 @@ $bannerUrl	= CodeGenUtil::getFileUrl( $content->banner, [ 'image' => $banner ] )
 <div class="box-content-wrap clearfix <?= !empty( $bannerUrl ) ? 'box-content-split' : null ?>">
 	<?php if( !empty( $bannerUrl ) ) { ?>
 		<div class="box-header-wrap">
-			<div class="box-header">				
+			<div class="box-header">
 				<a href="<?= "{$siteUrl}/blog/{$model->slug}" ?>">
 					<img class="fluid" src="<?= $bannerUrl ?>" title="<?= "{$model->displayName}" ?>" />
-				</a>				
+				</a>
 			</div>
 		</div>
 	<?php } ?>

@@ -33,10 +33,12 @@ $color-tertiary-text-d: #464646;
 
 // Form Fields Color
 $color-field: rgba( #FFFFFF, 0.2 );
-$color-field-text: #FFFFFF;
+//$color-field-text: #FFFFFF;
+$color-field-text: rgba( $color-gray-d, 0.8 );
 $color-field-h: rgba( #FFFFFF, 0.2 ); // Field Hover
-$color-field-text-h: #FFFFFF;
-$color-field-f: rgba( #FFFFFF, 0.2 ); // Focused Field
+//$color-field-text-h: #FFFFFF;
+$color-field-text-h: rgba( $color-gray-d, 0.8 );
+//$color-field-f: rgba( #FFFFFF, 0.2 ); // Focused Field
 $color-field-text-f: #E2A730;
 $color-field-d: #CCCCCC;      // Disabled Field
 $color-field-text-d: #909090;

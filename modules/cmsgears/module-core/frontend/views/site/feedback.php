@@ -19,7 +19,7 @@ $rightSidebar	= isset( $settings->rightSidebar ) ? $settings->rightSidebar : fal
 $footerSidebar	= isset( $settings->footerSidebar ) ? $settings->footerSidebar : false;
 
 $defaultIncludes	= Yii::getAlias( '@breeze' ) . '/templates/cms/page/default/includes';
-$templateIncludes	= Yii::getAlias( '@themes' ) . '/blog/modules/cmsgears/module-core/frontend/views/site/includes/feedback';
+$templateIncludes	= Yii::getAlias( '@themes' ) . '/t24x7/modules/cmsgears/module-core/frontend/views/site/includes/feedback';
 
 $buffer			= "$templateIncludes/buffer.php";
 $preObjects		= "$defaultIncludes/objects-pre.php";
