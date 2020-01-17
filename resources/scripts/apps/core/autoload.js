@@ -12,13 +12,29 @@ jQuery( document ).ready( function() {
 
 cmg.core.controllers.AutoloadController.prototype.autoloadActionSuccess = function( requestElement, response ) {
 
-	if( cmt.utils.object.hasProperty( response.data, 'widgetId' ) && cmt.utils.object.hasProperty( response.data, 'widgetHtml' ) ) {
+	var data		= response.data;
+	var html		= cmt.utils.object.hasProperty( data, 'html' );
+	var json		= cmt.utils.object.hasProperty( data, 'json' );
+	var autoload	= cmt.utils.object.hasProperty( data, 'id' ) && ( html || json );
 
-		var widget = jQuery( '#' + response.data.widgetId );
+	if( autoload ) {
 
-		if( widget.length > 0 ) {
+		var autoloader = jQuery( '#' + data.id );
 
-			widget.html( response.data.widgetHtml );
+		if( autoloader.length > 0 ) {
+
+			if( html ) {
+
+				autoloader.html( data.html );
+			}
+			else if( json ) {
+
+				var source 		= document.getElementById( data.id ).innerHTML;
+				var template	= Handlebars.compile( source );
+				var output 		= template( data.json );
+
+				autoloader.html( output );
+			}
 		}
 	}
 };
@@ -29,10 +45,12 @@ cmg.core.controllers.AutoloadController.prototype.autoloadActionSuccess = functi
 
 function initAutoloader() {
 
+	var app = cmt.api.root.getApplication( 'autoload' );
+
 	jQuery( '.autoloader' ).each( function() {
 
 		var element = jQuery( this );
 
-		cmt.api.utils.request.trigger( cmt.api.root.getApplication( 'autoload' ), element, false, element.find( '.cmt-click' ) );
+		cmt.api.utils.request.trigger( app, element, false, element.find( '.cmt-click' ) );
 	});
 }
