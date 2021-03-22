@@ -4,6 +4,10 @@
 	@include responsive-max( screen-tablet-large ) {
 
 		#mobile-actions {
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: 100;
 
 			.mobile-action {
 				color: $color-white;
@@ -23,6 +27,11 @@
 
 .header-landing {
 
+	#menu-main {
+		float: none;
+		text-align: center;
+	}
+
 	@include responsive-max( screen-tablet-large ) {
 		height: 50px;
 	}
@@ -36,7 +45,7 @@
 			text-align: center;
 
 			.logo {
-				@include valign-center();
+				@include valign-center;
 			}
 		}
 	}
@@ -45,16 +54,23 @@
 .header-banner {
 	height: 320px;
 
-	.header-logo {
-		margin-top: 60px;
+	.wrap-header-logo {
+		@include valign-center;
+
+		.header-logo {
+			margin-top: 0;
+			float: none;
+		}
+	}
+
+	#menu-mobile-wrap {
+		z-index: 100;
 	}
 
 	@include responsive-max( screen-tablet-large ) {
 		height: 180px;
 
 		.header-logo {
-			margin-top: 70px;
-			float: none;
 			text-align: center;
 		}
 
@@ -70,13 +86,12 @@
 		position: fixed;
 		top: 0;
 		width: 100%;
-		z-index: 10001;
 	}
 }
 
 .header-banner-no + .container-main-landing {
 
 	@include responsive-max( screen-tablet-large ) {
-		margin-top: 50px;
+		margin-top: 60px;
 	}
 }

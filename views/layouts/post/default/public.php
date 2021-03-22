@@ -16,7 +16,8 @@ $this->registerAssetBundle( 'public' );
 // Common variables available for headers, sidebars and footers included within this layout
 $coreProperties = $this->context->getCoreProperties();
 $themePath		= Yii::getAlias( '@themes/blog' );
-$user			= Yii::$app->user->getIdentity();
+$user			= Yii::$app->core->getUser();
+$resourceUrl	= $coreProperties->getResourceUrl();
 ?>
 <?php $this->beginPage(); ?>
 <!DOCTYPE html>

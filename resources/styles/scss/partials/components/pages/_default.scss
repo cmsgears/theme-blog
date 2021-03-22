@@ -16,7 +16,7 @@
 				max-height: 420px;
 			}
 		}
-		
+
 		// Content Wrapper
 		.page-content-row {
 			padding: 0 5%;
@@ -44,7 +44,7 @@
 				&.page-header-banner {
 					height: 320px;
 				}
-				
+
 				.page-header {
 					max-height: 320px;
 				}
@@ -61,7 +61,7 @@
 				&.page-header-banner {
 					height: 280px;
 				}
-				
+
 				.page-header {
 					max-height: 280px;
 				}
@@ -70,7 +70,41 @@
 	}
 }
 
-// Blog & Public Page
+// == System Pages ==================
+
+.page-system {
+
+	.page-content-wrap {
+
+		.page-content {
+
+			.page-content-form {
+				margin: 0;
+
+				.page-form {
+					background-color: $color-primary;
+					color: $color-primary-text;
+					width: 520px;
+					@include shadow-inset( 0, 0, 0, $color-border, $spread: 1px );
+
+					.text-with-line {
+
+						.text-content {
+							background-color: $color-primary;
+						}
+					}
+
+					@include responsive-max( screen-tablet-small ) {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+// == Public Pages & Blog ===========
+
 .page-model-blog, .page-home {
 
 	.page-content-wrap {
@@ -103,19 +137,20 @@
 	}
 }
 
-// Search Pages
+// == Search Pages ==================
+
 .page-search {
-	
+
 	.page-content-wrap {
-		
+
 		.page-content {
-			
+
 			.page-content-info {
 				background-color: $color-primary-l;
 				color: $color-primary-text-l;
 				padding-top: 1em;
 			}
-			
+
 			.page-widget-wrap {
 				margin-top: 2em;
 			}

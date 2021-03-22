@@ -12,12 +12,12 @@ $cmtAction		= $widget->cmtAction;
 	</div>
 
 	<div class="frm-actions">
-		<input class="rounded rounded-left rounded-left-small" type="text" name="Newsletter[email]" placeholder="Email *">
+		<input class="rounded rounded-left rounded-left-small" type="text" name="SignUpForm[email]" placeholder="Email *">
 		<input class="submit rounded rounded-right rounded-right-small" type="submit" name="submit" value="<?= $btnText ?>">
 	</div>
 
     <div class="frm-field padding padding-small-v">
-		<span class="error" cmt-error="email"></span>
+		<span class="error" cmt-error="SignUpForm[email]"></span>
     </div>
 
 	<div class="message success"></div>

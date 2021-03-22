@@ -1,0 +1,55 @@
+// == Structure - CRUD ==============
+
+.data-crud-wrap {
+	background-color: $color-primary-l;
+	color: $color-primary-text-l;
+	padding: 2em;
+
+	.data-crud-wrap-main {
+
+		.tabs-underline {
+
+			.tab-content-wrap {
+				padding: 2em 0;
+			}
+		}
+	}
+
+	.data-crud {
+
+		.data-crud-title {
+			padding: 0.5em 0;
+			margin-bottom: 1em;
+			font-size: $font-size-3;
+		}
+
+		.data-crud-form {
+			margin-bottom: 1em;
+		}
+
+		.data-crud-message {
+
+		}
+
+		.data-crud-actions {
+			text-align: right;
+			margin-bottom: 1em;
+		}
+	}
+}
+
+// == Structure - CRUD Address ======
+
+.data-crud-address {
+
+	.data-crud-title {
+
+		.actions-wrap {
+			text-align: right;
+
+			.btn-action {
+				font-size: 0.5em;
+			}
+		}
+	}
+}

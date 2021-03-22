@@ -54,7 +54,7 @@ class PublicAssets extends AssetBundle {
 		$this->js[] = 'scripts/sliders.js';
 		$this->js[] = 'scripts/popups.js';
 
-		$this->depends[] = 'foxslider\widgets\assets\FxsAssets';
+		$this->depends[] = 'cmsgears\assets\components\DateTimeAssets';
 	}
 
     // Instance methods --------------------------------------------

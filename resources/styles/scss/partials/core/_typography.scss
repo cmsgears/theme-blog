@@ -1,12 +1,12 @@
 html, body {
-    font-size: 10px;
+    font-size: 12px;
 
     @include responsive-min( screen-mobile-large ) {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     @include responsive-min( screen-tablet-large ) {
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 

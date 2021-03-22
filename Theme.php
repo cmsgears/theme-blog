@@ -12,10 +12,7 @@ namespace themes\blog;
 // Yii Imports
 use Yii;
 
-// CMG Imports
-use cmsgears\core\common\base\Theme as BaseTheme;
-
-class Theme extends BaseTheme {
+class Theme extends \cmsgears\core\common\base\Theme {
 
 	// Variables ---------------------------------------------------
 

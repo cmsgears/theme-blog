@@ -9,7 +9,7 @@ $success		= $widget->success;
 $rating			= $widget->rating;
 $ratingClass	= $widget->ratingClass;
 
-$user = Yii::$app->user->getIdentity();
+$user = Yii::$app->core->getUser();
 
 $ajaxUrl		= $widget->ajaxUrl;
 $cmtApp			= $widget->cmtApp;
@@ -66,7 +66,7 @@ $cmtAction		= $widget->cmtAction;
 			<div class="message success"></div>
 			<div class="message warning"></div>
 			<div class="message error"></div>
-			<div class="filler-height"> </div>
+			<div class="filler-height"></div>
 		</div>
 	</div>
 </div>

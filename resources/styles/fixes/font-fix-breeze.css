@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "cmti-core";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/breeze/cmti-core.eot");
+  src: url("../fonts/breeze/cmti-core.eot?#iefix") format("embedded-opentype"), url("../fonts/breeze/cmti-core.woff") format("woff"), url("../fonts/breeze/cmti-core.ttf") format("truetype"), url("../fonts/breeze/cmti-core.svg#cmti-core") format("svg");
+}

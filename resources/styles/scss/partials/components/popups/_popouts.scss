@@ -1,0 +1,143 @@
+.popout-group-main {
+	text-align: right;
+
+	.popout-actions {
+		display: inline-block;
+
+		.popout-trigger {
+			position: relative;
+			display: inline-block;
+			width: 70px;
+			height: 60px;
+			padding: 10px 5px;
+			line-height: 40px;
+			cursor: pointer;
+			position: relative;
+			text-align: center;
+			margin-left: -4px;
+			@include transit-all( $transit-eio, $transit-time-small );
+
+			&:hover {
+				background-color: $color-btn-h;
+				color: $color-btn-text-h;
+			}
+
+			&.active {
+				background-color: $color-btn !important;
+				color: $color-btn-text !important;
+			}
+		}
+
+		.wrap-user {
+
+			.icon {
+				padding: 0.75em;
+				@include circled1( $color-secondary, $color-secondary-text );
+			}
+
+			.user-avatar {
+				height: 2em;
+				@include shadow-inset( 0, 0, 0, $color-shadow-inset, 2px );
+			}
+		}
+	}
+
+	.popouts {
+		position: relative;
+		width: 100%;
+
+		.popout {
+			position: absolute;
+			width: 350px;
+
+			.popout-content-wrap {
+				background-color: $color-primary;
+				color: $color-primary-text;
+				padding: 0.5em;
+				text-align: left;
+				@include shadow( 0, 4px, 4px, $color-shadow, 0 );
+
+				.popout-content {
+
+					li {
+
+						span, a {
+							display: inline-block;
+							width: 100%;
+							padding: 0.5em;
+							@include transit-all( $transit-eio, $transit-time-small );
+							
+							&:hover {
+								background-color: $color-btn-h;
+								color: $color-btn-text-h;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		#popout-user {
+			right: 0;
+			width: 150px;
+		}
+
+		#popout-announcement {
+			right: 69px;
+		}
+
+		#popout-activity {
+			right: 138px;
+		}
+
+		#popout-reminder {
+			right: 206px;
+		}
+
+		#popout-notification {
+			right: 275px;
+		}
+	}
+
+	@include responsive-max( screen-tablet-large ) {
+
+		.popout-actions {
+
+			.popout-trigger {
+				height: 40px;
+				padding: 5px;
+				line-height: 30px;
+			}
+		}
+
+		.popouts {
+
+			.popout {
+				width: 220px;
+			}
+		}
+	}
+
+	@include responsive-max( screen-tablet-small ) {
+
+		.popout-actions {
+			width: 100%;
+			border-bottom: 1px solid $color-border;
+
+			.popout-trigger {
+				width: 20%;
+			}
+		}
+
+		.popouts {
+
+			.popout {
+				width: 100%;
+			}
+
+			#popout-activity, #popout-reminder, #popout-notification, #popout-announcement {
+				right: 0;
+			}
+		}
+	}
+}

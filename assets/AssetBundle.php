@@ -10,7 +10,6 @@
 namespace themes\blog\assets;
 
 // Yii Imports
-use yii\web\AssetBundle as BaseAssetBundle;
 use yii\web\View;
 
 /**
@@ -18,7 +17,7 @@ use yii\web\View;
  *
  * @since 1.0.0
  */
-class AssetBundle extends BaseAssetBundle {
+class AssetBundle extends \yii\web\AssetBundle {
 
 	// Variables ---------------------------------------------------
 
@@ -51,13 +50,18 @@ class AssetBundle extends BaseAssetBundle {
 	 */
 	public $js = [
 		// vendor
+
 		// templates
         'scripts/templates/public.js',
+
 		// apix
 		'scripts/apix/public.js',
+
 		// apps
-		'scripts/apps/autoload.js',
         'scripts/apps/public.js',
+
+		'scripts/apps/core/base.js',
+		'scripts/apps/core/autoload.js',
 		'scripts/apps/core/controllers/site.js'
 	];
 
@@ -72,20 +76,24 @@ class AssetBundle extends BaseAssetBundle {
 	 * @inheritdoc
 	 */
     public $depends = [
+		'cmsgears\assets\effects\Animate',
+		'cmsgears\icons\assets\IconAssets',
+		'cmsgears\assets\cmgtools\Lazy',
     	'cmsgears\assets\jquery\Jquery',
+		'cmsgears\assets\jquery\JqueryUi',
+		'foxslider\widgets\assets\FxsAssets',
 		//'cmsgears\assets\utilities\Conditionizr',
 		'cmsgears\assets\utilities\ImagesLoaded',
-		'cmsgears\assets\jquery\JqueryUi',
-		'cmsgears\assets\cmgtools\Velocity',
 		'cmsgears\assets\templates\Handlebars',
 		'cmsgears\assets\components\MCustomScrollbar',
 		//'cmsgears\assets\components\NoUiSlider',
 		//'cmsgears\assets\components\ProgressBar',
-		//'cmsgears\assets\effects\Animate',
-		//'cmsgears\widgets\aform\assets\FormAssets',
-		'themes\blog\assets\vapps\FormAssets',
-		'cmsgears\icons\assets\IconAssets',
-		'themes\blog\assets\vapps\BaseAssets'
+		'cmsgears\assets\libraries\ChartJs',
+		'cmsgears\assets\cmgtools\Velocity',
+		'cmsgears\assets\components\IntlTelInput',
+		'cmsgears\assets\vapps\BaseAssets',
+		'cmsgears\assets\vapps\FormAssets',
+		'cmsgears\assets\vapps\NotifyAssets'
     ];
 
     // Protected --------------

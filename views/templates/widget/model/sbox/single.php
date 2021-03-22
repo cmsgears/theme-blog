@@ -39,7 +39,7 @@ $bannerUrl	= CodeGenUtil::getFileUrl( $content->banner, [ 'image' => $banner ] )
 			<?= $model->displayName ?>
 		</div>
 		<div class="box-content-data reader">
-			<?= $content->getDisplaySummary( $widget->textLimit ) ?> &nbsp;&nbsp;
+			<?= strip_tags( $content->getDisplaySummary( $widget->textLimit ) ) ?> &nbsp;
 			... <a href="<?= "{$siteUrl}/blog/{$model->slug}" ?>">Read More</a>
 		</div>
 	</div>

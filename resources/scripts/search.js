@@ -21,7 +21,7 @@ function initSearch() {
 			searchBro( jQuery( this ).closest( '.search-box' ) );
 		}
 	});
-	
+
 	// Init Default Filters
 	initTextFilter( '.filter-text' );
 	initCheckboxFilter( '.filter-checkbox' );
@@ -32,11 +32,11 @@ function searchBro( searchBox ) {
 
 	var pageUrl		= window.location.href;
 	var keywords	= searchBox.find( '.search-terms' ).val();
-	var param		= cmt.utils.data.hasAttribute( searchBox, 'ldata-param' ) ? searchBox.attr( 'ldata-param' ) : 'keywords';
+	var param		= cmt.utils.data.hasAttribute( searchBox, 'data-param' ) ? searchBox.attr( 'data-param' ) : 'keywords';
 
-	if( cmt.utils.data.hasAttribute( searchBox, 'ldata-url' ) ) {
+	if( cmt.utils.data.hasAttribute( searchBox, 'data-url' ) ) {
 
-		pageUrl = siteUrl + searchBox.attr( 'ldata-url' );
+		pageUrl = siteUrl + searchBox.attr( 'data-url' );
 	}
 
 	// Search Keywords
@@ -48,6 +48,10 @@ function searchBro( searchBox ) {
 
 		pageUrl = cmt.utils.data.removeParam( pageUrl, param );
 	}
+
+	// Clear Pagination
+	pageUrl = cmt.utils.data.removeParam( pageUrl, 'page' );
+	pageUrl = cmt.utils.data.removeParam( pageUrl, 'per-page' );
 
 	window.location	= pageUrl;
 }

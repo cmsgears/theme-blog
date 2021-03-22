@@ -2,7 +2,8 @@
 
 jQuery( document ).ready( function() {
 
-	var app	= cmt.api.root.getApplication( 'core' );
+	var cmtApp	= cmt.api.root.getApplication( 'core' );
+	var blogApp	= cmt.api.root.getApplication( 'blogCore' );
 
 	// Register Controllers
 });
@@ -14,7 +15,7 @@ cmg.core.controllers.SiteController.prototype.checkUserActionPre = function( req
 	var event = requestElement.attr( 'data-event' );
 
 	switch( event ) {
-		
+
 		case 'review': {
 
 		}
@@ -49,6 +50,12 @@ cmg.core.controllers.SiteController.prototype.checkUserActionFailure = function(
 			break;
 		}
 	}
+};
+
+// Ajax Login
+cmg.core.controllers.SiteController.prototype.loginActionSuccess = function( requestElement, response ) {
+
+	window.location = response.data;
 };
 
 // == Direct Calls ========================

@@ -13,3 +13,28 @@
 		margin-top: 0px;
 	}
 }
+
+.container-private {
+	width: 100%;
+	padding-left: 225px;
+
+	@include responsive-max( screen-tablet-small ) {
+		padding-left: 0;
+	}
+}
+
+.header-private + .container-public {
+	margin-top: 60px;
+}
+
+.sidebar-main + .container-private {
+	margin-top: 60px;
+}
+
+.sidebar-main-micro + .container-private {
+	padding-left: 70px;
+
+	@include responsive-max( screen-tablet-small ) {
+		padding-left: 0;
+	}
+}

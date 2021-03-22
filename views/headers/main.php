@@ -21,10 +21,7 @@ use cmsgears\social\meta\components\SocialMeta;
 <script type="text/javascript"> if ( !window.console ) console = { log: function() {} }; </script>
 
 <!-- App Icons -->
-<link href="images/icons/favicon.ico" rel="shortcut icon">
-<link href="images/icons/apple-icon-precomposed.png" rel="apple-touch-icon-precomposed">
-
-<!-- Google Ads -->
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<link href="<?= $resourceUrl ?>/images/icons/favicon.ico" rel="shortcut icon">
+<link href="<?= $resourceUrl ?>/images/icons/apple-icon-precomposed.png" rel="apple-touch-icon-precomposed">
 
 <?php $this->head(); ?>
